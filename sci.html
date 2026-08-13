@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientia AI — bilingual Physical AI reading log (concept v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E0F1F;
+    --bg-1:#161832;
+    --bg-2:#1E2147;
+    --bg-3:#262a56;
+    --hair:rgba(222,224,255,0.10);
+    --hair-strong:rgba(222,224,255,0.22);
+    --ink:#E9EAF6;
+    --ink-dim:#9EA1C6;
+    --ink-faint:#6C6F97;
+    --blue:#5B8CFF;
+    --blue-dim:#33529e;
+    --violet:#9B6BFF;
+    --violet-dim:#5c3fa3;
+    --green:#3ADC9B;
+    --green-dim:#237054;
+    --pink:#FF5FA8;
+    --pink-dim:#9c3a6b;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 800px 460px at 8% -8%, rgba(155,107,255,0.16), transparent),
+      radial-gradient(ellipse 700px 500px at 100% 0%, rgba(91,140,255,0.13), transparent),
+      radial-gradient(ellipse 700px 460px at 90% 60%, rgba(58,220,155,0.08), transparent),
+      radial-gradient(ellipse 600px 400px at 0% 90%, rgba(255,95,168,0.08), transparent),
+      var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', ui-sans-serif, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--violet); color:#fff;}
+  :focus-visible{outline:2px solid var(--violet); outline-offset:2px;}
+  button, select, input{font-family:inherit;}
+
+  .sample-banner{
+    background:var(--bg-2); border-bottom:1px solid var(--hair-strong); color:var(--ink-dim);
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em;
+    text-align:center; padding:8px 16px;
+  }
+  .sample-banner strong{color:var(--pink); font-weight:600;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- masthead ---------- */
+  header.masthead{border-bottom:1px solid var(--hair); padding:34px 0 20px;}
+  .mast-row{display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+  .mast-title{
+    font-family:'Playfair Display', serif; font-weight:700; font-size:40px;
+    letter-spacing:.01em; line-height:1; margin:0; display:flex; align-items:baseline; gap:10px;
+    background:linear-gradient(100deg, var(--ink) 40%, var(--violet) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .mast-title .dot{color:var(--pink); font-size:.5em; -webkit-text-fill-color:var(--pink);}
+  .mast-tagline{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-dim); margin:9px 0 0;}
+  .mast-tagline .ko{color:var(--green);}
+  .lang-toggle{
+    display:flex; align-items:center; gap:2px; background:var(--bg-1);
+    border:1px solid var(--hair-strong); border-radius:20px; padding:3px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; flex-shrink:0;
+  }
+  .lang-toggle button{
+    border:none; background:transparent; color:var(--ink-faint);
+    padding:6px 14px; border-radius:20px; cursor:pointer; font-weight:500;
+    transition:background .15s, color .15s;
+  }
+  .lang-toggle button.active{background:var(--violet); color:#fff;}
+  .lang-toggle button[data-lang="ko"].active{background:var(--green); color:#08251a;}
+
+  nav.subnav{display:flex; gap:22px; margin-top:20px; flex-wrap:wrap; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-dim);}
+  nav.subnav a{padding-bottom:4px; border-bottom:2px solid transparent; cursor:pointer;}
+  nav.subnav a:hover, nav.subnav a.current{color:var(--ink); border-color:var(--violet);}
+
+  /* ---------- dial ---------- */
+  section.signal{padding:28px 0 24px; border-bottom:1px solid var(--hair);}
+  .signal-label{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:14px;}
+  .dial{position:relative; height:32px; border-radius:4px; overflow:hidden; background:var(--bg-1); border:1px solid var(--hair-strong); display:flex;}
+  .dial-seg{height:100%; transform-origin:left; transform:scaleX(0); transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .dial-seg.en{background:linear-gradient(90deg, var(--blue-dim), var(--blue)); width:58%;}
+  .dial-seg.ko{background:linear-gradient(90deg, var(--green), var(--green-dim)); width:42%;}
+  .dial.animate .dial-seg{transform:scaleX(1);}
+  .dial-ticks{position:absolute; inset:0; background-image:repeating-linear-gradient(90deg, transparent, transparent 9.9%, rgba(14,15,31,0.4) 10%); pointer-events:none;}
+  .dial-readout{display:flex; justify-content:space-between; align-items:baseline; margin-top:10px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-dim);}
+  .dial-readout b{color:var(--blue); font-weight:600;}
+  .dial-readout b.ko{color:var(--green);}
+  .dial-readout .new-count{color:var(--pink); font-weight:600;}
+
+  /* ---------- filters ---------- */
+  section.filters{padding:20px 0; border-bottom:1px solid var(--hair); display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+  .chip{font-family:'IBM Plex Mono', monospace; font-size:12px; border:1px solid var(--hair-strong); color:var(--ink-dim); background:transparent; padding:6px 13px; border-radius:20px; cursor:pointer; transition:all .15s;}
+  .chip:hover{border-color:var(--violet); color:var(--ink);}
+  .chip.active{background:var(--violet); color:#fff; border-color:var(--violet); font-weight:600;}
+  .alert-add{margin-left:auto; display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint);}
+  .alert-add input{background:var(--bg-1); border:1px solid var(--hair-strong); color:var(--ink); padding:7px 11px; border-radius:20px; font-size:12px; width:150px;}
+  .alert-add button{background:var(--violet); color:#fff; border:none; border-radius:20px; padding:7px 14px; font-size:12px; font-weight:600; cursor:pointer;}
+
+  /* ---------- section headers for tiers ---------- */
+  .tier-head{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink-faint); margin:34px 0 14px; display:flex; align-items:center; gap:10px;
+  }
+  .tier-head::after{content:""; flex:1; height:1px; background:var(--hair);}
+
+  /* ---------- card grids ---------- */
+  .tier-hero{display:block;}
+  .tier-pair{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .tier-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;}
+
+  .card{background:var(--bg-1); border:1px solid var(--hair); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column;}
+  .card:hover{border-color:var(--hair-strong);}
+  .thumb{width:100%; display:block; object-fit:cover; background:var(--bg-2);}
+  .card-hero .thumb{height:320px;}
+  .card-pair .thumb{height:190px;}
+  .card-grid .thumb{height:130px;}
+
+  .no-photo{
+    width:100%; display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; letter-spacing:.08em; text-transform:uppercase;
+    background-size:14px 14px;
+  }
+  .card-hero .no-photo{height:320px; font-size:15px;}
+  .card-pair .no-photo{height:190px; font-size:12px;}
+  .card-grid .no-photo{height:130px; font-size:10.5px;}
+  .no-photo.c-violet{background-color:#241b47; background-image:repeating-linear-gradient(45deg, rgba(155,107,255,0.16) 0 2px, transparent 2px 14px); color:var(--violet);}
+  .no-photo.c-blue{background-color:#12234a; background-image:repeating-linear-gradient(45deg, rgba(91,140,255,0.18) 0 2px, transparent 2px 14px); color:var(--blue);}
+  .no-photo.c-green{background-color:#0f3327; background-image:repeating-linear-gradient(45deg, rgba(58,220,155,0.18) 0 2px, transparent 2px 14px); color:var(--green);}
+
+  .card-body{padding:18px 20px 20px; display:flex; flex-direction:column; flex:1;}
+  .card-grid .card-body{padding:14px 15px 16px;}
+
+  .cov-row{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
+  .src-badge{display:inline-flex; align-items:center; gap:5px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:.03em; padding:2px 7px; border-radius:3px; border:1px solid var(--hair-strong);}
+  .src-badge.en{color:var(--blue); border-color:var(--blue-dim);}
+  .src-badge.ko{color:var(--green); border-color:var(--green-dim);}
+  .src-badge .swatch{width:6px; height:6px; border-radius:50%; background:currentColor; display:inline-block;}
+  .cov-count{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-faint);}
+  .gap-flag{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.05em; color:var(--pink); border:1px solid var(--pink-dim); padding:2px 7px; border-radius:3px; text-transform:uppercase;}
+  .cross-flag{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.05em; color:var(--violet); border:1px solid var(--violet-dim); padding:2px 7px; border-radius:3px; text-transform:uppercase;}
+
+  .mini-dial{height:5px; border-radius:3px; overflow:hidden; display:flex; margin-bottom:12px; background:var(--bg-2);}
+  .mini-dial span{height:100%;}
+  .mini-dial .en{background:var(--blue);}
+  .mini-dial .ko{background:var(--green);}
+
+  .card-title{font-family:'Playfair Display', serif; font-weight:600; line-height:1.28; margin:0 0 6px;}
+  .card-hero .card-title{font-size:26px;}
+  .card-pair .card-title{font-size:19px;}
+  .card-grid .card-title{font-size:15.5px;}
+  .card-title a{border-bottom:1px solid transparent;}
+  .card-title a:hover{border-color:currentColor;}
+
+  .orig-line{font-family:'IBM Plex Sans KR','IBM Plex Sans', sans-serif; font-size:12.5px; color:var(--ink-faint); margin:0 0 10px;}
+  .orig-line b{color:var(--ink-dim); font-weight:500; font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.06em; margin-right:6px;}
+
+  .card-summary{font-size:13.5px; line-height:1.62; color:var(--ink-dim); margin:0 0 12px; flex:1;}
+  .card-hero .card-summary{font-size:15px; max-width:60ch;}
+  .card-grid .card-summary{font-size:12.5px; -webkit-line-clamp:3; display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden;}
+
+  .card-tags{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-faint); border:1px solid var(--hair); padding:2px 8px; border-radius:20px;}
+
+  .card-actions{display:flex; gap:14px; margin-top:auto;}
+  .card-actions button{background:none; border:none; color:var(--ink-faint); cursor:pointer; font-family:'IBM Plex Mono', monospace; font-size:11px; padding:0; border-bottom:1px dashed var(--ink-faint);}
+  .card-actions button:hover{color:var(--violet); border-color:var(--violet);}
+  .card-actions button.marked{color:var(--pink); border-color:var(--pink);}
+  .note-box{display:none; margin-top:10px;}
+  .note-box.open{display:block;}
+  .note-box textarea{width:100%; min-height:56px; background:var(--bg-2); border:1px solid var(--hair-strong); border-radius:3px; color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; padding:9px; resize:vertical;}
+
+  .entry.hidden, .card.hidden{display:none;}
+
+  /* ---------- dense list tier ---------- */
+  .tier-list{display:flex; flex-direction:column;}
+  .list-row{display:grid; grid-template-columns:90px 1fr auto; gap:16px; align-items:center; padding:13px 0; border-bottom:1px solid var(--hair);}
+  .list-row:first-child{padding-top:0;}
+  .list-date{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint);}
+  .list-title{font-family:'Playfair Display', serif; font-size:15px; font-weight:600; margin:0;}
+  .list-title a:hover{border-bottom:1px solid currentColor;}
+  .list-src{font-family:'IBM Plex Mono', monospace; font-size:10.5px; flex-shrink:0;}
+  .list-src.en{color:var(--blue);} .list-src.ko{color:var(--green);}
+
+  /* ---------- course view ---------- */
+  section.course{display:none; padding:24px; margin:34px 0; background:var(--bg-1); border:1px solid var(--hair-strong); border-radius:var(--radius);}
+  section.course.open{display:block;}
+  .course-head{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:4px;}
+  .course-head h3{font-family:'Playfair Display', serif; font-size:20px; margin:0;}
+  .course-head span{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--violet);}
+  .course-sub{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-dim); margin:0 0 16px;}
+  .course-list{list-style:none; margin:0; padding:0; display:grid; gap:10px;}
+  .course-list li{display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-bottom:1px solid var(--hair); font-size:13.5px;}
+  .course-list li span{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); flex-shrink:0;}
+  .course-empty{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-faint); padding:6px 0;}
+
+  /* ---------- watches / sources panel ---------- */
+  section.watches{padding:34px 0; border-top:1px solid var(--hair); margin-top:10px;}
+  .watches h4{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 6px;}
+  .watches-sub{font-size:13px; color:var(--ink-dim); max-width:62ch; margin:0 0 20px; line-height:1.6;}
+  .watch-groups{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:24px;}
+  .watch-groups ul{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
+  .watch-groups li{font-size:13px; color:var(--ink-dim); display:flex; justify-content:space-between; gap:10px; border-bottom:1px solid var(--hair); padding-bottom:7px;}
+  .watch-groups li .meta{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-faint); text-align:right;}
+  .src-col-label{font-size:12px; margin:0 0 12px;}
+  .src-col-label.en{color:var(--blue);} .src-col-label.ko{color:var(--green);}
+
+  .add-watch-form{
+    display:grid; grid-template-columns:1.4fr 1fr 1.4fr .8fr 1fr auto; gap:8px;
+    background:var(--bg-1); border:1px solid var(--hair-strong); border-radius:var(--radius); padding:14px;
+  }
+  .add-watch-form input, .add-watch-form select{
+    background:var(--bg-2); border:1px solid var(--hair-strong); color:var(--ink);
+    padding:8px 10px; border-radius:3px; font-size:12.5px; width:100%;
+  }
+  .add-watch-form button{background:var(--pink); color:#fff; border:none; border-radius:3px; padding:8px 14px; font-size:12.5px; font-weight:600; cursor:pointer;}
+  .watch-note{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); margin-top:12px; line-height:1.6;}
+
+  footer{padding:26px 0 50px; border-top:1px solid var(--hair); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:900px){
+    .tier-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:640px){
+    .mast-title{font-size:31px;}
+    .tier-pair, .tier-grid{grid-template-columns:1fr;}
+    .watch-groups{grid-template-columns:1fr;}
+    .add-watch-form{grid-template-columns:1fr;}
+    .list-row{grid-template-columns:1fr; gap:4px;}
+    .alert-add{margin-left:0; width:100%;} .alert-add input{flex:1;}
+  }
+  @media (prefers-reduced-motion:reduce){ .dial-seg{transition:none;} html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<div class="sample-banner"><strong>CONCEPT MOCKUP v2</strong> — sample layout &amp; placeholder entries · watch list uses real in-browser storage, everything else is illustrative</div>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="mast-row">
+      <div>
+        <h1 class="mast-title"><span data-en="SERVO" data-ko="서보">SERVO</span><span class="dot">●</span></h1>
+        <p class="mast-tagline">
+          <span data-en="a bilingual reading log for Physical AI" data-ko="피지컬 AI를 위한 이중언어 리딩 로그">a bilingual reading log for Physical AI</span>
+          <span class="ko">· working title, swap freely</span>
+        </p>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Interface language">
+        <button data-lang="en" class="active" onclick="setLang('en')">EN</button>
+        <button data-lang="ko" onclick="setLang('ko')">한국어</button>
+      </div>
+    </div>
+    <nav class="subnav">
+      <a class="current" data-en="Log" data-ko="로그">Log</a>
+      <a onclick="toggleCourse()" data-en="Course view" data-ko="수업용 보기">Course view</a>
+      <a href="#watches" data-en="Sources &amp; watches" data-ko="소스 및 관심 키워드">Sources &amp; watches</a>
+      <a href="#" onclick="document.getElementById('add-watch-label').focus(); return false;" data-en="Add a watch" data-ko="관심 항목 추가">Add a watch</a>
+    </nav>
+  </header>
+
+  <section class="signal">
+    <div class="signal-label" data-en="Today's signal — coverage split, last 24h" data-ko="오늘의 신호 — 최근 24시간 보도 비율">Today's signal — coverage split, last 24h</div>
+    <div class="dial" id="dial">
+      <div class="dial-seg en"></div><div class="dial-seg ko"></div><div class="dial-ticks"></div>
+    </div>
+    <div class="dial-readout">
+      <span><b>58%</b> <span data-en="English" data-ko="영어">English</span> · <b class="ko">42%</b> <span data-en="Korean" data-ko="한국어">Korean</span></span>
+      <span class="new-count">17 <span data-en="new since yesterday" data-ko="어제 이후 신규">new since yesterday</span></span>
+    </div>
+  </section>
+
+  <section class="filters">
+    <button class="chip active" data-filter="all" data-en="All" data-ko="전체">All</button>
+    <button class="chip" data-filter="humanoids" data-en="Humanoids" data-ko="휴머노이드">Humanoids</button>
+    <button class="chip" data-filter="sensor" data-en="Sensor Fusion" data-ko="센서 융합">Sensor Fusion</button>
+    <button class="chip" data-filter="manipulation" data-en="Manipulation" data-ko="조작">Manipulation</button>
+    <button class="chip" data-filter="locomotion" data-en="Locomotion" data-ko="보행">Locomotion</button>
+    <button class="chip" data-filter="industry" data-en="Industry" data-ko="산업">Industry</button>
+    <div class="alert-add">
+      <input type="text" id="quick-watch" placeholder="watch a keyword…" aria-label="Add keyword watch">
+      <button type="button" onclick="quickAddWatch()" data-en="+ Watch" data-ko="+ 추가">+ Watch</button>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <div class="tier-head" data-en="Lead story — covered in both languages" data-ko="주요 기사 — 양국 언어 모두 보도">Lead story — covered in both languages</div>
+  <div class="tier-hero">
+    <article class="card card-hero" data-tags="humanoids industry">
+      <img class="thumb" src="https://picsum.photos/seed/servo-hero/1200/700" alt="">
+      <div class="card-body">
+        <div class="cov-row">
+          <span class="src-badge en"><span class="swatch"></span>3 EN</span>
+          <span class="src-badge ko"><span class="swatch"></span>2 KO</span>
+          <span class="cross-flag" data-en="cross-language" data-ko="교차 언어">cross-language</span>
+          <span class="cov-count">5 sources this week</span>
+        </div>
+        <div class="mini-dial"><span class="en" style="width:60%"></span><span class="ko" style="width:40%"></span></div>
+        <h2 class="card-title"><a href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener" data-en="Samsung and Hyundai humanoid units both post first-quarter pilot results — coverage lines up almost exactly" data-ko="삼성·현대 휴머노이드 사업부, 나란히 1분기 파일럿 결과 발표…양국 보도 거의 일치">Samsung and Hyundai humanoid units both post first-quarter pilot results — coverage lines up almost exactly</a></h2>
+        <p class="card-summary" data-en="Sample entry — cross-referencing three English outlets and two Korean outlets on the same week's pilot-program results turned up almost no difference in framing, which is itself unusual enough to flag." data-ko="샘플 항목 — 같은 주에 발표된 파일럿 결과를 다룬 영어권 매체 3곳과 한국 매체 2곳의 보도를 비교한 결과, 논조 차이가 거의 없었다는 점 자체가 눈에 띄는 사례.">Sample entry — cross-referencing three English outlets and two Korean outlets on the same week's pilot-program results turned up almost no difference in framing, which is itself unusual enough to flag.</p>
+        <div class="card-tags">
+          <span class="tag" data-en="humanoids" data-ko="휴머노이드">humanoids</span>
+          <span class="tag" data-en="industry" data-ko="산업">industry</span>
+          <span class="tag" data-en="cross-language" data-ko="교차 언어">cross-language</span>
+        </div>
+        <div class="card-actions">
+          <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
+          <button onclick="toggleNote(this)" data-en="+ add note" data-ko="+ 메모 추가">+ add note</button>
+        </div>
+        <div class="note-box"><textarea data-en-ph="Paraphrase the finding in your own words." data-ko-ph="핵심 내용을 자신의 말로 옮겨보세요." placeholder="Paraphrase the finding in your own words."></textarea></div>
+      </div>
+    </article>
+  </div>
+
+  <!-- PAIRED -->
+  <div class="tier-head" data-en="Developing — multiple sources, one flagged" data-ko="추적 중 — 복수 출처, 일부 미보도 표시">Developing — multiple sources, one flagged</div>
+  <div class="tier-pair">
+
+    <article class="card card-pair" data-tags="industry">
+      <div class="no-photo c-pink" style="background-color:#3a1330; background-image:repeating-linear-gradient(45deg, rgba(255,95,168,0.18) 0 2px, transparent 2px 14px); color:var(--pink);" data-en="ROBOTZINE" data-ko="로봇신문">로봇신문</div>
+      <div class="card-body">
+        <div class="cov-row">
+          <span class="src-badge ko"><span class="swatch"></span>2 KO</span>
+          <span class="gap-flag" data-en="no EN pickup yet" data-ko="영어권 미보도">no EN pickup yet</span>
+        </div>
+        <h2 class="card-title"><a href="https://www.irobotnews.com" target="_blank" rel="noopener" data-en="Rainbow Robotics quietly triples factory-floor pilot count, filings show" data-ko="레인보우로보틱스, 공시 보니 공장 파일럿 3배로 조용히 확대">Rainbow Robotics quietly triples factory-floor pilot count, filings show</a></h2>
+        <p class="orig-line"><b data-en="Original" data-ko="원문">Original</b><span data-en="korean trade press" data-ko="레인보우로보틱스 공시 자료 기반 국내 업계지 보도">korean trade press</span></p>
+        <p class="card-summary" data-en="Sample entry — regulatory filings show a Korean robotics maker expanding industrial pilots well beyond what's been publicly announced, spotted first in Korean trade coverage." data-ko="샘플 항목 — 국내 로봇 기업의 산업 현장 파일럿이 공개 발표보다 훨씬 빠르게 확대되고 있음을 공시 자료에서 확인, 한국 업계지에서 먼저 포착.">Sample entry — regulatory filings show a Korean robotics maker expanding industrial pilots well beyond what's been publicly announced, spotted first in Korean trade coverage.</p>
+        <div class="card-tags"><span class="tag" data-en="industry" data-ko="산업">industry</span><span class="tag" data-en="humanoids" data-ko="휴머노이드">humanoids</span></div>
+        <div class="card-actions">
+          <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
+          <button onclick="toggleNote(this)" data-en="+ add note" data-ko="+ 메모 추가">+ add note</button>
+        </div>
+        <div class="note-box"><textarea placeholder="번역 연습 — 핵심 내용을 자신의 말로 옮겨보세요."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-pair" data-tags="sensor manipulation">
+      <img class="thumb" src="https://picsum.photos/seed/servo-pair2/800/500" alt="">
+      <div class="card-body">
+        <div class="cov-row">
+          <span class="src-badge en"><span class="swatch"></span>1 EN</span>
+          <span class="src-badge ko"><span class="swatch"></span>1 KO</span>
+        </div>
+        <h2 class="card-title"><a href="http://export.arxiv.org/api/query?search_query=cat:cs.RO" target="_blank" rel="noopener" data-en="New tactile-sensing skin reaches sub-millimeter resolution on a $40 budget" data-ko="촉각 센서 스킨, 4만원대 부품으로 밀리미터 이하 해상도 달성">New tactile-sensing skin reaches sub-millimeter resolution on a $40 budget</a></h2>
+        <p class="card-summary" data-en="Sample entry — a low-cost capacitive skin design closes most of the resolution gap with sensors costing ten times more, tested on two gripper platforms." data-ko="샘플 항목 — 저비용 정전용량 방식 촉각 스킨이 10배 비싼 센서와 비슷한 해상도를 달성, 두 종류의 그리퍼에서 검증.">Sample entry — a low-cost capacitive skin design closes most of the resolution gap with sensors costing ten times more, tested on two gripper platforms.</p>
+        <div class="card-tags"><span class="tag" data-en="sensor fusion" data-ko="센서 융합">sensor fusion</span><span class="tag" data-en="manipulation" data-ko="조작">manipulation</span></div>
+        <div class="card-actions">
+          <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
+          <button onclick="toggleNote(this)" data-en="+ add note" data-ko="+ 메모 추가">+ add note</button>
+        </div>
+        <div class="note-box"><textarea placeholder="Paraphrase the finding in your own words."></textarea></div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- GRID -->
+  <div class="tier-head" data-en="Standard flow — single-source items" data-ko="일반 항목 — 단일 출처">Standard flow — single-source items</div>
+  <div class="tier-grid" id="grid-tier">
+
+    <article class="card card-grid" data-tags="humanoids">
+      <div class="no-photo c-violet">arXiv</div>
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge en"><span class="swatch"></span>arXiv</span></div>
+        <h2 class="card-title"><a href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener" data-en="Edge NPU benchmark suite adds humanoid-specific workloads" data-ko="엣지 NPU 벤치마크 스위트, 휴머노이드 특화 워크로드 추가">Edge NPU benchmark suite adds humanoid-specific workloads</a></h2>
+        <p class="card-summary" data-en="Sample entry — a new benchmark tests on-device inference chips against tasks specific to full-body humanoid control loops, not just single-arm manipulation." data-ko="샘플 항목 — 새 벤치마크는 단일 팔 조작이 아닌 전신 휴머노이드 제어 루프에 특화된 작업으로 온디바이스 추론 칩 성능을 평가한다.">Sample entry — a new benchmark tests on-device inference chips against tasks specific to full-body humanoid control loops, not just single-arm manipulation.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="Paraphrase in your own words."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-grid" data-tags="industry">
+      <img class="thumb" src="https://picsum.photos/seed/servo-g2/600/400" alt="">
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge ko"><span class="swatch"></span>KAIST 소식</span><span class="gap-flag" style="font-size:9px;" data-en="KO only" data-ko="한국어만">KO only</span></div>
+        <h2 class="card-title"><a href="https://www.irobotnews.com" target="_blank" rel="noopener" data-en="KAIST spinout raises seed round for quadruped inspection robots" data-ko="카이스트 스핀오프, 4족 점검 로봇으로 시드 투자 유치">KAIST spinout raises seed round for quadruped inspection robots</a></h2>
+        <p class="card-summary" data-en="Sample entry — a campus spinout closes early funding for pipeline- and tunnel-inspection quadrupeds, aimed at utility contractors first." data-ko="샘플 항목 — 캠퍼스 스핀오프 기업이 배관·터널 점검용 4족 로봇으로 초기 투자를 유치, 우선 유틸리티 업체를 대상으로 한다.">Sample entry — a campus spinout closes early funding for pipeline- and tunnel-inspection quadrupeds, aimed at utility contractors first.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="번역 연습."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-grid" data-tags="manipulation">
+      <div class="no-photo c-violet">arXiv</div>
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge en"><span class="swatch"></span>arXiv</span></div>
+        <h2 class="card-title"><a href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener" data-en="Simulation-to-real gap shrinks for deformable object grasping" data-ko="변형 물체 파지, 시뮬레이션-실제 격차 축소">Simulation-to-real gap shrinks for deformable object grasping</a></h2>
+        <p class="card-summary" data-en="Sample entry — a new domain-randomization recipe cuts failed grasps on cloth and produce by roughly half compared to the previous public baseline." data-ko="샘플 항목 — 새로운 도메인 랜덤화 기법이 이전 공개 베이스라인 대비 천, 농산물 파지 실패율을 약 절반으로 줄였다.">Sample entry — a new domain-randomization recipe cuts failed grasps on cloth and produce by roughly half compared to the previous public baseline.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="Paraphrase in your own words."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-grid" data-tags="industry">
+      <img class="thumb" src="https://picsum.photos/seed/servo-g4/600/400" alt="">
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge en"><span class="swatch"></span>IEEE Spectrum</span></div>
+        <h2 class="card-title"><a href="https://spectrum.ieee.org/topic/robotics/" target="_blank" rel="noopener" data-en="Why humanoid battery swaps beat fast charging on the factory floor" data-ko="공장에서는 급속충전보다 배터리 교체가 낫다">Why humanoid battery swaps beat fast charging on the factory floor</a></h2>
+        <p class="card-summary" data-en="Sample entry — a look at why several factory pilots standardized on swappable battery packs instead of fast-charge docks, mostly for uptime reasons." data-ko="샘플 항목 — 여러 공장 파일럿이 급속충전 대신 교체형 배터리 팩을 표준으로 채택한 이유, 주로 가동률 때문.">Sample entry — a look at why several factory pilots standardized on swappable battery packs instead of fast-charge docks, mostly for uptime reasons.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="Paraphrase in your own words."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-grid" data-tags="sensor">
+      <div class="no-photo c-green">ETRI</div>
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge ko"><span class="swatch"></span>ETRI 소식</span></div>
+        <h2 class="card-title"><a href="https://www.etri.re.kr" target="_blank" rel="noopener" data-en="ETRI open-sources Korean-language robot command dataset" data-ko="ETRI, 한국어 로봇 명령어 데이터셋 오픈소스 공개">ETRI open-sources Korean-language robot command dataset</a></h2>
+        <p class="card-summary" data-en="Sample entry — a government-affiliated lab releases labeled Korean voice commands for home-service robots, filling a gap most public datasets only cover in English." data-ko="샘플 항목 — 정부출연연구기관이 가정용 서비스 로봇을 위한 한국어 음성 명령 데이터셋을 공개, 대부분 영어 위주였던 공개 데이터셋의 공백을 메운다.">Sample entry — a government-affiliated lab releases labeled Korean voice commands for home-service robots, filling a gap most public datasets only cover in English.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="번역 연습."></textarea></div>
+      </div>
+    </article>
+
+    <article class="card card-grid" data-tags="locomotion">
+      <img class="thumb" src="https://picsum.photos/seed/servo-g6/600/400" alt="">
+      <div class="card-body">
+        <div class="cov-row"><span class="src-badge en"><span class="swatch"></span>arXiv</span></div>
+        <h2 class="card-title"><a href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener" data-en="Locomotion policy trained entirely in simulation clears uneven terrain first try" data-ko="시뮬레이션만으로 학습한 보행 정책, 실제 요철 지형 첫 시도 통과">Locomotion policy trained entirely in simulation clears uneven terrain first try</a></h2>
+        <p class="card-summary" data-en="Sample entry — zero real-world fine-tuning needed before the policy handled gravel, mulch, and a curb transition in one continuous walk." data-ko="샘플 항목 — 실제 환경에서의 추가 학습 없이도 자갈, 멀칭재, 연석 구간을 하나의 연속 보행으로 통과했다.">Sample entry — zero real-world fine-tuning needed before the policy handled gravel, mulch, and a curb transition in one continuous walk.</p>
+        <div class="card-actions"><button onclick="toggleMark(this)" data-en="☐ mark" data-ko="☐ 표시">☐ mark</button><button onclick="toggleNote(this)" data-en="+ note" data-ko="+ 메모">+ note</button></div>
+        <div class="note-box"><textarea placeholder="Paraphrase in your own words."></textarea></div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- DENSE LIST -->
+  <div class="tier-head" data-en="Earlier this week" data-ko="이번 주 이전 기사">Earlier this week</div>
+  <div class="tier-list">
+    <div class="list-row">
+      <span class="list-date">08.10</span>
+      <h3 class="list-title"><a href="https://www.naverlabs.com" target="_blank" rel="noopener" data-en="Naver Labs presents warehouse-robot fleet coordination results" data-ko="네이버랩스, 창고 로봇 군집 조정 결과 발표">Naver Labs presents warehouse-robot fleet coordination results</a></h3>
+      <span class="list-src ko">로봇신문</span>
+    </div>
+    <div class="list-row">
+      <span class="list-date">08.09</span>
+      <h3 class="list-title"><a href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener" data-en="Survey: what actually counts as &quot;Physical AI&quot; in 2026 papers" data-ko="설문: 2026년 논문에서 '피지컬 AI'는 실제로 무엇을 의미하나">Survey: what actually counts as "Physical AI" in 2026 papers</a></h3>
+      <span class="list-src en">arXiv</span>
+    </div>
+    <div class="list-row">
+      <span class="list-date">08.08</span>
+      <h3 class="list-title"><a href="https://www.therobotreport.com" target="_blank" rel="noopener" data-en="Soft-gripper startup exits stealth with automotive-parts contract" data-ko="소프트 그리퍼 스타트업, 자동차 부품 공급 계약과 함께 공개 전환">Soft-gripper startup exits stealth with automotive-parts contract</a></h3>
+      <span class="list-src en">The Robot Report</span>
+    </div>
+  </div>
+
+  <section class="course" id="course">
+    <div class="course-head">
+      <h3 data-en="Research Methods — reading set" data-ko="연구방법론 — 읽기 자료">Research Methods — reading set</h3>
+      <span id="course-count">0 items</span>
+    </div>
+    <p class="course-sub" data-en="Anything marked above lands here automatically, ready to print or link for students." data-ko="위에서 표시한 항목이 자동으로 이곳에 모입니다 — 인쇄하거나 학생들에게 링크로 전달하세요.">Anything marked above lands here automatically, ready to print or link for students.</p>
+    <ul class="course-list" id="course-list"></ul>
+    <p class="course-empty" id="course-empty" data-en="Nothing marked yet — click “mark for class” on any item above." data-ko="아직 표시된 항목이 없습니다 — 위에서 '수업용으로 표시'를 눌러보세요.">Nothing marked yet — click "mark for class" on any item above.</p>
+  </section>
+
+  <section class="watches" id="watches">
+    <h4 data-en="Sources &amp; watches" data-ko="소스 및 관심 키워드">Sources &amp; watches</h4>
+    <p class="watches-sub" data-en="Every RSS feed, API, and keyword feeding the log above. Colleagues can add their own watch below — new entries are marked with your name so Aaron can review before they go live." data-ko="위 로그에 들어오는 모든 RSS 피드, API, 키워드 목록입니다. 동료 교수님도 아래에서 직접 관심 항목을 추가할 수 있으며, 이름이 함께 표시되어 검토 후 반영됩니다.">Every RSS feed, API, and keyword feeding the log above. Colleagues can add their own watch below — new entries are marked with your name so Aaron can review before they go live.</p>
+    <div class="watch-groups">
+      <div>
+        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
+        <ul id="watch-list-en"></ul>
+      </div>
+      <div>
+        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
+        <ul id="watch-list-ko"></ul>
+      </div>
+    </div>
+    <form class="add-watch-form" id="add-watch-form">
+      <input id="add-watch-label" name="label" placeholder="Source name or keyword" required>
+      <select name="type">
+        <option value="keyword" data-en="Keyword" data-ko="키워드">Keyword</option>
+        <option value="rss" data-en="RSS feed URL" data-ko="RSS 피드 주소">RSS feed URL</option>
+      </select>
+      <input name="value" placeholder="soft robotics — or an RSS URL" required>
+      <select name="lang">
+        <option value="en" data-en="English" data-ko="영어">English</option>
+        <option value="ko" data-en="한국어" data-ko="한국어">한국어</option>
+      </select>
+      <input name="owner" placeholder="Your name" required>
+      <button type="submit" data-en="+ Add" data-ko="+ 추가">+ Add</button>
+    </form>
+    <p class="watch-note" data-en="In the real build this form writes to a small shared config file (or a spreadsheet, for non-technical colleagues) that the fetch pipeline reads on its next scheduled run." data-ko="실제 구현에서는 이 양식이 소규모 공유 설정 파일(또는 비개발자 동료를 위한 스프레드시트)에 기록되며, 수집 파이프라인이 다음 예약 실행 시 이를 읽어옵니다.">In the real build this form writes to a small shared config file (or a spreadsheet, for non-technical colleagues) that the fetch pipeline reads on its next scheduled run.</p>
+  </section>
+
+  <footer>
+    <span data-en="SERVO — working title, concept only" data-ko="서보 — 임시 이름, 컨셉 단계">SERVO — working title, concept only</span>
+    <span data-en="built for aaron.kr · fonts shared with courses.aaron.kr" data-ko="aaron.kr용 · courses.aaron.kr과 폰트 공유">built for aaron.kr · fonts shared with courses.aaron.kr</span>
+  </footer>
+
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => document.getElementById('dial').classList.add('animate'));
+    initWatches();
+  });
+
+  function setLang(lang){
+    document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = lang === 'ko' ? el.getAttribute('data-ko') : el.getAttribute('data-en');
+      if(val !== null) el.textContent = val;
+    });
+    document.querySelectorAll('[data-en-ph]').forEach(el => {
+      const val = lang === 'ko' ? el.getAttribute('data-ko-ph') : el.getAttribute('data-en-ph');
+      if(val !== null) el.setAttribute('placeholder', val);
+    });
+    document.documentElement.lang = lang;
+  }
+
+  document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip[data-filter]').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      document.querySelectorAll('[data-tags]').forEach(entry => {
+        const tags = entry.dataset.tags.split(' ');
+        entry.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+      });
+    });
+  });
+
+  function toggleNote(btn){
+    btn.closest('.card-body').querySelector('.note-box').classList.toggle('open');
+  }
+
+  function toggleMark(btn){
+    btn.classList.toggle('marked');
+    const lang = document.querySelector('.lang-toggle button.active').dataset.lang;
+    const marking = btn.classList.contains('marked');
+    if(btn.hasAttribute('data-en')){
+      btn.setAttribute('data-en', marking ? '☑ marked' : (btn.textContent.length > 10 ? '☐ mark for class' : '☐ mark'));
+      btn.setAttribute('data-ko', marking ? '☑ 표시됨' : (btn.getAttribute('data-ko').includes('수업') ? '☐ 수업용으로 표시' : '☐ 표시'));
+    }
+    btn.textContent = lang === 'ko' ? btn.getAttribute('data-ko') : btn.getAttribute('data-en');
+    renderCourseView();
+  }
+
+  function renderCourseView(){
+    const list = document.getElementById('course-list');
+    const empty = document.getElementById('course-empty');
+    const count = document.getElementById('course-count');
+    list.innerHTML = '';
+    const marked = Array.from(document.querySelectorAll('.card-actions button.marked'));
+    count.textContent = marked.length + ' items';
+    empty.style.display = marked.length ? 'none' : 'block';
+    marked.forEach(btn => {
+      const card = btn.closest('article');
+      const titleEl = card.querySelector('.card-title a, .list-title a');
+      if(!titleEl) return;
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${titleEl.textContent}</span><span>${(card.querySelector('.src-badge')||{}).textContent || ''}</span>`;
+      list.appendChild(li);
+    });
+  }
+
+  function toggleCourse(){
+    document.getElementById('course').classList.toggle('open');
+    document.getElementById('course').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  // ---- watches panel: real persistence via window.storage ----
+  const DEFAULT_WATCHES = [
+    {label:'arXiv cs.RO / cs.AI', type:'api', lang:'en', owner:'Aaron'},
+    {label:'IEEE Spectrum Robotics', type:'rss', lang:'en', owner:'Aaron'},
+    {label:'The Robot Report', type:'rss', lang:'en', owner:'Aaron'},
+    {label:'Semantic Scholar', type:'api', lang:'en', owner:'Aaron'},
+    {label:'로봇신문 (irobotnews.com)', type:'rss', lang:'ko', owner:'Aaron'},
+    {label:'Naver News: "피지컬 AI"', type:'keyword', lang:'ko', owner:'Aaron'},
+    {label:'ETRI / KAIST 소식', type:'rss', lang:'ko', owner:'Aaron'},
+    {label:'KSPAI 공지', type:'manual', lang:'ko', owner:'Aaron'},
+  ];
+
+  async function initWatches(){
+    let extra = [];
+    try{
+      const stored = await window.storage.get('servo-watches', false);
+      if(stored && stored.value) extra = JSON.parse(stored.value);
+    }catch(e){ /* no stored watches yet */ }
+    renderWatches(DEFAULT_WATCHES.concat(extra));
+
+    document.getElementById('add-watch-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const entry = {
+        label: f.label.value.trim(),
+        type: f.type.value,
+        value: f.value.value.trim(),
+        lang: f.lang.value,
+        owner: f.owner.value.trim()
+      };
+      if(!entry.label || !entry.value || !entry.owner) return;
+      extra.push(entry);
+      try{ await window.storage.set('servo-watches', JSON.stringify(extra), false); }catch(err){ console.error(err); }
+      renderWatches(DEFAULT_WATCHES.concat(extra));
+      f.reset();
+    });
+  }
+
+  function renderWatches(all){
+    const enList = document.getElementById('watch-list-en');
+    const koList = document.getElementById('watch-list-ko');
+    enList.innerHTML = ''; koList.innerHTML = '';
+    all.forEach(w => {
+      const li = document.createElement('li');
+      const typeLabel = w.type === 'api' ? 'API' : w.type === 'rss' ? 'RSS' : w.type === 'keyword' ? 'keyword' : 'manual';
+      li.innerHTML = `<span>${w.label}</span><span class="meta">${typeLabel} · ${w.owner}</span>`;
+      (w.lang === 'ko' ? koList : enList).appendChild(li);
+    });
+  }
+
+  function quickAddWatch(){
+    const input = document.getElementById('quick-watch');
+    const val = input.value.trim();
+    if(!val) return;
+    document.getElementById('add-watch-label').value = val;
+    document.querySelector('#add-watch-form [name="value"]').value = val;
+    document.querySelector('#add-watch-form [name="owner"]').value = 'Aaron';
+    document.getElementById('add-watch-form').requestSubmit();
+    input.value = '';
+    document.getElementById('watches').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+</script>
+
+</body>
+</html>

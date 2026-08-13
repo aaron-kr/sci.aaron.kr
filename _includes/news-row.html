@@ -1,0 +1,16 @@
+<!--
+  News row partial — dense list, thumbnail beside title only if `thumb` is given, never a placeholder.
+  Params: date, thumb (optional), title, url, source, lang (en|ko), commentary (true|false)
+-->
+<div class="list-row{% unless include.thumb %} no-thumb{% endunless %}">
+  <span class="list-date">{{ include.date }}</span>
+  {% if include.thumb %}<img class="list-thumb" src="{{ include.thumb }}" alt="">{% endif %}
+  <div class="list-main">
+    <h3 class="list-title"><a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a></h3>
+    {% if include.summary %}<p class="list-summary">{{ include.summary }}</p>{% endif %}
+  </div>
+  <div class="list-meta">
+    {% if include.commentary %}<span class="commentary-flag" data-en="commentary?" data-ko="논평 후보">commentary?</span>{% endif %}
+    <span class="list-src {{ include.lang }}">{{ include.source }}</span>
+  </div>
+</div>

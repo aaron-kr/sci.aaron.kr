@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREQUENCY — bilingual Physical AI reading log (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#161c27;
+    --bg-1:#1e2635;
+    --bg-2:#252f42;
+    --hair:rgba(237,231,220,0.11);
+    --hair-strong:rgba(237,231,220,0.22);
+    --ink:#EDE7DC;
+    --ink-dim:#9BA2B0;
+    --ink-faint:#6C7484;
+    --brass:#CDA24A;
+    --brass-dim:#8a7237;
+    --jade:#57AD98;
+    --jade-dim:#3c7364;
+    --rust:#C1583D;
+    --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(205,162,74,0.07), transparent),
+      radial-gradient(ellipse 700px 500px at 100% 10%, rgba(87,173,152,0.06), transparent),
+      var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', ui-sans-serif, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--brass); color:#161c27;}
+  :focus-visible{outline:2px solid var(--brass); outline-offset:2px;}
+
+  .sample-banner{
+    background:var(--bg-2);
+    border-bottom:1px solid var(--hair-strong);
+    color:var(--ink-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-align:center;
+    padding:8px 16px;
+  }
+  .sample-banner strong{color:var(--rust); font-weight:600;}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- masthead ---------- */
+  header.masthead{
+    border-bottom:1px solid var(--hair);
+    padding:34px 0 22px;
+  }
+  .mast-row{display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+  .mast-title{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:40px;
+    letter-spacing:.01em;
+    line-height:1;
+    margin:0;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .mast-title .dot{color:var(--brass); font-size:.5em; vertical-align:middle;}
+  .mast-tagline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-dim);
+    margin:9px 0 0;
+    letter-spacing:.03em;
+  }
+  .mast-tagline .ko{color:var(--jade);}
+  .lang-toggle{
+    display:flex; align-items:center; gap:2px;
+    background:var(--bg-1);
+    border:1px solid var(--hair-strong);
+    border-radius:20px;
+    padding:3px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    flex-shrink:0;
+  }
+  .lang-toggle button{
+    border:none; background:transparent; color:var(--ink-faint);
+    padding:6px 14px; border-radius:20px; cursor:pointer;
+    font-family:inherit; font-size:inherit; font-weight:500;
+    transition:background .15s, color .15s;
+  }
+  .lang-toggle button.active{background:var(--brass); color:#20160a;}
+  .lang-toggle button[data-lang="ko"].active{background:var(--jade); color:#0e2620;}
+
+  nav.subnav{
+    display:flex; gap:22px; margin-top:20px; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    color:var(--ink-dim);
+  }
+  nav.subnav a{text-decoration:none; padding-bottom:4px; border-bottom:2px solid transparent; cursor:pointer;}
+  nav.subnav a:hover, nav.subnav a.current{color:var(--ink); border-color:var(--brass);}
+
+  /* ---------- dial / signature ---------- */
+  section.signal{
+    padding:30px 0 26px;
+    border-bottom:1px solid var(--hair);
+  }
+  .signal-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink-faint); margin-bottom:14px;
+  }
+  .dial{
+    position:relative;
+    height:34px;
+    border-radius:4px;
+    overflow:hidden;
+    background:var(--bg-1);
+    border:1px solid var(--hair-strong);
+    display:flex;
+  }
+  .dial-seg{height:100%; transform-origin:left; transform:scaleX(0); transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .dial-seg.en{background:linear-gradient(90deg, var(--brass-dim), var(--brass)); width:62%;}
+  .dial-seg.ko{background:linear-gradient(90deg, var(--jade), var(--jade-dim)); width:38%;}
+  .dial.animate .dial-seg{transform:scaleX(1);}
+  .dial-ticks{
+    position:absolute; inset:0;
+    background-image:repeating-linear-gradient(90deg, transparent, transparent 9.9%, rgba(22,28,39,0.35) 10%);
+    pointer-events:none;
+  }
+  .dial-readout{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-top:10px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-dim);
+  }
+  .dial-readout b{color:var(--brass); font-weight:600;}
+  .dial-readout b.ko{color:var(--jade);}
+  .dial-readout .new-count{color:var(--rust); font-weight:600;}
+
+  /* ---------- filters ---------- */
+  section.filters{padding:22px 0; border-bottom:1px solid var(--hair); display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+  .chip{
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    border:1px solid var(--hair-strong); color:var(--ink-dim);
+    background:transparent; padding:6px 13px; border-radius:20px; cursor:pointer;
+    transition:all .15s;
+  }
+  .chip:hover{border-color:var(--brass); color:var(--ink);}
+  .chip.active{background:var(--ink); color:var(--bg); border-color:var(--ink); font-weight:600;}
+  .alert-add{
+    margin-left:auto; display:flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint);
+  }
+  .alert-add input{
+    background:var(--bg-1); border:1px solid var(--hair-strong); color:var(--ink);
+    padding:7px 11px; border-radius:20px; font-family:inherit; font-size:12px; width:150px;
+  }
+  .alert-add input::placeholder{color:var(--ink-faint);}
+  .alert-add button{
+    background:var(--brass); color:#20160a; border:none; border-radius:20px;
+    padding:7px 14px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer;
+  }
+
+  /* ---------- log ---------- */
+  section.log{padding:26px 0 10px;}
+  .entry{
+    display:grid;
+    grid-template-columns:118px 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid var(--hair);
+  }
+  .entry:first-child{padding-top:0;}
+  .entry-time{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint);
+    padding-top:3px;
+  }
+  .entry-time .date{display:block; color:var(--ink-dim); margin-bottom:3px;}
+  .src-tag{
+    display:inline-flex; align-items:center; gap:5px;
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:.04em;
+    padding:2px 7px; border-radius:3px; margin-bottom:9px;
+    border:1px solid var(--hair-strong);
+  }
+  .src-tag.en{color:var(--brass); border-color:var(--brass-dim);}
+  .src-tag.ko{color:var(--jade); border-color:var(--jade-dim);}
+  .src-tag .swatch{width:6px; height:6px; border-radius:50%; background:currentColor; display:inline-block;}
+  .entry-title{
+    font-family:'Playfair Display', serif; font-weight:600; font-size:19px;
+    line-height:1.32; margin:0 0 3px;
+  }
+  .entry-title-ko{
+    font-family:'IBM Plex Sans KR','IBM Plex Sans', sans-serif; font-size:14.5px;
+    color:var(--ink-dim); margin:0 0 9px; font-weight:400;
+  }
+  .entry-summary{font-size:14px; line-height:1.65; color:var(--ink-dim); margin:0 0 12px; max-width:56ch;}
+  .entry-summary .gloss-note{
+    display:block; margin-top:6px; font-size:12px; font-style:italic; color:var(--ink-faint);
+  }
+  .entry-tags{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:12px;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-faint);
+    border:1px solid var(--hair); padding:2px 8px; border-radius:20px;
+  }
+  .entry-actions{display:flex; gap:16px;}
+  .entry-actions button{
+    background:none; border:none; color:var(--ink-faint); cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:0;
+    border-bottom:1px dashed var(--ink-faint);
+  }
+  .entry-actions button:hover{color:var(--brass); border-color:var(--brass);}
+  .entry-actions button.marked{color:var(--rust); border-color:var(--rust);}
+  .note-box{
+    display:none; margin-top:12px; max-width:56ch;
+  }
+  .note-box.open{display:block;}
+  .note-box textarea{
+    width:100%; min-height:64px; background:var(--bg-1); border:1px solid var(--hair-strong);
+    border-radius:3px; color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-size:13px;
+    padding:10px; resize:vertical;
+  }
+  .note-box .note-label{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-faint);
+    letter-spacing:.06em; text-transform:uppercase; margin-bottom:6px; display:block;
+  }
+  .entry.hidden{display:none;}
+
+  /* ---------- course view ---------- */
+  section.course{
+    display:none;
+    padding:24px; margin:30px 0; background:var(--bg-1);
+    border:1px solid var(--hair-strong); border-radius:4px;
+  }
+  section.course.open{display:block;}
+  .course-head{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:4px;}
+  .course-head h3{font-family:'Playfair Display', serif; font-size:20px; margin:0;}
+  .course-head span{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--brass);}
+  .course-sub{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-dim); margin:0 0 16px;}
+  .course-list{list-style:none; margin:0; padding:0; display:grid; gap:10px;}
+  .course-list li{
+    display:flex; justify-content:space-between; gap:14px; padding:10px 0;
+    border-bottom:1px solid var(--hair); font-size:13.5px;
+  }
+  .course-list li span{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); flex-shrink:0;}
+
+  /* ---------- sources ---------- */
+  section.sources{padding:34px 0; border-top:1px solid var(--hair); margin-top:20px;}
+  .sources h4{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--ink-faint); margin:0 0 14px;
+  }
+  .src-cols{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  .src-cols ul{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
+  .src-cols li{font-size:13px; color:var(--ink-dim); display:flex; justify-content:space-between; gap:10px;}
+  .src-cols li .method{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-faint);}
+  .src-col-label{font-size:12px;}
+  .src-col-label.en{color:var(--brass);}
+  .src-col-label.ko{color:var(--jade);}
+
+  footer{
+    padding:26px 0 50px; border-top:1px solid var(--hair);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:640px){
+    .mast-title{font-size:31px;}
+    .entry{grid-template-columns:1fr; gap:6px;}
+    .entry-time{display:flex; gap:8px; padding-top:0;}
+    .entry-time .date{margin-bottom:0;}
+    .src-cols{grid-template-columns:1fr;}
+    .alert-add{margin-left:0; width:100%;}
+    .alert-add input{flex:1;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .dial-seg{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<div class="sample-banner"><strong>CONCEPT MOCKUP</strong> — sample layout &amp; placeholder entries, not a live feed</div>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="mast-row">
+      <div>
+        <h1 class="mast-title" data-i18n-container>
+          <span data-i18n="title">FREQUENCY</span><span class="dot">●</span>
+        </h1>
+        <p class="mast-tagline">
+          <span data-i18n="tagline">a bilingual reading log for Physical AI</span>
+          <span class="ko">· 한국어·영어 물리적 AI 리딩 로그</span>
+        </p>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Interface language">
+        <button data-lang="en" class="active" onclick="setLang('en')">EN</button>
+        <button data-lang="ko" onclick="setLang('ko')">한국어</button>
+      </div>
+    </div>
+    <nav class="subnav">
+      <a class="current">Log</a>
+      <a onclick="toggleCourse()" id="course-nav-link">Course view</a>
+      <a href="#sources">Sources</a>
+      <a href="#" onclick="document.querySelector('.alert-add input').focus(); return false;">Alerts</a>
+    </nav>
+  </header>
+
+  <section class="signal">
+    <div class="signal-label" data-i18n="signal-label">Today's signal — coverage split, last 24h</div>
+    <div class="dial" id="dial">
+      <div class="dial-seg en"></div>
+      <div class="dial-seg ko"></div>
+      <div class="dial-ticks"></div>
+    </div>
+    <div class="dial-readout">
+      <span><b>62%</b> <span data-i18n="en-word">English</span> · <b class="ko">38%</b> <span data-i18n="ko-word">Korean</span></span>
+      <span class="new-count">14 <span data-i18n="new-word">new since yesterday</span></span>
+    </div>
+  </section>
+
+  <section class="filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="humanoids">Humanoids</button>
+    <button class="chip" data-filter="sensor">Sensor Fusion</button>
+    <button class="chip" data-filter="edge">Edge AI</button>
+    <button class="chip" data-filter="manipulation">Manipulation</button>
+    <button class="chip" data-filter="policy">Policy &amp; Industry</button>
+    <div class="alert-add">
+      <input type="text" placeholder="watch a keyword…" aria-label="Add keyword alert">
+      <button type="button">+ Watch</button>
+    </div>
+  </section>
+
+  <section class="log" id="log">
+
+    <article class="entry" data-tags="humanoids policy">
+      <div class="entry-time"><span class="date">08.13</span>09:14</div>
+      <div>
+        <span class="src-tag en"><span class="swatch"></span>arXiv · cs.RO</span>
+        <h2 class="entry-title">Whole-body loco-manipulation under contact uncertainty: a benchmark for bipedal platforms</h2>
+        <p class="entry-summary">Sample entry — proposes a shared benchmark for testing whether bipedal robots keep their footing while their arms are also doing work, and reports which control strategies degrade least when contact estimates are noisy.</p>
+        <div class="entry-tags"><span class="tag">humanoids</span><span class="tag">control</span><span class="tag">benchmark</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="Paraphrase the finding in your own words — this is the writing practice."></textarea></div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="humanoids policy">
+      <div class="entry-time"><span class="date">08.13</span>08:02</div>
+      <div>
+        <span class="src-tag ko"><span class="swatch"></span>로봇신문 → translated</span>
+        <h2 class="entry-title">Korean humanoid maker reports commercial pilot with regional manufacturing partner</h2>
+        <p class="entry-title-ko">국내 휴머노이드 기업, 지역 제조 파트너와 상용화 파일럿 계약 체결 (샘플)</p>
+        <p class="entry-summary">Sample entry — Aaron's one-line gloss, not a full translation: a domestic humanoid vendor moves from demo to a paid pilot on a factory floor, with financing details still undisclosed.
+          <span class="gloss-note">Full article stays on the source site — this log only paraphrases and links out, per copyright practice.</span>
+        </p>
+        <div class="entry-tags"><span class="tag">humanoids</span><span class="tag">industry</span><span class="tag">한국</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="번역 연습 — 핵심 내용을 자신의 말로 옮겨보세요."></textarea></div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="sensor edge">
+      <div class="entry-time"><span class="date">08.12</span>21:40</div>
+      <div>
+        <span class="src-tag en"><span class="swatch"></span>IEEE Spectrum</span>
+        <h2 class="entry-title">Cheap event cameras are quietly replacing LiDAR in warehouse robots</h2>
+        <p class="entry-summary">Sample entry — a look at why several logistics-robot makers are pairing low-cost event-based vision sensors with lightweight fusion filters instead of adding a second LiDAR unit.</p>
+        <div class="entry-tags"><span class="tag">sensor fusion</span><span class="tag">edge ai</span><span class="tag">logistics</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="Paraphrase the finding in your own words — this is the writing practice."></textarea></div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="manipulation">
+      <div class="entry-time"><span class="date">08.12</span>17:05</div>
+      <div>
+        <span class="src-tag ko"><span class="swatch"></span>ETRI 소식 → translated</span>
+        <h2 class="entry-title">Public research institute open-sources a small-object grasping dataset</h2>
+        <p class="entry-title-ko">ETRI, 소형 물체 파지 데이터셋 오픈소스 공개 (샘플)</p>
+        <p class="entry-summary">Sample entry — a Korean government-affiliated lab releases a labeled grasping dataset aimed at deformable and reflective small parts, a known weak point for existing public sets.</p>
+        <div class="entry-tags"><span class="tag">manipulation</span><span class="tag">dataset</span><span class="tag">open source</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="번역 연습 — 핵심 내용을 자신의 말로 옮겨보세요."></textarea></div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="edge policy">
+      <div class="entry-time"><span class="date">08.12</span>11:30</div>
+      <div>
+        <span class="src-tag en"><span class="swatch"></span>The Robot Report</span>
+        <h2 class="entry-title">Edge-inference chip startups pivot pitch decks from "AI PC" to "Physical AI"</h2>
+        <p class="entry-summary">Sample entry — coverage of how several silicon startups are repositioning existing edge-inference chips toward robotics and embodied-AI customers as that market segment gets investor attention.</p>
+        <div class="entry-tags"><span class="tag">edge ai</span><span class="tag">industry</span><span class="tag">funding</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="Paraphrase the finding in your own words — this is the writing practice."></textarea></div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="humanoids sensor">
+      <div class="entry-time"><span class="date">08.11</span>19:52</div>
+      <div>
+        <span class="src-tag en"><span class="swatch"></span>arXiv · cs.RO</span>
+        <h2 class="entry-title">Tactile-visual fusion for occluded-grasp recovery on low-cost grippers</h2>
+        <p class="entry-summary">Sample entry — combines a cheap capacitive tactile skin with vision to recover from failed grasps when the object is partly hidden from the camera, without needing a force-torque sensor.</p>
+        <div class="entry-tags"><span class="tag">sensor fusion</span><span class="tag">manipulation</span></div>
+        <div class="entry-actions">
+          <button onclick="toggleMark(this)">☐ mark for class</button>
+          <button onclick="toggleNote(this)">+ add note</button>
+        </div>
+        <div class="note-box"><span class="note-label">Your gloss</span><textarea placeholder="Paraphrase the finding in your own words — this is the writing practice."></textarea></div>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="course" id="course">
+    <div class="course-head">
+      <h3>Research Methods — Week 3 reading set</h3>
+      <span>3 items · auto-filtered, English only</span>
+    </div>
+    <p class="course-sub">Pulled from the same log above — anything tagged for class and published in English lands here automatically, ready to print or link for students.</p>
+    <ul class="course-list">
+      <li>Whole-body loco-manipulation under contact uncertainty: a benchmark for bipedal platforms <span>arXiv · 08.13</span></li>
+      <li>Cheap event cameras are quietly replacing LiDAR in warehouse robots <span>IEEE Spectrum · 08.12</span></li>
+      <li>Tactile-visual fusion for occluded-grasp recovery on low-cost grippers <span>arXiv · 08.11</span></li>
+    </ul>
+  </section>
+
+  <section class="sources" id="sources">
+    <h4>Sources feeding this log (sample set)</h4>
+    <div class="src-cols">
+      <div>
+        <p class="src-col-label en">ENGLISH</p>
+        <ul>
+          <li>arXiv cs.RO / cs.AI <span class="method">API</span></li>
+          <li>IEEE Spectrum Robotics <span class="method">RSS</span></li>
+          <li>The Robot Report <span class="method">RSS</span></li>
+          <li>Semantic Scholar <span class="method">API</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="src-col-label ko">한국어 / KOREAN</p>
+        <ul>
+          <li>로봇신문 (irobotnews.com) <span class="method">RSS</span></li>
+          <li>Naver News search: "피지컬 AI" <span class="method">API</span></li>
+          <li>ETRI / KAIST 소식 <span class="method">RSS</span></li>
+          <li>KSPAI 공지 <span class="method">manual</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>FREQUENCY — working title, concept only</span>
+    <span>built for aaron.kr · fonts shared with courses.aaron.kr</span>
+  </footer>
+
+</div>
+
+<script>
+  // dial reveal
+  window.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => document.getElementById('dial').classList.add('animate'));
+  });
+
+  // language toggle (interface chrome only — sample entries stay as authored)
+  const i18n = {
+    en: {
+      title: 'FREQUENCY',
+      tagline: "a bilingual reading log for Physical AI",
+      'signal-label': "Today's signal — coverage split, last 24h",
+      'en-word': 'English', 'ko-word': 'Korean', 'new-word': 'new since yesterday'
+    },
+    ko: {
+      title: '주파수',
+      tagline: '피지컬 AI를 위한 이중언어 리딩 로그',
+      'signal-label': '오늘의 신호 — 최근 24시간 보도 비율',
+      'en-word': '영어', 'ko-word': '한국어', 'new-word': '어제 이후 신규'
+    }
+  };
+  function setLang(lang){
+    document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(i18n[lang][key]) el.textContent = i18n[lang][key];
+    });
+  }
+
+  // filter chips
+  document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip[data-filter]').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      document.querySelectorAll('.entry').forEach(entry => {
+        const tags = entry.dataset.tags.split(' ');
+        entry.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+      });
+    });
+  });
+
+  function toggleMark(btn){
+    btn.classList.toggle('marked');
+    btn.textContent = btn.classList.contains('marked') ? '☑ marked for class' : '☐ mark for class';
+  }
+  function toggleNote(btn){
+    const box = btn.closest('div').querySelector('.note-box');
+    box.classList.toggle('open');
+  }
+  function toggleCourse(){
+    document.getElementById('course').classList.toggle('open');
+    document.getElementById('course').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+  "_comment": "Starter config — copy to sources.json and extend. See CLAUDE.md → Data model for field docs. `topic` drives which research subsection an entry lands in; leave null for news sources that span topics.",
+  "sources": [
+    {
+      "id": "arxiv-csro",
+      "label": "arXiv cs.RO",
+      "type": "api",
+      "provider": "arxiv",
+      "endpoint": "http://export.arxiv.org/api/query?search_query=cat:cs.RO&sortBy=submittedDate&sortOrder=descending",
+      "lang": "en",
+      "category": "papers",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "ieee-spectrum-robotics",
+      "label": "IEEE Spectrum Robotics",
+      "type": "rss",
+      "endpoint": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+      "lang": "en",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "robot-report",
+      "label": "The Robot Report",
+      "type": "rss",
+      "endpoint": "https://www.therobotreport.com/feed/",
+      "lang": "en",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "semantic-scholar-physical-ai",
+      "label": "Semantic Scholar: Physical AI / robotics",
+      "type": "keyword",
+      "provider": "semantic-scholar",
+      "query": "physical AI robotics",
+      "lang": "en",
+      "category": "papers",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "irobotnews-all",
+      "label": "로봇신문 (전체기사)",
+      "type": "rss",
+      "endpoint": "https://www.irobotnews.com/rss/allArticle.xml",
+      "lang": "ko",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "irobotnews-ai",
+      "label": "로봇신문 (인공지능)",
+      "type": "rss",
+      "endpoint": "https://www.irobotnews.com/rss/S1N2.xml",
+      "lang": "ko",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "naver-physical-ai",
+      "label": "Naver News: \"피지컬 AI\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "피지컬 AI",
+      "lang": "ko",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "naver-humanoid",
+      "label": "Naver News: \"휴머노이드 로봇\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "휴머노이드 로봇",
+      "lang": "ko",
+      "category": "news",
+      "topic": "physical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-csai",
+      "label": "arXiv cs.AI",
+      "type": "api",
+      "provider": "arxiv",
+      "endpoint": "http://export.arxiv.org/api/query?search_query=cat:cs.AI&sortBy=submittedDate&sortOrder=descending",
+      "lang": "en",
+      "category": "papers",
+      "topic": "general-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-cslg",
+      "label": "arXiv cs.LG",
+      "type": "api",
+      "provider": "arxiv",
+      "endpoint": "http://export.arxiv.org/api/query?search_query=cat:cs.LG&sortBy=submittedDate&sortOrder=descending",
+      "lang": "en",
+      "category": "papers",
+      "topic": "general-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "naver-generative-ai",
+      "label": "Naver News: \"생성형 AI\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "생성형 AI",
+      "lang": "ko",
+      "category": "news",
+      "topic": "general-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-cscv-handwriting",
+      "label": "arXiv cs.CV: handwriting/OCR",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "cat:cs.CV AND (abs:handwriting OR abs:OCR)",
+      "lang": "en",
+      "category": "papers",
+      "topic": "ocr-handwriting",
+      "owner": "aaron"
+    },
+    {
+      "id": "semantic-scholar-handwriting",
+      "label": "Semantic Scholar: handwritten text recognition",
+      "type": "keyword",
+      "provider": "semantic-scholar",
+      "query": "handwritten text recognition historical document OCR",
+      "lang": "en",
+      "category": "papers",
+      "topic": "ocr-handwriting",
+      "owner": "aaron"
+    },
+    {
+      "id": "naver-hangul-handwriting",
+      "label": "Naver News: \"한글 필기체 인식\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "한글 필기체 인식",
+      "lang": "ko",
+      "category": "news",
+      "topic": "ocr-handwriting",
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-qbio-clinical",
+      "label": "arXiv q-bio + cs.AI: clinical/medical",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "(cat:q-bio.QM OR cat:cs.AI) AND (abs:clinical OR abs:medical)",
+      "lang": "en",
+      "category": "papers",
+      "topic": "biomedical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "pubmed-ai",
+      "label": "PubMed / NCBI E-utilities: AI in medicine",
+      "type": "keyword",
+      "provider": "pubmed",
+      "query": "artificial intelligence[Title] AND medicine",
+      "lang": "en",
+      "category": "papers",
+      "topic": "biomedical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "naver-medical-ai",
+      "label": "Naver News: \"의료 AI\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "의료 AI",
+      "lang": "ko",
+      "category": "news",
+      "topic": "biomedical-ai",
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-embedded-edge",
+      "label": "arXiv eess.SY / cs.AR: TinyML / edge inference",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "(cat:eess.SY OR cat:cs.AR) AND (abs:tinyml OR abs:\"edge inference\")",
+      "lang": "en",
+      "category": "papers",
+      "topic": null,
+      "owner": "aaron",
+      "_comment": "cross-cutting low-cost/embedded AI lens — tag as low-cost-embedded across any topic rather than its own subsection, see CLAUDE.md"
+    },
+    {
+      "id": "example-colleague-watch",
+      "label": "Example: a colleague's keyword watch",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "soft robotics",
+      "lang": "en",
+      "category": "papers",
+      "topic": "physical-ai",
+      "owner": "guest:example-professor-name"
+    }
+  ]
+}

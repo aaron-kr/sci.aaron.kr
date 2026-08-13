@@ -1,0 +1,21 @@
+title: Scientia
+tagline: "a bilingual, research-first reading log for AI"
+description: >-
+  A bilingual (English/Korean) reading log — research papers first (Physical AI,
+  General AI, handwritten script recognition/OCR, biomedical AI), news second.
+  Personal habit-building tool that also feeds a graduate Research Methods course.
+url: "https://sci.aaron.kr"
+baseurl: ""
+
+markdown: kramdown
+plugins: []
+
+exclude:
+  - CLAUDE.md
+  - README.md
+  - LICENSE
+  - sources.example.json
+  - frequency-concept.html
+  - sci.html
+  - Gemfile
+  - Gemfile.lock
