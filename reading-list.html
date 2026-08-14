@@ -7,32 +7,29 @@ permalink: /reading-list/
 
 <section class="major-head" style="padding-top:20px;">
   <h2 data-en="Reading list" data-ko="읽기 자료">Reading list</h2>
-  <p data-en="Built for CBNU Research Methodology (graduate). Anything flagged &ldquo;marked for class&rdquo; in the log lands here automatically — English items only, since that's the course's reading language." data-ko="충북대학교 연구방법론(대학원) 수업용. 로그에서 &lsquo;수업용으로 표시&rsquo;된 항목이 자동으로 이곳에 모입니다 — 수업 언어가 영어이므로 영어 자료만 표시됩니다.">Built for CBNU Research Methodology (graduate). Anything flagged "marked for class" in the log lands here automatically — English items only, since that's the course's reading language.</p>
+  <p data-en="Two separate lists: Research entries marked for class (below, English only — the course's reading language), and News articles bookmarked while browsing (personal, this browser only)." data-ko="두 개의 별도 목록입니다: 수업용으로 표시된 연구 항목(아래, 수업 언어인 영어만)과 탐색 중 북마크한 뉴스 기사(개인, 이 브라우저 한정).">Two separate lists: Research entries marked for class, and News articles bookmarked while browsing.</p>
 </section>
 
 {% assign class_research = site.research | where: "marked_for_class", true | where: "source_lang", "en" | sort: "date" | reverse %}
-{% assign class_news = site.news | where: "marked_for_class", true | where: "source_lang", "en" | sort: "date" | reverse %}
-{% assign class_count = class_research.size | plus: class_news.size %}
 
 <section class="course">
   <div class="course-head">
-    <h1 data-en="This week's set" data-ko="이번 주 자료">This week's set</h1>
-    <span>{{ class_count }} items</span>
+    <h1 data-en="This week's set — Research" data-ko="이번 주 자료 — 연구">This week's set — Research</h1>
+    <span>{{ class_research.size }} items</span>
   </div>
-  <p class="course-sub" data-en="Once the course goes live at courses.aaron.kr/courses/2026/cbnu-grad-research/, its weekly readings field will link straight back here — no copy-pasting a list by hand each week." data-ko="courses.aaron.kr/courses/2026/cbnu-grad-research/ 수업 페이지가 공개되면, 주차별 readings 항목이 이 페이지로 바로 연결됩니다 — 매주 목록을 손으로 복사할 필요가 없습니다.">Once the course goes live, its weekly readings field will link straight back here.</p>
+  <p class="course-sub" data-en="Research entries with marked_for_class: true in their front matter — set by hand, resets to empty automatically once the weekly digest goes out (see scripts/reset_class_marks.py), or trigger that reset early yourself: Actions → Weekly digest → Run workflow." data-ko="front matter에 marked_for_class: true로 표시된 연구 항목입니다 — 직접 설정하며, 주간 다이제스트 발송 후 자동으로 비워집니다(scripts/reset_class_marks.py). 직접 초기화하려면 Actions → Weekly digest → Run workflow를 실행하세요.">Research entries marked for class — resets automatically each week after the digest goes out.</p>
   <ul class="course-list">
     {% for e in class_research %}<li><a href="{{ e.url | relative_url }}">{{ e.title_en }}</a><span>{{ e.source }} · {{ e.date | date: "%m.%d" }}</span></li>{% endfor %}
-    {% for e in class_news %}<li><a href="{{ e.url | relative_url }}">{{ e.title }}</a><span>{{ e.source }} · {{ e.date | date: "%m.%d" }}</span></li>{% endfor %}
   </ul>
-  {% if class_count == 0 %}<p class="course-empty" data-en="Nothing marked for class yet." data-ko="아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet.</p>{% endif %}
+  {% if class_research.size == 0 %}<p class="course-empty" data-en="Nothing marked for class yet." data-ko="아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet.</p>{% endif %}
   <div class="course-print"><button onclick="window.print()" data-en="🖨 Print this list" data-ko="🖨 목록 인쇄">🖨 Print this list</button></div>
 </section>
 
 <section class="course" style="margin-top:20px;">
   <div class="course-head">
-    <h1 data-en="Bookmarked articles (this browser only)" data-ko="북마크한 기사 (이 브라우저 한정)">Bookmarked articles (this browser only)</h1>
+    <h1 data-en="Bookmarked articles — News (this browser only)" data-ko="북마크한 기사 — 뉴스 (이 브라우저 한정)">Bookmarked articles — News (this browser only)</h1>
   </div>
-  <p class="course-sub" data-en="Clicking &ldquo;mark for class&rdquo; anywhere on the site saves a personal bookmark here, stored in this browser only (localStorage) — nothing is sent anywhere. It does not change the official list above — that comes from the site's own data, set by hand." data-ko="사이트 어디서든 &lsquo;수업용으로 표시&rsquo;를 클릭하면 이 브라우저에만 개인 북마크로 저장됩니다(localStorage) — 어디로도 전송되지 않습니다. 위의 공식 목록에는 영향을 주지 않습니다 — 공식 목록은 직접 설정하는 사이트 데이터 기준입니다.">Clicking "mark for class" anywhere on the site saves a personal bookmark here, in this browser only.</p>
+  <p class="course-sub" data-en="Clicking the 🔖 bookmark icon on any news row saves it here, stored in this browser only (localStorage) — nothing is sent anywhere, and it's separate from the research list above." data-ko="뉴스 항목의 🔖 북마크 아이콘을 클릭하면 이 브라우저에만 저장됩니다(localStorage) — 어디로도 전송되지 않으며, 위의 연구 목록과는 별개입니다.">Clicking the bookmark icon on any news row saves it here, in this browser only.</p>
   <ul class="course-list" id="bookmark-list"></ul>
   <p class="course-empty" id="bookmark-empty" data-en="No bookmarked articles yet." data-ko="아직 북마크한 기사가 없습니다.">No bookmarked articles yet.</p>
   <div class="course-print"><button id="bookmark-clear" class="clear-all-btn" data-en="✕ Clear all" data-ko="✕ 모두 지우기">✕ Clear all</button></div>

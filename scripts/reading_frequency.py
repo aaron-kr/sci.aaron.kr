@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import REPO_ROOT
 
 WEEKS = 53
+MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 FRONT_MATTER_RE = re.compile(r"^---\n.*?\n---\n?(.*)$", re.DOTALL)
 
 
@@ -91,16 +92,22 @@ def main():
     weeks = []
     d = start_date
     total = 0
+    last_month = None
     for _w in range(WEEKS):
-        week = []
+        days = []
+        week_month = d.month  # label keyed off each column's first (Sunday) day
         for _d in range(7):
             future = d > today
             c = 0 if future else counts.get(d.isoformat(), 0)
             level = min(c, 4)
-            week.append({"date": d.isoformat(), "count": c, "level": level, "future": future})
+            days.append({"date": d.isoformat(), "count": c, "level": level, "future": future})
             total += c
             d += datetime.timedelta(days=1)
-        weeks.append(week)
+        month_label = None
+        if week_month != last_month:
+            month_label = MONTH_ABBR[week_month - 1]
+            last_month = week_month
+        weeks.append({"month_label": month_label, "days": days})
 
     streak = 0
     cur = today

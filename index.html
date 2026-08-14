@@ -9,7 +9,6 @@ description: "A bilingual (English/Korean) reading log — research papers first
   <button class="chip" data-filter="manipulation" data-en="Manipulation" data-ko="조작">Manipulation</button>
   <button class="chip embedded" data-filter="low-cost-embedded" data-en="Low-cost / Embedded" data-ko="저비용·임베디드">Low-cost / Embedded</button>
   <button class="chip embedded" data-filter="health-flourishing" data-en="Health &amp; Flourishing" data-ko="건강·플러리싱">Health &amp; Flourishing</button>
-  <button class="chip embedded" data-filter="ai-education" data-en="AI Education" data-ko="AI 교육">AI Education</button>
   <span class="filter-status hidden" id="filter-status">
     <span id="filter-status-label"></span>
     <button id="filter-status-clear" data-en="clear ✕" data-ko="지우기 ✕">clear ✕</button>
@@ -55,40 +54,51 @@ description: "A bilingual (English/Korean) reading log — research papers first
 {% endif %}
 
 {% assign physical = site.research | where: "topic", "physical-ai" | sort: "date" | reverse %}
-<div class="topic-head"><span class="rank">01</span><h3 data-en="Physical AI" data-ko="피지컬 AI">Physical AI</h3></div>
+<div class="filter-group t1">
+<div class="topic-head t1"><span class="rank">01</span><h3 data-en="Physical AI" data-ko="피지컬 AI">Physical AI</h3></div>
 <p class="topic-sub" data-en="Top priority — the core of KSPAI and pailab.io's focus. Showing {{ physical.size }}, most recent first." data-ko="최우선 순위 — KSPAI 및 pailab.io의 핵심 분야. 최신순 {{ physical.size }}건.">Top priority — the core of KSPAI and pailab.io's focus.</p>
 <section class="log">
   {% for e in physical limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 
 {% assign general = site.research | where: "topic", "general-ai" | sort: "date" | reverse %}
-<div class="topic-head"><span class="rank">02</span><h3 data-en="General AI" data-ko="일반 AI">General AI</h3></div>
+<div class="filter-group t2">
+<div class="topic-head t2"><span class="rank">02</span><h3 data-en="General AI" data-ko="일반 AI">General AI</h3></div>
 <p class="topic-sub" data-en="Broader ML/AI research, not embodiment-specific. Showing {{ general.size }}, most recent first." data-ko="체화 여부와 무관한 일반 머신러닝·AI 연구. 최신순 {{ general.size }}건.">Broader ML/AI research, not embodiment-specific.</p>
 <section class="log">
   {% for e in general limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 
 {% assign ocr = site.research | where: "topic", "ocr-handwriting" | sort: "date" | reverse %}
-<div class="topic-head"><span class="rank">03</span><h3 data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</h3></div>
+<div class="filter-group t3">
+<div class="topic-head t3"><span class="rank">03</span><h3 data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</h3></div>
 <p class="topic-sub" data-en="Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest. Lower volume by nature. Showing {{ ocr.size }}." data-ko="아론의 박사 논문 분야(만주문자, 한글) — 체로키어는 최근 관심 분야. {{ ocr.size }}건.">Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest.</p>
 <section class="log">
   {% for e in ocr limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 
 {% assign biomedical = site.research | where: "topic", "biomedical-ai" | sort: "date" | reverse %}
-<div class="topic-head"><span class="rank">04</span><h3 data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</h3></div>
+<div class="filter-group t4">
+<div class="topic-head t4"><span class="rank">04</span><h3 data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</h3></div>
 <p class="topic-sub" data-en="Newest, thinnest section — includes the health &amp; human-flourishing lens (sleep, behavior, wearables). Showing {{ biomedical.size }}." data-ko="가장 최근에 추가된 섹션 — 수면·행동·웨어러블 등 건강·플러리싱 관점 포함. {{ biomedical.size }}건.">Newest, thinnest section — includes the health &amp; human-flourishing lens.</p>
 <section class="log">
   {% for e in biomedical limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 
 {% assign ai_edu = site.research | where: "topic", "ai-education" | sort: "date" | reverse %}
-<div class="topic-head"><span class="rank">05</span><h3 data-en="AI Education" data-ko="AI 교육">AI Education</h3></div>
+<div class="filter-group t5">
+<div class="topic-head t5"><span class="rank">05</span><h3 data-en="AI Education" data-ko="AI 교육">AI Education</h3></div>
 <p class="topic-sub" data-en="Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education. Showing {{ ai_edu.size }}, most recent first." data-ko="아론의 현재 최고 출판 분야 — 교실에서의 ChatGPT·LLM 활용, 인지적 아웃소싱, 컴퓨팅·공학 교육. 최신순 {{ ai_edu.size }}건.">Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education.</p>
 <section class="log">
   {% for e in ai_edu limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 
+<div class="filter-group">
 <section class="major-head" id="news">
   <h2 data-en="News" data-ko="뉴스">News</h2>
   <p data-en="Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume." data-ko="의도적으로 작고 촘촘하게, 아래쪽에 배치 — 목적은 헤드라인 양이 아니라 논평으로 발전시킬 소재.">Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume.</p>
@@ -97,6 +107,7 @@ description: "A bilingual (English/Korean) reading log — research papers first
 <section class="news">
   {% for e in news_sorted limit: 30 %}{% include news-row.html entry=e %}{% endfor %}
 </section>
+</div>
 
 {% include sources.html %}
 {% include reading-frequency.html %}

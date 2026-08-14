@@ -123,6 +123,96 @@ see real behavior for the first time. Grouped by theme:
   being parsed as a tag) and was never meant to be part of the deployed
   site; just missing from `_config.yml`'s `exclude:` list.
 
+### Second follow-up (same session, after Aaron pushed the first round himself)
+
+- **Calendar month/day labels update automatically** — `reading_frequency.py`
+  recomputes the entire `weeks` array from `datetime.date.today()` on every
+  run (daily, via `fetch.yml`), so month labels always reflect the real
+  current date; nothing is hardcoded or could go stale. Confirmed, not a
+  risk — explained to Aaron, no code change needed for this one.
+- **Bookmarking moved from Research to News, cleanly split**: removed the
+  "☐ mark for class" button from `entry-card.html` — Research's "This
+  week's set" is the authoritative list now, driven purely by
+  `marked_for_class` front matter (set by hand), no client button pretending
+  to control it (that dual-system was the exact confusion flagged earlier).
+  Added a pink bookmark icon (inline SVG, outline→filled on toggle,
+  `.bookmark-btn`) to `news-row.html` instead — News' "Bookmarked articles"
+  section is now genuinely news-only, populated only by that icon.
+  `toggleMark()`/`markButtonsFromBookmarks()` in `main.js` retargeted from
+  `.entry`/`.entry-title` to `.list-row`/`.list-title`.
+- **"This week's set" now auto-resets weekly**: `scripts/reset_class_marks.py`
+  walks `_research/` and flips `marked_for_class: true` back to `false`,
+  research only. Wired into `digest.yml` as a step right after
+  `send_digest.py` (the sent email is the record of what was marked, so
+  nothing's lost), with a commit+push step (`digest.yml` needed
+  `permissions: contents: write` added, since it never touched files
+  before). A live "Clear all" button for this list isn't actually possible
+  on a static site — front matter can't be edited by client-side JS, only a
+  workflow run can — so the honest equivalent of "give me a button" is that
+  `digest.yml` already has `workflow_dispatch: {}`: Actions → Weekly digest →
+  Run workflow fires the same reset on demand, any time, not just Fridays.
+- **Active nav state**: `_includes/masthead.html`'s Reading List link now
+  gets `class="current"` via `{% if page.url contains "/reading-list" %}`.
+  The three homepage anchor links (Research/News/Sources) all point at the
+  same `page.url` (`/`) so there's no meaningful way to distinguish "current"
+  among them — left alone, scoped this fix to the one page that actually has
+  a distinct URL.
+- **Per-topic pill/CTA colors**: added `t1`–`t5` classes directly to each
+  `.filter-group` wrapper (not just the `.topic-head` inside it) and used
+  them to override `--accent`/`--accent-dim` in scope. Every element inside
+  a topic section that reads `var(--accent)` — `.pill-cta` background,
+  title-hover color, tag-hover color — now inherits that topic's fixed
+  color, overriding the language-tied default from the ancestor `html[lang]`
+  rule, in both languages. No changes needed to `entry-card.html` itself;
+  pure CSS custom-property cascade.
+- **Filters were hiding entries but leaving topic headers floating over
+  empty space** — most fine-grained tags (`humanoids`, `manipulation`, etc.)
+  only exist on entries `auto_tag.py` has classified, which needs
+  `ANTHROPIC_API_KEY` (not set up yet), so most topic sections have zero
+  matches for those chips right now. Wrapped each topic block (and News) in
+  a `.filter-group`; `applyFilter()` now hides the whole group, header
+  included, when it has no visible entries left. Also dropped the "AI
+  Education" filter chip — redundant now that it's its own section.
+
+### First follow-up in the same session
+
+Three quick fixes right after the batch above landed:
+
+- **Filters hid entries but left the topic header floating over an empty
+  gap** — fine-grained tags (`humanoids`, `manipulation`, etc.) only exist on
+  entries `scripts/auto_tag.py` has classified, which needs
+  `ANTHROPIC_API_KEY` (not yet set up — see SETUP.md), so most topic
+  sections currently have zero matches for those chips. Rather than wait on
+  that setup, wrapped each of the 5 topic blocks and the News block in a
+  `.filter-group` div; `applyFilter()` in `main.js` now hides the whole
+  group (header included) when it has no visible entries left, instead of
+  leaving a bare header over dead space. Also removed the "AI Education"
+  filter chip — redundant now that AI Education is its own section.
+- **Per-topic color palette**: `.topic-head.t1`–`.t5` give each of the 5
+  research sections a fixed identity color (rank badge + underline) — cyan /
+  jade / magenta / gold / orange, in priority order. Deliberately **not**
+  tied to `--accent` (which is language-driven, see Session 5 above) — the
+  point here is 5 *fixed* colors that stay put regardless of EN/KO toggle,
+  so the sections stay visually distinguishable while scrolling. Added
+  `--orange`/`--orange-dim` as a new token for this.
+- **Reading frequency calendar made responsive**: rebuilt as full-width flex
+  (53 `flex:1` columns × 7 stacked squares, `aspect-ratio:1/1`) instead of
+  fixed 10px squares — it now always spans the container exactly (the
+  previous version was both too narrow and, apparently, clipping a square at
+  the overflow edge; a strict flex layout with no wrapping structurally
+  guarantees the 53×7 grid regardless). Added day-of-week letters (S M T W T
+  F S) in a fixed left column and 3-letter month labels
+  (`week.month_label` in `reading_frequency.py`, set on each week's first
+  new month) above the grid — both required restructuring the JSON from
+  `weeks: [[day, ...]]` to `weeks: [{month_label, days: [...]}]`, so this is
+  a breaking change to `_data/reading_frequency.json`'s shape (fine, it's
+  regenerated fresh every run, nothing reads the old shape). On mobile
+  (<640px) the grid switches to fixed small squares inside a horizontally
+  scrolling `.freq-scroll` div, auto-scrolled to its right edge on load
+  (`initFreqScroll()` in `main.js`) so the most recent weeks are what's
+  visible by default — chosen over `overflow:hidden` so history is still
+  reachable by swiping, just not the default view.
+
 ## Session 4 changes (previous session)
 
 - **Naver Search/Papago moved to Naver Cloud Platform — Aaron decided to

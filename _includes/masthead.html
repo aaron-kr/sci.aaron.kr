@@ -19,7 +19,7 @@
     <div class="subnav-links" id="subnav-links">
       <a href="{{ '/' | relative_url }}#research" data-en="Research" data-ko="연구">Research</a>
       <a href="{{ '/' | relative_url }}#news" data-en="News" data-ko="뉴스">News</a>
-      <a href="{{ '/reading-list/' | relative_url }}" data-en="Reading list" data-ko="읽기 자료">Reading list</a>
+      <a href="{{ '/reading-list/' | relative_url }}"{% if page.url contains "/reading-list" %} class="current"{% endif %} data-en="Reading list" data-ko="읽기 자료">Reading list</a>
       <a href="{{ '/' | relative_url }}#sources" data-en="Sources" data-ko="소스">Sources</a>
       <span class="subnav-divider" aria-hidden="true"></span>
       <a href="https://courses.aaron.kr" target="_blank" rel="noopener" data-en="Courses ↗" data-ko="강의 ↗">Courses ↗</a>

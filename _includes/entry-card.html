@@ -28,7 +28,6 @@
     <div class="entry-tags">{% for t in e.tags %}<button class="tag" onclick="filterByTag('{{ t }}')">{{ t }}</button>{% endfor %}</div>
     <div class="entry-actions">
       <a class="pill-cta" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read article ↗" data-ko="기사 보기 ↗">read article ↗</a>
-      <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
     </div>
   </div>
 </article>

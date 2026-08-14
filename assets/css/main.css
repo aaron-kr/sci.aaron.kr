@@ -19,6 +19,8 @@
   --magenta-dim:#9c3a6b;
   --gold:#CDA24A;
   --gold-dim:#8a7237;
+  --orange:#FF9F45;
+  --orange-dim:#a5651f;
   --accent:var(--cyan);
   --accent-dim:var(--cyan-dim);
   --radius:4px;
@@ -168,13 +170,39 @@ section.major-head{padding:30px 0 4px;}
 }
 .topic-head .rank{
   font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:13px;
-  background:var(--accent); color:#0c1620; border-radius:3px; padding:3px 8px; letter-spacing:.03em;
+  background:var(--ink-faint); color:#0c1620; border-radius:3px; padding:3px 8px; letter-spacing:.03em;
   flex-shrink:0;
 }
 .topic-head h3{
   font-family:'Playfair Display', serif; font-weight:700; font-size:22px; margin:0; color:var(--ink);
 }
 .topic-sub{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); margin:0 0 14px;}
+
+/* one distinct color per research topic — helps the eye separate the five
+   sections while scrolling, independent of the language-tied --accent. */
+.topic-head.t1{border-bottom-color:var(--cyan-dim);}
+.topic-head.t1 .rank{background:var(--cyan); color:#0c1620;}
+.topic-head.t2{border-bottom-color:var(--jade-dim);}
+.topic-head.t2 .rank{background:var(--jade); color:#0e2620;}
+.topic-head.t3{border-bottom-color:var(--magenta-dim);}
+.topic-head.t3 .rank{background:var(--magenta); color:#2a0e1c;}
+.topic-head.t4{border-bottom-color:var(--gold-dim);}
+.topic-head.t4 .rank{background:var(--gold); color:#20160a;}
+.topic-head.t5{border-bottom-color:var(--orange-dim);}
+.topic-head.t5 .rank{background:var(--orange); color:#2a1400;}
+
+.filter-group.hidden{display:none;}
+
+/* Within a topic section, every use of --accent (pill-cta background, title
+   hover, tag hover, entry-actions hover) picks up that topic's fixed color
+   instead of the language-tied default — descendants inherit --accent from
+   the nearest ancestor that sets it, so this overrides html[lang="ko"]'s
+   version for everything inside, in either language. */
+.filter-group.t1{--accent:var(--cyan); --accent-dim:var(--cyan-dim);}
+.filter-group.t2{--accent:var(--jade); --accent-dim:var(--jade-dim);}
+.filter-group.t3{--accent:var(--magenta); --accent-dim:var(--magenta-dim);}
+.filter-group.t4{--accent:var(--gold); --accent-dim:var(--gold-dim);}
+.filter-group.t5{--accent:var(--orange); --accent-dim:var(--orange-dim);}
 
 /* ---------- lead / pinned story ---------- */
 .lead-wrap{margin:16px 0 30px;}
@@ -315,6 +343,14 @@ section.news{padding:6px 0 10px;}
 .list-src.en{color:var(--cyan);} .list-src.ko{color:var(--jade);}
 .commentary-flag{font-family:'IBM Plex Mono', monospace; font-size:9.5px; color:var(--magenta); border:1px solid var(--magenta); padding:1px 5px; border-radius:3px; text-transform:uppercase;}
 .cov-count{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-faint); flex-shrink:0;}
+/* bookmark icon on news rows — same pink as the old "mark for class" marked
+   state; outline when unbookmarked, filled once bookmarked */
+.bookmark-btn{background:none; border:none; cursor:pointer; padding:0; line-height:0; color:var(--ink-faint); flex-shrink:0; transition:color .15s, transform .1s;}
+.bookmark-btn svg{fill:none; stroke:currentColor; stroke-width:1.6;}
+.bookmark-btn:hover{color:var(--magenta);}
+.bookmark-btn.marked{color:var(--magenta);}
+.bookmark-btn.marked svg{fill:currentColor; stroke:none;}
+.bookmark-btn:active{transform:scale(.88);}
 
 /* ---------- entry permalink page ---------- */
 .entry-page{padding:30px 0 60px;}
@@ -388,15 +424,41 @@ footer a:hover{color:var(--accent);}
 .freq-section{padding:30px 0 40px; border-top:1px solid var(--hair); margin-top:10px;}
 .freq-section h4{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 6px;}
 .freq-sub{font-size:12.5px; color:var(--ink-dim); margin:0 0 16px; max-width:60ch; line-height:1.6;}
-.freq-grid{display:flex; gap:3px; overflow-x:auto; padding-bottom:4px;}
-.freq-col{display:flex; flex-direction:column; gap:3px;}
-.freq-day{width:10px; height:10px; border-radius:2px; background:var(--bg-1); border:1px solid var(--hair); display:block;}
+
+/* full-width by construction: 53 flex:1 columns, each 7 stacked squares —
+   the grid always spans its container exactly, at whatever size it renders. */
+.freq-outer{display:flex; gap:6px; align-items:flex-start; width:100%;}
+.freq-daylabels{display:flex; flex-direction:column; gap:2px; flex-shrink:0; margin-top:17px;}
+.freq-daylabels span{
+  height:11px; line-height:11px; font-family:'IBM Plex Mono', monospace; font-size:8px;
+  color:var(--ink-faint); text-align:center;
+}
+.freq-scroll{flex:1; min-width:0;}
+.freq-months{display:flex; gap:2px; height:13px; margin-bottom:4px;}
+.freq-months span{
+  flex:1; min-width:0; font-family:'IBM Plex Mono', monospace; font-size:9px;
+  color:var(--ink-faint); white-space:nowrap; overflow:hidden;
+}
+.freq-grid{display:flex; gap:2px;}
+.freq-col{flex:1; min-width:0; display:flex; flex-direction:column; gap:2px;}
+.freq-day{width:100%; aspect-ratio:1/1; border-radius:2px; background:var(--bg-1); border:1px solid var(--hair); display:block;}
 .freq-day.future{background:transparent; border-color:transparent;}
 .freq-day.level-1{background:var(--jade-dim); border-color:var(--jade-dim);}
 .freq-day.level-2{background:var(--jade); border-color:var(--jade);}
 .freq-day.level-3{background:#7fd6bd; border-color:#7fd6bd;}
 .freq-day.level-4{background:var(--gold); border-color:var(--gold);}
-@media (max-width:640px){.freq-day{width:8px; height:8px;}}
+
+@media (max-width:640px){
+  /* 53 flex-fit columns get illegibly thin on a phone — switch to a fixed
+     small size and let the strip scroll horizontally instead, auto-scrolled
+     to the most recent weeks on load (see initFreqScroll in main.js). */
+  .freq-scroll{overflow-x:auto; padding-bottom:4px; -webkit-overflow-scrolling:touch;}
+  .freq-months, .freq-grid{width:max-content;}
+  .freq-months span{flex:none; width:9px; font-size:7px;}
+  .freq-col{flex:none; width:9px;}
+  .freq-day{width:9px; height:9px;}
+  .freq-daylabels span{font-size:7px;}
+}
 
 @media (max-width:640px){
   .mast-title{font-size:31px;}

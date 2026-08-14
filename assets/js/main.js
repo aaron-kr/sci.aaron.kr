@@ -21,6 +21,12 @@ function applyFilter(f){
     const tags = entry.dataset.tags.split(' ');
     entry.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
   });
+  // a topic/news block with zero visible entries left behind its own header
+  // and an empty-looking gap — hide the whole block instead
+  document.querySelectorAll('.filter-group').forEach(group => {
+    const anyVisible = group.querySelector('[data-tags]:not(.hidden)');
+    group.classList.toggle('hidden', f !== 'all' && !anyVisible);
+  });
   const status = document.getElementById('filter-status');
   const label = document.getElementById('filter-status-label');
   if(status && label){
@@ -68,32 +74,38 @@ function setBookmarks(list){
 }
 
 function toggleMark(btn){
-  const entry = btn.closest('.entry, .entry-page');
-  const href = entry?.querySelector('.entry-title a, .entry-page-title a')?.href || window.location.href;
-  const title = entry?.querySelector('.entry-title a, .entry-page-title')?.textContent?.trim() || document.title;
+  // news rows (list) are the only place this lives now — research uses the
+  // authoritative marked_for_class front-matter field instead (see
+  // reading-list.html / CLAUDE.md "Reading list page")
+  const entry = btn.closest('.list-row, .entry-page');
+  const href = entry?.querySelector('.list-title a, .entry-page-title a')?.href || window.location.href;
+  const title = entry?.querySelector('.list-title a, .entry-page-title')?.textContent?.trim() || document.title;
   let list = getBookmarks();
   const marking = !list.some(b => b.href === href);
   list = marking ? list.concat([{href, title}]) : list.filter(b => b.href !== href);
   setBookmarks(list);
 
   btn.classList.toggle('marked', marking);
-  const activeLangBtn = document.querySelector('.lang-toggle button.active');
-  const lang = activeLangBtn ? activeLangBtn.dataset.lang : 'en';
-  if(btn.hasAttribute('data-en')){
-    btn.setAttribute('data-en', marking ? '☑ bookmarked' : '☐ mark for class');
-    btn.setAttribute('data-ko', marking ? '☑ 저장됨' : '☐ 수업용으로 표시');
+  if(btn.classList.contains('bookmark-btn')){
+    btn.setAttribute('aria-pressed', marking ? 'true' : 'false');
+  } else if(btn.hasAttribute('data-en')){
+    const activeLangBtn = document.querySelector('.lang-toggle button.active');
+    const lang = activeLangBtn ? activeLangBtn.dataset.lang : 'en';
+    btn.setAttribute('data-en', marking ? '☑ bookmarked' : '☐ bookmark');
+    btn.setAttribute('data-ko', marking ? '☑ 저장됨' : '☐ 북마크');
     btn.textContent = lang === 'ko' ? btn.getAttribute('data-ko') : btn.getAttribute('data-en');
-  } else {
-    btn.textContent = marking ? '☑ bookmarked' : '☐ mark for class';
   }
 }
 
 function markButtonsFromBookmarks(){
   const bookmarked = new Set(getBookmarks().map(b => b.href));
-  document.querySelectorAll('.entry-actions button[onclick*="toggleMark"]').forEach(btn => {
-    const entry = btn.closest('.entry, .entry-page');
-    const href = entry?.querySelector('.entry-title a, .entry-page-title a')?.href;
-    if(href && bookmarked.has(href)) btn.classList.add('marked');
+  document.querySelectorAll('[onclick*="toggleMark"]').forEach(btn => {
+    const entry = btn.closest('.list-row, .entry-page');
+    const href = entry?.querySelector('.list-title a, .entry-page-title a')?.href;
+    if(href && bookmarked.has(href)){
+      btn.classList.add('marked');
+      if(btn.classList.contains('bookmark-btn')) btn.setAttribute('aria-pressed', 'true');
+    }
   });
 }
 
@@ -123,6 +135,14 @@ function clearBookmarks(){
 
 function initClearBookmarks(){
   document.getElementById('bookmark-clear')?.addEventListener('click', clearBookmarks);
+}
+
+// ---- reading frequency calendar: on narrow screens it scrolls (see CSS);
+// start scrolled to the right so the most recent weeks are what's visible ----
+function initFreqScroll(){
+  const scroller = document.getElementById('freq-scroll');
+  if(!scroller) return;
+  scroller.scrollLeft = scroller.scrollWidth;
 }
 
 // ---- mobile hamburger for the sticky subnav ----
@@ -200,6 +220,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initRain();
   initSubnavToggle();
   initClearBookmarks();
+  initFreqScroll();
   markButtonsFromBookmarks();
   renderPersonalBookmarks();
   try{
