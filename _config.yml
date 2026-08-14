@@ -41,6 +41,7 @@ exclude:
   - CLAUDE.md
   - README.md
   - SETUP.md
+  - US_ROADMAP.md
   - LICENSE
   - sources.example.json
   - frequency-concept.html
