@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment"
+hook_ko: "자동 운전을 위한 학습 기반 행동 계획: 실제 환경 통합 및 배포"
 tags: ["autonomous-driving"]
 embedded: false
 health_flourishing: false

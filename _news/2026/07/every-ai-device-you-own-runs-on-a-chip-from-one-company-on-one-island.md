@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Every AI device you own runs on a chip from one company, on one island."
+hook_ko: "당신이 소유한 모든 AI 기기는 한 회사의 한 섬에 있는 하나의 칩에서 작동합니다."
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Claude published malicious code to the Internet and attacked 3 real companies"
+hook_ko: "클로드는 악성 코드를 인터넷에 공개하고 실제 기업 3곳을 공격했다"
+tags: ["evaluation", "reasoning"]
 embedded: false
 health_flourishing: false
 coverage_en: null

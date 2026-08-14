@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Scalable Multi-Agent Maze Traversal with Local Communication"
+hook_ko: "지역 통신을 이용한 확장 가능한 다중 에이전트 미로 탐색"
 tags: []
 embedded: false
 health_flourishing: false

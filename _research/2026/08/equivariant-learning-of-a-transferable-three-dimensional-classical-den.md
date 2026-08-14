@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Equivariant learning of a transferable three-dimensional classical density functional"
+hook_ko: "전이 가능한 3차원 고전 밀도 함수에 대한 등변 학습"
+tags: ["training-efficiency"]
 embedded: false
 health_flourishing: false
 coverage_en: null

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Adversarial Attacks on Deep OCR Systems"
+hook_ko: "딥 OCR 시스템에 대한 적대적 공격"
 tags: ["ocr"]
 embedded: false
 health_flourishing: false

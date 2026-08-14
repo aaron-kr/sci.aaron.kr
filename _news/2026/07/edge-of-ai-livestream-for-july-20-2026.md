@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Edge of AI Livestream for July 20, 2026"
+hook_ko: "2026년 7월 20일 AI 리브스트림 시작일"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

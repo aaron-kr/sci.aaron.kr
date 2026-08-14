@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Beyond Benchmarks: Continuous Edge Inference for Fine-Grained Roadside Perception"
+hook_ko: "기준을 넘어서: 세밀한 도로변 인식을 위한 연속 엣지 추론"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

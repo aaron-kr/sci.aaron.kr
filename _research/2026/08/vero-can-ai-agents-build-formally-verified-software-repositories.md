@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Vero: Can AI Agents Build Formally Verified Software Repositories?"
+hook_ko: "베로: AI 에이전트가 형식적으로 검증된 소프트웨어 저장소를 구축할 수 있을까?"
 tags: []
 embedded: false
 health_flourishing: false

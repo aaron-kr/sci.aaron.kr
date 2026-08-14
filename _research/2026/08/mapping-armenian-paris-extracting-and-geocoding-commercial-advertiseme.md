@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Mapping Armenian Paris: Extracting and Geocoding Commercial Advertisements from the 20th-Century Diaspora Press"
+hook_ko: "아르메니아 파리 지도화: 20세기 디아스포라 언론의 상업 광고 추출 및 지오코딩"
 tags: ["ocr", "historical-documents"]
 embedded: false
 health_flourishing: false

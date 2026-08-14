@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Redistribution-based Cost Inference Improves Sparse Safe Offline RL"
+hook_ko: "재분배 기반 비용 추론이 희소 안전 오프라인 강화학습을 향상시킨다"
+tags: ["reasoning"]
 embedded: false
 health_flourishing: false
 coverage_en: null

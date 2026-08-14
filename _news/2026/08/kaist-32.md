@@ -1,7 +1,7 @@
 ---
 hook_en: ""
 hook_ko: ""
-tags: []
+tags: ["industry"]
 embedded: false
 health_flourishing: false
 coverage_en: null

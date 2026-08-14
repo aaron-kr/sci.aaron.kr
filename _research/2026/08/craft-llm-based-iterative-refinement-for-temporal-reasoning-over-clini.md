@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "CRAFT: LLM-Based Iterative Refinement for Temporal Reasoning over Clinical Narratives"
+hook_ko: "공작: 임상 서사에 대한 시간적 추론을 위한 LLM 기반 반복적 개선"
+tags: ["clinical", "reasoning"]
 embedded: false
 health_flourishing: false
 coverage_en: null

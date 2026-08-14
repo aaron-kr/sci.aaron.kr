@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Hardware-Enabled Fuzzy Inference: Architectures, Platforms, and Emerging Trends"
+hook_ko: "하드웨어 기반 퍼지 추론: 아키텍처, 플랫폼, 그리고 떠오르는 트렌드"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

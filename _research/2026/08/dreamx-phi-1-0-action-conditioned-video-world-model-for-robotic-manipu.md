@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation"
+hook_ko: "DreamX-Phi 1.0: 로봇 조작을 위한 행동 조건화 비디오 월드 모델"
 tags: ["manipulation"]
 embedded: false
 health_flourishing: false

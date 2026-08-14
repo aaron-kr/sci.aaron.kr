@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations"
+hook_ko: "선호도 트리 최적화: 미리보기 시뮬레이션을 통한 목표 지향적 대화 강화"
 tags: ["health-flourishing"]
 embedded: false
 health_flourishing: true

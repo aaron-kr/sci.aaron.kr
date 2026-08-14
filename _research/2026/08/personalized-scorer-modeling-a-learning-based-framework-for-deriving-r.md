@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Personalized Scorer Modeling: A Learning-Based Framework for Deriving Robust Sleep Stage Labels from Multiple Experts"
+hook_ko: "개인 맞춤형 점수 모델링: 다수 전문가로부터 견고한 수면 단계 라벨을 도출하기 위한 학습 기반 프레임워크"
 tags: ["health-flourishing"]
 embedded: false
 health_flourishing: true

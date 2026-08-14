@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation"
+hook_ko: "DreamFly: 공중 비전-언어 내비게이션을 위한 인과 기억과 후퇴 지평선 확산 계획"
+tags: ["navigation", "reasoning"]
 embedded: false
 health_flourishing: false
 coverage_en: null

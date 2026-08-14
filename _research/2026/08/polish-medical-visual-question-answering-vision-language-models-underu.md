@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Polish Medical Visual Question Answering: Vision-Language Models Underutilize Visual Evidence"
+hook_ko: "폴란드어 의료 시각 질문 답변: 시각 언어 모델은 시각적 증거를 충분히 활용하지 못한다"
+tags: ["biomedical", "evaluation"]
 embedded: false
 health_flourishing: false
 coverage_en: null

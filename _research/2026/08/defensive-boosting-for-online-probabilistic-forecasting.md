@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Defensive Boosting for Online Probabilistic Forecasting"
+hook_ko: "온라인 확률 예측을 위한 방어적 부스팅"
+tags: ["training-efficiency"]
 embedded: false
 health_flourishing: false
 coverage_en: null

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Running hardware-aware neural architecture search on embedded devices under 512MB of RAM"
+hook_ko: "512MB RAM 환경에서 임베디드 장치에 하드웨어 인지 신경망 아키텍처 검색 실행하기"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Sony makes the camera in your iPhone. In 2020 it built one that refuses to hand over the photo: and that refusal may be worth more than PlayStation."
+hook_ko: "소니가 당신의 아이폰에 들어 있는 카메라를 만든다. 2020년에 그것은 사진을 넘겨주지 않는 기기를 만들었는데, 그 거부가 플레이스테이션보다 더 가치 있을지도 모릅니다."
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

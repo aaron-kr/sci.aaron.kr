@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "DaViNCi: A Dataset Towards Outdoor Vision-and-Language Navigation with Continuous Actions and Dynamic Elements"
+hook_ko: "DaViNCi: 연속적인 행동과 동적 요소를 활용한 야외 시각 및 언어 내비게이션을 위한 데이터셋"
+tags: ["dataset", "navigation", "vision-language"]
 embedded: false
 health_flourishing: false
 coverage_en: null

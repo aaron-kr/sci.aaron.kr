@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure"
+hook_ko: "초기 학습자: 교육적으로 통제된 지식 노출 하의 언어 모델"
+tags: ["ai-education", "training-efficiency"]
 embedded: false
 health_flourishing: false
 coverage_en: null

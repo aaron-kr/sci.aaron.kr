@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "TinyML for On-Device and Edge Analytics in Wireless Networks: A Survey of Deployments, Opportunities, and Concept-Drift Mitigation"
+hook_ko: "무선 네트워크에서의 온디바이스 및 엣지 분석을 위한 TinyML: 배포 현황, 기회 및 개념 변화 완화에 관한 조사"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

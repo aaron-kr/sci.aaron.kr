@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "BRUCE: Benchmarking Robustness Under Corruption Escalation for Scientific Vision-Language Reasoning"
+hook_ko: "브루스: 과학적 비전-언어 추론에서 부패 심화에 따른 견고성 벤치마킹"
 tags: []
 embedded: false
 health_flourishing: false

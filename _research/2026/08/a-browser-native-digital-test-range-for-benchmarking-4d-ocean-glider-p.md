@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "A Browser-Native Digital Test Range for Benchmarking 4D Ocean-Glider Planning Algorithms"
+hook_ko: "4D 해양 글라이더 계획 알고리즘 벤치마킹을 위한 브라우저 네이티브 디지털 테스트 범위"
+tags: ["benchmark", "navigation"]
 embedded: false
 health_flourishing: false
 coverage_en: null

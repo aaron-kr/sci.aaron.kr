@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MARC v1: An Open-Source Multi-Agent Framework for Clinical AI Reasoning and Coordination"
+hook_ko: "MARC v1: 임상 AI 추론 및 조정을 위한 오픈소스 다중 에이전트 프레임워크"
 tags: []
 embedded: false
 health_flourishing: false

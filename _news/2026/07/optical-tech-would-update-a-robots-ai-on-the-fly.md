@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Optical Tech Would Update a Robot’s AI on the Fly"
+hook_ko: "광학 기술이 로봇의 AI를 실시간으로 업데이트할 것이다"
+tags: ["humanoids", "training-efficiency"]
 embedded: false
 health_flourishing: false
 coverage_en: null

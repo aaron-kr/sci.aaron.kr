@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees"
+hook_ko: "DARTree: 자기회귀 초안 트리를 이용한 추측적 확산 디코딩"
+tags: ["training-efficiency"]
 embedded: false
 health_flourishing: false
 coverage_en: null

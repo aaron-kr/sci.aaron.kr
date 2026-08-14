@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Before You Say It: Anticipating Verbal Behavior from Longitudinal Everyday Conversations with LLMs"
+hook_ko: "말하기 전에: LLM과의 장기 일상 대화에서 언어 행동 예측하기"
 tags: ["health-flourishing"]
 embedded: false
 health_flourishing: true

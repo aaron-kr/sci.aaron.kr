@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "A Time-Multiplexed Spiking Neural Network Accelerator with Pipelined Readout for FPGA Inference"
+hook_ko: "FPGA 추론을 위한 파이프라인 읽기 기능을 갖춘 시분할 스파이킹 신경망 가속기"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

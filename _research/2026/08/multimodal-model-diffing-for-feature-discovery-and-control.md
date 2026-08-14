@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Multimodal Model Diffing for Feature Discovery and Control"
+hook_ko: "특징 발견 및 제어를 위한 멀티모달 모델 디핑"
+tags: ["reasoning", "evaluation"]
 embedded: false
 health_flourishing: false
 coverage_en: null

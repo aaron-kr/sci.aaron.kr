@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Decoding Task Progress from VLA Representations"
+hook_ko: "VLA 표현으로부터 작업 진행 상황 해독하기"
 tags: ["manipulation"]
 embedded: false
 health_flourishing: false

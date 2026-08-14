@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "The Role of Natural Language Understanding in Multimodal Video-Based Dengue Diagnosis"
+hook_ko: "다중 모달 비디오 기반 뎅기열 진단에서 자연어 이해의 역할"
 tags: ["health-flourishing"]
 embedded: false
 health_flourishing: true
