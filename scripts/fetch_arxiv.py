@@ -13,7 +13,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import REPO_ROOT, load_sources, slugify, write_entry
+from lib import REPO_ROOT, dated_dir, load_sources, slugify, write_entry
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 ENTRIES_PER_SOURCE = int(os.environ.get("ENTRIES_PER_SOURCE", "5"))
@@ -87,8 +87,10 @@ def main():
             if "health-flourishing" in source.get("tags", []):
                 fm["health_flourishing"] = True
 
-            stem = f"{item['date'] or 'undated'}-{slugify(item['title'])}"
-            if write_entry(RESEARCH_DIR, stem, fm, dedup_key=item["arxiv_id"]):
+            entry_date = item["date"] or datetime.date.today().isoformat()
+            stem = slugify(item["title"])
+            target_dir = dated_dir(RESEARCH_DIR, entry_date)
+            if write_entry(target_dir, stem, fm, dedup_key=item["arxiv_id"], dedup_scan_root=RESEARCH_DIR):
                 written_here += 1
         print(f"    +{written_here} new")
         total_written += written_here

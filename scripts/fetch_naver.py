@@ -15,7 +15,7 @@ import urllib.parse
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import REPO_ROOT, load_sources, slugify, write_entry
+from lib import REPO_ROOT, dated_dir, load_sources, slugify, write_entry
 
 ENTRIES_PER_SOURCE = int(os.environ.get("ENTRIES_PER_SOURCE", "8"))
 NEWS_DIR = os.path.join(REPO_ROOT, "_news")
@@ -94,8 +94,9 @@ def main():
             if "health-flourishing" in source.get("tags", []):
                 fm["health_flourishing"] = True
 
-            stem = f"{date}-{slugify(title)}"
-            if write_entry(NEWS_DIR, stem, fm, dedup_key=link):
+            stem = slugify(title)
+            target_dir = dated_dir(NEWS_DIR, date)
+            if write_entry(target_dir, stem, fm, dedup_key=link, dedup_scan_root=NEWS_DIR):
                 written_here += 1
         print(f"    +{written_here} new")
         total_written += written_here

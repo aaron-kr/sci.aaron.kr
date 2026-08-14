@@ -27,6 +27,14 @@ def slugify(text, max_len=70):
     return text[:max_len].rstrip("-") or "entry"
 
 
+def dated_dir(collection_root, date_str):
+    """_research or _news -> _research/2026/08, from a YYYY-MM-DD date string.
+    Entries are filed by year/month so the archive stays browsable as it grows —
+    see CLAUDE.md 'Archive organization'."""
+    year, month = date_str[:4], date_str[5:7]
+    return os.path.join(collection_root, year, month)
+
+
 def yaml_str(value):
     """Double-quoted YAML scalar, safe for titles containing colons/quotes."""
     if value is None:
@@ -65,19 +73,22 @@ DEFAULT_FRONT_MATTER = {
 }
 
 
-def write_entry(collection_dir, filename_stem, front_matter, body="", dedup_key=None):
+def write_entry(collection_dir, filename_stem, front_matter, body="", dedup_key=None, dedup_scan_root=None):
     """Writes a new collection file unless one with the same dedup_key (checked
     via a lightweight grep of existing files) already exists — keeps re-runs
-    idempotent without a separate database."""
+    idempotent without a separate database. `dedup_scan_root` (e.g. _research/)
+    scans the whole collection, not just this entry's year/month folder — a
+    story published right at a month boundary must still dedup correctly."""
     os.makedirs(collection_dir, exist_ok=True)
     if dedup_key:
-        for existing in os.listdir(collection_dir):
-            path = os.path.join(collection_dir, existing)
-            if not existing.endswith(".md"):
-                continue
-            with open(path, encoding="utf-8") as f:
-                if dedup_key in f.read():
-                    return False  # already fetched, skip
+        scan_root = dedup_scan_root or collection_dir
+        for root, _dirs, files in os.walk(scan_root):
+            for existing in files:
+                if not existing.endswith(".md"):
+                    continue
+                with open(os.path.join(root, existing), encoding="utf-8") as f:
+                    if dedup_key in f.read():
+                        return False  # already fetched, skip
 
     fm = dict(DEFAULT_FRONT_MATTER)
     fm.update(front_matter)

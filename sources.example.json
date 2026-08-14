@@ -242,6 +242,54 @@
       "_comment": "cross-cutting low-cost/embedded AI lens — tagged, not its own subsection. See CLAUDE.md."
     },
     {
+      "id": "ieee-spectrum-all",
+      "label": "IEEE Spectrum (all topics)",
+      "type": "rss",
+      "endpoint": "https://spectrum.ieee.org/customfeeds/feed/all-topics/rss",
+      "lang": "en",
+      "category": "news",
+      "topic": "general-ai",
+      "tags": [],
+      "owner": "aaron",
+      "_comment": "confirmed working — see SETUP.md § RSS checklist"
+    },
+    {
+      "id": "arstechnica-tech",
+      "label": "Ars Technica (Technology Lab)",
+      "type": "rss",
+      "endpoint": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "lang": "en",
+      "category": "news",
+      "topic": "general-ai",
+      "tags": [],
+      "owner": "aaron",
+      "_comment": "confirmed working. Ars Technica publishes other topical feeds too — see arstechnica.com/rss-feeds/ if a narrower one is wanted later"
+    },
+    {
+      "id": "mit-tech-review",
+      "label": "MIT Technology Review",
+      "type": "rss",
+      "endpoint": "https://www.technologyreview.com/feed/",
+      "lang": "en",
+      "category": "news",
+      "topic": "general-ai",
+      "tags": [],
+      "owner": "aaron",
+      "_comment": "confirmed working"
+    },
+    {
+      "id": "edgeai-foundation",
+      "label": "EdgeAI Foundation (formerly TinyML Foundation)",
+      "type": "rss",
+      "endpoint": "https://edgeaifoundation.substack.com/feed",
+      "lang": "en",
+      "category": "news",
+      "topic": "general-ai",
+      "tags": ["low-cost-embedded"],
+      "owner": "aaron",
+      "_comment": "confirmed working — their Substack feed, not the edgeaifoundation.org homepage (no RSS found there)"
+    },
+    {
       "id": "example-colleague-watch",
       "label": "Example: a colleague's keyword watch",
       "type": "keyword",

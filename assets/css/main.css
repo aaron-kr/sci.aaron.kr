@@ -233,6 +233,21 @@ section.news{padding:6px 0 10px;}
 .list-mini-cov span{height:100%;}
 .list-mini-cov .en{background:var(--cyan);}
 .list-mini-cov .ko{background:var(--jade);}
+
+/* Coverage-intensity edge — a quick "how over/under-covered is this" glance
+   while skimming, separate from the precise EN/KO split in .list-mini-cov.
+   Only appears once a story has been clustered with 2+ sources (see
+   scripts/cluster.py) — a lone item shows no edge at all. */
+.list-row{position:relative;}
+.list-row.cov-2, .list-row.cov-3, .list-row.cov-4, .list-row.cov-5plus{padding-right:14px;}
+.list-row.cov-2::after, .list-row.cov-3::after, .list-row.cov-4::after, .list-row.cov-5plus::after{
+  content:""; position:absolute; top:2px; bottom:2px; right:0; width:5px; border-radius:3px;
+  background:linear-gradient(180deg, var(--cyan), var(--jade));
+}
+.list-row.cov-2::after{opacity:.25;}
+.list-row.cov-3::after{opacity:.45;}
+.list-row.cov-4::after{opacity:.65;}
+.list-row.cov-5plus::after{opacity:.9;}
 .list-meta{display:flex; align-items:center; gap:8px; justify-self:end; text-align:right;}
 .list-src{font-family:'IBM Plex Mono', monospace; font-size:10.5px; flex-shrink:0;}
 .list-src.en{color:var(--cyan);} .list-src.ko{color:var(--jade);}

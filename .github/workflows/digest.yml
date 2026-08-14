@@ -2,8 +2,8 @@ name: Weekly digest
 
 on:
   schedule:
-    # Mondays 22:00 UTC ≈ Tue 07:00 KST — change the day/time here, see SETUP.md
-    - cron: "0 22 * * 1"
+    # Fridays 20:00 UTC ≈ Sat 05:00 KST — change the day/time here, see SETUP.md
+    - cron: "0 20 * * 5"
   workflow_dispatch: {}
 
 jobs:

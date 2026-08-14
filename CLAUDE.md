@@ -2,6 +2,100 @@
 
 Session handoff file. Read this first.
 
+## Session 3 changes (this session) — read this before the rest of the file
+
+The rest of this file is mostly still accurate but has some stale
+references from the session that wrote it. Corrections and additions:
+
+- **Archive is now organized by year/month.** `_research/YYYY/MM/slug.md` and
+  `_news/YYYY/MM/slug.md`, not flat. Filenames dropped their date prefix
+  (the folder encodes it now). `scripts/lib.py` has a `dated_dir()` helper;
+  all three fetch scripts use it. Jekyll's `permalink: /:collection/:path/`
+  handles nested paths automatically — no `_config.yml` change was needed.
+- **No retention policy / no auto-delete.** Considered and explicitly
+  rejected: static markdown files cost nothing meaningful to keep forever,
+  and deleting old entries would break permalinks that might get linked to
+  or indexed. Entries stay up indefinitely. If Aaron wants a "last 3–5
+  years" *view* for a job-application-style presentation, that's a future
+  filtered page, not a deletion policy — nothing built for this yet since
+  it's speculative until actually needed.
+- **`scripts/gloss.py` is gone, replaced by two scripts with a cleaner
+  cost/purpose split:**
+  - `scripts/translate_papago.py` — generates `hook_en`/`hook_ko` as a
+    **literal Papago translation of the title**, not an LLM paraphrase. A
+    title is a few words; that's a translation problem, not a judgment
+    problem, and Papago is free at this volume (10,000 chars/day free tier)
+    where an LLM call isn't necessary. Uses the same Naver app/credentials
+    as `fetch_naver.py`.
+  - `scripts/auto_tag.py` — the only remaining Claude Haiku call in the
+    pipeline. Picks 0–4 fine-grained tags (`humanoids`, `manipulation`,
+    etc.) from a title. This is genuinely a judgment call, unlike
+    translation, so it's the one place an LLM earns its cost. ~$0.0003 per
+    entry — see SETUP.md § 4 for the full math. Answers the "how much is
+    automatic" question from the Automation table below: **fine-grained
+    tags are now automatic**, not manual — update that table's row.
+  - `.github/workflows/fetch.yml` updated to call both, plus `cluster.py`
+    (below), in sequence after the existing fetch steps.
+- **Story clustering is implemented** (`scripts/cluster.py`) — simple
+  word-overlap (Jaccard on tokenized `hook_en`, falling back to title) within
+  a 48h window, news only. Sets `coverage_en`/`coverage_ko`/`gap` on every
+  entry in a cluster of 2+; solo entries are left with those fields `null`
+  (deliberately no clutter for the common single-source case). Re-run safe —
+  recomputes from scratch every run rather than incrementally, so a story
+  that drops out of a cluster gets its stale coverage data cleared, not just
+  newly-clustered stories getting updated. Caught and fixed a real bug this
+  session: a naive Jaccard on very short token sets (e.g. both titles
+  sharing only the word "KAIST") gives a misleading 1.0 score — added a
+  `MIN_TOKENS = 3` floor before comparing two entries at all.
+- **Coverage now has a visual UI element**, not just inline text: a
+  right-edge gradient bar on news rows (`.list-row.cov-2`
+  through `.cov-5plus` in `assets/css/main.css`), opacity scaled by cluster
+  size, meant as an at-a-glance "how covered is this" cue while skimming —
+  separate from the precise `.list-mini-cov` bar, which stays for exact
+  numbers on inspection. Still metadata, still not sort-driving — the
+  gradient doesn't move anything, it just colors what's already there.
+- **AI-driven feed personalization: still deferred, re-confirmed this
+  session.** Not building adaptive/click-based re-ranking. Same reasoning as
+  before (no backend/analytics infra, manual curation sufficient at this
+  scale) plus a new one: with clustering and auto-tagging now handling the
+  categorization work, there's even less of a gap for personalization to
+  fill.
+- **courses.aaron.kr integration: confirmed not needed.** Aaron decided the
+  `/reading-list/` page link is sufficient; the course's `readings:` field
+  linking out to it (documented in the prior session's version of this file)
+  is no longer planned. Removed from "Immediate next steps" below.
+- **GitHub issue template was blank when tested — root cause: nothing had
+  been pushed to GitHub yet.** All of the previous session's work (and this
+  one) existed only in the local working tree. Not a bug in the template
+  itself. See SETUP.md § 8.
+- **Naver Search/Papago access clarification.** Aaron found
+  `developers.naver.com/apps/#/cooperation` listing Search, Papago, CAPTCHA,
+  and Maps — initially read as "these need special partnership approval."
+  Corrected: that page is a *negative* list — these APIs are explicitly
+  **exempt** from the partnership-application requirement, i.e. confirmed to
+  use the normal self-service `애플리케이션 등록` flow already documented in
+  SETUP.md. No change needed to the registration steps themselves.
+- **Semantic Scholar / Google Scholar / Scopus / ScienceDirect**: no fetch
+  script exists for any of these, and that's expected to stay true.
+  Semantic Scholar has a real free public API (unlike the others) and is
+  listed in `sources.example.json` as aspirational, but arXiv already covers
+  most of the same ground for this project's topics, so it hasn't been
+  prioritized. Google Scholar has no public API (scraping it violates its
+  ToS — not doing that). Scopus and ScienceDirect are Elsevier products
+  requiring an institutional subscription and API key per-institution, not
+  a free public source — realistically only usable if one of Aaron's 5
+  university affiliations provides institutional API access, which hasn't
+  been checked. Not a near-term priority either way.
+- **New file: `US_ROADMAP.md`** — private career-planning tracker (US
+  visiting-position timeline, SCIE-first publishing strategy, societies/
+  conferences/journals open questions). Explicitly not a public page — see
+  its own "Where this doesn't go" section for the reasoning (a genuinely
+  public "publications & venues" page, if it ever makes sense, belongs on
+  pailab.io's team/bio page once there's real content, not as a new
+  sci.aaron.kr page).
+- **pailab.io nav link**: added last session, confirmed still in place
+  (`Nav.astro`, Research group → "Scientia AI (reading log) ↗").
+
 **Status: near-live.** The Jekyll site builds and runs today with real fetched
 data — `_research/` and `_news/` are populated from a live run of
 `scripts/fetch_arxiv.py` and `scripts/fetch_rss.py` (not hand-written sample
@@ -107,13 +201,14 @@ narrowness is the value, not a limitation to apologize for.
 Revised this session — Aaron wants to write real 200–500 word summaries
 himself, not just edit a machine gloss. Three distinct tiers now:
 
-1. **The hook** (`hook_en` / `hook_ko`, one sentence each, LLM-generated by
-   `scripts/gloss.py`) — a translated one-line "is this worth a look," shown
-   inline in the log and on the entry's permalink page. Fully automated,
-   cheap (see SETUP.md § Anthropic). This is the *only* auto-generated prose
-   in the pipeline now — it used to be a 1–3 sentence paraphrase; that scope
-   shrank specifically so Aaron's own writing isn't competing with an LLM
-   draft for the same slot.
+1. **The hook** (`hook_en` / `hook_ko`, one sentence each, generated by
+   `scripts/translate_papago.py` as a literal translation, not an LLM
+   paraphrase — see Session 3 notes above) — a translated one-line "is this
+   worth a look," shown inline in the log and on the entry's permalink page.
+   Fully automated, free at this volume (see SETUP.md § 2–3). This is the
+   only auto-generated text in the pipeline for the hook slot — it used to
+   be a 1–3 sentence LLM paraphrase; that scope shrank specifically so
+   Aaron's own writing isn't competing with an LLM draft for the same slot.
 2. **Aaron's own summary** (200–500 words, the entry's markdown body,
    written by hand, whenever he gets to it) — lives on the entry's own
    permalink page (`_research/<slug>.md` / `_news/<slug>.md`, rendered via
@@ -340,12 +435,12 @@ since it came up this session:
 | Fetching titles/dates/links (arXiv, RSS, Naver once configured) | **Yes** — `fetch_arxiv.py` / `fetch_rss.py` / `fetch_naver.py`, cron-scheduled |
 | Which topic section an entry lands in | **Yes** — comes straight from the source's `topic` field in `sources.json` |
 | Cross-cutting tags (`low-cost-embedded`, `health-flourishing`) | **Yes, if the *source* is tagged** — propagates automatically; a source that isn't pre-tagged won't get these automatically |
-| Fine-grained tags (`humanoids`, `manipulation`, `ocr`, etc.) | **No** — currently hand-added per entry (see the handful tagged this session as a proof of concept). Not auto-classified. Revisit only if this becomes a real bottleneck — a cheap LLM tagging pass during `gloss.py` is the natural next step if so, but wasn't built this session to keep scope down. |
-| Hooks (`hook_en`/`hook_ko`) | **Yes, once `ANTHROPIC_API_KEY` is set** — `gloss.py` |
+| Fine-grained tags (`humanoids`, `manipulation`, `ocr`, etc.) | **Yes, as of Session 3** — `scripts/auto_tag.py`, once `ANTHROPIC_API_KEY` is set. Only tags entries with no existing tags, so hand-tagged entries aren't overwritten. |
+| Hooks (`hook_en`/`hook_ko`) | **Yes, once `NAVER_CLIENT_ID`/`NAVER_CLIENT_SECRET` are set** — `scripts/translate_papago.py` (literal translation, not an LLM call — see Session 3 notes above) |
+| Coverage counts / cross-language gap flags | **Yes, as of Session 3** — `scripts/cluster.py`, no credentials needed, runs unconditionally in the daily Action |
 | Aaron's own 200–500 word summary | **No, by design** — this is the point of the habit |
 | Pinning a lead story | **No, manual** — `pin: true` |
 | Marking for class | **Partially** — the authoritative flag (`marked_for_class: true`) is manual/front-matter; a personal per-browser bookmark button exists as a convenience but doesn't write back to the site |
-| Coverage counts / cross-language gap flags | **Not implemented yet** — the fields exist in the schema (`coverage_en`, `coverage_ko`, `gap`) but no clustering step populates them automatically. Still deliberately metadata-only, not sort-driving, per the earlier pivot away from the Ground News model. |
 
 ## Contributor flow (fixed a real bug this session)
 
@@ -404,7 +499,7 @@ enabled   — optional, default true; set false to keep a source documented but 
 ```
 title_en, title (news items use `title` in the source's own language; research
   items use `title_en` since arXiv/Semantic Scholar/PubMed are English-only),
-hook_en, hook_ko (single sentence each, LLM-generated, empty string until gloss.py runs),
+hook_en, hook_ko (single sentence each, Papago-translated, empty string until translate_papago.py runs),
 source, source_lang, source_url, topic, tags[],
 date, thumb (news only, nullable — null unless the RSS feed actually supplied one),
 coverage_en, coverage_ko, gap ("en_only"|"ko_only"|null) — metadata only, see above,
@@ -437,19 +532,29 @@ implemented.
 2. **Fetch step**: `scripts/fetch_arxiv.py` and `scripts/fetch_rss.py` run
    unconditionally (no credentials needed, stdlib only). `scripts/fetch_naver.py`
    runs only if `NAVER_CLIENT_ID`/`NAVER_CLIENT_SECRET` secrets are set.
-3. **Hook step**: `scripts/gloss.py` runs only if `ANTHROPIC_API_KEY` is set;
-   capped at `GLOSS_MAX_PER_RUN` (default 40) entries per run to bound cost.
-4. **Commit step**: the Action commits any new `_research`/`_news` files and
-   pushes — GitHub Pages' own Jekyll build then picks it up automatically, no
-   separate render/deploy step needed (this is why the fetch scripts write
-   directly into the Jekyll collections instead of some intermediate format).
-5. **`.github/workflows/digest.yml`** — weekly (currently Mondays 22:00 UTC,
-   change the `cron:` line to move the day — see SETUP.md), runs
-   `scripts/send_digest.py` (Resend) if `RESEND_API_KEY`/`DIGEST_TO_EMAIL`
-   are set.
+3. **Translate step**: `scripts/translate_papago.py` runs only if the same
+   Naver secrets are set (Papago is the same app as Search — see SETUP.md
+   § 2); capped at `TRANSLATE_MAX_PER_RUN` (default 60).
+4. **Cluster step**: `scripts/cluster.py` runs unconditionally (no
+   credentials needed) — computes `coverage_en`/`coverage_ko`/`gap` across
+   `_news/`.
+5. **Tag step**: `scripts/auto_tag.py` runs only if `ANTHROPIC_API_KEY` is
+   set; capped at `AUTO_TAG_MAX_PER_RUN` (default 40) entries per run to
+   bound cost (see SETUP.md § 4 for the actual math — a few cents a month).
+6. **Commit step**: the Action commits any new/changed `_research`/`_news`
+   files and pushes — GitHub Pages' own Jekyll build then picks it up
+   automatically, no separate render/deploy step needed (this is why the
+   fetch scripts write directly into the Jekyll collections instead of some
+   intermediate format).
+7. **`.github/workflows/digest.yml`** — weekly, currently **Fridays 20:00
+   UTC ≈ Saturday 05:00 KST** (Aaron changed this from the original Monday
+   default this session), runs `scripts/send_digest.py` (Resend) if
+   `RESEND_API_KEY`/`DIGEST_TO_EMAIL` are set — both are now set as of this
+   session, pending DNS confirmation on the Resend side.
 
-All five scripts (`lib.py`, `fetch_arxiv.py`, `fetch_rss.py`, `fetch_naver.py`,
-`gloss.py`, `send_digest.py`) are stdlib-only Python — no `requirements.txt`,
+All eight scripts (`lib.py`, `fetch_arxiv.py`, `fetch_rss.py`, `fetch_naver.py`,
+`translate_papago.py`, `cluster.py`, `auto_tag.py`, `send_digest.py`) are
+stdlib-only Python — no `requirements.txt`,
 no pip install step in CI, on purpose (keeps the Action fast and reduces the
 site's long-term maintenance surface, consistent with the original
 "low-maintenance" instinct from `courses.aaron.kr`).
@@ -470,35 +575,40 @@ site's long-term maintenance surface, consistent with the original
 
 ## Open decisions for the next session
 
-- [ ] ~~Final name~~ — resolved: **Scientia AI**, propagated everywhere.
+- [x] ~~Final name~~ — resolved: **Scientia AI**, propagated everywhere.
+- [x] ~~courses.aaron.kr integration~~ — resolved: not needed, the
+      `/reading-list/` page link is sufficient. See Session 3 notes above.
+- [x] ~~Story clustering~~ — resolved: implemented, `scripts/cluster.py`.
+- [x] ~~Fine-grained tag auto-classification~~ — resolved: implemented,
+      `scripts/auto_tag.py`.
 - [ ] DNS CNAME record for `sci.aaron.kr` — not yet added at the DNS
-      provider (see SETUP.md § 5).
-- [ ] Naver / Anthropic / Resend credentials — not yet registered (see
-      SETUP.md §§ 2–4).
-- [ ] courses.aaron.kr integration — investigated, not wired (see "Reading
-      list page" above); revisit once the CBNU course page goes `visible: true`.
+      provider (see SETUP.md § 6).
+- [ ] Naver app registration (unlocks Korean search + translation) and
+      Anthropic key — not yet done (see SETUP.md §§ 2, 4). Resend is done
+      (secrets added), pending DNS confirmation on Resend's side.
 - [ ] Google Sheet vs. GitHub issue for the multi-professor contributor
       flow — GitHub issue is now primary; Sheet stays a documented fallback.
-- [ ] Story clustering for `coverage_en/ko`/`gap` — still not implemented;
-      still deliberately low priority since it's metadata-only now.
-- [ ] Fine-grained tag auto-classification (`humanoids`, `manipulation`,
-      etc.) — currently manual; a `gloss.py`-adjacent LLM tagging pass is the
-      natural next step if manual tagging becomes a bottleneck.
-- [ ] RSS feeds to confirm — see SETUP.md § 7 for the specific checklist.
+- [ ] RSS feeds to confirm — see SETUP.md § 9 for the specific checklist
+      (down to just KAIST/ETRI press + a Korean OCR-specific outlet, after
+      this session's 4 new confirmed feeds).
 - [ ] PubMed — deferred, revisit once arXiv-only biomedical coverage has run
       for a while and its volume can be assessed.
+- [ ] Semantic Scholar fetch script — still aspirational, still not blocking
+      (see Session 3 notes above on why arXiv covers most of the same ground).
+- [ ] Whether this repo's work is pushed to GitHub — as of this session,
+      still local-only; see SETUP.md § 8 for what's blocked until it is.
 
 ## Immediate next steps
 
-1. Work through `SETUP.md` — Naver app registration first (unlocks the
-   biggest missing chunk of content, Korean coverage), then Anthropic
-   (unlocks hooks), then DNS, then Resend (lowest priority, weekly digest is
-   a nice-to-have).
-2. Once Naver + Anthropic are live, let the daily Action run for a week and
+1. Push this repo to GitHub — several things (the issue template, the
+   Actions workflows, the live `_research`/`_news` content) silently don't
+   work until this happens. See SETUP.md § 8.
+2. Work through `SETUP.md` — Naver app registration first (unlocks Korean
+   coverage *and* hook translation now that both run through the same app),
+   then Anthropic (unlocks fine-grained tagging), then DNS.
+3. Once Naver + Anthropic are live, let the daily Action run for a week and
    sanity-check the actual volume per topic before deciding whether to widen
    `ENTRIES_PER_SOURCE` or add more sources.
-3. Write a real summary on at least one more entry beyond the demo pin, to
+4. Write a real summary on at least one more entry beyond the demo pin, to
    confirm the entry-permalink writing workflow feels right before it's a
    daily habit.
-4. Revisit courses.aaron.kr integration once that course page is ready to go
-   `visible: true`.

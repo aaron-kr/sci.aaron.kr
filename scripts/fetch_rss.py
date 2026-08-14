@@ -14,7 +14,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import REPO_ROOT, load_sources, slugify, write_entry
+from lib import REPO_ROOT, dated_dir, load_sources, slugify, write_entry
 
 MEDIA_NS = "{http://search.yahoo.com/mrss/}"
 ENTRIES_PER_SOURCE = int(os.environ.get("ENTRIES_PER_SOURCE", "8"))
@@ -91,8 +91,9 @@ def main():
             if "health-flourishing" in source.get("tags", []):
                 fm["health_flourishing"] = True
 
-            stem = f"{item['date']}-{slugify(item['title'])}"
-            if write_entry(NEWS_DIR, stem, fm, dedup_key=item["link"]):
+            stem = slugify(item["title"])
+            target_dir = dated_dir(NEWS_DIR, item["date"])
+            if write_entry(target_dir, stem, fm, dedup_key=item["link"], dedup_scan_root=NEWS_DIR):
                 written_here += 1
         print(f"    +{written_here} new")
         total_written += written_here
