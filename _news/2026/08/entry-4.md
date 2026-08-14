@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "English company Reimagine Robotics escapes obscurity with 'learning on-site' robot technology"
+hook_ko: "英 리이매진 로보틱스, ‘현장에서 학습하는’ 로봇기술로 무명 탈출"
 tags: []
 embedded: false
 health_flourishing: false

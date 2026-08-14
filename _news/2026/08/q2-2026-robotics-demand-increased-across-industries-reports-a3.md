@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Q2 2026 robotics demand increased across industries, reports A3"
+hook_ko: "A3 보고서에 따르면 2026년 2분기 로봇 수요가 산업 전반에 걸쳐 증가했습니다"
 tags: ["industry"]
 embedded: false
 health_flourishing: false

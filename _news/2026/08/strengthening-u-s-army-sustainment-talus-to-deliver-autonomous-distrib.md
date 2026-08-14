@@ -1,7 +1,7 @@
 ---
 hook_en: ""
 hook_ko: ""
-tags: []
+tags: ["autonomous-driving", "industry"]
 embedded: false
 health_flourishing: false
 coverage_en: null

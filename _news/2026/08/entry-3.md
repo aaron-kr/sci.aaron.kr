@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MegaDyna Robotics unveils robot foundation model trained solely on human video"
+hook_ko: "美 다이나 로보틱스, 인간 영상만으로 학습한 로봇 파운데이션 모델 공개"
 tags: ["humanoids", "training-efficiency"]
 embedded: false
 health_flourishing: false

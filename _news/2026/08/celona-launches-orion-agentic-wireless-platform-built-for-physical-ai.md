@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Celona launches Orion agentic wireless platform built for physical AI and robotics"
+hook_ko: "Celona, 물리 AI와 로보틱스를 위한 오리온 에이전트형 무선 플랫폼 출시"
 tags: ["humanoids", "industry"]
 embedded: false
 health_flourishing: false

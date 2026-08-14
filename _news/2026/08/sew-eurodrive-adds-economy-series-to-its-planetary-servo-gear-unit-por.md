@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "SEW-EURODRIVE adds economy series to its planetary servo gear unit portfolio"
+hook_ko: "SEW-EURODRIVE가 행성 서보 기어 유닛 포트폴리오에 이코노미 시리즈를 추가했습니다"
 tags: []
 embedded: false
 health_flourishing: false

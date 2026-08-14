@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Cowintech to pursue name change to “Cowint Robotics”"
+hook_ko: "코윈테크, ‘코윈로보틱스’로 사명 변경 추진한다"
 tags: []
 embedded: false
 health_flourishing: false

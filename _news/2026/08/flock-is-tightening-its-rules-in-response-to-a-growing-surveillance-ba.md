@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Flock is tightening its rules in response to a growing surveillance backlash"
+hook_ko: "플록은 커져가는 감시 반발에 대응해 규제를 강화하고 있다"
+tags: ["policy"]
 embedded: false
 health_flourishing: false
 coverage_en: null

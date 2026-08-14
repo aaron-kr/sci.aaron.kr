@@ -1,7 +1,7 @@
 ---
 hook_en: "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design"
 hook_ko: "자동 설계: 장기 에이전트 설계를 위한 메타 하니스 최적화"
-tags: []
+tags: ["reasoning", "training-efficiency"]
 embedded: false
 health_flourishing: false
 ai_education: false

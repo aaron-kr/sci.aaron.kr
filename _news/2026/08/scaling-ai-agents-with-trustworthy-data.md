@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Scaling AI agents with trustworthy data"
+hook_ko: "신뢰할 수 있는 데이터로 AI 에이전트 확장하기"
 tags: ["training-efficiency"]
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Edge of AI for Aug 3, 2026"
+hook_ko: "2026년 8월 3일 AI의 최전선"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

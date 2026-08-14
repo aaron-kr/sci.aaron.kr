@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Crooks Are Learning to Love AI Hallucinations"
+hook_ko: "범죄자들이 AI 환각 현상을 즐기는 법을 배우고 있다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

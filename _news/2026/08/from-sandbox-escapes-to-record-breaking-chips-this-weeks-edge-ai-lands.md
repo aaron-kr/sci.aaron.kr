@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "From \\"sandbox escapes\\" to record-breaking chips, this week’s edge-AI landscape proves the tech is outpacing the guardrails - Edge of AI for Aug 10"
+hook_ko: "'샌드박스 탈출'부터 기록을 깨는 칩까지, 이번 주 엣지 AI 동향은 기술이 안전장치를 앞서가고 있음을 보여줍니다 - 8월 10일 엣지 AI"
 tags: ["low-cost-embedded"]
 embedded: true
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Pakistani Judges Give Their Verdict on JudgeGPT"
+hook_ko: "파키스탄 판사들이 JudgeGPT에 판결을 내리다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

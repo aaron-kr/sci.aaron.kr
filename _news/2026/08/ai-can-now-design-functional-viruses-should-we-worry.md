@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "AI Can Now Design Functional Viruses. Should We Worry?"
+hook_ko: "AI가 이제 기능성 바이러스를 설계할 수 있다. 우리가 걱정해야 할까?"
 tags: ["reasoning", "policy"]
 embedded: false
 health_flourishing: false

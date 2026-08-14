@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Daedong Group to jointly develop the agricultural robot “Agroid” with Rainbow Robotics"
+hook_ko: "대동그룹, 레인보우로보틱스와 농업 로봇 '애그로이드' 공동 개발 추진"
 tags: ["humanoids", "industry"]
 embedded: false
 health_flourishing: false

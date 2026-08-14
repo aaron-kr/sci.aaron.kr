@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Former KAIST President Lee Kwang-hyung, Commander of the 4th Army’s Science and Military Command, awarded an honorary Doctor of Military Science degree from the Korea National Defense University"
+hook_ko: "‘제4군 과학군사령관’ KAIST 이광형 前 총장, 국방대 명예 군사학박사 수여"
 tags: []
 embedded: false
 health_flourishing: false

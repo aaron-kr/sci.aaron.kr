@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Private security firms will soon be allowed to hack overseas cybercriminals"
+hook_ko: "민간 보안 업체들이 곧 해외 사이버 범죄자들을 해킹할 수 있게 될 것입니다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

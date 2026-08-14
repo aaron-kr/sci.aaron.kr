@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MakinaRocks tests HD Korea Shipbuilding & Offshore’s welding robot anomaly detection AI solution"
+hook_ko: "마키나락스, HD한국조선해양 용접 로봇 이상탐지 AI 솔루션 시험 적용"
 tags: ["industry", "humanoids"]
 embedded: false
 health_flourishing: false

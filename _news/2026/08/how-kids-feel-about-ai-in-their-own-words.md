@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "How kids feel about AI, in their own words"
+hook_ko: "아이들이 직접 말하는 AI에 대한 느낌"
 tags: ["ai-education"]
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Video Friday: Meet Google DeepMind’s Gemini Robotics 2"
+hook_ko: "금요일 영상: 구글 딥마인드의 제미니 로보틱스 2를 만나보세요"
 tags: ["humanoids", "manipulation"]
 embedded: false
 health_flourishing: false

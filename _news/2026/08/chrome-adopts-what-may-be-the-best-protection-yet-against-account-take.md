@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Chrome adopts what may be the best protection yet against account takeovers"
+hook_ko: "크롬은 계정 탈취에 대해 지금까지 나온 것 중 최고 수준의 보호 기능을 도입했습니다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

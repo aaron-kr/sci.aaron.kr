@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Cloning could be used to save species—or make human “organ sacks”"
+hook_ko: "복제는 종을 구하는 데 사용될 수도 있고, 인간의 '장기 주머니'를 만드는 데 쓰일 수도 있다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

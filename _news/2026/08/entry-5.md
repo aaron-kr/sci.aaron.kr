@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "China’s First Specialty Store for 'Agricultural Robots' Opens"
+hook_ko: "中 최초 '농업 로봇' 전문 판매점 문 열었다"
 tags: ["humanoids"]
 embedded: false
 health_flourishing: false

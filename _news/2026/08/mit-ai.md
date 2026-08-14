@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MIT Develops Robot AI Technology Capable of Simultaneously Thinking and Acting"
+hook_ko: "MIT, '생각과 행동' 동시에 수행하는 로봇 AI 기술 개발"
 tags: ["humanoids", "manipulation"]
 embedded: false
 health_flourishing: false

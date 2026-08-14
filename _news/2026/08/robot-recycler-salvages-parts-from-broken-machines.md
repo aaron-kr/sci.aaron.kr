@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Robot Recycler Salvages Parts From Broken Machines"
+hook_ko: "로봇 재활용기가 고장 난 기계에서 부품을 회수하다"
 tags: ["humanoids", "manipulation", "industry"]
 embedded: false
 health_flourishing: false

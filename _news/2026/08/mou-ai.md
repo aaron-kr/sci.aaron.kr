@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MOU among Ministry of Industry, Hyundai Motor Group, and the Army…\"Expansion of Applying Robots and Physical AI in Defense\""
+hook_ko: "산업부·현대차그룹·육군 MOU…“로봇·피지컬 AI 국방 적용 확대”"
 tags: ["humanoids", "industry", "policy"]
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Public Procurement Service chief visits site of AI surgical robot development…On-site Visit to Advanced Technology Facilities"
+hook_ko: "AI 수술로봇 개발 현장 찾은 조달청장…첨단기술 현장 행보"
 tags: ["humanoids", "industry"]
 embedded: false
 health_flourishing: false

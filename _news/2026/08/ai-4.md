@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Germany’s Nura Robotics establishes a Physical AI Training Center at RWTH Aachen University of Technology"
+hook_ko: "獨 뉴라 로보틱스, 아헨공대에 피지컬AI 훈련센터 설립"
 tags: ["humanoids", "industry"]
 embedded: false
 health_flourishing: false

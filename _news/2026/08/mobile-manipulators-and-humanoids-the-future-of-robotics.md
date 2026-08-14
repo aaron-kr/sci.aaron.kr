@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Mobile manipulators and humanoids: The future of robotics"
+hook_ko: "이동식 조작기와 휴머노이드 로봇: 로봇공학의 미래"
 tags: ["humanoids", "manipulation", "mobile-manipulators"]
 embedded: false
 health_flourishing: false

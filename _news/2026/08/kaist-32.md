@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "KAIST–Samsung Heavy Industries, the fruits of 32 years of industry-academia cooperation…Launch of the Next-Generation Ship Research Center"
+hook_ko: "KAIST–삼성중공업, 32년 산학협력 결실…‘차세대선박연구센터’ 출범"
 tags: ["industry"]
 embedded: false
 health_flourishing: false

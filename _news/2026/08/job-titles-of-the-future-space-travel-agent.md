@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Job titles of the future: Space travel agent"
+hook_ko: "미래의 직업 직함: 우주 여행 요원"
+tags: ["ai-education"]
 embedded: false
 health_flourishing: false
 ai_education: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Bring a Product Manager Mindset to Your Next Engineering Job"
+hook_ko: "다음 엔지니어링 직무에 제품 관리자 마인드를 가져가세요"
 tags: []
 embedded: false
 health_flourishing: false

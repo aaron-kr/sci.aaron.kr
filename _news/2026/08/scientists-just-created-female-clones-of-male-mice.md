@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Scientists just created female clones of male mice"
+hook_ko: "과학자들이 수컷 쥐의 암컷 복제 개체를 만들어냈다"
 tags: []
 embedded: false
 health_flourishing: false

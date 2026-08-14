@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Like a Cool Lion – Open Graph Labs partners on physical AI data business"
+hook_ko: "멋쟁이사자처럼-오픈그래프랩스, 피지컬 AI 데이터 사업 협력"
 tags: ["industry"]
 embedded: false
 health_flourishing: false

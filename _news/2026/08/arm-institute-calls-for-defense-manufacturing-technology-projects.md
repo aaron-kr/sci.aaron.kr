@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "ARM Institute calls for defense manufacturing technology projects"
+hook_ko: "ARM 연구소, 방위 제조 기술 프로젝트 추진 촉구"
 tags: ["policy", "industry"]
 embedded: false
 health_flourishing: false

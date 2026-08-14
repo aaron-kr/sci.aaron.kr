@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Experts to discuss the state of humanoid robots at RoboBusiness"
+hook_ko: "전문가들이 RoboBusiness에서 휴머노이드 로봇의 현황에 대해 논의합니다"
 tags: ["humanoids"]
 embedded: false
 health_flourishing: false

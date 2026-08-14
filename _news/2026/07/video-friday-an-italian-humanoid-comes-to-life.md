@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Video Friday: An Italian Humanoid Comes to Life"
+hook_ko: "금요일 영상: 이탈리아 휴머노이드가 생명을 얻다"
 tags: ["humanoids"]
 embedded: false
 health_flourishing: false

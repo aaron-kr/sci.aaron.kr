@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Building a practical path to post-quantum cryptography"
+hook_ko: "포스트 양자 암호학으로 가는 실질적인 길 만들기"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

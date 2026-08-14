@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "U.S. FedEx-Dexterity expands physical AI deployment for autonomous trailer loading"
+hook_ko: "美 페덱스-덱스터리티, 자율 트레일러 적재용 피지컬 AI 배치 확대"
 tags: ["humanoids", "manipulation", "autonomous-driving"]
 embedded: false
 health_flourishing: false

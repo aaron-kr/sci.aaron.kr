@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "MAUM AI Joins Kookmin University AX Industry-Academia Cooperation Group…Taking the Lead in Expanding the Physical AI Ecosystem"
+hook_ko: "마음AI, 국민대 AX 산학협력체 합류…피지컬 AI 생태계 확장 나선다"
 tags: []
 embedded: false
 health_flourishing: false

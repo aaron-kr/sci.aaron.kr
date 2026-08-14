@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "New Pass-ta-key attack reveals all the things we didn't know about passkeys"
+hook_ko: "새로운 패스키 공격이 우리가 패스키에 대해 몰랐던 모든 것을 드러냈다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

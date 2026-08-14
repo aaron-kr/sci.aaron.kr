@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Augmental’s Mouthpad Is a Touchpad for Your Tongue"
+hook_ko: "어그멘탈의 마우스패드는 혀를 위한 터치패드입니다"
 tags: ["humanoids"]
 embedded: false
 health_flourishing: false

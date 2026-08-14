@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Brazil Seeks Its Quantum State"
+hook_ko: "브라질, 양자 국가를 모색하다"
 tags: []
 embedded: false
 health_flourishing: false
