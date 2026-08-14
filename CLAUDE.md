@@ -2,7 +2,128 @@
 
 Session handoff file. Read this first.
 
-## Session 4 changes (this session)
+## Session 5 changes (this session) — site is now live at sci.aaron.kr
+
+Thirteen items from Aaron, addressed after the site went live and he could
+see real behavior for the first time. Grouped by theme:
+
+- **Nav**: added `Courses ↗` (courses.aaron.kr) and `Lab ↗` (pailab.io)
+  links to the sticky subnav, after a divider. Added a mobile hamburger
+  (`.subnav-toggle`, shows under 640px) since the nav no longer fits on one
+  line on small screens — `initSubnavToggle()` in `main.js`.
+- **Multi-priority pinning** (`_layouts/entry.html`, `index.html`,
+  `scripts/lib.py`): replaced the single `pin: true` boolean with
+  `pin_priority` (nullable int) + `pin_own_research` (bool). Priority 1 is
+  the full-width `.lead-story`; any number of priority 2+ entries render as
+  half-width `.lead-card`s in a `.lead-grid` below it. `pin_own_research:
+  true` swaps the pink border/badge for gold — reserved for Aaron's own
+  papers, distinct from an editorial "external work I'm highlighting" pick.
+  Old `pin` field is not renamed in existing files (harmless dead data, see
+  "Data model") — only templates and the one demo entry were migrated.
+- **Fixed the demo pin's fake "Full commentary on aaron.kr" link** — the
+  `handedit-...` demo entry had `commentary_url: "https://aaron.kr/writing"`
+  hardcoded as a worked example from an earlier session; Aaron correctly
+  flagged that no such commentary exists. Nulled it, and removed the
+  placeholder "[Demo of the pin workflow...]" body text — the entry now
+  renders as a normal unwritten pin, no fake data left standing in for real
+  content on the live site.
+- **Language-reactive accent color**: added `--accent`/`--accent-dim` custom
+  properties (default = cyan), overridden to jade under `html[lang="ko"]`
+  (main.js's `setLang()` already sets `document.documentElement.lang`, so no
+  new JS was needed). Generic UI chrome — hovers, CTAs, the topic-head rank
+  badge, focus rings, selection color — now uses `--accent` and shifts blue
+  ↔ green with the interface language toggle. **Deliberately NOT switched**:
+  `src-tag.en/.ko`, `list-src.en/.ko`, and the embedded/health/education flag
+  colors — those label the *item's own* source language/category, which
+  doesn't change when the reader toggles UI language. Also added `--gold`/
+  `--gold-dim` as a third accent, reserved for "this is Aaron's own work"
+  (own-research pins, written-summary badges) — not language-tied.
+- **Removed the coverage edge-highlight bar** (`.list-row.cov-2/3/4/5plus`
+  gradient bars) per Aaron's request — kept `.list-mini-cov` (the EN/KO
+  split bar) and the visible `N sources` footnote text, both less "loud."
+- **Reading list page**: "Your bookmarks (this browser only)" →
+  "Bookmarked articles (this browser only)" (Aaron's own suggested wording
+  covered news only; broadened since research entries get bookmarked too),
+  with a clearer one-line explanation of what sets it. Added a "✕ Clear all"
+  button (`#bookmark-clear`, `clearBookmarks()` in main.js) with a native
+  `confirm()` — client-side only, since it's localStorage. Did **not** touch
+  the separate "This week's set" authoritative list (`marked_for_class`
+  front-matter flag, set by hand) — that's still a distinct mechanism
+  documented in "Reading list page" below; Clear All only makes sense for
+  the browser-local one.
+- **Alerts system** replacing the "CONCEPT" banner: new `_alerts` collection
+  (`output: false`), each file has `active` (bool), `starts`/`expires`
+  (optional dates), `text_en`/`text_ko`. `_layouts/default.html` picks the
+  first active alert whose date window includes today and renders it in
+  `.site-alert` (gold `UPDATE` label); renders nothing if none match. Example
+  alert at `_alerts/2026-09-01-semester-begins.md`. This was overdue — the
+  banner used to hardcode "real fetched sample entries... not wired up live
+  yet," which stopped being true the moment the site went live and Aaron
+  never noticed it was still there.
+- **AI Education graduated from a cross-cutting tag to a full 5th research
+  topic** (`topic: "ai-education"`, rank 05 in `index.html`, after Biomedical
+  AI). Reasoning: Aaron's strongest current publication niche, high expected
+  volume (ChatGPT-in-classrooms, cognitive offloading, computing/engineering
+  education), and a 5th section supports a "one subsection a day" reading
+  cadence he wants for motivation. `sources.example.json`'s
+  `arxiv-ai-education`/`naver-ai-education` sources now set
+  `topic: "ai-education"` instead of `general-ai`. The `ai_education` flag/
+  badge/filter-chip system stays too, for the rarer case of an
+  education-relevant entry that isn't itself in the AI Education topic (e.g.
+  an OCR or biomedical paper with a teaching angle). Vibe-coding /
+  human-in-the-loop stays a lighter-touch tag under General AI, unchanged —
+  lower confirmed volume so far (~5 papers expected, not yet arrived).
+- **Removed "my summary →" / "add a summary →" action links** — redundant
+  once the title itself already conditionally links to the right place (the
+  source when unwritten, the permalink page once written — that logic
+  shipped last session). Replaced with a small muted `↗` (`.ext-icon`) next
+  to the title *only* when it links out to the source; its absence signals
+  the title links internally.
+- **Reading frequency calendar** (`scripts/reading_frequency.py`,
+  `_data/reading_frequency.json`, `_includes/reading-frequency.html`) — a
+  GitHub-commit-style grid under the Sources & Watches box. Counts the day
+  Aaron's own summary first went non-empty for each entry, found by walking
+  each file's git history (`git log`/`git show`, stdlib `subprocess`, no pip
+  deps). **Runs as a step in `fetch.yml`, not at Jekyll-build time** —
+  GitHub Pages' classic "Deploy from a branch" build only runs `jekyll
+  build` itself with no way to run custom scripts around it, so the data
+  file has to already be committed before Jekyll ever sees it (same reason
+  the fetch pipeline itself works this way). `fetch.yml`'s checkout now uses
+  `fetch-depth: 0` — the script needs full git history. Levels 1–4 shade
+  jade→gold (a level-4 day, 4+ summaries, lights up gold — same "this is
+  real work" color as own-research pins and written-summary badges).
+  Currently renders all-empty (0 summaries) since no entry has real body
+  content yet — expected, will fill in as Aaron actually writes.
+- **Dimmed un-summarized entries, gold-badged written ones**: `.no-summary`
+  (opacity .82, or .68 combined with `.wire`) on any entry/row where
+  `has_summary` is 0, for quick "what still needs writing" triage. Entries
+  *with* a summary get a small gold `✓ written` badge (`.summary-badge` on
+  research cards and the permalink page, a smaller `.summary-dot` on the
+  denser news rows) — same gold as own-research pins and the frequency
+  calendar's best days, one consistent "this is Aaron's own work" signal
+  across the site.
+- **Bug found and fixed while in this area, not from Aaron's list**:
+  `_layouts/entry.html`'s "no write-up yet" placeholder never actually
+  rendered, on any of the ~60 unwritten permalink pages — the check was
+  `page.content and page.content.size > 0`, but every file's trailing
+  `\r\n` after `---` makes `page.content` a non-empty *whitespace* string,
+  which passes that check (truthy, size > 0) and then renders to nothing
+  after Markdown conversion. Fixed by reusing the already-stripped
+  `has_summary` variable (`page.content | strip | size`) instead. Also found
+  `scripts/send_digest.py`'s `collect()` only listed each collection's
+  top-level directory (`os.listdir`, not recursive) — it has never actually
+  found any entry since the year/month archive folders were introduced, so
+  the weekly digest has been silently sending "Nothing flagged this week"
+  regardless of real content. Switched to `os.walk`, and updated its
+  "interesting" check from the retired `pin` bool to `pin_priority`.
+  Untested against a real send (needs `RESEND_API_KEY`/`DIGEST_TO_EMAIL` and
+  a live cron fire to confirm end-to-end) but the logic bugs are fixed.
+- **Excluded `Claude-code-v1-notes.md` from the Jekyll build** — it was
+  triggering a Liquid syntax warning on every build (`{{}}` in its text
+  being parsed as a tag) and was never meant to be part of the deployed
+  site; just missing from `_config.yml`'s `exclude:` list.
+
+## Session 4 changes (previous session)
 
 - **Naver Search/Papago moved to Naver Cloud Platform — Aaron decided to
   proceed anyway.** As of ~July 2026, Naver Search moved to "NAVER API HUB"
@@ -451,31 +572,25 @@ Two layered, intentionally subtle effects (`assets/css/main.css` `.bg-grid`,
 
 ## Layout — research first, news second, coverage as a footnote (unchanged from prior session)
 
-1. **Masthead** — sticky anchor nav: `Research` · `News` · `Reading list` · `Sources`.
-2. **Pinned lead story** (optional, `pin: true` on at most one `_research`
-   entry) — a visually distinct card above the topic sections: larger title,
-   optional custom `pin_image` (the one case where a manually-chosen image is
-   fine — this is Aaron deliberately picking a photo, not an auto-fetched
-   placeholder), links to both the original source and (if set)
-   `commentary_url`/`commentary_video_url`. **How to pin something:** set
-   `pin: true` in that entry's front matter (and optionally `pin_image`,
-   `commentary_url`) — see the demo entry
-   `_research/2026-08-12-handedit-...md` for a worked example. Only the first
-   `pin: true` entry found is shown; unpin the old one before pinning a new
-   one.
-3. **Research section**, four subsections in priority order (Physical AI →
-   General AI → OCR/handwriting → Biomedical AI), ~10 shown per topic
-   (`limit: 10` in `index.html`, most recent first — the underlying
-   collection can hold more).
+1. **Masthead** — sticky anchor nav: `Research` · `News` · `Reading list` ·
+   `Sources` · (divider) · `Courses ↗` (courses.aaron.kr) · `Lab ↗`
+   (pailab.io), collapsing into a hamburger (`☰`, `.subnav-toggle`) under
+   640px. See Session 5.
+2. **Pinned lead stories** (optional, `pin_priority: 1, 2, 3…` on any number
+   of `_research` entries) — see Session 5's "Multi-priority pinning" for the
+   current mechanism; this replaced the old single-boolean `pin: true` field.
+3. **Research section**, five subsections in priority order (Physical AI →
+   General AI → OCR/handwriting → Biomedical AI → AI Education), ~10 shown
+   per topic (`limit: 10` in `index.html`, most recent first — the
+   underlying collection can hold more).
 4. **News section**, dense list, ~30 shown (`limit: 30`), smaller than
    research, mini coverage bar where applicable, wire styling where
    applicable.
 5. **Sources** (`_includes/sources.html`) — full source list by topic, plus
    the "suggest a source" GitHub issue CTA (see "Contributor flow").
-6. **Footer** — links out to pailab.io / aaron.kr / courses.aaron.kr.
-
-A manual "pin as lead story" override exists (see above) for days when the
-algorithmic-by-recency top item isn't what Aaron wants leading.
+6. **Reading frequency calendar** (`_includes/reading-frequency.html`) — a
+   GitHub-commit-style grid under the sources box. See Session 5.
+7. **Footer** — links out to pailab.io / aaron.kr / courses.aaron.kr.
 
 ## Research topic priority (unchanged)
 
@@ -595,10 +710,16 @@ date, thumb (news only, nullable — null unless the RSS feed actually supplied 
 coverage_en, coverage_ko, gap ("en_only"|"ko_only"|null) — metadata only, see above,
 marked_for_class (bool), commentary_worthy (bool),
 commentary_url (nullable, → aaron.kr Writing), commentary_video_url (nullable, → YouTube),
-pin (bool, research only in practice), pin_image (nullable),
-raw_wire (bool), embedded (bool), health_flourishing (bool),
+pin_priority (nullable int — 1 = full-width lead, 2+ = half-width card, sorted ascending; replaces the old `pin` bool as of Session 5),
+pin_own_research (bool — gold border/badge instead of pink, for Aaron's own papers), pin_image (nullable),
+raw_wire (bool), embedded (bool), health_flourishing (bool), ai_education (bool),
 dedup_key (the arXiv ID or article URL — used by scripts/lib.py to avoid re-fetching)
 ```
+
+Note: entries fetched before Session 5 still carry a leftover `pin: false`
+line in their front matter — harmless dead data, not referenced by any
+template anymore. Not worth a mass find-and-replace across ~60 files for a
+key nothing reads.
 
 Body content (below the `---`) is Aaron's own write-up — empty until he
 writes one; `_layouts/entry.html` shows a clear "no write-up yet" note

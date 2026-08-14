@@ -37,7 +37,22 @@
 <div class="bg-grid"></div>
 <canvas id="rain" aria-hidden="true"></canvas>
 
-<div class="sample-banner"><strong>CONCEPT</strong> — real fetched sample entries, but hooks/summaries/pipeline automation aren't wired up live yet</div>
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign active_alerts = site.alerts | where: "active", true %}
+{% assign current_alert = nil %}
+{% for a in active_alerts %}
+  {% assign a_starts = a.starts | date: "%Y-%m-%d" %}
+  {% assign a_expires = a.expires | date: "%Y-%m-%d" %}
+  {% if a.starts and a_starts > today %}{% continue %}{% endif %}
+  {% if a.expires and a_expires < today %}{% continue %}{% endif %}
+  {% if current_alert == nil %}{% assign current_alert = a %}{% endif %}
+{% endfor %}
+{% if current_alert %}
+<div class="site-alert">
+  <strong data-en="UPDATE" data-ko="소식">UPDATE</strong>
+  <span data-en="{{ current_alert.text_en | escape }}" data-ko="{{ current_alert.text_ko | escape }}">{{ current_alert.text_en }}</span>
+</div>
+{% endif %}
 
 <div class="wrap">
   {% include masthead.html %}

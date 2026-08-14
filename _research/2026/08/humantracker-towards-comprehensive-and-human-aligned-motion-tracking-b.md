@@ -15,7 +15,7 @@ pin: false
 pin_image: null
 raw_wire: false
 title_en: "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark"
-source: "Example: a colleague's keyword watch"
+source: "arXiv cs.RO"
 source_lang: "en"
 source_url: "http://arxiv.org/abs/2608.13555v1"
 topic: "physical-ai"

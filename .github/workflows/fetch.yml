@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # reading_frequency.py needs full history, not just the latest commit
 
       - uses: actions/setup-python@v5
         with:
@@ -48,10 +50,13 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Update reading-frequency calendar
+        run: python scripts/reading_frequency.py
+
       - name: Commit new entries
         run: |
           git config user.name "scientia-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add _research _news
+          git add _research _news _data
           git diff --cached --quiet || git commit -m "Fetch: $(date -u +%F)"
           git push

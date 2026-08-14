@@ -16,22 +16,41 @@ description: "A bilingual (English/Korean) reading log — research papers first
   </span>
 </section>
 
-{% assign pinned = site.research | where: "pin", true | first %}
+{% assign pinned_all = site.research | where_exp: "e", "e.pin_priority != nil" | sort: "pin_priority" %}
 <section class="major-head" id="research">
   <h2 data-en="Research" data-ko="연구">Research</h2>
-  <p data-en="Papers first — four topics, in reading-priority order." data-ko="논문 우선 — 네 가지 주제를 읽는 순서대로 배치.">Papers first — four topics, in reading-priority order.</p>
+  <p data-en="Papers first — five topics, in reading-priority order." data-ko="논문 우선 — 다섯 가지 주제를 읽는 순서대로 배치.">Papers first — five topics, in reading-priority order.</p>
 </section>
 
-{% if pinned %}
-<div class="lead-story" data-tags="all {{ pinned.tags | join: ' ' }}">
-  <span class="lead-badge" data-en="★ pinned lead story" data-ko="★ 고정된 주요 기사">★ pinned lead story</span>
-  {% if pinned.pin_image %}<img class="lead-image" src="{{ pinned.pin_image }}" alt="">{% endif %}
-  <h2 class="lead-title"><a href="{{ pinned.url | relative_url }}">{{ pinned.title_en }}</a></h2>
-  <p class="lead-summary">{{ pinned.hook_en }}</p>
-  <div class="lead-links">
-    <a href="{{ pinned.source_url }}" target="_blank" rel="noopener" data-en="Read the original →" data-ko="원문 보기 →">Read the original →</a>
-    {% if pinned.commentary_url %}<a href="{{ pinned.commentary_url }}" target="_blank" rel="noopener" data-en="Full commentary on aaron.kr →" data-ko="aaron.kr 전체 논평 →">Full commentary on aaron.kr →</a>{% endif %}
+{% if pinned_all.size > 0 %}
+<div class="lead-wrap">
+  {% for pinned in pinned_all %}
+    {% if pinned.pin_priority == 1 %}
+    <div class="lead-story{% if pinned.pin_own_research %} own-research{% endif %}" data-tags="all {{ pinned.tags | join: ' ' }}">
+      <span class="lead-badge" data-en="★ pinned lead story" data-ko="★ 고정된 주요 기사">★ pinned lead story</span>
+      {% if pinned.pin_image %}<img class="lead-image" src="{{ pinned.pin_image }}" alt="">{% endif %}
+      <h2 class="lead-title"><a href="{{ pinned.url | relative_url }}">{{ pinned.title_en }}</a></h2>
+      <p class="lead-summary">{{ pinned.hook_en }}</p>
+      <div class="lead-links">
+        <a href="{{ pinned.source_url }}" target="_blank" rel="noopener" data-en="Read the original →" data-ko="원문 보기 →">Read the original →</a>
+        {% if pinned.commentary_url %}<a href="{{ pinned.commentary_url }}" target="_blank" rel="noopener" data-en="Full commentary on aaron.kr →" data-ko="aaron.kr 전체 논평 →">Full commentary on aaron.kr →</a>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  {% assign pinned_secondary = pinned_all | where_exp: "e", "e.pin_priority > 1" %}
+  {% if pinned_secondary.size > 0 %}
+  <div class="lead-grid">
+    {% for pinned in pinned_secondary %}
+    <div class="lead-card{% if pinned.pin_own_research %} own-research{% endif %}" data-tags="all {{ pinned.tags | join: ' ' }}">
+      <span class="lead-badge small" data-en="★ pinned" data-ko="★ 고정됨">★ pinned</span>
+      <h3 class="lead-card-title"><a href="{{ pinned.url | relative_url }}">{{ pinned.title_en }}</a></h3>
+      <p class="lead-card-summary">{{ pinned.hook_en }}</p>
+      <a class="pill-cta pill-cta-small" href="{{ pinned.source_url }}" target="_blank" rel="noopener" data-en="read article ↗" data-ko="기사 보기 ↗">read article ↗</a>
+    </div>
+    {% endfor %}
   </div>
+  {% endif %}
 </div>
 {% endif %}
 
@@ -63,6 +82,13 @@ description: "A bilingual (English/Korean) reading log — research papers first
   {% for e in biomedical limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
 
+{% assign ai_edu = site.research | where: "topic", "ai-education" | sort: "date" | reverse %}
+<div class="topic-head"><span class="rank">05</span><h3 data-en="AI Education" data-ko="AI 교육">AI Education</h3></div>
+<p class="topic-sub" data-en="Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education. Showing {{ ai_edu.size }}, most recent first." data-ko="아론의 현재 최고 출판 분야 — 교실에서의 ChatGPT·LLM 활용, 인지적 아웃소싱, 컴퓨팅·공학 교육. 최신순 {{ ai_edu.size }}건.">Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education.</p>
+<section class="log">
+  {% for e in ai_edu limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
+</section>
+
 <section class="major-head" id="news">
   <h2 data-en="News" data-ko="뉴스">News</h2>
   <p data-en="Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume." data-ko="의도적으로 작고 촘촘하게, 아래쪽에 배치 — 목적은 헤드라인 양이 아니라 논평으로 발전시킬 소재.">Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume.</p>
@@ -73,3 +99,4 @@ description: "A bilingual (English/Korean) reading log — research papers first
 </section>
 
 {% include sources.html %}
+{% include reading-frequency.html %}

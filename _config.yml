@@ -22,6 +22,8 @@ collections:
   news:
     output: true
     permalink: /news/:path/
+  alerts:
+    output: false
 
 defaults:
   - scope:
@@ -42,6 +44,7 @@ exclude:
   - README.md
   - SETUP.md
   - US_ROADMAP.md
+  - Claude-code-v1-notes.md
   - LICENSE
   - sources.example.json
   - frequency-concept.html

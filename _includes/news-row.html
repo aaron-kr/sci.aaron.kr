@@ -4,20 +4,13 @@
 {% assign has_summary = e.content | strip | size %}
 {% assign cov_total = 0 %}
 {% if e.coverage_en or e.coverage_ko %}{% assign cov_total = e.coverage_en | default: 0 | plus: e.coverage_ko | default: 0 %}{% endif %}
-{% assign cov_class = "" %}
-{% case cov_total %}
-  {% when 2 %}{% assign cov_class = "cov-2" %}
-  {% when 3 %}{% assign cov_class = "cov-3" %}
-  {% when 4 %}{% assign cov_class = "cov-4" %}
-  {% else %}{% if cov_total >= 5 %}{% assign cov_class = "cov-5plus" %}{% endif %}
-{% endcase %}
-<div class="list-row{% unless e.thumb %} no-thumb{% endunless %}{% if e.raw_wire %} wire{% endif %}{% if cov_class != "" %} {{ cov_class }}{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
+<div class="list-row{% unless e.thumb %} no-thumb{% endunless %}{% if e.raw_wire %} wire{% endif %}{% if has_summary > 0 %} has-summary{% else %} no-summary{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
   <span class="list-date">{{ e.date | date: "%m.%d" }}</span>
   {% if e.thumb %}<img class="list-thumb" src="{{ e.thumb }}" alt="">{% endif %}
   <div class="list-main">
     <h3 class="list-title">
       {% if has_summary > 0 %}<a href="{{ e.url | relative_url }}">{{ e.title }}</a>
-      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title }}</a>{% endif %}
+      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title }}</a><span class="ext-icon" aria-hidden="true">↗</span>{% endif %}
     </h3>
     {% assign hook = e.hook_en %}
     {% if e.source_lang == "en" %}{% assign hook = e.hook_ko %}{% endif %}
@@ -32,6 +25,7 @@
   <div class="list-meta">
     {% if e.raw_wire %}<span class="wire-flag" data-en="wire" data-ko="보도자료">wire</span>{% endif %}
     {% if e.commentary_worthy %}<span class="commentary-flag" data-en="commentary?" data-ko="논평 후보">commentary?</span>{% endif %}
+    {% if has_summary > 0 %}<span class="summary-dot" title="Aaron's own summary">●</span>{% endif %}
     {% if cov_total > 0 %}<span class="cov-count" data-en="{{ cov_total }} sources" data-ko="{{ cov_total }}곳 보도">{{ cov_total }} sources</span>{% endif %}
     <span class="list-src {{ e.source_lang }}">{{ e.source }}</span>
     <a class="pill-cta pill-cta-small" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read ↗" data-ko="보기 ↗">read ↗</a>

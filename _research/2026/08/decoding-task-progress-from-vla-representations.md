@@ -15,7 +15,7 @@ pin: false
 pin_image: null
 raw_wire: false
 title_en: "Decoding Task Progress from VLA Representations"
-source: "Example: a colleague's keyword watch"
+source: "arXiv cs.RO"
 source_lang: "en"
 source_url: "http://arxiv.org/abs/2608.13474v1"
 topic: "physical-ai"

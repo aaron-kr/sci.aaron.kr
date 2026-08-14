@@ -32,26 +32,38 @@ def bool_field(fm_text, key):
     return field(fm_text, key) == "true"
 
 
+def field_is_set(fm_text, key):
+    """True if the field is present and not the YAML null/empty sentinel —
+    used for pin_priority, which is an int-or-null, not a bool."""
+    v = field(fm_text, key)
+    return v not in (None, "null", "")
+
+
 def collect(coll_dir, kind, since):
     items = []
     d = os.path.join(REPO_ROOT, coll_dir)
     if not os.path.isdir(d):
         return items
-    for name in sorted(os.listdir(d)):
-        if not name.endswith(".md"):
-            continue
-        path = os.path.join(d, name)
-        fm = read_front_matter(path)
-        date = field(fm, "date")
-        if not date or date < since:
-            continue
-        interesting = bool_field(fm, "pin") or bool_field(fm, "commentary_worthy") or bool_field(fm, "marked_for_class")
-        if not interesting:
-            continue
-        title = field(fm, "title_en") or field(fm, "title")
-        slug = name[:-3]
-        url = f"{SITE_URL}/{kind}/{slug}/"
-        items.append({"title": title, "url": url, "date": date})
+    for root, _dirs, files in os.walk(d):  # entries live under year/month subfolders
+        for name in sorted(files):
+            if not name.endswith(".md"):
+                continue
+            path = os.path.join(root, name)
+            fm = read_front_matter(path)
+            date = field(fm, "date")
+            if not date or date < since:
+                continue
+            interesting = (
+                field_is_set(fm, "pin_priority")
+                or bool_field(fm, "commentary_worthy")
+                or bool_field(fm, "marked_for_class")
+            )
+            if not interesting:
+                continue
+            title = field(fm, "title_en") or field(fm, "title")
+            slug = name[:-3]
+            url = f"{SITE_URL}/{kind}/{slug}/"
+            items.append({"title": title, "url": url, "date": date})
     return items
 
 

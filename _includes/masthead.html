@@ -15,9 +15,15 @@
 <div class="subnav-stick">
   <nav class="subnav">
     <span class="subnav-name">SCIENTIA</span>
-    <a href="{{ '/' | relative_url }}#research" data-en="Research" data-ko="연구">Research</a>
-    <a href="{{ '/' | relative_url }}#news" data-en="News" data-ko="뉴스">News</a>
-    <a href="{{ '/reading-list/' | relative_url }}" data-en="Reading list" data-ko="읽기 자료">Reading list</a>
-    <a href="{{ '/' | relative_url }}#sources" data-en="Sources" data-ko="소스">Sources</a>
+    <button class="subnav-toggle" id="subnav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="subnav-links">☰</button>
+    <div class="subnav-links" id="subnav-links">
+      <a href="{{ '/' | relative_url }}#research" data-en="Research" data-ko="연구">Research</a>
+      <a href="{{ '/' | relative_url }}#news" data-en="News" data-ko="뉴스">News</a>
+      <a href="{{ '/reading-list/' | relative_url }}" data-en="Reading list" data-ko="읽기 자료">Reading list</a>
+      <a href="{{ '/' | relative_url }}#sources" data-en="Sources" data-ko="소스">Sources</a>
+      <span class="subnav-divider" aria-hidden="true"></span>
+      <a href="https://courses.aaron.kr" target="_blank" rel="noopener" data-en="Courses ↗" data-ko="강의 ↗">Courses ↗</a>
+      <a href="https://pailab.io" target="_blank" rel="noopener" data-en="Lab ↗" data-ko="연구실 ↗">Lab ↗</a>
+    </div>
   </nav>
 </div>

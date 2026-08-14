@@ -29,8 +29,11 @@ permalink: /reading-list/
 </section>
 
 <section class="course" style="margin-top:20px;">
-  <div class="course-head"><h1 data-en="Your bookmarks (this browser only)" data-ko="내 북마크 (이 브라우저 한정)">Your bookmarks (this browser only)</h1></div>
-  <p class="course-sub" data-en="Clicking &ldquo;mark for class&rdquo; anywhere on the site saves a personal bookmark here, in this browser only. It does not change the official list above — that comes from the site's own data." data-ko="사이트 어디서든 &lsquo;수업용으로 표시&rsquo;를 클릭하면 이 브라우저에만 개인 북마크로 저장됩니다. 위의 공식 목록에는 영향을 주지 않습니다 — 공식 목록은 사이트 데이터 기준입니다.">Clicking "mark for class" anywhere on the site saves a personal bookmark here, in this browser only.</p>
+  <div class="course-head">
+    <h1 data-en="Bookmarked articles (this browser only)" data-ko="북마크한 기사 (이 브라우저 한정)">Bookmarked articles (this browser only)</h1>
+  </div>
+  <p class="course-sub" data-en="Clicking &ldquo;mark for class&rdquo; anywhere on the site saves a personal bookmark here, stored in this browser only (localStorage) — nothing is sent anywhere. It does not change the official list above — that comes from the site's own data, set by hand." data-ko="사이트 어디서든 &lsquo;수업용으로 표시&rsquo;를 클릭하면 이 브라우저에만 개인 북마크로 저장됩니다(localStorage) — 어디로도 전송되지 않습니다. 위의 공식 목록에는 영향을 주지 않습니다 — 공식 목록은 직접 설정하는 사이트 데이터 기준입니다.">Clicking "mark for class" anywhere on the site saves a personal bookmark here, in this browser only.</p>
   <ul class="course-list" id="bookmark-list"></ul>
-  <p class="course-empty" id="bookmark-empty" data-en="No personal bookmarks yet." data-ko="아직 개인 북마크가 없습니다.">No personal bookmarks yet.</p>
+  <p class="course-empty" id="bookmark-empty" data-en="No bookmarked articles yet." data-ko="아직 북마크한 기사가 없습니다.">No bookmarked articles yet.</p>
+  <div class="course-print"><button id="bookmark-clear" class="clear-all-btn" data-en="✕ Clear all" data-ko="✕ 모두 지우기">✕ Clear all</button></div>
 </section>

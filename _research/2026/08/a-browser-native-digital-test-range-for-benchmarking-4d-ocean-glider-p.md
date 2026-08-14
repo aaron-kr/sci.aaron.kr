@@ -15,7 +15,7 @@ pin: false
 pin_image: null
 raw_wire: false
 title_en: "A Browser-Native Digital Test Range for Benchmarking 4D Ocean-Glider Planning Algorithms"
-source: "Example: a colleague's keyword watch"
+source: "arXiv cs.RO"
 source_lang: "en"
 source_url: "http://arxiv.org/abs/2608.13511v1"
 topic: "physical-ai"

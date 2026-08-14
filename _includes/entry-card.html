@@ -2,11 +2,12 @@
 {% assign e = include.entry %}
 {% assign tag_str = e.tags | join: " " %}
 {% assign has_summary = e.content | strip | size %}
-<article class="entry{% if e.raw_wire %} wire{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
+<article class="entry{% if e.raw_wire %} wire{% endif %}{% if has_summary > 0 %} has-summary{% else %} no-summary{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
   <div class="entry-time"><span class="date">{{ e.date | date: "%m.%d" }}</span>{{ e.date | date: "%Y" }}</div>
   <div>
     <div class="src-row">
       <span class="src-tag {{ e.source_lang }}"><span class="swatch"></span>{{ e.source }}</span>
+      {% if has_summary > 0 %}<span class="summary-badge" data-en="✓ written" data-ko="✓ 작성됨">✓ written</span>{% endif %}
       {% if e.coverage_en or e.coverage_ko %}<span class="cov-inline">{% if e.coverage_en %}{{ e.coverage_en }} EN{% endif %}{% if e.coverage_en and e.coverage_ko %} · {% endif %}{% if e.coverage_ko %}{{ e.coverage_ko }} KO{% endif %}</span>{% endif %}
       {% if e.gap == "en_only" %}<span class="gap-flag" data-en="no KO pickup yet" data-ko="한국어 미보도">no KO pickup yet</span>{% endif %}
       {% if e.gap == "ko_only" %}<span class="gap-flag" data-en="no EN pickup yet" data-ko="영어권 미보도">no EN pickup yet</span>{% endif %}
@@ -17,7 +18,7 @@
     </div>
     <h2 class="entry-title">
       {% if has_summary > 0 %}<a href="{{ e.url | relative_url }}">{{ e.title_en }}</a>
-      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title_en }}</a>{% endif %}
+      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title_en }}</a><span class="ext-icon" aria-hidden="true">↗</span>{% endif %}
     </h2>
     {% assign translated_hook = e.hook_ko %}
     {% if translated_hook and translated_hook != "" %}<p class="entry-title-ko">{{ translated_hook }}</p>{% endif %}
@@ -28,11 +29,6 @@
     <div class="entry-actions">
       <a class="pill-cta" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read article ↗" data-ko="기사 보기 ↗">read article ↗</a>
       <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
-      {% if has_summary > 0 %}
-        <a href="{{ e.url | relative_url }}" data-en="my summary →" data-ko="내 요약 보기 →">my summary →</a>
-      {% else %}
-        <a href="{{ e.url | relative_url }}" data-en="add a summary →" data-ko="요약 작성하기 →">add a summary →</a>
-      {% endif %}
     </div>
   </div>
 </article>

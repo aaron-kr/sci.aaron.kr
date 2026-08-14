@@ -297,10 +297,10 @@
       "query": "(cat:cs.CY OR cat:cs.AI) AND (abs:\"AI education\" OR abs:\"computing education\" OR abs:\"engineering education\")",
       "lang": "en",
       "category": "papers",
-      "topic": "general-ai",
+      "topic": "ai-education",
       "tags": ["ai-education"],
       "owner": "aaron",
-      "_comment": "cross-cutting lens, not its own topic — Aaron's strongest current publication niche. See CLAUDE.md."
+      "_comment": "own topic as of this session — Aaron's strongest current publication niche, graduated from a cross-cutting tag once volume justified a 5th research section. See CLAUDE.md."
     },
     {
       "id": "naver-ai-education",
@@ -310,7 +310,7 @@
       "query": "AI 교육",
       "lang": "ko",
       "category": "news",
-      "topic": "general-ai",
+      "topic": "ai-education",
       "tags": ["ai-education"],
       "owner": "aaron"
     },

@@ -68,7 +68,8 @@ DEFAULT_FRONT_MATTER = {
     "commentary_worthy": False,
     "commentary_url": None,
     "commentary_video_url": None,
-    "pin": False,
+    "pin_priority": None,
+    "pin_own_research": False,
     "pin_image": None,
     "raw_wire": False,
 }

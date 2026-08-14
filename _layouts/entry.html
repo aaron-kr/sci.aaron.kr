@@ -6,7 +6,9 @@ layout: default
 
   <div class="src-row">
     <span class="src-tag {{ page.source_lang }}"><span class="swatch"></span>{{ page.source }}</span>
-    {% if page.pin %}<span class="commentary-flag" data-en="pinned lead story" data-ko="고정된 주요 기사">pinned lead story</span>{% endif %}
+    {% if page.pin_priority %}<span class="commentary-flag{% if page.pin_own_research %} own-research{% endif %}" data-en="pinned lead story" data-ko="고정된 주요 기사">pinned lead story</span>{% endif %}
+    {% assign has_summary = page.content | strip | size %}
+    {% if has_summary > 0 %}<span class="summary-badge" data-en="✓ written" data-ko="✓ 작성됨">✓ written</span>{% endif %}
     {% if page.raw_wire %}<span class="wire-flag" data-en="wire / press release" data-ko="보도자료">wire / press release</span>{% endif %}
     {% if page.embedded %}<span class="embedded-flag" data-en="low-cost / embedded" data-ko="저비용·임베디드">low-cost / embedded</span>{% endif %}
     {% if page.health_flourishing %}<span class="embedded-flag health" data-en="health &amp; flourishing" data-ko="건강·플러리싱">health &amp; flourishing</span>{% endif %}
@@ -32,7 +34,7 @@ layout: default
   {% endif %}
 
   <div class="entry-page-body">
-    {% if page.content and page.content.size > 0 %}
+    {% if has_summary > 0 %}
       {{ content }}
     {% else %}
       <p class="entry-page-empty" data-en="No write-up yet — this entry is still just the auto-fetched hook. Aaron's own summary (200–500 words) will replace this note once he's written it." data-ko="아직 작성된 요약이 없습니다 — 현재는 자동으로 수집된 hook만 있는 상태입니다. 아론이 직접 작성한 요약(200~500단어)이 준비되면 이 안내문을 대체합니다.">No write-up yet — this entry is still just the auto-fetched hook. Aaron's own summary (200–500 words) will replace this note once he's written it.</p>

@@ -1,0 +1,23 @@
+<!-- GitHub-commit-style calendar of days Aaron wrote his own summary.
+     Data comes from _data/reading_frequency.json (scripts/reading_frequency.py,
+     run daily in fetch.yml) — absent until the first CI run generates it. -->
+{% assign freq = site.data.reading_frequency %}
+{% if freq %}
+<section class="freq-section">
+  <h4 data-en="Reading frequency" data-ko="읽기 빈도">Reading frequency</h4>
+  <p class="freq-sub" data-en="One square per day, filled in whenever a summary gets written — in either language. {{ freq.total }} total{% if freq.streak > 0 %} · {{ freq.streak }}-day streak{% endif %}." data-ko="요약을 작성한 날마다 칸이 채워집니다(언어 무관). 총 {{ freq.total }}건{% if freq.streak > 0 %} · {{ freq.streak }}일 연속{% endif %}.">One square per day, filled in whenever a summary gets written.</p>
+  <div class="freq-grid">
+    {% for week in freq.weeks %}
+    <div class="freq-col">
+      {% for day in week %}
+        {% if day.future %}
+        <span class="freq-day future" aria-hidden="true"></span>
+        {% else %}
+        <span class="freq-day level-{{ day.level }}" title="{{ day.date }} — {{ day.count }} {% if day.count == 1 %}summary{% else %}summaries{% endif %}"></span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

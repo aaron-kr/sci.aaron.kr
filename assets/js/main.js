@@ -112,6 +112,34 @@ function renderPersonalBookmarks(){
   });
 }
 
+function clearBookmarks(){
+  const activeLangBtn = document.querySelector('.lang-toggle button.active');
+  const lang = activeLangBtn ? activeLangBtn.dataset.lang : 'en';
+  const msg = lang === 'ko' ? '이 브라우저의 북마크된 항목을 모두 지울까요?' : 'Clear all bookmarked articles in this browser?';
+  if(!window.confirm(msg)) return;
+  setBookmarks([]);
+  renderPersonalBookmarks();
+}
+
+function initClearBookmarks(){
+  document.getElementById('bookmark-clear')?.addEventListener('click', clearBookmarks);
+}
+
+// ---- mobile hamburger for the sticky subnav ----
+function initSubnavToggle(){
+  const btn = document.getElementById('subnav-toggle');
+  const links = document.getElementById('subnav-links');
+  if(!btn || !links) return;
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }));
+}
+
 // ---- back to top ----
 function initBackToTop(){
   const btn = document.getElementById('back-to-top');
@@ -170,6 +198,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initFilters();
   initBackToTop();
   initRain();
+  initSubnavToggle();
+  initClearBookmarks();
   markButtonsFromBookmarks();
   renderPersonalBookmarks();
   try{
