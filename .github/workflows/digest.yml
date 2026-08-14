@@ -1,0 +1,21 @@
+name: Weekly digest
+
+on:
+  schedule:
+    # Mondays 22:00 UTC ≈ Tue 07:00 KST — change the day/time here, see SETUP.md
+    - cron: "0 22 * * 1"
+  workflow_dispatch: {}
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send weekly digest
+        run: python scripts/send_digest.py
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_TO_EMAIL: ${{ secrets.DIGEST_TO_EMAIL }}

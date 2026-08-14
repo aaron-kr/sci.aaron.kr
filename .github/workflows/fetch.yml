@@ -1,0 +1,47 @@
+name: Fetch sources
+
+on:
+  schedule:
+    # once a day, 21:00 UTC ≈ 06:00 KST — see SETUP.md to change the cadence
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch arXiv
+        run: python scripts/fetch_arxiv.py
+
+      - name: Fetch RSS
+        run: python scripts/fetch_rss.py
+
+      - name: Fetch Naver (skipped until NAVER_CLIENT_ID/SECRET are set — see SETUP.md)
+        if: env.NAVER_CLIENT_ID != '' && env.NAVER_CLIENT_SECRET != ''
+        run: python scripts/fetch_naver.py
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+
+      - name: Generate hooks (skipped until ANTHROPIC_API_KEY is set — see SETUP.md)
+        if: env.ANTHROPIC_API_KEY != ''
+        run: python scripts/gloss.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit new entries
+        run: |
+          git config user.name "scientia-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add _research _news
+          git diff --cached --quiet || git commit -m "Fetch: $(date -u +%F)"
+          git push

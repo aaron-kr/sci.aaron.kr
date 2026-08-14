@@ -1,42 +1,197 @@
-# CLAUDE.md — Scientia (working title) build notes
+# CLAUDE.md — Scientia AI build notes
 
 Session handoff file. Read this first.
 
-**Status: concept/refinement stage.** Design mockups exist (`frequency-concept.html` = v1, `sci.html` = v2). This file documents a pivot made after reviewing both mockups together — v2's coverage-count-driven layout was too Ground-News-shaped for what this project actually needs. No fetch pipeline is built yet. Nothing is live.
+**Status: near-live.** The Jekyll site builds and runs today with real fetched
+data — `_research/` and `_news/` are populated from a live run of
+`scripts/fetch_arxiv.py` and `scripts/fetch_rss.py` (not hand-written sample
+HTML anymore). What's still missing before this is genuinely "live": Naver/
+Anthropic/Resend credentials (see `SETUP.md`), a DNS record for the custom
+domain, and Aaron's own written summaries on any entry beyond the one demo
+pin. See "Open decisions" at the bottom for what's left.
 
 ## What this project is
 
-A bilingual (EN/KO) reading log, **research-first**, for a small set of AI subfields. Two purposes for one person:
+A bilingual (EN/KO) reading log, **research-first**, for a small set of AI
+subfields. Publicly discoverable on purpose (see "Public, not private" below)
+— this is no longer a "keep it off the nav" project.
 
-1. **Personal habit-building** — Aaron is a CS professor (5 Korean universities, PI at PAI Lab / pailab.io, founding organizer of KSPAI — 한국피지컬AI학회) rebuilding a daily habit of reading and writing about his own research field, in both languages. The habit is the point — this is a training tool aimed at Aaron himself first.
-2. **Course prep** — feeds a graduate "Research Methods" course (international engineering dept., textbooks: *The Craft of Research*, *Writing for Computer Science*) with a running, filterable pool of current English-language papers/articles for students to read and analyze weekly.
+1. **Personal habit-building** — Aaron is a CS professor (5 Korean
+   universities, PI at PAI Lab / pailab.io, founding organizer of KSPAI —
+   한국피지컬AI학회) rebuilding a daily habit of reading and writing about his
+   own research field, in both languages.
+2. **Course prep** — feeds a graduate "Research Methodology" course at CBNU
+   (`courses.aaron.kr/courses/2026/cbnu-grad-research/`, currently
+   `visible: false` — not published yet) with a running, filterable pool of
+   current English-language papers/articles. See "Reading list page" below.
+3. **Professional portfolio / credibility** — Aaron is aiming for a visiting
+   lecturer position in the US in roughly three years, as a solo, unfunded
+   researcher whose co-authors are mostly full-time-employed academics
+   without lab funding either. A public, well-designed, actively-maintained
+   research aggregator is concrete evidence of research engagement and
+   initiative that a résumé line can't convey on its own — this is exactly
+   the kind of "small, cheap, embedded, solo-researcher" project that fits
+   his actual niche and is realistic to sustain without grant funding.
 
-Secondary audience: other professors (starting with KSPAI colleagues) who may want to add their own RSS feed or keyword watch without touching code.
+Secondary audience: other professors (starting with KSPAI colleagues) who may
+want to add their own RSS feed or keyword watch, and — because this is now
+public — anyone who finds it organically via Feedly/Google/search and finds
+it useful for tracking Physical AI, OCR, or biomedical AI research
+specifically (see "Why this instead of Feedly/Inoreader/Google News" below).
 
 ### Explicitly NOT this project
-- Not the lab's research output site (that's pailab.io — Astro, has its own EN/KO handling, publications, curriculum).
-- Not the courses site (`courses.aaron.kr` — pure static HTML, no build step, documented in its own CLAUDE.md).
-- Not a SCIE-writing or Zotero/citation-management guide — that's deliberately being built out on pailab.io's curriculum instead (`pailab.io/curriculum/track-00-research`, which already covers finding/citing sources, IMRaD writing, and getting published). Don't duplicate it here.
-- Not the place for long-form commentary essays — see "Where commentary lives" below.
-- This project should stay a personal/practice tool, not a lab-branded deliverable. Keep it off pailab.io's nav.
+- Not the lab's research output site (that's pailab.io — Astro, has its own
+  EN/KO handling, publications, curriculum). It **is**, however, now linked
+  *from* pailab.io's nav (Research → "Scientia AI (reading log) ↗") — see
+  "Public, not private."
+- Not the courses site (`courses.aaron.kr` — pure static HTML, no build step).
+- Not a SCIE-writing or Zotero/citation-management guide — that's on
+  pailab.io's curriculum instead (`pailab.io/curriculum/track-00-research`,
+  which already covers finding/citing sources, IMRaD writing, and getting
+  published). Confirmed again this session — don't duplicate it here.
+- Not the place for AI-driven feed personalization (adaptive ranking based on
+  click behavior) — considered and explicitly deferred, see "Deferred ideas."
 
-## Where commentary lives (resolved)
+## Public, not private (reversed from earlier planning)
 
-Aaron wants to react to some stories the way Cal Newport reacts to AI news — real essays, not one-line glosses. Two different artifacts, two different homes:
+Earlier planning said to keep this off pailab.io's nav and stay a private
+practice tool. **Reversed this session.** Aaron wants it publicly known —
+business card material, discoverable by students/colleagues who find it
+organically, and evidence of active research engagement for a future US
+visiting-lecturer search. Concretely, this session:
+- Added a link to it from **pailab.io's nav** (`Nav.astro`, under Research →
+  after "Doing Research →", labeled "Scientia AI (reading log) ↗").
+- Added SEO basics to the Jekyll build: per-page `<title>`/meta description,
+  Open Graph + Twitter card tags, canonical URLs, `jekyll-sitemap`,
+  `robots.txt`, and a `WebSite` JSON-LD block. See `_layouts/default.html`.
+- Set the custom domain (`CNAME` → `sci.aaron.kr`) so it reads as a real
+  destination, not a `github.io` URL, on a business card.
 
-- **The gloss** (1–3 sentence paraphrase, required for every entry, the daily writing-practice habit) stays inline on this site. See "Content rules."
-- **A full commentary/reaction essay** (occasional, only for stories that earn it) belongs on **aaron.kr's existing Writing section** — it's WordPress-backed (see `aaron.kr` repo, `components/Writing.tsx`), already publishes exactly this genre (e.g. "On Physical AI: What Embodied Intelligence Means for Education"), and already has an audience/design for long-form personal essays. Don't build a second blog here.
-- The link direction: the Scientia entry can carry an optional `commentary_url` pointing out to the aaron.kr Writing post once one exists. Not the other way around — Scientia is the log, aaron.kr/writing is where the essay lives.
-- Not pailab.io (lab-branded, third-person research voice) and not courses.aaron.kr (course materials, not personal opinion).
+Implication: because a general audience (not just students) can now land
+here, the homepage should read as more than a course tool — hence moving the
+class-specific "reading list" off the homepage and onto its own page (see
+below), and treating the contributor form as a public-facing surface that
+needs spam resistance (see "Contributor flow").
 
-## Decisions made in planning
+## Why this instead of Feedly / Inoreader / Google News
 
-- **URL**: `sci.aaron.kr` — this is resolved (the repo itself is already named for it). Not `servo.aaron.kr` / `field.aaron.kr` as earlier candidates.
-- **Name**: working title **Scientia** (as used in `sci.html`'s `<title>`) — still not 100% final, but no longer an open question the way "SERVO" was. Confirm before final launch, since it touches meta tags, OG images, etc.
-- **Monetization/traffic**: deliberately not a goal. Build for Aaron + students + KSPAI colleagues. Revisit only if it organically grows.
-- **Coverage metrics are metadata, not the sort key.** Earlier planning (and the v2 mockup) borrowed Ground News's "more coverage = bigger card" model directly, sorting and sizing everything by EN/KO source count. Aaron doesn't need to know "how many outlets are covering this" as a primary signal — it's mildly interesting, not decisive. `coverage_count_en/ko`, `cross_language`, and `gap_flag` are still computed and still shown (small, inline, per-entry), but they no longer drive hero/paired/grid card tiering. What drives structure now is **content type and topic** — see Layout below.
-- **No forced thumbnails.** v1 (`frequency-concept.html`) proved a pure list/text layout works and looks better than manufacturing placeholder images. Keep that instinct system-wide: if a source provides a real thumbnail, it can be shown small; if it doesn't, don't fake one. This ruled out v2's `no-photo` diagonal-stripe placeholder pattern for papers — papers just don't get an image slot at all, full stop.
-- **No full-text republishing**: see "Content rules."
+Worth stating explicitly since it's the site's actual value proposition, not
+just a design note: those tools aggregate by keyword/feed but don't do
+EN/KO bilingual corroboration, don't structure around a fixed research-topic
+taxonomy (Physical AI → General AI → OCR/handwriting → Biomedical AI), and
+have no concept of "mark for class" or a research-methods pedagogy layer.
+This project is narrow and opinionated where they're general-purpose — that
+narrowness is the value, not a limitation to apologize for.
+
+## Deferred ideas (considered, not building now)
+
+- **AI-driven adaptive feed personalization** (re-ranking based on Aaron's
+  click/read behavior) — overkill for a solo-maintained static site with no
+  backend or analytics infrastructure. Manual curation (topic order, pin,
+  filters) is sufficient at this scale. Revisit only if traffic/usage
+  patterns actually demand it.
+- **PubMed/NCBI fetch script** — see sources.example.json's `pubmed-ai` entry
+  (`"enabled": false`). Reasoning: arXiv's `q-bio` + `cs.AI` keyword filter
+  already covers a meaningful slice of biomedical AI research, Biomedical AI
+  is already the thinnest/newest of the four topics, and PubMed's E-utilities
+  XML shape is a genuinely different parser from arXiv's Atom feed (not a
+  copy-paste job). Launch on arXiv-only biomedical coverage, add PubMed once
+  that volume is assessed and feels thin.
+- **Semantic Scholar fetch script** — referenced in `sources.example.json` as
+  aspirational; no fetch script exists yet. Not blocking launch.
+- **Google Sheet contributor flow** — still an open decision (see below); the
+  GitHub issue template is the working path for now.
+
+## Where commentary lives (three content tiers, not two)
+
+Revised this session — Aaron wants to write real 200–500 word summaries
+himself, not just edit a machine gloss. Three distinct tiers now:
+
+1. **The hook** (`hook_en` / `hook_ko`, one sentence each, LLM-generated by
+   `scripts/gloss.py`) — a translated one-line "is this worth a look," shown
+   inline in the log and on the entry's permalink page. Fully automated,
+   cheap (see SETUP.md § Anthropic). This is the *only* auto-generated prose
+   in the pipeline now — it used to be a 1–3 sentence paraphrase; that scope
+   shrank specifically so Aaron's own writing isn't competing with an LLM
+   draft for the same slot.
+2. **Aaron's own summary** (200–500 words, the entry's markdown body,
+   written by hand, whenever he gets to it) — lives on the entry's own
+   permalink page (`_research/<slug>.md` / `_news/<slug>.md`, rendered via
+   `_layouts/entry.html` at `/research/<slug>/` or `/news/<slug>/`). This is
+   the actual daily-habit writing practice, Seth-Godin-length, and it lives
+   **here on sci.aaron.kr**, not on aaron.kr — see "Why per-entry pages"
+   below for the reasoning (volume + site identity).
+3. **Full commentary/reaction essays** (500–1500+ words, occasional, only for
+   stories that earn it, à la Cal Newport reacting to AI news) — these go on
+   **aaron.kr's existing Writing section** (WordPress-backed, already
+   publishes this genre — e.g. "On Physical AI: What Embodied Intelligence
+   Means for Education"). An entry can carry a `commentary_url` pointing out
+   to the aaron.kr post once one exists, and/or a `commentary_video_url` if
+   Aaron records a talking-head reaction (see "YouTube" below). Confirmed
+   again this session, unchanged from before.
+
+## Why per-entry pages (and why tier 2 doesn't go on aaron.kr)
+
+This session added real per-entry permalink pages
+(`_layouts/entry.html`, Jekyll collections `research` and `news`) instead of
+everything living only in list form on the homepage. Reasoning:
+- Aaron's own 200–500 word summaries (tier 2 above) need *somewhere* to live
+  that isn't the homepage list view or aaron.kr.
+- Volume: if this habit sticks, that's potentially 200+ written summaries a
+  year. Putting that on aaron.kr's Writing section — a curated portfolio
+  meant to read well for a job search — would dilute exactly the credibility
+  effect this project is now supposed to support. sci.aaron.kr is expected to
+  be high-volume by nature (it's a log), so it's the right home for volume;
+  aaron.kr should stay low-volume and curated.
+- This also directly enables the reading-list page (below) and the pin/lead
+  story feature to link to something concrete instead of an external URL.
+
+## Reading list page (moved off the homepage)
+
+`reading-list.html` → `/reading-list/`. Previously an in-page collapsible
+"Course view" section on the homepage; moved to its own page this session
+because the homepage now has a general public audience (see "Public, not
+private"), not just students, and a course-reading-list widget doesn't belong
+on a page meant to read as a general research aggregator.
+
+- Server-rendered from real data: `site.research` / `site.news` where
+  `marked_for_class: true` and `source_lang: en` (the course reads in
+  English). This is the **authoritative** list.
+- A second, separate "your bookmarks" block below it is a **personal,
+  per-browser convenience** (localStorage, via the same "mark for class"
+  button anywhere on the site) — explicitly not the same thing as the
+  authoritative list, and the page says so. A static site has no backend to
+  write "this is now marked" back to a file from a button click; the real
+  marking happens by setting `marked_for_class: true` in an entry's front
+  matter (by hand for now, or via a future admin script).
+- **courses.aaron.kr integration (investigated, not yet wired):** the CBNU
+  course lives at `_courses/2026/cbnu-grad-research.md` in the
+  `courses.aaron.kr` repo (same root folder as this repo), currently
+  `visible: false`. Its weekly-lecture data file
+  (`_data/2026/cbnu_grad_research_lectures.yml`) doesn't exist yet — other
+  courses' lecture files (e.g. `_data/2023/dju_sec_lectures.yml`) show each
+  week has a free-form HTML `readings:` field. Once that data file exists,
+  each week's `readings:` can simply be
+  `<a href="https://sci.aaron.kr/reading-list/">This week's reading list →</a>`
+  instead of a copy-pasted list. **Deliberately not implemented yet** — Aaron
+  asked to decide this on a future session once the course itself is closer
+  to publishing.
+
+## YouTube (advisory, not a repo change beyond one data field)
+
+Discussed this session, not something to build here: recommendation is
+**one channel** (the existing PAI Lab / pailab.io channel) with **playlists**
+separating course content (Korean) from commentary reactions (English),
+rather than splitting into two channels. Reasoning: subscriber/view-count
+fragmentation across two channels actively hurts monetization eligibility and
+discovery, whereas playlists already solve the audience-segmentation problem
+most channels use separate channels for — a viewer who wants only Korean
+course content can subscribe to that playlist's notifications via YouTube's
+per-playlist follow, and video titles/thumbnails/auto-captions can signal
+language clearly per video. Bilingual content coexisting on one channel is
+already normal for many EDU channels. The only repo-level change from this:
+`commentary_video_url` exists as an optional per-entry field (see data model)
+for whenever this starts happening.
 
 ## Design tokens
 
@@ -45,7 +200,10 @@ Fonts (Google Fonts CDN, matches the rest of the `aaron.kr` family) — unchange
 - Labels / metadata / timestamps: `IBM Plex Mono` (400/500/600)
 - Body text: `IBM Plex Sans` (EN) / `IBM Plex Sans KR` (KO) (400/500/600)
 
-**Color palette — switched to the v1 (`frequency-concept.html`) palette.** Aaron prefers its background and the restraint of its list-first layout over v2's brighter indigo/violet card treatment. v2's palette is retired.
+**Color palette — v1's background kept, accent hues swapped for a more
+"AI-coded" set.** Brass/rust read as too warm/muted for this project (v1's
+palette was originally borrowed wholesale from a different aesthetic
+intent); jade stayed since it read fine.
 
 | Token | Hex | Role |
 |---|---|---|
@@ -55,186 +213,292 @@ Fonts (Google Fonts CDN, matches the rest of the `aaron.kr` family) — unchange
 | `--ink` | `#EDE7DC` | primary text |
 | `--ink-dim` | `#9BA2B0` | secondary text |
 | `--ink-faint` | `#6C7484` | metadata / disabled |
-| `--brass` | `#CDA24A` | English-source marker / brand |
-| `--jade` | `#57AD98` | Korean-source marker |
-| `--rust` | `#C1583D` | "new" / one-sided-coverage flag |
+| `--cyan` | `#4FD1FF` | English-source marker / brand / links (was `--brass`) |
+| `--jade` | `#57AD98` | Korean-source marker (unchanged) |
+| `--magenta` | `#FF5FA8` | flags / pin / "new" (was `--rust`) |
 
-Dark mode only for now (matches the rest of the family's dark-default pattern).
+Dark mode only for now.
 
-## Layout — research first, news second, coverage as a footnote
+### Background treatment
 
-Replaces v2's hero/paired/grid/dense-list tiering entirely.
+Two layered, intentionally subtle effects (`assets/css/main.css` `.bg-grid`,
+`assets/js/main.js` `initRain()`):
+- **Organic grid**: multiple `repeating-linear-gradient` layers at different
+  spacings/opacities (97px / 41px verticals, 160px horizontal) instead of one
+  uniform grid — reads as asymmetric/organic rather than a rigid CSS grid,
+  per Aaron's request to match the subtle-grid treatment on his other sites
+  without it looking mechanical.
+- **Digital rain canvas** (`#rain`): a very low-opacity (~4-10%), slow
+  (throttled to ~11fps via a manual frame-time check, not full 60fps),
+  sparse-column (26px spacing) Matrix-style character fall, tinted
+  cyan/jade. Respects `prefers-reduced-motion` (skipped entirely) and pauses
+  via the Page Visibility API when the tab isn't active. This is meant to be
+  barely noticeable at a glance — if it's ever distracting, turn the opacity
+  down further or the frame-time threshold up before removing it outright.
 
-1. **Masthead** — title, bilingual tagline, EN/KO interface toggle. Unchanged from both mockups.
-2. **Anchor nav** — jump links: `Research` · `News` · `Sources`. The page is long (research topics + a big news list); anchors matter more here than they did in either mockup.
-3. **Research section (top, largest share of the page).** Subsections in priority order (see "Research topic priority" below), each its own list in v1's entry style — date/time rail, source badge, serif title, EN summary (+ KO title line when the source is Korean), tags, actions (mark for class / add note). Target **~10 recent items per topic/source**, newest first within each. No thumbnails, ever, for papers — arXiv/Semantic Scholar/IEEE don't provide them and nothing should be faked.
-4. **News section (below research, anchor-linked, visually smaller/denser).** A straight list — closer to a blog index than cards: date, title (serif, smaller than research titles), source name, and — only when the source actually supplies one — a small thumbnail sitting *beside* the title (horizontal), never stacked above it, never a placeholder. Target **~20+ recent items**, across all watched news sources combined. This is also where the coverage badge (EN/KO count, cross-language, gap flag) actually earns its keep — it's most useful as a "these two are the same story" signal in a dense list, not as a hero-sizing algorithm.
-5. **Course view** — unchanged concept from v2 (marked items collect into a printable/linkable weekly reading set for Research Methods). Filters by English-only since that's the course's language.
-6. **Sources** — see below.
-7. **Footer.**
+### Interaction details fixed this session
+- **Sticky anchor nav**: `.subnav-stick` (position:sticky, top:0, blurred
+  background) replaces the old non-sticky subnav — addresses "anchor nav
+  with nothing to get back to sections easily."
+- **Back-to-top button**: `#back-to-top`, fixed bottom-right, fades in after
+  500px of scroll.
+- **Title hover behavior**: entry/list/lead/permalink titles have no default
+  underline; hover adds color (cyan) + underline together, not underline
+  alone as a static state. Applies to `.entry-title a`, `.list-title a`,
+  `.lead-title a`.
+- **Topic heads stand out more**: `.topic-head .rank` is now a filled cyan
+  numeral badge (was plain muted text), plus a 2px bottom border and larger
+  heading size — was getting lost against the surrounding hairline-bordered
+  sections before.
+- **Tag pills are clickable**: `.tag` is a `<button>` now, wired to
+  `filterByTag()` in `main.js` — clicking a tag on any entry (including on
+  its permalink page) filters the homepage to that tag, navigating there
+  first if needed.
+- **Mini coverage bar**: `.list-mini-cov`, a small Ground-News-style
+  horizontal EN/KO split bar, but scoped to **news rows only**, and only
+  rendered when `coverage_en`/`coverage_ko` are actually set on that entry —
+  metadata, not a layout/sort driver, consistent with the earlier decision
+  to demote coverage counts.
+- **Wire/press-release styling**: `raw_wire: true` dims an entry/row (`.wire`,
+  `opacity:.72`) and adds a small muted "WIRE" badge instead of excluding
+  raw/press-release coverage outright — Aaron still wants it included, just
+  visually deprioritized versus trade-press/analysis coverage.
 
-A manual "pin as lead story" override for the very top of Research should still exist for days when Aaron wants a specific item first regardless of recency — kept from the original planning notes, just no longer tied to a coverage algorithm.
+## Layout — research first, news second, coverage as a footnote (unchanged from prior session)
 
-## Research topic priority
+1. **Masthead** — sticky anchor nav: `Research` · `News` · `Reading list` · `Sources`.
+2. **Pinned lead story** (optional, `pin: true` on at most one `_research`
+   entry) — a visually distinct card above the topic sections: larger title,
+   optional custom `pin_image` (the one case where a manually-chosen image is
+   fine — this is Aaron deliberately picking a photo, not an auto-fetched
+   placeholder), links to both the original source and (if set)
+   `commentary_url`/`commentary_video_url`. **How to pin something:** set
+   `pin: true` in that entry's front matter (and optionally `pin_image`,
+   `commentary_url`) — see the demo entry
+   `_research/2026-08-12-handedit-...md` for a worked example. Only the first
+   `pin: true` entry found is shown; unpin the old one before pinning a new
+   one.
+3. **Research section**, four subsections in priority order (Physical AI →
+   General AI → OCR/handwriting → Biomedical AI), ~10 shown per topic
+   (`limit: 10` in `index.html`, most recent first — the underlying
+   collection can hold more).
+4. **News section**, dense list, ~30 shown (`limit: 30`), smaller than
+   research, mini coverage bar where applicable, wire styling where
+   applicable.
+5. **Sources** (`_includes/sources.html`) — full source list by topic, plus
+   the "suggest a source" GitHub issue CTA (see "Contributor flow").
+6. **Footer** — links out to pailab.io / aaron.kr / courses.aaron.kr.
 
-This is Aaron's actual reading order, and the order subsections should appear on the page:
+A manual "pin as lead story" override exists (see above) for days when the
+algorithmic-by-recency top item isn't what Aaron wants leading.
+
+## Research topic priority (unchanged)
 
 1. **Physical AI** — top priority, the core of KSPAI and pailab.io's focus.
 2. **General AI** — broader ML/AI research, not embodiment-specific.
-3. **Handwritten script recognition / OCR** — Aaron's Ph.D. thesis was on Manchu and Hangul handwritten script recognition; Cherokee is a newer interest. Keep this as its own subsection even though volume will be lower than the first two.
-4. **Biomedical AI** — Aaron teaches this across several schools and wants to publish in it; still building expertise here, so this is the newest/thinnest subsection.
+3. **Handwritten script recognition / OCR** — Aaron's Ph.D. thesis was on
+   Manchu and Hangul handwritten script recognition; Cherokee is a newer
+   interest.
+4. **Biomedical AI** — taught across several schools, actively building
+   toward publishing here. **Now includes the health & human-flourishing
+   lens** (see below) rather than that being a separate topic.
 
-**Cross-cutting research niche, not a fifth section:** Aaron's likely long-term research identity is *small, cheap, embedded AI for classrooms and labs without major funding* (he's a solo, unfunded researcher). This is a lens across all four topics above, not a separate pillar — implement as a filter chip (e.g. `low-cost / embedded`) that can be applied within any topic, plus make sure the source list includes feeds that actually cover this (TinyML-adjacent venues, edge-inference hardware coverage). Don't build a 5th top-level subsection for it yet — there may not be enough volume to sustain one on its own.
+**Cross-cutting lenses, not separate topics** — implemented as `tags` on
+sources (propagate straight onto generated entries) and as filter chips:
+- `low-cost-embedded` — Aaron's likely long-term research niche: small,
+  cheap, embedded AI for classrooms/labs without major funding. Cuts across
+  all four topics (currently populated under General AI, via the
+  `arxiv-embedded-edge` source).
+- `health-flourishing` — new this session. Aaron's interest in AI research
+  touching sleep, exercise, behavior change, wearables — the
+  Huberman/Peterson-adjacent angle, kept as a lens within Biomedical AI (and
+  General AI, if a relevant paper surfaces there) rather than a 5th topic,
+  since it's a cross-cutting interest, not a distinct field with its own
+  volume. Sources: `arxiv-health-flourishing`, `naver-health-ai`.
 
-## News selection lens
+Both lenses get their own filter chip on the homepage
+(`Low-cost / Embedded`, `Health & Flourishing`) — unlike per-topic chips
+(removed this session, see below), these two genuinely need cross-topic
+filtering since the topic sections alone don't surface them.
 
-Ground News comparison is gone from the layout, but the *reason* Aaron wants a news section at all is specific: he wants news that could become evergreen commentary — reacting to a story the way Cal Newport reacts to AI news (see "Where commentary lives"). Practical implications:
-- Prefer trade press and analysis-flavored coverage over raw wire/press-release rewrites when a source offers a choice.
-- The per-entry data model should support a lightweight flag Aaron can set by hand (`commentary_worthy: bool` or similar) separate from `marked_for_class` — different downstream use (aaron.kr Writing vs. the Research Methods reading list).
-- This is a hand-curation lens, not something to over-automate — don't try to build a "commentary-worthiness" classifier.
+**Chips removed this session**: `Humanoids`/`Manipulation`/`OCR`/`Biomedical`
+top-level filter chips existed in the prior draft but were redundant with
+the topic sections themselves (OCR items are already grouped under topic 3,
+etc.) and, worse, had no real tag data behind them yet — clicking them
+against live-fetched entries showed empty results. Kept `Humanoids` and
+`Manipulation` as chips (hand-tagged a few real Physical AI entries this
+session to prove them out) since those genuinely cut *within* a topic rather
+than duplicating a whole section.
+
+## Automation vs. manual — what's actually automatic right now
+
+Answering "how much of this will be automatic vs. me going back in" directly,
+since it came up this session:
+
+| Piece | Automatic? |
+|---|---|
+| Fetching titles/dates/links (arXiv, RSS, Naver once configured) | **Yes** — `fetch_arxiv.py` / `fetch_rss.py` / `fetch_naver.py`, cron-scheduled |
+| Which topic section an entry lands in | **Yes** — comes straight from the source's `topic` field in `sources.json` |
+| Cross-cutting tags (`low-cost-embedded`, `health-flourishing`) | **Yes, if the *source* is tagged** — propagates automatically; a source that isn't pre-tagged won't get these automatically |
+| Fine-grained tags (`humanoids`, `manipulation`, `ocr`, etc.) | **No** — currently hand-added per entry (see the handful tagged this session as a proof of concept). Not auto-classified. Revisit only if this becomes a real bottleneck — a cheap LLM tagging pass during `gloss.py` is the natural next step if so, but wasn't built this session to keep scope down. |
+| Hooks (`hook_en`/`hook_ko`) | **Yes, once `ANTHROPIC_API_KEY` is set** — `gloss.py` |
+| Aaron's own 200–500 word summary | **No, by design** — this is the point of the habit |
+| Pinning a lead story | **No, manual** — `pin: true` |
+| Marking for class | **Partially** — the authoritative flag (`marked_for_class: true`) is manual/front-matter; a personal per-browser bookmark button exists as a convenience but doesn't write back to the site |
+| Coverage counts / cross-language gap flags | **Not implemented yet** — the fields exist in the schema (`coverage_en`, `coverage_ko`, `gap`) but no clustering step populates them automatically. Still deliberately metadata-only, not sort-driving, per the earlier pivot away from the Ground News model. |
+
+## Contributor flow (fixed a real bug this session)
+
+The previous draft's "add a watch" form used `window.storage.get/set` —
+**this is not a real API on GitHub Pages.** It was accidentally carried over
+from an Artifact-preview-only convention and would have silently done
+nothing (or errored) on the actual deployed site. Caught and removed this
+session.
+
+Replaced with a **GitHub issue template**
+(`.github/ISSUE_TEMPLATE/source-suggestion.yml`) — the sources section links
+out to `github.com/aaron-kr/sci.aaron.kr/issues/new?template=source-suggestion.yml`
+instead of a live form. This also directly answers the spam/security
+concern raised this session (robots/randoms editing a public form that feeds
+`sources.json`): a GitHub issue requires a GitHub account (real friction
+against bots and drive-by spam), is reviewable before anything gets merged,
+and needs zero backend — a good fit for a static GitHub Pages site. The
+Google-Sheet contributor-flow idea from earlier planning is now the fallback
+option, not the primary one, if a non-technical colleague specifically can't
+use GitHub issues.
 
 ## Content rules (copyright) — unchanged
 
-- Never republish full article text or full machine translations of Korean articles publicly.
-- Every entry gets a short paraphrased gloss (1–3 sentences), not a translation — generated by an LLM pass, ideally hand-edited by Aaron as the writing-practice step. This is a feature, not just a legal safeguard: editing the gloss is the point of the daily habit.
-- Always link the title to the original source. Always attribute the source name.
-- If unsure whether a summary is too close to the source's wording, shorten and reword further rather than publish as-is.
+- Never republish full article text or full machine translations of Korean
+  articles publicly.
+- Every entry gets a one-sentence bilingual hook (see "Where commentary
+  lives" tier 1) — not a translation, not a summary.
+- Always link the title to the original source. Always attribute the source
+  name.
+- If unsure whether Aaron's own summary is too close to the source's
+  wording, shorten and reword further rather than publish as-is.
 
 ## Data model
 
 ### `sources.json` (or `.yml`) — the watch list
 
-See `sources.example.json` in this repo for the schema. Fields:
+See `sources.example.json`. Fields (added `tags` and `enabled` this session):
 
 ```
 id        — unique slug
 label     — display name
 type      — "api" | "rss" | "keyword"
-provider  — for type=keyword: which backend handles it ("naver", "arxiv", etc.)
+provider  — for type=keyword: which backend handles it ("naver", "arxiv", "semantic-scholar", "pubmed")
 endpoint  — for type=api/rss: the URL to hit
 query     — for type=keyword: the search string
 lang      — "en" | "ko"
 category  — "papers" | "news"
-topic     — "physical-ai" | "general-ai" | "ocr-handwriting" | "biomedical-ai" | null (news sources may span topics; papers sources should usually set one)
+topic     — "physical-ai" | "general-ai" | "ocr-handwriting" | "biomedical-ai" (required — no more null topics; cross-cutting lenses use `tags` instead)
+tags      — array, propagates onto every entry this source produces (e.g. ["low-cost-embedded"])
 owner     — who added it (supports the multi-professor use case)
+enabled   — optional, default true; set false to keep a source documented but skip fetching it (used for the deferred PubMed entry)
 ```
 
-`topic` is new — it's what drives which research subsection an entry lands in. News entries can leave it null and rely on tags instead, since news volume/categorization is looser than papers.
+### Per-entry record (Jekyll collection front matter — `_research/*.md` / `_news/*.md`)
+
+```
+title_en, title (news items use `title` in the source's own language; research
+  items use `title_en` since arXiv/Semantic Scholar/PubMed are English-only),
+hook_en, hook_ko (single sentence each, LLM-generated, empty string until gloss.py runs),
+source, source_lang, source_url, topic, tags[],
+date, thumb (news only, nullable — null unless the RSS feed actually supplied one),
+coverage_en, coverage_ko, gap ("en_only"|"ko_only"|null) — metadata only, see above,
+marked_for_class (bool), commentary_worthy (bool),
+commentary_url (nullable, → aaron.kr Writing), commentary_video_url (nullable, → YouTube),
+pin (bool, research only in practice), pin_image (nullable),
+raw_wire (bool), embedded (bool), health_flourishing (bool),
+dedup_key (the arXiv ID or article URL — used by scripts/lib.py to avoid re-fetching)
+```
+
+Body content (below the `---`) is Aaron's own write-up — empty until he
+writes one; `_layouts/entry.html` shows a clear "no write-up yet" note
+instead of pretending there's content.
 
 ### Contributor flow for other professors
 
-The concept mockup includes an in-browser "add a watch" form as a UX reference, but a live form on a static site has nowhere to write to without a backend. Two real options, not yet chosen:
+See "Contributor flow" above — GitHub issue template is primary now. Google
+Sheet → CSV → build-step merge remains a documented fallback for a
+non-technical colleague who genuinely can't use a GitHub account, not yet
+implemented.
 
-1. **Git-based**: colleagues (or Aaron on their behalf) add an entry to `sources.json` via a PR. Best practice, but not realistic for non-technical colleagues to do themselves.
-2. **Shared Google Sheet → CSV → build step**: a Google Sheet that any professor can edit directly (no git needed), pulled into the GitHub Action as CSV at build time and merged with `sources.json`. Recommended for actually getting colleague contributions — lower friction wins here over purity.
+## Build pipeline (now partially real, not just proposed)
 
-Leaning toward (2) as the primary path, with (1) staying available for Aaron's own edits. Not implemented yet.
+1. **`.github/workflows/fetch.yml`** — daily cron (`0 21 * * *` UTC ≈ 06:00
+   KST; was 4–6 hours in earlier planning, **changed to once daily** this
+   session — a personal/solo-researcher reading log doesn't need faster
+   polling than "once before I sit down to read," and less-frequent runs
+   mean less GitHub Actions minutes and fewer Anthropic API calls). Also
+   runnable on demand via `workflow_dispatch`.
+2. **Fetch step**: `scripts/fetch_arxiv.py` and `scripts/fetch_rss.py` run
+   unconditionally (no credentials needed, stdlib only). `scripts/fetch_naver.py`
+   runs only if `NAVER_CLIENT_ID`/`NAVER_CLIENT_SECRET` secrets are set.
+3. **Hook step**: `scripts/gloss.py` runs only if `ANTHROPIC_API_KEY` is set;
+   capped at `GLOSS_MAX_PER_RUN` (default 40) entries per run to bound cost.
+4. **Commit step**: the Action commits any new `_research`/`_news` files and
+   pushes — GitHub Pages' own Jekyll build then picks it up automatically, no
+   separate render/deploy step needed (this is why the fetch scripts write
+   directly into the Jekyll collections instead of some intermediate format).
+5. **`.github/workflows/digest.yml`** — weekly (currently Mondays 22:00 UTC,
+   change the `cron:` line to move the day — see SETUP.md), runs
+   `scripts/send_digest.py` (Resend) if `RESEND_API_KEY`/`DIGEST_TO_EMAIL`
+   are set.
 
-### Per-entry record (after fetch + gloss pass)
+All five scripts (`lib.py`, `fetch_arxiv.py`, `fetch_rss.py`, `fetch_naver.py`,
+`gloss.py`, `send_digest.py`) are stdlib-only Python — no `requirements.txt`,
+no pip install step in CI, on purpose (keeps the Action fast and reduces the
+site's long-term maintenance surface, consistent with the original
+"low-maintenance" instinct from `courses.aaron.kr`).
 
-```
-id, title_en, title_ko, summary_en, summary_ko, url, source_label,
-source_lang, published_at, category ("papers"|"news"), topic, tags[],
-image_url (nullable — papers should always be null; news only when the source
-  provides one, never generated),
-coverage_count_en, coverage_count_ko, cross_language (bool),
-gap_flag ("en_only" | "ko_only" | null),
-marked_for_class (bool), commentary_worthy (bool), commentary_url (nullable),
-note (string)
-```
+## Stack: static + Jekyll (confirmed, now built out)
 
-`cross_language`, `coverage_count_*`, and `gap_flag` require basic story-clustering (matching entries across sources that are "the same story") — start simple (same keyword/entity match within a ~48h window) rather than building real dedup/clustering up front. Remember: these fields are for display as metadata, not for computing layout/sort order anymore.
-
-## Source list to start with
-
-**Physical AI (English):**
-- arXiv `cs.RO` — REST API, free, no key: `http://export.arxiv.org/api/query?search_query=cat:cs.RO&sortBy=submittedDate&sortOrder=descending`
-- IEEE Spectrum Robotics — RSS: `https://spectrum.ieee.org/feeds/topic/robotics.rss`
-- The Robot Report — RSS
-- Semantic Scholar API — for citation context / dedup, not primary feed
-
-**Physical AI (Korean):**
-- 로봇신문 (irobotnews.com) — confirmed RSS feeds:
-  - 전체기사 (all articles): `https://www.irobotnews.com/rss/allArticle.xml`
-  - 인공지능 (AI section): `https://www.irobotnews.com/rss/S1N2.xml`
-  - 로봇 (robot section): `https://www.irobotnews.com/rss/S1N1.xml`
-- Naver Open API — News Search (`https://openapi.naver.com/v1/search/news`) — requires a free registered app (client ID + secret) at developers.naver.com. Good starter queries: "피지컬 AI", "휴머노이드 로봇", "엣지 AI".
-- ETRI / KAIST press releases — RSS if available, otherwise check manually at first.
-
-**General AI (English):**
-- arXiv `cs.AI` / `cs.LG` — same API pattern as above, swap `search_query=cat:cs.AI` or `cat:cs.LG`.
-- Semantic Scholar API — same as above, broader query.
-
-**General AI (Korean):**
-- Naver News Search — query candidates: "인공지능", "생성형 AI".
-
-**Handwritten script recognition / OCR (English):**
-- arXiv `cs.CV` filtered to handwriting/OCR keywords — e.g. `search_query=cat:cs.CV+AND+abs:handwriting` or `abs:OCR`. Broad `cs.CV` alone is too noisy; needs the keyword filter.
-- Consider a Semantic Scholar keyword watch for "handwritten text recognition," "historical document OCR" — this subfield moves slowly enough that a keyword watch may outperform a category feed.
-
-**Handwritten script recognition / OCR (Korean):**
-- Naver News / Naver Open API keyword watch: "한글 필기체 인식" (Hangul handwriting recognition) — low volume expected, keep it anyway for the rare hit.
-- No confirmed Korean academic-press RSS yet for this niche — flag as a manual-check source until one is found.
-
-**Biomedical AI (English):**
-- arXiv `q-bio` (quantitative biology) and `cs.AI` filtered to biomedical keywords — e.g. `abs:clinical` or `abs:medical`.
-- PubMed / NCBI E-utilities — free API, no key required for low-volume use: `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi` — worth a dedicated fetch script since it's a different shape than arXiv's Atom feed.
-
-**Biomedical AI (Korean):**
-- Naver News keyword watch: "의료 AI", "헬스케어 AI".
-
-**Cross-cutting: low-cost / embedded AI (tag, not a separate topic — apply across the above):**
-- arXiv `eess.SY` and `cs.AR` keyword-filtered for edge/embedded inference — e.g. `abs:tinyml`, `abs:edge+inference`.
-- Watch for TinyML Foundation / tinyML.org content if they publish RSS — not yet confirmed.
-
-**News (English, for the evergreen-commentary lens):**
-- IEEE Spectrum (general, not just robotics) — RSS
-- The Robot Report — RSS
-- Ars Technica AI tag — RSS if available
-- MIT Technology Review AI section — RSS if available
-
-**News (Korean):**
-- 로봇신문 전체기사 (already listed above, also serves news)
-- Naver News Search — broader industry queries beyond the Physical AI ones above.
-
-**Utility, not a content source:**
-- Naver Papago API (`https://openapi.naver.com/v1/papago/n2mt`) — optional, for a first-pass literal translation to edit from. Don't publish its raw output — see content rules.
-
-Several of the above ("RSS if available") need a five-minute check before being added to `sources.json` for real — this list intentionally includes a few unconfirmed candidates so the next session knows where to look first, rather than starting from zero.
-
-## Build pipeline (proposed, not built)
-
-1. GitHub Action on a cron schedule (start with every 4–6 hours).
-2. Fetch step: iterate `sources.json`, hit each source by type (api/rss/keyword), normalize into the per-entry record shape above.
-3. Dedup/cluster step: group entries that look like the same story within ~48h, compute `coverage_count_en/ko`, `cross_language`, `gap_flag`. Display-only — does not affect placement.
-4. Gloss step: call the Anthropic API once per new entry to generate `summary_en` + `summary_ko` (short, paraphrased — see content rules). Cache so re-runs don't re-summarize existing entries.
-5. Render step: write the static page(s) — research subsections (by topic, ~10 each) first, news list (~20+) second, per the layout rules above.
-6. Commit + push the generated static files (or deploy artifact) as the last step of the Action.
-
-"Alerts" = the page updating on schedule. Revisit an email digest (e.g. via Resend) only if that turns out to be worth the extra moving part.
-
-## Stack: static + Jekyll (confirmed)
-
-Still the right call, now confirmed rather than an open question:
-- `courses.aaron.kr` is pure static HTML with no build step; this project follows the same zero-maintenance instinct, but with enough shared chrome (masthead, footer, card/list markup repeated per research topic) that hand-copy-pasting HTML like the mockups do would get error-prone fast.
-- **Jekyll** (GitHub Pages' native build) solves that without adding real infrastructure: `_layouts/default.html` for shared page chrome, `_includes/` for repeated partials (a research-topic-section partial reused four times, a news-row partial, etc.), and it deploys on GitHub Pages with zero extra CI setup beyond what Pages does automatically.
-- CSS and JS are pulled out of the mockups' inline `<style>`/`<script>` blocks into `assets/css/main.css` and `assets/js/main.js` — one shared stylesheet/script per site instead of duplicated per mockup file.
-- The eventual fetch pipeline (GitHub Action) writes generated entry data (likely `_data/entries.yml` or per-topic YAML/JSON files under `_data/`) that Jekyll's Liquid templates consume at build time — this keeps content generation (Python/Node fetch script) and rendering (Jekyll) as separate concerns.
-- Astro (to match `pailab.io`) was the other option on the table; not chosen, since this project doesn't need pailab.io's component-sharing and Jekyll better matches the "as close to zero maintenance as possible" goal already established for `courses.aaron.kr`.
+- Jekyll collections (`research`, `news`) instead of hand-authored includes —
+  `_config.yml` defines them with `output: true` and clean permalinks
+  (`/research/:path/`, `/news/:path/`).
+- `_layouts/default.html` (shared chrome, SEO tags, background effects) and
+  `_layouts/entry.html` (permalink page, chains to `default`).
+- `_includes/`: `masthead.html`, `footer.html`, `entry-card.html` (research
+  list item, takes an `entry` param), `news-row.html` (news list item, same
+  pattern), `sources.html` (sources tab content).
+- `assets/css/main.css` / `assets/js/main.js` — one shared stylesheet/script.
+- `jekyll-sitemap` plugin (via the `github-pages` gem, already a Gemfile
+  dependency) for `sitemap.xml`.
 
 ## Open decisions for the next session
 
-- [ ] Final name (currently "Scientia" as used in `sci.html`'s `<title>` — confirm or replace before shipping).
-- [ ] Naver Open API app registration (needs a Naver account + app registration at developers.naver.com) — needed before any Korean keyword search works.
-- [ ] Google Sheet vs. git PR for the multi-professor contributor flow (leaning Sheet — see above).
-- [ ] Story clustering approach for `cross_language`/`gap_flag` — keep it simple at first (keyword/entity match), don't over-engineer. Remember it's metadata-only now, not layout-driving, so it doesn't need to be perfect at launch.
-- [ ] Whether "mark for class" output should just be an on-page list (as in the mockup) or also export to something like Markdown/a printable page for handing to students.
-- [ ] Confirm the unconfirmed RSS candidates in "Source list to start with" (Ars Technica AI tag, MIT Tech Review AI, TinyML Foundation, any Korean handwriting-recognition press).
-- [ ] PubMed/NCBI fetch script needs its own shape (E-utilities XML, not Atom like arXiv) — budget real time for this, it's not a copy-paste of the arXiv fetcher.
+- [ ] ~~Final name~~ — resolved: **Scientia AI**, propagated everywhere.
+- [ ] DNS CNAME record for `sci.aaron.kr` — not yet added at the DNS
+      provider (see SETUP.md § 5).
+- [ ] Naver / Anthropic / Resend credentials — not yet registered (see
+      SETUP.md §§ 2–4).
+- [ ] courses.aaron.kr integration — investigated, not wired (see "Reading
+      list page" above); revisit once the CBNU course page goes `visible: true`.
+- [ ] Google Sheet vs. GitHub issue for the multi-professor contributor
+      flow — GitHub issue is now primary; Sheet stays a documented fallback.
+- [ ] Story clustering for `coverage_en/ko`/`gap` — still not implemented;
+      still deliberately low priority since it's metadata-only now.
+- [ ] Fine-grained tag auto-classification (`humanoids`, `manipulation`,
+      etc.) — currently manual; a `gloss.py`-adjacent LLM tagging pass is the
+      natural next step if manual tagging becomes a bottleneck.
+- [ ] RSS feeds to confirm — see SETUP.md § 7 for the specific checklist.
+- [ ] PubMed — deferred, revisit once arXiv-only biomedical coverage has run
+      for a while and its volume can be assessed.
 
 ## Immediate next steps
 
-1. Build the new Jekyll scaffold (`_config.yml`, `_layouts/default.html`, `_includes/`, `assets/css/main.css`, `assets/js/main.js`) reflecting this file's layout section — in progress this session.
-2. Register a Naver Open API app (client ID/secret) — needed before any Korean keyword search works.
-3. Scaffold `sources.json` (seed from the expanded `sources.example.json`), a `/scripts` fetch script per source type, and a minimal render step that can turn today's fetched entries into the research-first layout.
-4. Get the arXiv fetch working first — it's the easiest (no auth, stable API) and proves the pipeline end to end (and covers 3 of the 4 research topics) before adding Naver/RSS/PubMed complexity.
+1. Work through `SETUP.md` — Naver app registration first (unlocks the
+   biggest missing chunk of content, Korean coverage), then Anthropic
+   (unlocks hooks), then DNS, then Resend (lowest priority, weekly digest is
+   a nice-to-have).
+2. Once Naver + Anthropic are live, let the daily Action run for a week and
+   sanity-check the actual volume per topic before deciding whether to widen
+   `ENTRIES_PER_SOURCE` or add more sources.
+3. Write a real summary on at least one more entry beyond the demo pin, to
+   confirm the entry-permalink writing workflow feels right before it's a
+   daily habit.
+4. Revisit courses.aaron.kr integration once that course page is ready to go
+   `visible: true`.

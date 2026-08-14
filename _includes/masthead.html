@@ -1,10 +1,9 @@
 <header class="masthead">
   <div class="mast-row">
     <div>
-      <h1 class="mast-title"><span data-en="Scientia" data-ko="Scientia">Scientia</span><span class="dot">●</span></h1>
+      <h1 class="mast-title"><a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit; display:flex; align-items:baseline; gap:10px;"><span data-en="Scientia AI" data-ko="Scientia AI">Scientia AI</span><span class="dot">●</span></a></h1>
       <p class="mast-tagline">
         <span data-en="a bilingual, research-first reading log for AI" data-ko="AI를 위한 이중언어·연구 중심 리딩 로그">a bilingual, research-first reading log for AI</span>
-        <span class="ko">· working title, swap freely</span>
       </p>
     </div>
     <div class="lang-toggle" role="group" aria-label="Interface language">
@@ -12,10 +11,13 @@
       <button data-lang="ko" onclick="setLang('ko')">한국어</button>
     </div>
   </div>
-  <nav class="subnav">
-    <a href="#research" data-en="Research" data-ko="연구">Research</a>
-    <a href="#news" data-en="News" data-ko="뉴스">News</a>
-    <a onclick="toggleCourse()" data-en="Course view" data-ko="수업용 보기">Course view</a>
-    <a href="#sources" data-en="Sources" data-ko="소스">Sources</a>
-  </nav>
 </header>
+<div class="subnav-stick">
+  <nav class="subnav">
+    <span class="subnav-name">SCIENTIA</span>
+    <a href="{{ '/' | relative_url }}#research" data-en="Research" data-ko="연구">Research</a>
+    <a href="{{ '/' | relative_url }}#news" data-en="News" data-ko="뉴스">News</a>
+    <a href="{{ '/reading-list/' | relative_url }}" data-en="Reading list" data-ko="읽기 자료">Reading list</a>
+    <a href="{{ '/' | relative_url }}#sources" data-en="Sources" data-ko="소스">Sources</a>
+  </nav>
+</div>

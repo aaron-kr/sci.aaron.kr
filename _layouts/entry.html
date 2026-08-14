@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article class="entry-page">
+  <p class="entry-page-back"><a href="{{ '/' | relative_url }}#{{ page.kind }}" data-en="&larr; back to the log" data-ko="&larr; 로그로 돌아가기">&larr; back to the log</a></p>
+
+  <div class="src-row">
+    <span class="src-tag {{ page.source_lang }}"><span class="swatch"></span>{{ page.source }}</span>
+    {% if page.pin %}<span class="commentary-flag" data-en="pinned lead story" data-ko="고정된 주요 기사">pinned lead story</span>{% endif %}
+    {% if page.raw_wire %}<span class="wire-flag" data-en="wire / press release" data-ko="보도자료">wire / press release</span>{% endif %}
+    {% if page.embedded %}<span class="embedded-flag" data-en="low-cost / embedded" data-ko="저비용·임베디드">low-cost / embedded</span>{% endif %}
+    {% if page.health_flourishing %}<span class="embedded-flag health" data-en="health &amp; flourishing" data-ko="건강·플러리싱">health &amp; flourishing</span>{% endif %}
+  </div>
+
+  <h1 class="entry-page-title">{{ page.title_en | default: page.title }}</h1>
+  {% assign translated_hook = page.hook_ko %}
+  {% if page.source_lang == "ko" %}{% assign translated_hook = page.hook_en %}{% endif %}
+  {% if translated_hook and translated_hook != "" %}<p class="entry-page-hook">{{ translated_hook }}</p>{% endif %}
+
+  <p class="entry-page-meta">
+    <span>{{ page.date | date: "%Y.%m.%d" }}</span>
+    {% if page.topic %} · <span>{{ page.topic }}</span>{% endif %}
+    <a class="entry-page-source-link" href="{{ page.source_url }}" target="_blank" rel="noopener" data-en="Read the original &rarr;" data-ko="원문 보기 &rarr;">Read the original &rarr;</a>
+  </p>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <div class="entry-tags">{% for t in page.tags %}<button class="tag" onclick="filterByTag('{{ t }}')">{{ t }}</button>{% endfor %}</div>
+  {% endif %}
+
+  <div class="entry-page-body">
+    {% if page.content and page.content.size > 0 %}
+      {{ content }}
+    {% else %}
+      <p class="entry-page-empty" data-en="No write-up yet — this entry is still just the auto-fetched hook. Aaron's own summary (200–500 words) will replace this note once he's written it." data-ko="아직 작성된 요약이 없습니다 — 현재는 자동으로 수집된 hook만 있는 상태입니다. 아론이 직접 작성한 요약(200~500단어)이 준비되면 이 안내문을 대체합니다.">No write-up yet — this entry is still just the auto-fetched hook. Aaron's own summary (200–500 words) will replace this note once he's written it.</p>
+    {% endif %}
+  </div>
+
+  {% if page.commentary_url %}
+  <p class="entry-page-commentary"><a href="{{ page.commentary_url }}" target="_blank" rel="noopener" data-en="Full commentary on aaron.kr &rarr;" data-ko="aaron.kr 전체 논평 보기 &rarr;">Full commentary on aaron.kr &rarr;</a></p>
+  {% endif %}
+  {% if page.commentary_video_url %}
+  <p class="entry-page-commentary"><a href="{{ page.commentary_video_url }}" target="_blank" rel="noopener" data-en="Video reaction on YouTube &rarr;" data-ko="유튜브 영상 논평 보기 &rarr;">Video reaction on YouTube &rarr;</a></p>
+  {% endif %}
+
+  {% if page.coverage_en or page.coverage_ko %}
+  <div class="entry-page-coverage">
+    <span class="cov-inline">{% if page.coverage_en %}{{ page.coverage_en }} EN{% endif %}{% if page.coverage_en and page.coverage_ko %} · {% endif %}{% if page.coverage_ko %}{{ page.coverage_ko }} KO{% endif %}</span>
+    {% if page.gap == "en_only" %}<span class="gap-flag" data-en="no KO pickup yet" data-ko="한국어 미보도">no KO pickup yet</span>{% endif %}
+    {% if page.gap == "ko_only" %}<span class="gap-flag" data-en="no EN pickup yet" data-ko="영어권 미보도">no EN pickup yet</span>{% endif %}
+  </div>
+  {% endif %}
+</article>

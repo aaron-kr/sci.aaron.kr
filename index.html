@@ -1,235 +1,74 @@
 ---
 layout: default
+description: "A bilingual (English/Korean) reading log — research papers first (Physical AI, General AI, OCR/handwritten script recognition, biomedical AI), news second."
 ---
 
 <section class="filters">
   <button class="chip active" data-filter="all" data-en="All" data-ko="전체">All</button>
   <button class="chip" data-filter="humanoids" data-en="Humanoids" data-ko="휴머노이드">Humanoids</button>
-  <button class="chip" data-filter="sensor" data-en="Sensor Fusion" data-ko="센서 융합">Sensor Fusion</button>
   <button class="chip" data-filter="manipulation" data-en="Manipulation" data-ko="조작">Manipulation</button>
-  <button class="chip" data-filter="ocr" data-en="OCR / Handwriting" data-ko="OCR·필기체">OCR / Handwriting</button>
-  <button class="chip" data-filter="biomedical" data-en="Biomedical" data-ko="바이오메디컬">Biomedical</button>
   <button class="chip embedded" data-filter="low-cost-embedded" data-en="Low-cost / Embedded" data-ko="저비용·임베디드">Low-cost / Embedded</button>
-  <div class="alert-add">
-    <input type="text" id="quick-watch" placeholder="watch a keyword…" aria-label="Add keyword watch">
-    <button type="button" onclick="quickAddWatch()" data-en="+ Watch" data-ko="+ 추가">+ Watch</button>
-  </div>
+  <button class="chip embedded" data-filter="health-flourishing" data-en="Health &amp; Flourishing" data-ko="건강·플러리싱">Health &amp; Flourishing</button>
+  <span class="filter-status hidden" id="filter-status">
+    <span id="filter-status-label"></span>
+    <button id="filter-status-clear" data-en="clear ✕" data-ko="지우기 ✕">clear ✕</button>
+  </span>
 </section>
 
+{% assign pinned = site.research | where: "pin", true | first %}
 <section class="major-head" id="research">
   <h2 data-en="Research" data-ko="연구">Research</h2>
-  <p data-en="Papers first — four topics, in reading-priority order. ~10 recent items per topic in the real build; sample data below." data-ko="논문 우선 — 네 가지 주제를 읽는 순서대로 배치. 실제 구현에서는 주제별 최근 10건, 아래는 샘플 데이터.">Papers first — four topics, in reading-priority order. ~10 recent items per topic in the real build; sample data below.</p>
+  <p data-en="Papers first — four topics, in reading-priority order." data-ko="논문 우선 — 네 가지 주제를 읽는 순서대로 배치.">Papers first — four topics, in reading-priority order.</p>
 </section>
 
-<div class="topic-head"><span class="rank">01</span><span data-en="Physical AI" data-ko="피지컬 AI">Physical AI</span></div>
-<p class="topic-sub" data-en="Top priority — the core of KSPAI and pailab.io's focus." data-ko="최우선 순위 — KSPAI 및 pailab.io의 핵심 분야.">Top priority — the core of KSPAI and pailab.io's focus.</p>
+{% if pinned %}
+<div class="lead-story" data-tags="all {{ pinned.tags | join: ' ' }}">
+  <span class="lead-badge" data-en="★ pinned lead story" data-ko="★ 고정된 주요 기사">★ pinned lead story</span>
+  {% if pinned.pin_image %}<img class="lead-image" src="{{ pinned.pin_image }}" alt="">{% endif %}
+  <h2 class="lead-title"><a href="{{ pinned.url | relative_url }}">{{ pinned.title_en }}</a></h2>
+  <p class="lead-summary">{{ pinned.hook_en }}</p>
+  <div class="lead-links">
+    <a href="{{ pinned.source_url }}" target="_blank" rel="noopener" data-en="Read the original →" data-ko="원문 보기 →">Read the original →</a>
+    {% if pinned.commentary_url %}<a href="{{ pinned.commentary_url }}" target="_blank" rel="noopener" data-en="Full commentary on aaron.kr →" data-ko="aaron.kr 전체 논평 →">Full commentary on aaron.kr →</a>{% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% assign physical = site.research | where: "topic", "physical-ai" | sort: "date" | reverse %}
+<div class="topic-head"><span class="rank">01</span><h3 data-en="Physical AI" data-ko="피지컬 AI">Physical AI</h3></div>
+<p class="topic-sub" data-en="Top priority — the core of KSPAI and pailab.io's focus. Showing {{ physical.size }}, most recent first." data-ko="최우선 순위 — KSPAI 및 pailab.io의 핵심 분야. 최신순 {{ physical.size }}건.">Top priority — the core of KSPAI and pailab.io's focus.</p>
 <section class="log">
-  {% include entry.html date="08.13" time="09:14" lang="en" src="arXiv · cs.RO" url="https://arxiv.org/list/cs.RO/recent" title_en="Whole-body loco-manipulation under contact uncertainty: a benchmark for bipedal platforms" summary_en="Sample entry — proposes a shared benchmark for testing whether bipedal robots keep their footing while their arms are also doing work, and reports which control strategies degrade least when contact estimates are noisy." tags="humanoids policy" %}
-
-  {% include entry.html date="08.13" time="08:02" lang="ko" src="로봇신문" url="https://www.irobotnews.com" title_en="Korean humanoid maker reports commercial pilot with regional manufacturing partner" title_ko="국내 휴머노이드 기업, 지역 제조 파트너와 상용화 파일럿 계약 체결 (샘플)" summary_en="Sample entry — a domestic humanoid vendor moves from demo to a paid pilot on a factory floor, with financing details still undisclosed." gloss_note="Full article stays on the source site — this log only paraphrases and links out, per copyright practice." tags="humanoids industry" cov="2 KO sources" gap="ko_only" %}
-
-  {% include entry.html date="08.12" time="21:40" lang="en" src="IEEE Spectrum" url="https://spectrum.ieee.org/topic/robotics/" title_en="Cheap event cameras are quietly replacing LiDAR in warehouse robots" summary_en="Sample entry — a look at why several logistics-robot makers are pairing low-cost event-based vision sensors with lightweight fusion filters instead of adding a second LiDAR unit." tags="sensor logistics" embedded="true" %}
-
-  {% include entry.html date="08.12" time="17:05" lang="ko" src="ETRI 소식" url="https://www.etri.re.kr" title_en="Public research institute open-sources a small-object grasping dataset" title_ko="ETRI, 소형 물체 파지 데이터셋 오픈소스 공개 (샘플)" summary_en="Sample entry — a Korean government-affiliated lab releases a labeled grasping dataset aimed at deformable and reflective small parts, a known weak point for existing public sets." tags="manipulation dataset" %}
-
-  {% include entry.html date="08.11" time="19:52" lang="en" src="arXiv · cs.RO" url="https://arxiv.org/list/cs.RO/recent" title_en="Tactile-visual fusion for occluded-grasp recovery on low-cost grippers" summary_en="Sample entry — combines a cheap capacitive tactile skin with vision to recover from failed grasps when the object is partly hidden from the camera, without needing a force-torque sensor." tags="sensor manipulation" embedded="true" %}
+  {% for e in physical limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
 
-<div class="topic-head"><span class="rank">02</span><span data-en="General AI" data-ko="일반 AI">General AI</span></div>
-<p class="topic-sub" data-en="Broader ML/AI research, not embodiment-specific." data-ko="체화 여부와 무관한 일반 머신러닝·AI 연구.">Broader ML/AI research, not embodiment-specific.</p>
+{% assign general = site.research | where: "topic", "general-ai" | sort: "date" | reverse %}
+<div class="topic-head"><span class="rank">02</span><h3 data-en="General AI" data-ko="일반 AI">General AI</h3></div>
+<p class="topic-sub" data-en="Broader ML/AI research, not embodiment-specific. Showing {{ general.size }}, most recent first." data-ko="체화 여부와 무관한 일반 머신러닝·AI 연구. 최신순 {{ general.size }}건.">Broader ML/AI research, not embodiment-specific.</p>
 <section class="log">
-  {% include entry.html date="08.13" time="10:30" lang="en" src="arXiv · cs.LG" url="https://arxiv.org/list/cs.LG/recent" title_en="Sub-linear scaling recipe for fine-tuning cuts compute cost on commodity GPUs" summary_en="Sample entry — a fine-tuning schedule that reaches comparable benchmark scores using roughly a third of the usual GPU-hours, tested on models small enough to run on a single consumer card." tags="training efficiency" embedded="true" %}
-
-  {% include entry.html date="08.12" time="14:05" lang="en" src="arXiv · cs.AI" url="https://arxiv.org/list/cs.AI/recent" title_en="Multi-step reasoning benchmark exposes gap between stated and actual confidence" summary_en="Sample entry — models that report high confidence on multi-step reasoning tasks are wrong nearly as often as when they report low confidence, undercutting confidence as a reliability signal." tags="reasoning evaluation" %}
-
-  {% include entry.html date="08.11" time="09:47" lang="ko" src="Naver News" url="https://openapi.naver.com/v1/search/news" title_en="Domestic cloud providers report surge in generative-AI API billing disputes" title_ko="국내 클라우드 업체, 생성형 AI API 과금 분쟁 급증 (샘플)" summary_en="Sample entry — several Korean cloud vendors report a wave of billing disputes tied to unexpectedly high token usage from generative-AI integrations." tags="industry policy" %}
+  {% for e in general limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
 
-<div class="topic-head"><span class="rank">03</span><span data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</span></div>
-<p class="topic-sub" data-en="Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest. Lower volume than the topics above; kept as its own section anyway." data-ko="아론의 박사 논문 분야(만주문자, 한글) — 체로키어는 최근 관심 분야. 다른 주제보다 자료가 적지만 별도 섹션으로 유지.">Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest. Lower volume than the topics above; kept as its own section anyway.</p>
+{% assign ocr = site.research | where: "topic", "ocr-handwriting" | sort: "date" | reverse %}
+<div class="topic-head"><span class="rank">03</span><h3 data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</h3></div>
+<p class="topic-sub" data-en="Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest. Lower volume by nature. Showing {{ ocr.size }}." data-ko="아론의 박사 논문 분야(만주문자, 한글) — 체로키어는 최근 관심 분야. {{ ocr.size }}건.">Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest.</p>
 <section class="log">
-  {% include entry.html date="08.10" time="16:20" lang="en" src="arXiv · cs.CV" url="https://arxiv.org/list/cs.CV/recent" title_en="Cross-script transfer learning improves recognition on low-resource historical manuscripts" summary_en="Sample entry — pretraining on high-resource scripts before fine-tuning on scarce historical manuscript data (the paper's test set includes Manchu court documents) cuts character error rate noticeably versus training from scratch." tags="ocr handwriting historical" %}
-
-  {% include entry.html date="08.08" time="11:15" lang="en" src="Semantic Scholar" url="https://www.semanticscholar.org" title_en="First public benchmark dataset for Cherokee syllabary handwriting recognition" summary_en="Sample entry — a newly released labeled dataset targets the Cherokee syllabary specifically, filling a gap in a script family that's had almost no dedicated OCR benchmark work until now." tags="ocr handwriting cherokee" %}
-
-  {% include entry.html date="08.06" time="08:40" lang="ko" src="Naver News" url="https://openapi.naver.com/v1/search/news" title_en="University archive project digitizes Joseon-era handwritten court records" title_ko="대학 아카이브 프로젝트, 조선시대 필사 court 기록 디지털화 (샘플)" summary_en="Sample entry — a university-led digitization effort is producing labeled handwriting data as a byproduct, which could feed future Hangul OCR benchmark work even though that's not the project's stated goal." tags="ocr handwriting historical" cov="1 KO source" gap="ko_only" %}
+  {% for e in ocr limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
 
-<div class="topic-head"><span class="rank">04</span><span data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</span></div>
-<p class="topic-sub" data-en="Newest, thinnest section — Aaron teaches this across several schools and is building toward publishing here." data-ko="가장 최근에 추가된, 아직 자료가 적은 섹션 — 여러 학교에서 강의 중이며 이 분야 논문 게재를 준비하고 있음.">Newest, thinnest section — Aaron teaches this across several schools and is building toward publishing here.</p>
+{% assign biomedical = site.research | where: "topic", "biomedical-ai" | sort: "date" | reverse %}
+<div class="topic-head"><span class="rank">04</span><h3 data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</h3></div>
+<p class="topic-sub" data-en="Newest, thinnest section — includes the health &amp; human-flourishing lens (sleep, behavior, wearables). Showing {{ biomedical.size }}." data-ko="가장 최근에 추가된 섹션 — 수면·행동·웨어러블 등 건강·플러리싱 관점 포함. {{ biomedical.size }}건.">Newest, thinnest section — includes the health &amp; human-flourishing lens.</p>
 <section class="log">
-  {% include entry.html date="08.09" time="13:00" lang="en" src="arXiv · q-bio" url="https://arxiv.org/list/q-bio/recent" title_en="Lightweight triage model runs entirely on-device for rural clinic deployment" summary_en="Sample entry — a compressed classification model small enough to run on low-end hardware performs within a few points of a full-size baseline on a triage task, aimed explicitly at clinics without reliable cloud connectivity." tags="biomedical clinical" embedded="true" %}
-
-  {% include entry.html date="08.07" time="10:10" lang="en" src="PubMed" url="https://pubmed.ncbi.nlm.nih.gov" title_en="Meta-analysis finds inconsistent reporting standards across AI-assisted diagnosis studies" summary_en="Sample entry — a review of recent AI-assisted diagnosis papers finds wide variation in how sensitivity/specificity are reported, making cross-study comparison harder than it should be." tags="biomedical methodology" %}
+  {% for e in biomedical limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
 
 <section class="major-head" id="news">
   <h2 data-en="News" data-ko="뉴스">News</h2>
-  <p data-en="Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume. ~20+ items in the real build; sample rows below." data-ko="의도적으로 작고 촘촘하게, 아래쪽에 배치 — 목적은 헤드라인 양이 아니라 논평으로 발전시킬 소재. 실제 구현에서는 20건 이상, 아래는 샘플.">Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume. ~20+ items in the real build; sample rows below.</p>
+  <p data-en="Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume." data-ko="의도적으로 작고 촘촘하게, 아래쪽에 배치 — 목적은 헤드라인 양이 아니라 논평으로 발전시킬 소재.">Smaller, denser, further down on purpose — the point is evergreen commentary material, not headline volume.</p>
 </section>
+{% assign news_sorted = site.news | sort: "date" | reverse %}
 <section class="news">
-  {% include news-row.html date="08.13" title="Edge-inference chip startups pivot pitch decks from &quot;AI PC&quot; to &quot;Physical AI&quot;" url="https://www.therobotreport.com" source="The Robot Report" lang="en" summary="Sample — several silicon startups reposition existing edge chips toward robotics customers as the segment gets investor attention." commentary="true" %}
-  {% include news-row.html date="08.13" title="레인보우로보틱스, 공시 보니 공장 파일럿 3배로 조용히 확대" url="https://www.irobotnews.com" source="로봇신문" lang="ko" summary="Sample — 공시 자료 기반, 산업 현장 파일럿 확대 포착." %}
-  {% include news-row.html date="08.12" thumb="https://picsum.photos/seed/scientia-n3/120/120" title="Why humanoid battery swaps beat fast charging on the factory floor" url="https://spectrum.ieee.org" source="IEEE Spectrum" lang="en" summary="Sample — factory pilots standardize on swappable packs mostly for uptime reasons." %}
-  {% include news-row.html date="08.11" title="Naver Labs presents warehouse-robot fleet coordination results" url="https://www.naverlabs.com" source="로봇신문" lang="ko" summary="Sample — 창고 로봇 군집 조정 결과 발표." %}
-  {% include news-row.html date="08.11" title="Survey: what actually counts as &quot;Physical AI&quot; in 2026 papers" url="https://arxiv.org" source="arXiv" lang="en" summary="Sample — a loosely-defined term gets an actual taxonomy attempt." commentary="true" %}
-  {% include news-row.html date="08.10" thumb="https://picsum.photos/seed/scientia-n6/120/120" title="Soft-gripper startup exits stealth with automotive-parts contract" url="https://www.therobotreport.com" source="The Robot Report" lang="en" summary="Sample — first commercial contract for a soft-gripper spinout." %}
-  {% include news-row.html date="08.09" title="국내 클라우드 업체, 생성형 AI API 과금 분쟁 급증" url="https://openapi.naver.com/v1/search/news" source="Naver News" lang="ko" summary="Sample — 예상보다 높은 토큰 사용량에서 비롯된 과금 분쟁." %}
-  {% include news-row.html date="08.08" title="TinyML Foundation members report growing interest from education budgets" url="https://arxiv.org" source="arXiv-adjacent" lang="en" summary="Sample — cheap edge-inference boards showing up in classroom procurement, not just industry pilots." commentary="true" embedded="true" %}
-  {% include news-row.html date="08.07" title="ETRI, 한국어 로봇 명령어 데이터셋 오픈소스 공개" url="https://www.etri.re.kr" source="ETRI 소식" lang="ko" summary="Sample — 가정용 서비스 로봇용 한국어 음성 명령 데이터셋 공개." %}
-  {% include news-row.html date="08.06" title="Locomotion policy trained entirely in simulation clears uneven terrain first try" url="https://arxiv.org" source="arXiv" lang="en" summary="Sample — zero real-world fine-tuning needed before handling gravel, mulch, and a curb transition." %}
+  {% for e in news_sorted limit: 30 %}{% include news-row.html entry=e %}{% endfor %}
 </section>
 
-<section class="course" id="course">
-  <div class="course-head">
-    <h3 data-en="Research Methods — reading set" data-ko="연구방법론 — 읽기 자료">Research Methods — reading set</h3>
-    <span id="course-count">0 items</span>
-  </div>
-  <p class="course-sub" data-en="Anything marked above lands here automatically, ready to print or link for students." data-ko="위에서 표시한 항목이 자동으로 이곳에 모입니다 — 인쇄하거나 학생들에게 링크로 전달하세요.">Anything marked above lands here automatically, ready to print or link for students.</p>
-  <ul class="course-list" id="course-list"></ul>
-  <p class="course-empty" id="course-empty" data-en="Nothing marked yet — click &ldquo;mark for class&rdquo; on any research item above." data-ko="아직 표시된 항목이 없습니다 — 위에서 '수업용으로 표시'를 눌러보세요.">Nothing marked yet — click "mark for class" on any research item above.</p>
-</section>
-
-<section class="sources" id="sources">
-  <h4 data-en="Sources &amp; watches" data-ko="소스 및 관심 키워드">Sources &amp; watches</h4>
-  <p class="sources-sub" data-en="Every RSS feed, API, and keyword feeding the log above, grouped by topic. Colleagues can add their own watch below — new entries are marked with your name so Aaron can review before they go live." data-ko="위 로그에 들어오는 모든 RSS 피드, API, 키워드 목록을 주제별로 정리했습니다. 동료 교수님도 아래에서 직접 관심 항목을 추가할 수 있으며, 이름이 함께 표시되어 검토 후 반영됩니다.">Every RSS feed, API, and keyword feeding the log above, grouped by topic. Colleagues can add their own watch below — new entries are marked with your name so Aaron can review before they go live.</p>
-
-  <div class="source-topic">
-    <h5 data-en="Physical AI" data-ko="피지컬 AI">Physical AI</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul>
-          <li>arXiv cs.RO <span class="method">API</span></li>
-          <li>IEEE Spectrum Robotics <span class="method">RSS</span></li>
-          <li>The Robot Report <span class="method">RSS</span></li>
-          <li>Semantic Scholar <span class="method">API</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul>
-          <li>로봇신문 (irobotnews.com) <span class="method">RSS</span></li>
-          <li>Naver News: "피지컬 AI" <span class="method">API</span></li>
-          <li>Naver News: "휴머노이드 로봇" <span class="method">API</span></li>
-          <li>ETRI / KAIST 소식 <span class="method">RSS</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="source-topic">
-    <h5 data-en="General AI" data-ko="일반 AI">General AI</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul>
-          <li>arXiv cs.AI <span class="method">API</span></li>
-          <li>arXiv cs.LG <span class="method">API</span></li>
-          <li>Semantic Scholar <span class="method">API</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul>
-          <li>Naver News: "인공지능" <span class="method">API</span></li>
-          <li>Naver News: "생성형 AI" <span class="method">API</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="source-topic">
-    <h5 data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul>
-          <li>arXiv cs.CV (handwriting/OCR filter) <span class="method">API</span></li>
-          <li>Semantic Scholar: handwritten text recognition <span class="method">API</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul>
-          <li>Naver News: "한글 필기체 인식" <span class="method">API</span></li>
-          <li><span data-en="No confirmed academic-press feed yet" data-ko="확인된 학술 언론 피드 없음">No confirmed academic-press feed yet</span> <span class="method" data-en="manual" data-ko="수동">manual</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="source-topic">
-    <h5 data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul>
-          <li>arXiv q-bio + cs.AI (clinical filter) <span class="method">API</span></li>
-          <li>PubMed / NCBI E-utilities <span class="method">API</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul>
-          <li>Naver News: "의료 AI" <span class="method">API</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="source-topic">
-    <h5 data-en="News (cross-topic)" data-ko="뉴스 (주제 통합)">News (cross-topic)</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul>
-          <li>IEEE Spectrum (general) <span class="method" data-en="RSS — unconfirmed" data-ko="RSS — 미확인">RSS — unconfirmed</span></li>
-          <li>Ars Technica AI tag <span class="method" data-en="RSS — unconfirmed" data-ko="RSS — 미확인">RSS — unconfirmed</span></li>
-          <li>MIT Technology Review AI <span class="method" data-en="RSS — unconfirmed" data-ko="RSS — 미확인">RSS — unconfirmed</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul>
-          <li>로봇신문 전체기사 <span class="method">RSS</span></li>
-          <li>Naver News (broader industry queries) <span class="method">API</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="source-topic">
-    <p class="watch-note" style="margin-top:0;" data-en="Cross-cutting lens, not its own topic: low-cost / embedded AI (arXiv eess.SY / cs.AR, TinyML-adjacent coverage) — tagged across any of the topics above rather than listed as a fifth section. See CLAUDE.md." data-ko="별도 주제가 아닌 교차 관점: 저비용·임베디드 AI (arXiv eess.SY / cs.AR, TinyML 관련 보도) — 다섯 번째 섹션이 아니라 위 주제들에 태그로 표시. CLAUDE.md 참고.">Cross-cutting lens, not its own topic: low-cost / embedded AI (arXiv eess.SY / cs.AR, TinyML-adjacent coverage) — tagged across any of the topics above rather than listed as a fifth section. See CLAUDE.md.</p>
-  </div>
-
-  <div class="source-topic" id="colleague-watches" style="display:none;">
-    <h5 data-en="Added by colleagues" data-ko="동료 교수 추가 항목">Added by colleagues</h5>
-    <div class="src-cols">
-      <div>
-        <p class="src-col-label en" data-en="ENGLISH" data-ko="영어">ENGLISH</p>
-        <ul id="watch-list-en"></ul>
-      </div>
-      <div>
-        <p class="src-col-label ko" data-en="KOREAN" data-ko="한국어">KOREAN</p>
-        <ul id="watch-list-ko"></ul>
-      </div>
-    </div>
-  </div>
-
-  <form class="add-watch-form" id="add-watch-form">
-    <input name="label" placeholder="Source name or keyword" required>
-    <select name="type">
-      <option value="keyword" data-en="Keyword" data-ko="키워드">Keyword</option>
-      <option value="rss" data-en="RSS feed URL" data-ko="RSS 피드 주소">RSS feed URL</option>
-    </select>
-    <input name="value" placeholder="soft robotics — or an RSS URL" required>
-    <select name="lang">
-      <option value="en" data-en="English" data-ko="영어">English</option>
-      <option value="ko" data-en="한국어" data-ko="한국어">한국어</option>
-    </select>
-    <input name="owner" placeholder="Your name" required>
-    <button type="submit" data-en="+ Add" data-ko="+ 추가">+ Add</button>
-  </form>
-  <p class="watch-note" data-en="In the real build this form writes to a small shared config file (or a spreadsheet, for non-technical colleagues) that the fetch pipeline reads on its next scheduled run." data-ko="실제 구현에서는 이 양식이 소규모 공유 설정 파일(또는 비개발자 동료를 위한 스프레드시트)에 기록되며, 수집 파이프라인이 다음 예약 실행 시 이를 읽어옵니다.">In the real build this form writes to a small shared config file (or a spreadsheet, for non-technical colleagues) that the fetch pipeline reads on its next scheduled run.</p>
-</section>
+{% include sources.html %}

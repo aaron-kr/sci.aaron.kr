@@ -1,21 +1,51 @@
-title: Scientia
+title: Scientia AI
 tagline: "a bilingual, research-first reading log for AI"
 description: >-
   A bilingual (English/Korean) reading log — research papers first (Physical AI,
   General AI, handwritten script recognition/OCR, biomedical AI), news second.
-  Personal habit-building tool that also feeds a graduate Research Methods course.
+  Built by a solo AI researcher rebuilding a daily reading habit, shared publicly
+  because it's also useful to other researchers, students, and professors.
 url: "https://sci.aaron.kr"
 baseurl: ""
+author: Aaron Snowberger
+twitter_handle: ""
+lang: en
 
 markdown: kramdown
-plugins: []
+plugins:
+  - jekyll-sitemap
+
+collections:
+  research:
+    output: true
+    permalink: /research/:path/
+  news:
+    output: true
+    permalink: /news/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: entry
+      kind: research
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: entry
+      kind: news
 
 exclude:
   - CLAUDE.md
   - README.md
+  - SETUP.md
   - LICENSE
   - sources.example.json
   - frequency-concept.html
   - sci.html
   - Gemfile
   - Gemfile.lock
+  - scripts
+  - requirements.txt

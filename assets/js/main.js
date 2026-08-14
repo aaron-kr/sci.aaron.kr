@@ -1,141 +1,179 @@
-// Scientia — shared client behavior (lang toggle, filters, mark/note, course view, watches)
+// Scientia AI — shared client behavior
 
 function setLang(lang){
   document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
   document.querySelectorAll('[data-en]').forEach(el => {
     const val = lang === 'ko' ? el.getAttribute('data-ko') : el.getAttribute('data-en');
-    if(val !== null) el.textContent = val;
+    if(val !== null) el.innerHTML = val;
   });
   document.querySelectorAll('[data-en-ph]').forEach(el => {
     const val = lang === 'ko' ? el.getAttribute('data-ko-ph') : el.getAttribute('data-en-ph');
     if(val !== null) el.setAttribute('placeholder', val);
   });
   document.documentElement.lang = lang;
+  try{ localStorage.setItem('scientia-lang', lang); }catch(e){}
+}
+
+// ---- filtering (chips on the homepage, tag pills anywhere) ----
+function applyFilter(f){
+  document.querySelectorAll('.chip[data-filter]').forEach(c => c.classList.toggle('active', c.dataset.filter === f));
+  document.querySelectorAll('[data-tags]').forEach(entry => {
+    const tags = entry.dataset.tags.split(' ');
+    entry.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+  });
+  const status = document.getElementById('filter-status');
+  const label = document.getElementById('filter-status-label');
+  if(status && label){
+    if(f === 'all'){ status.classList.add('hidden'); }
+    else { label.textContent = 'Filtering: ' + f; status.classList.remove('hidden'); }
+  }
+}
+
+function filterByTag(tag){
+  const onHomepage = !!document.querySelector('.filters');
+  if(onHomepage){
+    applyFilter(tag);
+    document.querySelector('#research')?.scrollIntoView({behavior:'smooth', block:'start'});
+  } else {
+    window.location.href = '/?tag=' + encodeURIComponent(tag) + '#research';
+  }
 }
 
 function initFilters(){
   document.querySelectorAll('.chip[data-filter]').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.chip[data-filter]').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const f = chip.dataset.filter;
-      document.querySelectorAll('[data-tags]').forEach(entry => {
-        const tags = entry.dataset.tags.split(' ');
-        entry.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
-      });
-    });
+    chip.addEventListener('click', () => applyFilter(chip.dataset.filter));
   });
+  const clearBtn = document.getElementById('filter-status-clear');
+  if(clearBtn) clearBtn.addEventListener('click', () => applyFilter('all'));
+
+  const params = new URLSearchParams(window.location.search);
+  const tag = params.get('tag');
+  if(tag) applyFilter(tag);
 }
 
+// ---- notes / mark for class (personal, per-browser bookmark) ----
 function toggleNote(btn){
   const box = btn.closest('.entry, article')?.querySelector('.note-box');
   if(box) box.classList.toggle('open');
 }
 
-function toggleMark(btn){
-  btn.classList.toggle('marked');
-  const activeLangBtn = document.querySelector('.lang-toggle button.active');
-  const lang = activeLangBtn ? activeLangBtn.dataset.lang : 'en';
-  const marking = btn.classList.contains('marked');
-  if(btn.hasAttribute('data-en')){
-    btn.setAttribute('data-en', marking ? '☑ marked for class' : '☐ mark for class');
-    btn.setAttribute('data-ko', marking ? '☑ 표시됨' : '☐ 수업용으로 표시');
-    btn.textContent = lang === 'ko' ? btn.getAttribute('data-ko') : btn.getAttribute('data-en');
-  } else {
-    btn.textContent = marking ? '☑ marked for class' : '☐ mark for class';
-  }
-  renderCourseView();
+function bookmarkKey(){ return 'scientia-bookmarks'; }
+
+function getBookmarks(){
+  try{ return JSON.parse(localStorage.getItem(bookmarkKey())) || []; }catch(e){ return []; }
 }
 
-function renderCourseView(){
-  const list = document.getElementById('course-list');
-  const empty = document.getElementById('course-empty');
-  const count = document.getElementById('course-count');
+function setBookmarks(list){
+  try{ localStorage.setItem(bookmarkKey(), JSON.stringify(list)); }catch(e){}
+}
+
+function toggleMark(btn){
+  const entry = btn.closest('.entry, .entry-page');
+  const href = entry?.querySelector('.entry-title a, .entry-page-title a')?.href || window.location.href;
+  const title = entry?.querySelector('.entry-title a, .entry-page-title')?.textContent?.trim() || document.title;
+  let list = getBookmarks();
+  const marking = !list.some(b => b.href === href);
+  list = marking ? list.concat([{href, title}]) : list.filter(b => b.href !== href);
+  setBookmarks(list);
+
+  btn.classList.toggle('marked', marking);
+  const activeLangBtn = document.querySelector('.lang-toggle button.active');
+  const lang = activeLangBtn ? activeLangBtn.dataset.lang : 'en';
+  if(btn.hasAttribute('data-en')){
+    btn.setAttribute('data-en', marking ? '☑ bookmarked' : '☐ mark for class');
+    btn.setAttribute('data-ko', marking ? '☑ 저장됨' : '☐ 수업용으로 표시');
+    btn.textContent = lang === 'ko' ? btn.getAttribute('data-ko') : btn.getAttribute('data-en');
+  } else {
+    btn.textContent = marking ? '☑ bookmarked' : '☐ mark for class';
+  }
+}
+
+function markButtonsFromBookmarks(){
+  const bookmarked = new Set(getBookmarks().map(b => b.href));
+  document.querySelectorAll('.entry-actions button[onclick*="toggleMark"]').forEach(btn => {
+    const entry = btn.closest('.entry, .entry-page');
+    const href = entry?.querySelector('.entry-title a, .entry-page-title a')?.href;
+    if(href && bookmarked.has(href)) btn.classList.add('marked');
+  });
+}
+
+// renders the personal-bookmarks block on the reading-list page, if present
+function renderPersonalBookmarks(){
+  const list = document.getElementById('bookmark-list');
+  const empty = document.getElementById('bookmark-empty');
   if(!list) return;
+  const bookmarks = getBookmarks();
   list.innerHTML = '';
-  const marked = Array.from(document.querySelectorAll('.entry-actions button.marked'));
-  count.textContent = marked.length + ' items';
-  empty.style.display = marked.length ? 'none' : 'block';
-  marked.forEach(btn => {
-    const entry = btn.closest('.entry');
-    const titleEl = entry && entry.querySelector('.entry-title a, .entry-title');
-    if(!titleEl) return;
-    const srcEl = entry.querySelector('.src-tag');
+  if(empty) empty.style.display = bookmarks.length ? 'none' : 'block';
+  bookmarks.forEach(b => {
     const li = document.createElement('li');
-    li.innerHTML = `<span>${titleEl.textContent}</span><span>${srcEl ? srcEl.textContent.trim() : ''}</span>`;
+    li.innerHTML = `<a href="${b.href}">${b.title}</a>`;
     list.appendChild(li);
   });
 }
 
-function toggleCourse(){
-  const el = document.getElementById('course');
-  el.classList.toggle('open');
-  if(el.classList.contains('open')) el.scrollIntoView({behavior:'smooth', block:'start'});
+// ---- back to top ----
+function initBackToTop(){
+  const btn = document.getElementById('back-to-top');
+  if(!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 }
 
-// ---- sources/watches panel: colleague-added watches persisted client-side ----
-// The default source list is static markup in index.html (grouped by topic).
-// This only handles watches a colleague adds live via the form below it.
-async function initWatches(){
-  let extra = [];
-  try{
-    const stored = await window.storage.get('scientia-watches', false);
-    if(stored && stored.value) extra = JSON.parse(stored.value);
-  }catch(e){ /* no stored watches yet */ }
-  renderWatches(extra);
+// ---- subtle "digital rain" background — off by default on reduced-motion ----
+function initRain(){
+  const canvas = document.getElementById('rain');
+  if(!canvas) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const form = document.getElementById('add-watch-form');
-  if(!form) return;
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const f = e.target;
-    const entry = {
-      label: f.label.value.trim(),
-      type: f.type.value,
-      value: f.value.value.trim(),
-      lang: f.lang.value,
-      owner: f.owner.value.trim()
-    };
-    if(!entry.label || !entry.value || !entry.owner) return;
-    extra.push(entry);
-    try{ await window.storage.set('scientia-watches', JSON.stringify(extra), false); }catch(err){ console.error(err); }
-    renderWatches(extra);
-    f.reset();
-  });
-}
+  const ctx = canvas.getContext('2d');
+  const chars = '01アイウエオカキクケコASIRO'.split('');
+  let cols, drops, w, h, running = true;
 
-function renderWatches(extra){
-  const enList = document.getElementById('watch-list-en');
-  const koList = document.getElementById('watch-list-ko');
-  const section = document.getElementById('colleague-watches');
-  if(!enList || !koList) return;
-  enList.innerHTML = ''; koList.innerHTML = '';
-  const typeLabel = t => t === 'api' ? 'API' : t === 'rss' ? 'RSS' : t === 'keyword' ? 'keyword' : 'manual';
+  function size(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    const spacing = 26;
+    cols = Math.floor(w / spacing);
+    drops = new Array(cols).fill(0).map(() => Math.random() * -h / spacing);
+  }
+  size();
+  window.addEventListener('resize', size);
 
-  extra.forEach(w => appendWatch(w.lang === 'ko' ? koList : enList, w.label, typeLabel(w.type), w.owner));
-  if(section) section.style.display = extra.length ? 'block' : 'none';
-}
+  let lastFrame = 0;
+  function draw(ts){
+    if(!running){ requestAnimationFrame(draw); return; }
+    if(ts - lastFrame < 90){ requestAnimationFrame(draw); return; } // slow, subtle cadence
+    lastFrame = ts;
+    ctx.fillStyle = 'rgba(22,28,39,0.14)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.font = '14px IBM Plex Mono, monospace';
+    for(let i = 0; i < cols; i++){
+      const text = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * 26;
+      const y = drops[i] * 26;
+      ctx.fillStyle = i % 5 === 0 ? 'rgba(87,173,152,0.10)' : 'rgba(79,209,255,0.06)';
+      ctx.fillText(text, x, y);
+      if(y > h && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
 
-function appendWatch(list, label, type, owner){
-  const li = document.createElement('li');
-  li.innerHTML = `<span>${label}</span><span class="method">${type} · ${owner}</span>`;
-  list.appendChild(li);
-}
-
-function quickAddWatch(){
-  const input = document.getElementById('quick-watch');
-  const val = input.value.trim();
-  if(!val) return;
-  const form = document.getElementById('add-watch-form');
-  form.querySelector('[name="label"]').value = val;
-  form.querySelector('[name="value"]').value = val;
-  form.querySelector('[name="owner"]').value = 'Aaron';
-  form.requestSubmit();
-  input.value = '';
-  document.getElementById('sources').scrollIntoView({behavior:'smooth', block:'start'});
+  document.addEventListener('visibilitychange', () => { running = !document.hidden; });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   initFilters();
-  initWatches();
+  initBackToTop();
+  initRain();
+  markButtonsFromBookmarks();
+  renderPersonalBookmarks();
+  try{
+    const savedLang = localStorage.getItem('scientia-lang');
+    if(savedLang) setLang(savedLang);
+  }catch(e){}
 });

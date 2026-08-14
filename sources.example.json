@@ -1,5 +1,5 @@
 {
-  "_comment": "Starter config — copy to sources.json and extend. See CLAUDE.md → Data model for field docs. `topic` drives which research subsection an entry lands in; leave null for news sources that span topics.",
+  "_comment": "Starter config — copy to sources.json and extend. See CLAUDE.md → Data model for field docs. `topic` is required (drives which research subsection an entry lands in — news sources use it as a loose grouping too). `tags` propagate straight onto generated entries; use them for the cross-cutting lenses (low-cost-embedded, health-flourishing) instead of inventing new topics.",
   "sources": [
     {
       "id": "arxiv-csro",
@@ -10,6 +10,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -20,6 +21,7 @@
       "lang": "en",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -30,6 +32,7 @@
       "lang": "en",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -41,6 +44,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -51,6 +55,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -61,6 +66,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -72,6 +78,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -83,6 +90,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -94,6 +102,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "general-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -105,6 +114,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "general-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -116,6 +126,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "general-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -127,6 +138,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "ocr-handwriting",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -138,6 +150,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "ocr-handwriting",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -149,6 +162,7 @@
       "lang": "ko",
       "category": "news",
       "topic": "ocr-handwriting",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -160,17 +174,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "biomedical-ai",
-      "owner": "aaron"
-    },
-    {
-      "id": "pubmed-ai",
-      "label": "PubMed / NCBI E-utilities: AI in medicine",
-      "type": "keyword",
-      "provider": "pubmed",
-      "query": "artificial intelligence[Title] AND medicine",
-      "lang": "en",
-      "category": "papers",
-      "topic": "biomedical-ai",
+      "tags": [],
       "owner": "aaron"
     },
     {
@@ -182,6 +186,46 @@
       "lang": "ko",
       "category": "news",
       "topic": "biomedical-ai",
+      "tags": [],
+      "owner": "aaron"
+    },
+    {
+      "id": "pubmed-ai",
+      "label": "PubMed / NCBI E-utilities: AI in medicine",
+      "type": "keyword",
+      "provider": "pubmed",
+      "query": "artificial intelligence[Title] AND medicine",
+      "lang": "en",
+      "category": "papers",
+      "topic": "biomedical-ai",
+      "tags": [],
+      "owner": "aaron",
+      "enabled": false,
+      "_comment": "Deferred — launch on arXiv q-bio/cs.AI coverage alone first, add PubMed once the pipeline is proven and biomedical volume is assessed. See CLAUDE.md open decisions."
+    },
+    {
+      "id": "arxiv-health-flourishing",
+      "label": "arXiv: AI for sleep / behavior / health coaching",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "(cat:q-bio.QM OR cat:cs.AI OR cat:cs.HC) AND (abs:sleep OR abs:\"behavior change\" OR abs:wearable)",
+      "lang": "en",
+      "category": "papers",
+      "topic": "biomedical-ai",
+      "tags": ["health-flourishing"],
+      "owner": "aaron",
+      "_comment": "cross-cutting lens, not its own topic — AI research touching sleep/exercise/behavior/wearables, Aaron's Huberman/Peterson-adjacent interest. See CLAUDE.md."
+    },
+    {
+      "id": "naver-health-ai",
+      "label": "Naver News: \"수면 AI\" / \"웨어러블 건강\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "수면 AI OR 웨어러블 건강",
+      "lang": "ko",
+      "category": "news",
+      "topic": "biomedical-ai",
+      "tags": ["health-flourishing"],
       "owner": "aaron"
     },
     {
@@ -192,9 +236,10 @@
       "query": "(cat:eess.SY OR cat:cs.AR) AND (abs:tinyml OR abs:\"edge inference\")",
       "lang": "en",
       "category": "papers",
-      "topic": null,
+      "topic": "general-ai",
+      "tags": ["low-cost-embedded"],
       "owner": "aaron",
-      "_comment": "cross-cutting low-cost/embedded AI lens — tag as low-cost-embedded across any topic rather than its own subsection, see CLAUDE.md"
+      "_comment": "cross-cutting low-cost/embedded AI lens — tagged, not its own subsection. See CLAUDE.md."
     },
     {
       "id": "example-colleague-watch",
@@ -205,6 +250,7 @@
       "lang": "en",
       "category": "papers",
       "topic": "physical-ai",
+      "tags": [],
       "owner": "guest:example-professor-name"
     }
   ]

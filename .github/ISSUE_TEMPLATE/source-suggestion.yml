@@ -1,0 +1,65 @@
+name: Suggest a source
+description: Propose an RSS feed, API, or keyword watch for Scientia AI to track.
+title: "[source] "
+labels: ["source-suggestion"]
+body:
+  - type: input
+    id: label
+    attributes:
+      label: Source name
+      placeholder: e.g. "Naver News: 로봇 윤리" or "ArXiv Sanity Lite"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - RSS feed
+        - API (arXiv / Semantic Scholar / PubMed / Naver / other)
+        - Keyword watch
+    validations:
+      required: true
+  - type: input
+    id: value
+    attributes:
+      label: Feed URL, API endpoint, or keyword
+      placeholder: "https://example.com/feed.xml — or a search term"
+    validations:
+      required: true
+  - type: dropdown
+    id: lang
+    attributes:
+      label: Language
+      options:
+        - English
+        - Korean
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Which topic does this fit?
+      options:
+        - Physical AI
+        - General AI
+        - Handwritten script recognition / OCR
+        - Biomedical AI
+        - News (cross-topic)
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Your name (and affiliation, if a colleague suggesting this)
+      placeholder: e.g. "Prof. Kim, KSPAI"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this source?
+      placeholder: Anything that helps Aaron evaluate it — reliability, how niche it is, why it's worth tracking.
+    validations:
+      required: false

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Reading list
+description: "Weekly reading list for CBNU Research Methodology (graduate) — auto-built from entries marked for class."
+permalink: /reading-list/
+---
+
+<section class="major-head" style="padding-top:20px;">
+  <h2 data-en="Reading list" data-ko="읽기 자료">Reading list</h2>
+  <p data-en="Built for CBNU Research Methodology (graduate). Anything flagged &ldquo;marked for class&rdquo; in the log lands here automatically — English items only, since that's the course's reading language." data-ko="충북대학교 연구방법론(대학원) 수업용. 로그에서 &lsquo;수업용으로 표시&rsquo;된 항목이 자동으로 이곳에 모입니다 — 수업 언어가 영어이므로 영어 자료만 표시됩니다.">Built for CBNU Research Methodology (graduate). Anything flagged "marked for class" in the log lands here automatically — English items only, since that's the course's reading language.</p>
+</section>
+
+{% assign class_research = site.research | where: "marked_for_class", true | where: "source_lang", "en" | sort: "date" | reverse %}
+{% assign class_news = site.news | where: "marked_for_class", true | where: "source_lang", "en" | sort: "date" | reverse %}
+{% assign class_count = class_research.size | plus: class_news.size %}
+
+<section class="course">
+  <div class="course-head">
+    <h1 data-en="This week's set" data-ko="이번 주 자료">This week's set</h1>
+    <span>{{ class_count }} items</span>
+  </div>
+  <p class="course-sub" data-en="Once the course goes live at courses.aaron.kr/courses/2026/cbnu-grad-research/, its weekly readings field will link straight back here — no copy-pasting a list by hand each week." data-ko="courses.aaron.kr/courses/2026/cbnu-grad-research/ 수업 페이지가 공개되면, 주차별 readings 항목이 이 페이지로 바로 연결됩니다 — 매주 목록을 손으로 복사할 필요가 없습니다.">Once the course goes live, its weekly readings field will link straight back here.</p>
+  <ul class="course-list">
+    {% for e in class_research %}<li><a href="{{ e.url | relative_url }}">{{ e.title_en }}</a><span>{{ e.source }} · {{ e.date | date: "%m.%d" }}</span></li>{% endfor %}
+    {% for e in class_news %}<li><a href="{{ e.url | relative_url }}">{{ e.title }}</a><span>{{ e.source }} · {{ e.date | date: "%m.%d" }}</span></li>{% endfor %}
+  </ul>
+  {% if class_count == 0 %}<p class="course-empty" data-en="Nothing marked for class yet." data-ko="아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet.</p>{% endif %}
+  <div class="course-print"><button onclick="window.print()" data-en="🖨 Print this list" data-ko="🖨 목록 인쇄">🖨 Print this list</button></div>
+</section>
+
+<section class="course" style="margin-top:20px;">
+  <div class="course-head"><h1 data-en="Your bookmarks (this browser only)" data-ko="내 북마크 (이 브라우저 한정)">Your bookmarks (this browser only)</h1></div>
+  <p class="course-sub" data-en="Clicking &ldquo;mark for class&rdquo; anywhere on the site saves a personal bookmark here, in this browser only. It does not change the official list above — that comes from the site's own data." data-ko="사이트 어디서든 &lsquo;수업용으로 표시&rsquo;를 클릭하면 이 브라우저에만 개인 북마크로 저장됩니다. 위의 공식 목록에는 영향을 주지 않습니다 — 공식 목록은 사이트 데이터 기준입니다.">Clicking "mark for class" anywhere on the site saves a personal bookmark here, in this browser only.</p>
+  <ul class="course-list" id="bookmark-list"></ul>
+  <p class="course-empty" id="bookmark-empty" data-en="No personal bookmarks yet." data-ko="아직 개인 북마크가 없습니다.">No personal bookmarks yet.</p>
+</section>
