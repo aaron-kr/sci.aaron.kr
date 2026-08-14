@@ -1,7 +1,8 @@
 <!-- Research entry card. Param: entry (a doc from site.research) -->
 {% assign e = include.entry %}
 {% assign tag_str = e.tags | join: " " %}
-<article class="entry{% if e.raw_wire %} wire{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}">
+{% assign has_summary = e.content | strip | size %}
+<article class="entry{% if e.raw_wire %} wire{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
   <div class="entry-time"><span class="date">{{ e.date | date: "%m.%d" }}</span>{{ e.date | date: "%Y" }}</div>
   <div>
     <div class="src-row">
@@ -11,9 +12,13 @@
       {% if e.gap == "ko_only" %}<span class="gap-flag" data-en="no EN pickup yet" data-ko="영어권 미보도">no EN pickup yet</span>{% endif %}
       {% if e.embedded %}<span class="embedded-flag" data-en="low-cost / embedded" data-ko="저비용·임베디드">low-cost / embedded</span>{% endif %}
       {% if e.health_flourishing %}<span class="embedded-flag health" data-en="health &amp; flourishing" data-ko="건강·플러리싱">health &amp; flourishing</span>{% endif %}
+      {% if e.ai_education %}<span class="embedded-flag education" data-en="AI education" data-ko="AI 교육">AI education</span>{% endif %}
       {% if e.raw_wire %}<span class="wire-flag" data-en="wire" data-ko="보도자료">wire</span>{% endif %}
     </div>
-    <h2 class="entry-title"><a href="{{ e.url | relative_url }}">{{ e.title_en }}</a></h2>
+    <h2 class="entry-title">
+      {% if has_summary > 0 %}<a href="{{ e.url | relative_url }}">{{ e.title_en }}</a>
+      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title_en }}</a>{% endif %}
+    </h2>
     {% assign translated_hook = e.hook_ko %}
     {% if translated_hook and translated_hook != "" %}<p class="entry-title-ko">{{ translated_hook }}</p>{% endif %}
     <p class="entry-summary">
@@ -21,9 +26,13 @@
     </p>
     <div class="entry-tags">{% for t in e.tags %}<button class="tag" onclick="filterByTag('{{ t }}')">{{ t }}</button>{% endfor %}</div>
     <div class="entry-actions">
+      <a class="pill-cta" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read article ↗" data-ko="기사 보기 ↗">read article ↗</a>
       <button onclick="toggleMark(this)" data-en="☐ mark for class" data-ko="☐ 수업용으로 표시">☐ mark for class</button>
-      <a href="{{ e.url | relative_url }}" data-en="read &amp; write your summary →" data-ko="읽고 요약 작성하기 →">read &amp; write your summary →</a>
-      <a href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="original ↗" data-ko="원문 ↗">original ↗</a>
+      {% if has_summary > 0 %}
+        <a href="{{ e.url | relative_url }}" data-en="my summary →" data-ko="내 요약 보기 →">my summary →</a>
+      {% else %}
+        <a href="{{ e.url | relative_url }}" data-en="add a summary →" data-ko="요약 작성하기 →">add a summary →</a>
+      {% endif %}
     </div>
   </div>
 </article>

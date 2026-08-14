@@ -7,9 +7,14 @@ this step — Papago is free at this volume and literal translation is actually
 more honest for a title than an LLM-generated "hook". See CLAUDE.md → "Where
 commentary lives" and SETUP.md § Papago.
 
-Requires NAVER_CLIENT_ID / NAVER_CLIENT_SECRET (same app as fetch_naver.py —
-Papago Translation and News Search are both under the same Open API
-application). Stdlib only.
+As of ~July 2026 Papago Translation moved to Naver Cloud Platform (NCP) — see
+fetch_naver.py's docstring for the full context (new auth headers, NCP
+account with real-name verification + payment method required). Confirmed
+endpoint and header names for this one (unlike the news search path, which
+is inferred by pattern) — found a literal documented example.
+
+Requires NAVER_CLIENT_ID / NAVER_CLIENT_SECRET — same NCP application as
+fetch_naver.py, just a different registered service on it. Stdlib only.
 """
 import json
 import os
@@ -23,7 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import REPO_ROOT
 
 MAX_PER_RUN = int(os.environ.get("TRANSLATE_MAX_PER_RUN", "60"))
-PAPAGO_URL = "https://openapi.naver.com/v1/papago/n2mt"
+PAPAGO_URL = "https://papago.apigw.ntruss.com/nmt/v1/translation"
 
 
 def find_entries():
@@ -59,8 +64,8 @@ def needs_translation(fm_text):
 def papago_translate(client_id, client_secret, text, source, target):
     body = urllib.parse.urlencode({"source": source, "target": target, "text": text}).encode("utf-8")
     req = urllib.request.Request(PAPAGO_URL, data=body, headers={
-        "X-Naver-Client-Id": client_id,
-        "X-Naver-Client-Secret": client_secret,
+        "X-NCP-APIGW-API-KEY-ID": client_id,
+        "X-NCP-APIGW-API-KEY": client_secret,
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
     })
     with urllib.request.urlopen(req, timeout=20) as resp:

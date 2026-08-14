@@ -1,6 +1,7 @@
 <!-- News row. Param: entry (a doc from site.news) -->
 {% assign e = include.entry %}
 {% assign tag_str = e.tags | join: " " %}
+{% assign has_summary = e.content | strip | size %}
 {% assign cov_total = 0 %}
 {% if e.coverage_en or e.coverage_ko %}{% assign cov_total = e.coverage_en | default: 0 | plus: e.coverage_ko | default: 0 %}{% endif %}
 {% assign cov_class = "" %}
@@ -10,23 +11,29 @@
   {% when 4 %}{% assign cov_class = "cov-4" %}
   {% else %}{% if cov_total >= 5 %}{% assign cov_class = "cov-5plus" %}{% endif %}
 {% endcase %}
-<div class="list-row{% unless e.thumb %} no-thumb{% endunless %}{% if e.raw_wire %} wire{% endif %}{% if cov_class != "" %} {{ cov_class }}{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}" {% if cov_total > 0 %}title="{% if e.coverage_en %}{{ e.coverage_en }} EN{% endif %}{% if e.coverage_en and e.coverage_ko %} · {% endif %}{% if e.coverage_ko %}{{ e.coverage_ko }} KO{% endif %} covering this story"{% endif %}>
+<div class="list-row{% unless e.thumb %} no-thumb{% endunless %}{% if e.raw_wire %} wire{% endif %}{% if cov_class != "" %} {{ cov_class }}{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
   <span class="list-date">{{ e.date | date: "%m.%d" }}</span>
   {% if e.thumb %}<img class="list-thumb" src="{{ e.thumb }}" alt="">{% endif %}
   <div class="list-main">
-    <h3 class="list-title"><a href="{{ e.url | relative_url }}">{{ e.title }}</a></h3>
+    <h3 class="list-title">
+      {% if has_summary > 0 %}<a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      {% else %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{{ e.title }}</a>{% endif %}
+    </h3>
     {% assign hook = e.hook_en %}
     {% if e.source_lang == "en" %}{% assign hook = e.hook_ko %}{% endif %}
     {% if hook and hook != "" %}<p class="list-summary">{{ hook }}</p>{% endif %}
-    {% if e.coverage_en or e.coverage_ko %}
-    {% assign total = e.coverage_en | default: 0 | plus: e.coverage_ko | default: 0 %}
-    {% assign en_pct = e.coverage_en | default: 0 | times: 100 | divided_by: total %}
-    <div class="list-mini-cov" title="{{ e.coverage_en }} EN · {{ e.coverage_ko }} KO"><span class="en" style="width:{{ en_pct }}%"></span><span class="ko" style="width:{{ 100 | minus: en_pct }}%"></span></div>
+    {% if cov_total > 0 %}
+    <div class="list-mini-cov" title="{{ e.coverage_en }} EN · {{ e.coverage_ko }} KO">
+      {% assign en_pct = e.coverage_en | default: 0 | times: 100 | divided_by: cov_total %}
+      <span class="en" style="width:{{ en_pct }}%"></span><span class="ko" style="width:{{ 100 | minus: en_pct }}%"></span>
+    </div>
     {% endif %}
   </div>
   <div class="list-meta">
     {% if e.raw_wire %}<span class="wire-flag" data-en="wire" data-ko="보도자료">wire</span>{% endif %}
     {% if e.commentary_worthy %}<span class="commentary-flag" data-en="commentary?" data-ko="논평 후보">commentary?</span>{% endif %}
+    {% if cov_total > 0 %}<span class="cov-count" data-en="{{ cov_total }} sources" data-ko="{{ cov_total }}곳 보도">{{ cov_total }} sources</span>{% endif %}
     <span class="list-src {{ e.source_lang }}">{{ e.source }}</span>
+    <a class="pill-cta pill-cta-small" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read ↗" data-ko="보기 ↗">read ↗</a>
   </div>
 </div>

@@ -2,7 +2,97 @@
 
 Session handoff file. Read this first.
 
-## Session 3 changes (this session) — read this before the rest of the file
+## Session 4 changes (this session)
+
+- **Naver Search/Papago moved to Naver Cloud Platform — Aaron decided to
+  proceed anyway.** As of ~July 2026, Naver Search moved to "NAVER API HUB"
+  and Papago moved to NCP's AI Services, both now requiring an NCP account
+  (real-name ID verification + a payment method on file — NCP is a paid
+  cloud platform, not the old free-and-open Developers Center), with
+  pay-as-you-go pricing on Search (exact rate/free-tier threshold still
+  unconfirmed — NCP's calculator requires login). Given a choice between
+  deferring this or going through NCP registration, Aaron chose to register.
+  **Code updated accordingly this session:**
+  - `scripts/fetch_naver.py` and `scripts/translate_papago.py` now use NCP's
+    headers (`X-NCP-APIGW-API-KEY-ID` / `X-NCP-APIGW-API-KEY`) and endpoints.
+  - Papago's endpoint (`https://papago.apigw.ntruss.com/nmt/v1/translation`)
+    is **confirmed** — found a literal documented example, high confidence.
+  - The news search endpoint (`https://naverapihub.apigw.ntruss.com/search/v1/news`)
+    is **inferred by pattern**, not literally confirmed — the only
+    documented API HUB example found was Knowledge-iN search
+    (`/search/v1/kin`); `news` is the same-family extension of that pattern
+    but hasn't been tested against a real key. **If Aaron's first real run
+    404s on the news fetch, check the NCP console's own API HUB
+    documentation (needs login) for the exact path** and fix
+    `NEWS_ENDPOINT` in `fetch_naver.py` — everything else in that script
+    should still be correct.
+  - `NAVER_CLIENT_ID`/`NAVER_CLIENT_SECRET` env var *names* are unchanged
+    (still hold NCP's Client ID/Secret now, not the old Developers Center
+    ones) — no changes needed to `.github/workflows/fetch.yml` or any
+    already-added GitHub secret name, just the values once Aaron registers.
+- **GitHub Pages deployment gap found and fixed.** Aaron had already set the
+  repo's Pages source to "GitHub Actions" (not "Deploy from a branch") — in
+  that mode, GitHub does *not* auto-build Jekyll on push; nothing was
+  actually deploying. Added `.github/workflows/pages.yml`
+  (`actions/configure-pages` + `jekyll build` + `actions/upload-pages-artifact`
+  + `actions/deploy-pages`) to match the mode Aaron already chose, rather
+  than switching him back to branch-based deploy. Don't use GitHub's own
+  auto-suggested default workflow — this repo has its own.
+- **Issue template confirmed correctly present on GitHub** (verified via
+  `gh api` against the `main` branch — valid GitHub Issue Forms YAML, right
+  path, right branch). If it's still showing blank, the two most likely
+  causes are (a) GitHub's template-picker cache not having refreshed yet
+  right after a push, or (b) navigating to plain `/issues/new` instead of
+  `/issues/new?template=source-suggestion.yml`. Not a bug in the file.
+- **Conditional article/summary links.** Every title link (research cards,
+  news rows) now points straight to the source article when there's no
+  write-up yet, and to the entry's own permalink page once a real summary
+  exists — no more sending visitors to an empty page. `has_summary` check is
+  `{% assign has_summary = e.content | strip | size %}` in
+  `entry-card.html`/`news-row.html`. Verified both branches render correctly
+  against real data (68 direct-to-source links + the one demo entry with a
+  body linking to its own page).
+- **"Read article" pills.** All source-article links now render as a
+  distinct bright pill button (`assets/css/main.css` `.pill-cta`), not plain
+  text — meant to be the most obviously-clickable thing on the page, text
+  changed from "original" to "read article". The entry permalink page
+  (`_layouts/entry.html`) gets a bigger magenta/pink version
+  (`.pill-cta-big`) prominently placed right under the title/hook.
+  Commentary/video links stay conditional (only render if
+  `commentary_url`/`commentary_video_url` is actually set) — unchanged, was
+  already correct.
+- **New cross-cutting tag: `ai_education`.** Same pattern as
+  `health_flourishing`/`embedded` — boolean front-matter field, a flag badge,
+  a filter chip, propagated from source `tags: ["ai-education"]`. This is
+  Aaron's strongest current publication niche (numerous existing papers),
+  so it got the full dedicated-field treatment like the other two lenses,
+  not just a plain tag. Sources added: `arxiv-ai-education` (cs.CY/cs.AI),
+  `naver-ai-education`.
+- **New topical tag (not a dedicated field): `human-in-the-loop`** — Aaron's
+  newer research direction (vibe coding, human-in-the-loop AI, ~5 papers
+  expected). Deliberately *not* given the full dedicated-lens treatment yet
+  (no boolean field, no flag badge) since the volume isn't established —
+  it's a plain tag for now, added to `auto_tag.py`'s known vocabulary and a
+  candidate source (`arxiv-human-in-the-loop`, cs.SE/cs.HC). **Watch this**:
+  if the "~5 more papers" materializes, this is a strong candidate to
+  graduate to a full cross-cutting lens (or even a 5th research topic) —
+  revisit once there's real volume, don't force the decision now.
+- **`sources.example.json`'s `example-colleague-watch` placeholder entry
+  removed** — it never actually rendered on the site (the Sources & Watches
+  section is hand-written markup, not driven by `sources.json`), so it was
+  just noise in the schema file.
+- **Sources & Watches list is now fully linked.** Every entry in
+  `_includes/sources.html` is a real `<a>` to the source's homepage or (for
+  Naver keyword watches) a live `search.naver.com` search URL for that exact
+  query — Aaron can click through the whole list to explore. KAIST/ETRI
+  entries link to the pages already confirmed to have no RSS (per SETUP.md),
+  marked "manual" accordingly.
+- **News coverage count is now a visible footnote**, not just a hover
+  tooltip — `.cov-count` span in `news-row.html` shows "N sources" in the
+  row's metadata directly. The hover tooltip on `.list-mini-cov` stays too
+  (exact EN/KO split on inspection); the footnote is the at-a-glance number.
+
+## Session 3 changes (previous session) — still accurate, read after Session 4
 
 The rest of this file is mostly still accurate but has some stale
 references from the session that wrote it. Corrections and additions:

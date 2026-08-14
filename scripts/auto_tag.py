@@ -30,6 +30,7 @@ KNOWN_TAGS = [
     "dataset", "multi-agent", "autonomous-driving", "ocr", "handwriting",
     "historical-documents", "document-parsing", "biomedical", "clinical",
     "reasoning", "training-efficiency", "evaluation", "industry", "policy",
+    "ai-education", "human-in-the-loop", "vibe-coding",
 ]
 
 SYSTEM_PROMPT = (

@@ -23,50 +23,68 @@ Nothing here should ever be committed to the repo itself — only added as a sec
 
 ---
 
-## 2. Naver Open API — one app, two APIs (correction from last session)
+## 2. Naver — now via Naver Cloud Platform (correction, again — Naver moved this)
 
-You found `developers.naver.com/apps/#/cooperation` listing 검색 (Search),
-CAPTCHA, Papago Translation, and Maps as **not** going through the API
-제휴 (partnership) program. That's actually **good news, not a blocker** —
-read that page as a negative list: "these APIs do *not* require the special
-partnership application" — i.e. they're confirmed to use the normal
-self-service path below. I misread your question as "these are gated";
-they're actually explicitly exempted from gating. The registration flow I
-originally described is correct and current:
+**This changed since the last session, and my previous correction here was
+itself wrong.** The old Developers Center self-service flow (검색/Papago
+under 애플리케이션 등록) is gone — as of ~July 2026, Naver moved both APIs to
+**Naver Cloud Platform (NCP)**:
+- **Search** → hosted on the new **NAVER API HUB**
+- **Papago Translation** → NCP's **AI Services**
 
-1. Go to **developers.naver.com**, sign in with a Naver account.
-2. **Application → 애플리케이션 등록** (Register Application).
-3. Name it anything, e.g. "Scientia AI".
-4. Under **사용 API** (APIs to use), add **both**:
-   - **검색 (Search)** — powers `scripts/fetch_naver.py`
-   - **Papago 번역 (Papago Translation)** — powers `scripts/translate_papago.py` (see §3 below — this replaced the original Anthropic-based hook translation)
-5. Under environment, add a **Web service URL** — `https://sci.aaron.kr` once
-   the domain is live, or `https://aaron-kr.github.io` in the meantime. Not
-   strictly checked for these two APIs, so it won't block local testing.
-6. Submit → you get **one Client ID / Client Secret pair covering both APIs**
-   on the application's detail page.
-7. Add as GitHub secrets:
+Both now require an **NCP account**, which means real-name identity
+verification and a registered payment method — NCP is a full paid cloud
+platform (like AWS/GCP), not the old open developer portal. Pricing on
+Search is confirmed **pay-as-you-go**; the exact rate and whether there's a
+free monthly quota before billing kicks in wasn't confirmable without
+logging into NCP's pricing calculator yourself — **check that before you
+commit**, ideally right after creating the account and before enabling
+billing on anything.
+
+You already decided to go through this rather than defer it, so:
+
+1. Go to **console.ncloud.com**, sign up / sign in. This is where the
+   real-name verification and payment method get requested — that's normal
+   NCP onboarding, not something specific to these two services.
+2. **For Papago**: Console → **Services → AI Services → Papago Translation**
+   → **Request Service** (이용 신청) → **AI·NAVER API → Application**
+   → register an application, check **Papago Translation**, generate
+   Client ID/Secret.
+3. **For Search**: Console → **NAVER API HUB** → create an application →
+   select/activate the **Search** API → issue the key. (This is a newer,
+   separate flow from Papago's — API HUB unifies several search-family APIs
+   under one key rather than the old per-service application model.)
+4. You'll end up with credentials from these steps — add them as GitHub
+   secrets exactly as before:
    - `NAVER_CLIENT_ID`
    - `NAVER_CLIENT_SECRET`
+   (If Papago and Search end up issuing *separate* credential pairs rather
+   than one shared pair — possible, since they're technically different NCP
+   services now — use the Papago ones for these two secret names, since
+   `translate_papago.py` needs them confirmed-working; if Search's News
+   endpoint needs a different key, that'll surface as an auth error in
+   `fetch_naver.py` specifically, and we can add a second secret pair then.)
 
-Both `fetch_naver.py` and `translate_papago.py` read the same two secrets —
-no separate registration needed for the Korean-blog Papago setup you already
-have; that was a different application (tied to that blog's own client
-ID/secret), so register a fresh one here rather than reusing it, since
-usage/rate limits are tracked per application.
+**Code is already updated for this** (see CLAUDE.md → Session 4) —
+`fetch_naver.py` and `translate_papago.py` now send NCP's headers
+(`X-NCP-APIGW-API-KEY-ID` / `X-NCP-APIGW-API-KEY`) to NCP's endpoints. The
+Papago endpoint is confirmed against a real documented example; the news
+search endpoint is a high-confidence pattern-match, not literally confirmed
+— **if your first real run of `fetch_naver.py` 404s**, that's the most
+likely reason. Check NCP's own API HUB docs (needs your login) for the exact
+path and update `NEWS_ENDPOINT` near the top of `fetch_naver.py`.
 
-**Free tier, concretely:**
-- Search API: 25,000 calls/day.
-- Papago Translation: **10,000 characters/day free** on the Open API tier (this
-  is the free developer tier — separate from Naver Cloud Platform's paid
-  Papago NMT product, which has a larger 150,000/month allotment but requires
-  a paid NCP account; you don't need that for this project's volume). A title
-  is roughly 40–80 characters; even 100 new entries a day is under 8,000
-  characters — comfortably inside the free daily limit.
+**On cost**: I can't give you a confirmed free-tier number the way I could
+for the old API — check NCP's pricing calculator yourself before enabling
+billing on anything, since "pay-as-you-go" with an unknown rate is a real
+risk for a project meant to stay near-free. Papago's older Open API tier
+(now retired) was 10,000 free characters/day; if NCP's Papago pricing is
+similar in spirit, your actual volume (titles only, ~40–80 characters each)
+would stay small regardless — but confirm rather than assume.
 
 Once both secrets exist, `fetch.yml` automatically starts running
 `fetch_naver.py` and `translate_papago.py` on the next scheduled run (or
-trigger it by hand — see §6).
+trigger it by hand — see §7).
 
 ---
 

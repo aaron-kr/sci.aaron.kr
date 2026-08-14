@@ -290,16 +290,42 @@
       "_comment": "confirmed working — their Substack feed, not the edgeaifoundation.org homepage (no RSS found there)"
     },
     {
-      "id": "example-colleague-watch",
-      "label": "Example: a colleague's keyword watch",
+      "id": "arxiv-ai-education",
+      "label": "arXiv cs.CY + cs.AI: AI / computing education",
       "type": "keyword",
       "provider": "arxiv",
-      "query": "soft robotics",
+      "query": "(cat:cs.CY OR cat:cs.AI) AND (abs:\"AI education\" OR abs:\"computing education\" OR abs:\"engineering education\")",
       "lang": "en",
       "category": "papers",
-      "topic": "physical-ai",
-      "tags": [],
-      "owner": "guest:example-professor-name"
+      "topic": "general-ai",
+      "tags": ["ai-education"],
+      "owner": "aaron",
+      "_comment": "cross-cutting lens, not its own topic — Aaron's strongest current publication niche. See CLAUDE.md."
+    },
+    {
+      "id": "naver-ai-education",
+      "label": "Naver News: \"AI 교육\"",
+      "type": "keyword",
+      "provider": "naver",
+      "query": "AI 교육",
+      "lang": "ko",
+      "category": "news",
+      "topic": "general-ai",
+      "tags": ["ai-education"],
+      "owner": "aaron"
+    },
+    {
+      "id": "arxiv-human-in-the-loop",
+      "label": "arXiv cs.SE + cs.HC: vibe coding / human-in-the-loop",
+      "type": "keyword",
+      "provider": "arxiv",
+      "query": "(cat:cs.SE OR cat:cs.HC) AND (abs:\"vibe coding\" OR abs:\"human-in-the-loop\" OR abs:\"LLM-assisted programming\")",
+      "lang": "en",
+      "category": "papers",
+      "topic": "general-ai",
+      "tags": ["human-in-the-loop"],
+      "owner": "aaron",
+      "_comment": "topical tag, not a dedicated cross-cutting lens yet — newer interest, ~5 papers expected. Watch this: may graduate to its own topic if volume grows. See CLAUDE.md."
     }
   ]
 }

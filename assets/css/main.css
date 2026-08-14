@@ -192,6 +192,23 @@ section.log{padding:6px 0 10px;}
 .gap-flag{color:var(--magenta); border:1px solid var(--magenta); padding:1px 6px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em; font-size:9.5px;}
 .embedded-flag{color:var(--jade); border:1px solid var(--jade-dim); padding:1px 6px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em; font-size:9.5px;}
 .embedded-flag.health{color:var(--cyan); border-color:var(--cyan-dim);}
+.embedded-flag.education{color:var(--magenta); border-color:var(--magenta-dim);}
+
+/* "Read article" pill CTAs — deliberately the brightest, most clickable-looking
+   element in each entry, since the original source is the most likely link
+   anyone actually wants. */
+.pill-cta{
+  display:inline-flex; align-items:center; font-family:'IBM Plex Mono', monospace; font-weight:600;
+  border-radius:20px; text-decoration:none; white-space:nowrap; transition:background .15s, color .15s, transform .1s;
+}
+.pill-cta:active{transform:scale(.97);}
+.entry-actions .pill-cta{font-size:11.5px; padding:5px 12px; background:var(--cyan); color:#0c1620; border-bottom:none;}
+.entry-actions .pill-cta:hover{background:#7fdcff; color:#0c1620;}
+.pill-cta-small{font-size:10px; padding:3px 9px; background:var(--cyan); color:#0c1620;}
+.pill-cta-small:hover{background:#7fdcff;}
+.entry-page-cta-row{margin:0 0 20px;}
+.pill-cta-big{font-size:14px; padding:11px 22px; background:var(--magenta); color:#fff; box-shadow:0 2px 12px rgba(255,95,168,0.25);}
+.pill-cta-big:hover{background:#ff7fb8;}
 .wire-flag{color:var(--ink-faint); border:1px solid var(--hair-strong); padding:1px 6px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em; font-size:9.5px;}
 
 .entry-title{font-family:'Playfair Display', serif; font-weight:600; font-size:19px; line-height:1.32; margin:0 0 3px;}
@@ -252,6 +269,7 @@ section.news{padding:6px 0 10px;}
 .list-src{font-family:'IBM Plex Mono', monospace; font-size:10.5px; flex-shrink:0;}
 .list-src.en{color:var(--cyan);} .list-src.ko{color:var(--jade);}
 .commentary-flag{font-family:'IBM Plex Mono', monospace; font-size:9.5px; color:var(--magenta); border:1px solid var(--magenta); padding:1px 5px; border-radius:3px; text-transform:uppercase;}
+.cov-count{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-faint); flex-shrink:0;}
 
 /* ---------- entry permalink page ---------- */
 .entry-page{padding:30px 0 60px;}
@@ -298,6 +316,8 @@ section.sources{padding:34px 0; border-top:1px solid var(--hair); margin-top:20p
 .src-cols{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
 .src-cols ul{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
 .src-cols li{font-size:13px; color:var(--ink-dim); display:flex; justify-content:space-between; gap:10px; border-bottom:1px solid var(--hair); padding-bottom:6px;}
+.src-cols li a{text-decoration:none; border-bottom:1px solid transparent; transition:color .15s, border-color .15s;}
+.src-cols li a:hover{color:var(--cyan); border-color:var(--cyan);}
 .src-cols li .method{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-faint); text-align:right; flex-shrink:0;}
 .src-col-label{font-size:11.5px; margin:0 0 10px; font-family:'IBM Plex Mono', monospace; letter-spacing:.06em;}
 .src-col-label.en{color:var(--cyan);}

@@ -90,6 +90,8 @@ def main():
                 fm["embedded"] = True
             if "health-flourishing" in source.get("tags", []):
                 fm["health_flourishing"] = True
+            if "ai-education" in source.get("tags", []):
+                fm["ai_education"] = True
 
             stem = slugify(item["title"])
             target_dir = dated_dir(NEWS_DIR, item["date"])

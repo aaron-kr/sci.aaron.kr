@@ -60,6 +60,7 @@ DEFAULT_FRONT_MATTER = {
     "tags": [],
     "embedded": False,
     "health_flourishing": False,
+    "ai_education": False,
     "coverage_en": None,
     "coverage_ko": None,
     "gap": None,

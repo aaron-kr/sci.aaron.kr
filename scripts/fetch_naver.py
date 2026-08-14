@@ -2,8 +2,23 @@
 """Fetch Naver News Search results for every naver-provider source in
 sources.json and write them into the _news/ collection.
 
-Requires NAVER_CLIENT_ID / NAVER_CLIENT_SECRET env vars — register a free app
-at developers.naver.com first. See SETUP.md. Stdlib only.
+As of ~July 2026 this API moved from the old Naver Developers Center to
+NAVER API HUB, hosted on Naver Cloud Platform (NCP) — different auth headers
+(X-NCP-APIGW-API-KEY-ID / X-NCP-APIGW-API-KEY, not the old X-Naver-Client-Id/
+Secret) and a different endpoint. Registration now requires an NCP account
+(real-name verification + a payment method on file) — see SETUP.md § 2 for
+why, and for the tradeoff Aaron weighed before deciding to proceed anyway.
+
+Requires NAVER_CLIENT_ID / NAVER_CLIENT_SECRET env vars (still using these
+names for continuity with the rest of this repo — they now hold the NCP
+Client ID/Secret, not the old Developers Center ones). Stdlib only.
+
+NOTE ON CONFIDENCE: the endpoint path below (`/search/v1/news`) is inferred
+by pattern from NAVER API HUB's confirmed Knowledge-iN endpoint
+(`/search/v1/kin`), not copied from a literal documented news example — the
+official docs didn't show one. High confidence, not yet verified against a
+real key. If this 404s, check the NCP console's own API Hub documentation
+(needs login) for the exact path and adjust NEWS_ENDPOINT below.
 """
 import datetime
 import html
@@ -21,6 +36,9 @@ ENTRIES_PER_SOURCE = int(os.environ.get("ENTRIES_PER_SOURCE", "8"))
 NEWS_DIR = os.path.join(REPO_ROOT, "_news")
 TAG_RE = re.compile(r"<[^>]+>")
 
+# NAVER API HUB base — see module docstring re: confidence on the news path.
+NEWS_ENDPOINT = "https://naverapihub.apigw.ntruss.com/search/v1/news"
+
 
 def strip_tags(s):
     return html.unescape(TAG_RE.sub("", s or "")).strip()
@@ -28,12 +46,12 @@ def strip_tags(s):
 
 def fetch_naver(query, client_id, client_secret, display):
     url = (
-        "https://openapi.naver.com/v1/search/news.json"
-        f"?query={urllib.parse.quote(query)}&display={display}&sort=date"
+        f"{NEWS_ENDPOINT}?query={urllib.parse.quote(query)}"
+        f"&display={display}&start=1&sort=date&format=json"
     )
     req = urllib.request.Request(url, headers={
-        "X-Naver-Client-Id": client_id,
-        "X-Naver-Client-Secret": client_secret,
+        "X-NCP-APIGW-API-KEY-ID": client_id,
+        "X-NCP-APIGW-API-KEY": client_secret,
         "User-Agent": "scientia-ai-fetch/1.0",
     })
     with urllib.request.urlopen(req, timeout=20) as resp:
@@ -93,6 +111,8 @@ def main():
                 fm["embedded"] = True
             if "health-flourishing" in source.get("tags", []):
                 fm["health_flourishing"] = True
+            if "ai-education" in source.get("tags", []):
+                fm["ai_education"] = True
 
             stem = slugify(title)
             target_dir = dated_dir(NEWS_DIR, date)

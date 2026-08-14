@@ -10,6 +10,7 @@ layout: default
     {% if page.raw_wire %}<span class="wire-flag" data-en="wire / press release" data-ko="보도자료">wire / press release</span>{% endif %}
     {% if page.embedded %}<span class="embedded-flag" data-en="low-cost / embedded" data-ko="저비용·임베디드">low-cost / embedded</span>{% endif %}
     {% if page.health_flourishing %}<span class="embedded-flag health" data-en="health &amp; flourishing" data-ko="건강·플러리싱">health &amp; flourishing</span>{% endif %}
+    {% if page.ai_education %}<span class="embedded-flag education" data-en="AI education" data-ko="AI 교육">AI education</span>{% endif %}
   </div>
 
   <h1 class="entry-page-title">{{ page.title_en | default: page.title }}</h1>
@@ -20,7 +21,10 @@ layout: default
   <p class="entry-page-meta">
     <span>{{ page.date | date: "%Y.%m.%d" }}</span>
     {% if page.topic %} · <span>{{ page.topic }}</span>{% endif %}
-    <a class="entry-page-source-link" href="{{ page.source_url }}" target="_blank" rel="noopener" data-en="Read the original &rarr;" data-ko="원문 보기 &rarr;">Read the original &rarr;</a>
+  </p>
+
+  <p class="entry-page-cta-row">
+    <a class="pill-cta pill-cta-big" href="{{ page.source_url }}" target="_blank" rel="noopener" data-en="Read the original article ↗" data-ko="원문 기사 보기 ↗">Read the original article ↗</a>
   </p>
 
   {% if page.tags and page.tags.size > 0 %}
