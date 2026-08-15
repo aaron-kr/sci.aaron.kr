@@ -53,6 +53,9 @@ jobs:
       - name: Update reading-frequency calendar
         run: python scripts/reading_frequency.py
 
+      - name: Prune old, unbookmarked, unsummarized news
+        run: python scripts/prune_news.py
+
       - name: Commit new entries
         run: |
           git config user.name "scientia-bot"

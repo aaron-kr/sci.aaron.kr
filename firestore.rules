@@ -20,11 +20,22 @@ service cloud.firestore {
                  && request.auth.token.email == "OWNER_EMAIL";
     }
 
-    // ── Bookmarks (research "interested in" hearts + news bookmarks) ──
-    // Public read (harmless — "Aaron liked this paper" isn't sensitive,
-    // and it lets the Reading List page render without requiring visitors
-    // to sign in). Only the owner can write.
+    // ── Bookmarks (research hearts + news bookmarks + "mark for class") ──
+    // Public read (harmless — this is just "Aaron marked this," and it lets
+    // the Reading List page render without requiring visitors to sign in).
+    // Only the owner can write. kind: "research" | "news" | "class" — the
+    // active/current state; unmarking (or "Clear all") deletes the doc.
     match /bookmarks/{id} {
+      allow read: if true;
+      allow write: if request.auth != null
+                   && request.auth.token.email == "OWNER_EMAIL";
+    }
+
+    // ── Permanent semester log (research marked for class only) ─────
+    // Append-only from the UI's perspective: "Clear all" on This week's
+    // set only touches /bookmarks above, never this — the semester reading
+    // list (grouped by week) reads from here so it survives weekly resets.
+    match /class_log/{id} {
       allow read: if true;
       allow write: if request.auth != null
                    && request.auth.token.email == "OWNER_EMAIL";

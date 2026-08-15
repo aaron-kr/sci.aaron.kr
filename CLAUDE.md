@@ -2,7 +2,94 @@
 
 Session handoff file. Read this first.
 
-## Session 6 changes (this session) — Firebase auth, Firestore bookmarks, Zotero
+## Session 7 changes (this session) — "mark for class" moves to Firestore, semester list, pruning
+
+Firebase/Zotero setup from Session 6 is live (Aaron completed it — real values
+now in `assets/js/firebase-config.js`, deployed Cloud Function). This session
+mostly closes a gap that setup exposed: the *old* "mark for class" concept
+(front-matter `marked_for_class`, manual, no button) was never actually
+rebuilt on top of the new auth system, so Aaron correctly noticed it missing.
+
+### "Mark for class" retired from front matter, rebuilt on Firestore
+
+Now a third `bookmarks` kind (`"class"`, alongside `"research"` hearts and
+`"news"` bookmarks) — a flag icon on research cards/permalink pages, same
+`requireOwnerAuth` gating as hearts. **This retires the whole front-matter
+`marked_for_class` mechanism** from a couple sessions back — it was built
+that way specifically because there was no backend yet; now there is one, so
+the manual-file-editing indirection is gone. Cleaned up what depended on it:
+- `scripts/reset_class_marks.py` deleted — Firestore's "Clear all" replaces
+  what it did, see below.
+- `digest.yml` reverted to email-only (no more commit/push step, no more
+  `contents: write`) — nothing left for it to write back to the repo.
+- `send_digest.py`'s "interesting" check dropped the `marked_for_class`
+  bool_field check (dead — nothing sets it anymore); `pin_priority` +
+  `commentary_worthy` still work as before.
+
+### Found a real bug during this: same-href, different-kind collision
+
+`bookmarkDocId()` used to be just `hrefKey(href)` — fine when research
+("heart") and news ("bookmark") never shared a URL space, but the moment
+research entries got a *second* independent flag (heart AND class, same
+href), both would write to the **same Firestore document** and stomp each
+other. Fixed: doc ID is now `kind + '_' + hrefKey(href)` everywhere
+(`auth.js`). Worth remembering if a fourth kind ever gets added to the same
+collection — always key on `(kind, href)`, never `href` alone.
+
+### Two Firestore collections, not one — active state vs. permanent history
+
+`bookmarks` (existing) is the *active/current* view — "Clear all" deletes
+from here, and clicking a flag/heart/bookmark icon again unmarks by deleting
+its doc. But Aaron also wants a permanent, never-reset semester-long record
+of everything ever marked for class ("This week's set" is meant to
+periodically empty out; the semester list is meant to never lose anything).
+One collection can't do both — a delete is a delete. So marking something
+`kind: "class"` now **also** upserts `class_log/{hrefKey(href)}` (title,
+source, source_lang, timestamp) — a second collection that `requireOwnerAuth`
+gates the same way, but that nothing in the UI ever deletes from (there's no
+"remove" affordance on the Semester Reading List, on purpose — see
+`_layouts/entry.html`'s `.rl-delete` icons, which only ever touch
+`/bookmarks`, never `/class_log`). New `firestore.rules` block for it —
+**Aaron needs to re-paste the updated `firestore.rules` into the Firebase
+Console** (added the `class_log` match block; same public-read/owner-write
+shape as `bookmarks`).
+
+### Semester Reading List
+
+`_data/semester.yml` (`start` date + `skip_weeks: []`, hand-edited) feeds
+`window.SEMESTER_CONFIG` (a small inline `<script>` in `reading-list.html` —
+Jekyll data isn't otherwise reachable from client JS). `auth.js`'s
+`weekNumber()` computes a week number from each `class_log` entry's
+timestamp relative to `start`; `renderSemesterList()` groups and renders one
+`<div class="semester-week">` per week that actually has entries — a
+vacation week with nothing marked simply never appears, no need to
+pre-declare it, `skip_weeks` is only there for the rarer case of wanting to
+explicitly suppress a week that *did* get something marked (e.g. marked by
+mistake during a break).
+
+### Reading List page: source-tag styling + hover-delete
+
+Both live lists ("This week's set — Research" and "Bookmarked articles —
+News") now render a `.rl-src` span (colored cyan/jade by `source_lang`,
+matching the homepage's `.src-tag`/`.list-src` look) plus a `.rl-delete` ✕
+icon per item — **double-gated** on purpose: `body.is-owner` (nobody but
+Aaron ever sees it at all) *and* `:hover` (not constantly visible even to
+him, per his own request). Deleting removes only from `/bookmarks` (unmark),
+never from `/class_log` (permanent history stays intact either way).
+
+### News retention: `scripts/prune_news.py`
+
+Wired into `fetch.yml` (runs daily, right before the commit step) — deletes
+`_news/*.md` entries older than `NEWS_RETENTION_DAYS` (default 21) *unless*
+they have a written summary, are bookmarked, or are flagged
+`commentary_worthy`/pinned. The bookmarked-check is a plain unauthenticated
+GET against Firestore's REST API — no credentials needed, since
+`firestore.rules` already makes `bookmarks` publicly readable, so this adds
+zero new secrets. Nothing is ever truly gone (git history keeps deleted
+files), and the retention window is a single env var if Aaron wants to tune
+it before trusting the automation further.
+
+## Session 6 changes (previous session) — Firebase auth, Firestore bookmarks, Zotero
 
 **Not live yet — needs Aaron to complete Firebase Console setup.** See
 `AUTH_SETUP.md` for his side; everything below degrades quietly (buttons

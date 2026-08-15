@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Weekly email digest via Resend — the week's pinned/commentary-worthy/marked
+"""Weekly email digest via Resend — the week's pinned/commentary-worthy
 entries, sent once. Requires RESEND_API_KEY and DIGEST_TO_EMAIL. See SETUP.md.
+("Marked for class" isn't part of this anymore — it moved to Firestore as of
+Session 7, see CLAUDE.md; the reading list itself is now the record.)
 Stdlib only.
 """
 import datetime
@@ -56,7 +58,6 @@ def collect(coll_dir, kind, since):
             interesting = (
                 field_is_set(fm, "pin_priority")
                 or bool_field(fm, "commentary_worthy")
-                or bool_field(fm, "marked_for_class")
             )
             if not interesting:
                 continue

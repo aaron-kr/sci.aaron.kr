@@ -1,5 +1,12 @@
 # AUTH_SETUP.md — Firebase auth, bookmarks, and Zotero
 
+> **Already set up? One update needed.** Session 7 added a `class_log`
+> collection (the permanent semester reading list — see CLAUDE.md). Re-open
+> **Firebase Console → Firestore Database → Rules**, replace the deployed
+> rules with the current `firestore.rules` in this repo (with `OWNER_EMAIL`
+> swapped for your real email, same as before), and **Publish**. Nothing
+> else in this doc needs redoing.
+
 This is the piece the site needs from you before hearts/bookmarks and the
 Zotero one-click button do anything — right now everything degrades quietly
 (buttons render, clicking them just does nothing) because `firebase-config.js`

@@ -1,0 +1,6 @@
+# Drives the Semester Reading List on /reading-list/ — week numbers are
+# computed client-side from `start` (see auth.js's weekNumber()). Add a
+# week number to skip_weeks for a vacation/break week; it just won't render
+# even if something happens to get marked for class that week.
+start: "2026-09-01"
+skip_weeks: []

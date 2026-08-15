@@ -30,7 +30,7 @@
     {% if has_summary > 0 %}<span class="summary-dot" title="Aaron's own summary">●</span>{% endif %}
     {% if cov_total > 0 %}<span class="cov-count" data-en="{{ cov_total }} sources" data-ko="{{ cov_total }}곳 보도">{{ cov_total }} sources</span>{% endif %}
     <span class="list-src {{ e.source_lang }}">{{ e.source }}</span>
-    <button class="bookmark-btn" data-bookmark-href="{{ bookmark_href }}" data-bookmark-title="{{ e.title | escape }}" data-bookmark-kind="news" aria-pressed="false" aria-label="Bookmark this article" title="Bookmark this article"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/></svg></button>
+    <button class="bookmark-btn" data-bookmark-href="{{ bookmark_href }}" data-bookmark-title="{{ e.title | escape }}" data-bookmark-kind="news" data-bookmark-source="{{ e.source | escape }}" data-bookmark-source-lang="{{ e.source_lang }}" aria-pressed="false" aria-label="Bookmark this article" title="Bookmark this article"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/></svg></button>
     <a class="pill-cta pill-cta-small" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read ↗" data-ko="보기 ↗">read ↗</a>
   </div>
 </div>

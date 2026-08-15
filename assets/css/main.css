@@ -389,6 +389,16 @@ section.news{padding:6px 0 10px;}
 .heart-btn.marked svg{fill:currentColor; stroke:none;}
 .heart-btn:active{transform:scale(.88);}
 
+/* "mark for class" — Firestore-backed (kind=class), feeds This week's set
+   + the permanent semester log. Cyan to read as "official/assigned",
+   distinct from the heart's red and the news bookmark's pink. */
+.class-btn{background:none; border:none; cursor:pointer; padding:0; line-height:0; color:var(--ink-faint); flex-shrink:0; transition:color .15s, transform .1s;}
+.class-btn svg{fill:none; stroke:currentColor; stroke-width:1.6;}
+.class-btn:hover{color:var(--cyan);}
+.class-btn.marked{color:var(--cyan);}
+.class-btn.marked svg{fill:currentColor; stroke:none;}
+.class-btn:active{transform:scale(.88);}
+
 /* Zotero one-click add — owner only (see functions/index.js). Hidden until
    auth.js confirms the owner is signed in; the public-facing Zotero story
    is the citation <meta> tags in default.html's <head>, not this button. */
@@ -435,8 +445,28 @@ section.course{padding:24px; margin:30px 0; background:var(--bg-1); border:1px s
 .course-print{margin-top:18px;}
 .course-print button{font-family:'IBM Plex Mono', monospace; font-size:12px; background:none; border:1px solid var(--hair-strong); color:var(--ink-dim); padding:7px 14px; border-radius:20px; cursor:pointer;}
 .course-print button:hover{border-color:var(--accent); color:var(--accent);}
-.clear-all-btn{font-family:'IBM Plex Mono', monospace; font-size:12px; background:none; border:1px solid var(--magenta-dim); color:var(--magenta); padding:7px 14px; border-radius:20px; cursor:pointer;}
+.clear-all-btn{font-family:'IBM Plex Mono', monospace; font-size:12px; background:none; border:1px solid var(--magenta-dim); color:var(--magenta); padding:7px 14px; border-radius:20px; cursor:pointer; margin-left:10px;}
 .clear-all-btn:hover{background:var(--magenta); color:#fff;}
+
+/* Reading List page — richer list rows (source tag like the homepage) +
+   an owner-only, hover-revealed remove icon. Two-level gating on purpose:
+   body.is-owner (only Aaron ever sees the icon at all) AND :hover (not
+   constantly visible even to him — see his own request). */
+.course-list li{align-items:center;}
+.rl-meta{display:flex; align-items:center; gap:10px; flex-shrink:0;}
+.rl-src{font-family:'IBM Plex Mono', monospace; font-size:10.5px;}
+.rl-src.en{color:var(--cyan);} .rl-src.ko{color:var(--jade);}
+.rl-delete{
+  background:none; border:none; color:var(--magenta); cursor:pointer; padding:0;
+  font-size:13px; line-height:1; opacity:0; pointer-events:none; transition:opacity .15s;
+}
+body.is-owner .course-list li:hover .rl-delete{opacity:1; pointer-events:auto;}
+
+.rl-hr{border:none; border-top:1px solid var(--hair-strong); margin:40px 0 0;}
+.semester-week{margin:26px 0;}
+.semester-week h3{font-family:'Playfair Display', serif; font-size:17px; margin:0 0 8px; color:var(--ink);}
+.semester-week .course-list{gap:6px;}
+.semester-week .course-list li{padding:7px 0; font-size:13px;}
 @media print{
   .subnav-stick, .filters, #back-to-top, .site-alert, .course-print{display:none !important;}
   .bg-grid, #rain{display:none !important;}

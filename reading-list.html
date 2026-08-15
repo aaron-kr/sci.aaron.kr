@@ -5,32 +5,41 @@ description: "Weekly reading list for CBNU Research Methodology (graduate) — a
 permalink: /reading-list/
 ---
 
+<script>window.SEMESTER_CONFIG = {{ site.data.semester | jsonify }};</script>
+
 <section class="major-head" style="padding-top:20px;">
   <h2 data-en="Reading list" data-ko="읽기 자료">Reading list</h2>
-  <p data-en="Two separate lists: Research entries marked for class (below, English only — the course's reading language), and News articles bookmarked while browsing (personal, this browser only)." data-ko="두 개의 별도 목록입니다: 수업용으로 표시된 연구 항목(아래, 수업 언어인 영어만)과 탐색 중 북마크한 뉴스 기사(개인, 이 브라우저 한정).">Two separate lists: Research entries marked for class, and News articles bookmarked while browsing.</p>
+  <p data-en="Two lists, both synced to Aaron's account across devices: Research marked for class, and News articles bookmarked while browsing." data-ko="아론의 계정으로 기기 간 동기화되는 두 개의 목록입니다: 수업용으로 표시된 연구 항목과, 탐색 중 북마크한 뉴스 기사.">Two lists, synced across devices: Research marked for class, and News bookmarked while browsing.</p>
 </section>
-
-{% assign class_research = site.research | where: "marked_for_class", true | where: "source_lang", "en" | sort: "date" | reverse %}
 
 <section class="course">
   <div class="course-head">
     <h1 data-en="This week's set — Research" data-ko="이번 주 자료 — 연구">This week's set — Research</h1>
-    <span>{{ class_research.size }} items</span>
   </div>
-  <p class="course-sub" data-en="Research entries with marked_for_class: true in their front matter — set by hand, resets to empty automatically once the weekly digest goes out (see scripts/reset_class_marks.py), or trigger that reset early yourself: Actions → Weekly digest → Run workflow." data-ko="front matter에 marked_for_class: true로 표시된 연구 항목입니다 — 직접 설정하며, 주간 다이제스트 발송 후 자동으로 비워집니다(scripts/reset_class_marks.py). 직접 초기화하려면 Actions → Weekly digest → Run workflow를 실행하세요.">Research entries marked for class — resets automatically each week after the digest goes out.</p>
-  <ul class="course-list">
-    {% for e in class_research %}<li><a href="{{ e.url | relative_url }}">{{ e.title_en }}</a><span>{{ e.source }} · {{ e.date | date: "%m.%d" }}</span></li>{% endfor %}
-  </ul>
-  {% if class_research.size == 0 %}<p class="course-empty" data-en="Nothing marked for class yet." data-ko="아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet.</p>{% endif %}
-  <div class="course-print"><button onclick="window.print()" data-en="🖨 Print this list" data-ko="🖨 목록 인쇄">🖨 Print this list</button></div>
+  <p class="course-sub" data-en="Click the flag icon on any research entry to mark it for class. Resets here each time you hit &ldquo;Clear all&rdquo; below — the full history stays in the Semester Reading List." data-ko="연구 항목의 깃발 아이콘을 클릭하면 수업용으로 표시됩니다. 아래 &lsquo;모두 지우기&rsquo;를 누르면 이 목록만 초기화되며, 전체 기록은 학기 읽기 목록에 남아 있습니다.">Click the flag icon on any research entry to mark it for class.</p>
+  <ul class="course-list" id="class-list"></ul>
+  <p class="course-empty" id="class-empty" data-en="Nothing marked for class yet." data-ko="아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet.</p>
+  <div class="course-print">
+    <button onclick="window.print()" data-en="🖨 Print this list" data-ko="🖨 목록 인쇄">🖨 Print this list</button>
+    <button id="class-clear" class="clear-all-btn" data-en="✕ Clear all" data-ko="✕ 모두 지우기">✕ Clear all</button>
+  </div>
 </section>
 
 <section class="course" style="margin-top:20px;">
   <div class="course-head">
-    <h1 data-en="Bookmarked articles — News (this browser only)" data-ko="북마크한 기사 — 뉴스 (이 브라우저 한정)">Bookmarked articles — News (this browser only)</h1>
+    <h1 data-en="Bookmarked articles — News" data-ko="북마크한 기사 — 뉴스">Bookmarked articles — News</h1>
   </div>
-  <p class="course-sub" data-en="Clicking the 🔖 bookmark icon on any news row saves it here, stored in this browser only (localStorage) — nothing is sent anywhere, and it's separate from the research list above." data-ko="뉴스 항목의 🔖 북마크 아이콘을 클릭하면 이 브라우저에만 저장됩니다(localStorage) — 어디로도 전송되지 않으며, 위의 연구 목록과는 별개입니다.">Clicking the bookmark icon on any news row saves it here, in this browser only.</p>
+  <p class="course-sub" data-en="Click the bookmark icon on any news row to save it here — separate from the research list above." data-ko="뉴스 항목의 북마크 아이콘을 클릭하면 이곳에 저장됩니다 — 위의 연구 목록과는 별개입니다.">Click the bookmark icon on any news row to save it here.</p>
   <ul class="course-list" id="bookmark-list"></ul>
   <p class="course-empty" id="bookmark-empty" data-en="No bookmarked articles yet." data-ko="아직 북마크한 기사가 없습니다.">No bookmarked articles yet.</p>
   <div class="course-print"><button id="bookmark-clear" class="clear-all-btn" data-en="✕ Clear all" data-ko="✕ 모두 지우기">✕ Clear all</button></div>
 </section>
+
+<hr class="rl-hr">
+
+<section class="major-head" style="padding-top:0;">
+  <h2 data-en="Semester reading list" data-ko="학기 읽기 목록">Semester reading list</h2>
+  <p data-en="Every research entry ever marked for class, grouped by week — a permanent record that survives &ldquo;Clear all&rdquo; above. Weeks with nothing marked (e.g. a break) just don't appear." data-ko="지금까지 수업용으로 표시된 모든 연구 항목을 주차별로 정리했습니다 — 위의 &lsquo;모두 지우기&rsquo;와 무관하게 영구 보존됩니다. 아무것도 표시되지 않은 주(예: 방학)는 표시되지 않습니다.">Every research entry ever marked for class, grouped by week — survives "Clear all" above.</p>
+</section>
+<div id="semester-weeks"></div>
+<p class="course-empty" id="semester-empty" data-en="Nothing marked for class yet this semester." data-ko="이번 학기에 아직 수업용으로 표시된 항목이 없습니다.">Nothing marked for class yet this semester.</p>
