@@ -1,7 +1,7 @@
 ---
 hook_en: "Towards Context-Aware Clinical Motion Understanding in Daily Living at Home: Freezing of Gait Detection with Egocentric Vision"
 hook_ko: "가정에서의 일상생활 속 맥락 인식 임상 움직임 이해를 향하여: 자기중심 시각을 이용한 보행 감지의 동결"
-tags: []
+tags: ["clinical", "evaluation"]
 embedded: false
 health_flourishing: false
 coverage_en: null

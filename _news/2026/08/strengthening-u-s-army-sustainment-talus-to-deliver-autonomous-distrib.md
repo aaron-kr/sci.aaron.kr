@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Strengthening U.S. Army sustainment: TALUS to deliver autonomous distribution"
+hook_ko: "미 육군 유지력 강화: 자율 배급을 제공하는 TALUS"
 tags: ["autonomous-driving", "industry"]
 embedded: false
 health_flourishing: false

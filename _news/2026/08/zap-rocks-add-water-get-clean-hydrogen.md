@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "Zap Rocks. Add Water. Get Clean Hydrogen"
+hook_ko: "잠수 바위들. 물 추가하기. 깨끗한 수소를 얻으세요"
+tags: ["industry"]
 embedded: false
 health_flourishing: false
 coverage_en: null

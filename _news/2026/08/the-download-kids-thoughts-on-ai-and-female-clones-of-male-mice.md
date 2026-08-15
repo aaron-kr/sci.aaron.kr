@@ -1,7 +1,7 @@
 ---
-hook_en: ""
-hook_ko: ""
-tags: []
+hook_en: "The Download: kids’ thoughts on AI, and female clones of male mice"
+hook_ko: "다운로드: AI와 수컷 쥐의 여성 복제체에 대한 아이들의 생각"
+tags: ["ai-education"]
 embedded: false
 health_flourishing: false
 coverage_en: 2

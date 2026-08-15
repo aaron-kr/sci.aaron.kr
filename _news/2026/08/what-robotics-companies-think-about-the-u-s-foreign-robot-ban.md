@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "What Robotics Companies Think About the U.S. Foreign Robot Ban"
+hook_ko: "미국의 외국인 로봇 금지 조치에 대해 로봇 기업들은 어떻게 생각할까"
 tags: ["humanoids", "policy"]
 embedded: false
 health_flourishing: false

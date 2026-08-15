@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "The Download: Flock’s new rules, cloning’s future, and children’s cells"
+hook_ko: "다운로드: 무리의 새로운 규칙, 복제의 미래, 그리고 자식 세포들"
 tags: []
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Terabytes of credentials leaked in massive supply-chain attack"
+hook_ko: "대규모 공급망 공격으로 테라바이트 단위의 자격 증명이 유출되다"
 tags: ["policy"]
 embedded: false
 health_flourishing: false

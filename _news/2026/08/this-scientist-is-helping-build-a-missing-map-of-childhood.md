@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "This scientist is helping build a missing map of childhood"
+hook_ko: "이 과학자는 어린 시절에 대한 사라진 지도를 만드는 데 도움을 주고 있다"
 tags: []
 embedded: false
 health_flourishing: false

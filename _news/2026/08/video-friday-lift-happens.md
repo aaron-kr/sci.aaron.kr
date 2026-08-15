@@ -1,6 +1,6 @@
 ---
-hook_en: ""
-hook_ko: ""
+hook_en: "Video Friday: Lift Happens"
+hook_ko: "금요일 영상: 리프트가 일어나다"
 tags: []
 embedded: false
 health_flourishing: false
