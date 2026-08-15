@@ -2,7 +2,68 @@
 
 Session handoff file. Read this first.
 
-## Session 7 changes (this session) — "mark for class" moves to Firestore, semester list, pruning
+## Session 8 changes (this session) — semester auto-naming, citation form
+
+### Semester auto-naming — no config, no empty-semester records
+
+Replaced `_data/semester.yml`'s single hardcoded `start` date with a pure
+function: `semesterId(date)` in `auth.js` buckets any date into
+`{year}-winter` (Jan–Feb) / `{year}-1` (Mar–Jun, spring) / `{year}-summer`
+(Jul–Aug) / `{year}-2` (Sep–Dec, fall) — the Korean academic calendar
+boundaries Aaron described. `semesterStart(semId)` goes the other direction
+(semester ID → its first date) so week numbers can be computed without any
+stored per-semester config. This was a deliberate design choice over a
+config file listing each semester's dates by hand: **a semester's existence
+is just a value of the `semester` field on whichever `class_log` docs happen
+to have it** — there's no separate "semester record" to create, so an empty
+semester genuinely stores nothing, matching Aaron's explicit requirement.
+`_data/semester.yml` now only holds `skip_weeks` (keyed by semester ID) for
+the rare case of force-suppressing a week that *did* get something marked.
+
+`renderSemesterList()` (`auth.js`) now groups `class_log` two levels deep:
+semester (most recent first) → week within that semester → items. Rendered
+as `.semester-block` (semester heading, gold) containing `.semester-week`
+divs (unchanged from before). Added a print/PDF button to this section —
+**"save as PDF" needs no new code**, it's just the browser's native print
+dialog, which already had a "Save as PDF" destination once `@media print`
+CSS existed (see the "This week's set" print button from Session 6/7).
+
+### "Found this elsewhere" citation form
+
+New box on `/reading-list/`, styled like the homepage's "Suggest a source"
+(reused `.suggest-box`, generalized `.suggest-cta` to work on `<button>` as
+well as `<a>`), hidden until owner-confirmed (`body.is-owner` — same
+reasoning as the Zotero button: no reason for a random visitor to see a
+content-creation form). Accepts exactly two input shapes, both handled in
+`auth.js`, deliberately not a general citation-format guesser:
+- **Pasted BibTeX** (`parseBibtex()`) — regex-extracts `title`/`author`/
+  `year`/`doi`/`url` fields client-side, no network call. Covers anything
+  exported from Google Scholar, arXiv, journal sites, or Zotero itself —
+  all one click away from BibTeX at the source, so this covers the common
+  case with zero API dependency.
+- **A bare DOI or `doi.org` URL** (`isDoiLike()` → `fetchCrossref()`) — live
+  lookup against Crossref's REST API, which is CORS-open for browser
+  `fetch()` (unlike, e.g., arXiv's export API, which isn't reliably
+  CORS-enabled — this is why DOI/Crossref was chosen over trying to
+  auto-detect and query arXiv specifically).
+
+Either path produces the same shape as everything else in `bookmarks`/
+`class_log` (`addManualClassEntry()`) — it's added to *both* This week's set
+and the semester log in one write, exactly like clicking the flag icon on a
+real entry, just for an article that has no corresponding Jekyll page on
+this site at all (its `href` just points straight at the DOI/BibTeX `url`).
+
+### Deferred (discussed, not built): tabbed UI
+
+Aaron raised two tab-related ideas — collapsing the Reading List page's two
+sections into tabs, and turning the homepage's 5 research sections into a
+sticky, click-to-switch tab bar (current section full-size, others
+70%-scaled/grayscale). Recommendation given, not yet built: skip tabs on
+Reading List (it's short enough that full-page is fine), but the homepage
+sticky-tabs idea is worth building — deferred pending confirmation since
+it's a real scroll-spy/IntersectionObserver undertaking, not a small change.
+
+## Session 7 changes (previous session) — "mark for class" moves to Firestore, semester list, pruning
 
 Firebase/Zotero setup from Session 6 is live (Aaron completed it — real values
 now in `assets/js/firebase-config.js`, deployed Cloud Function). This session

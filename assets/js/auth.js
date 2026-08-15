@@ -45,6 +45,24 @@ function hrefKey(href){
 // those need to be independent documents, not collide on the same ID.
 function bookmarkDocId(kind, href){ return kind + '_' + hrefKey(href); }
 
+// ---- academic semester naming (Korean academic calendar: Mar=spring start,
+// Jul=summer start, Sep=fall start, Jan=winter start) — no config needed,
+// no empty-semester records: this is just a label computed from the date
+// something was actually marked, stored as a field on that class_log doc. ----
+function semesterId(date){
+  const y = date.getFullYear(), m = date.getMonth() + 1; // 1-12
+  if(m <= 2) return `${y}-winter`;
+  if(m <= 6) return `${y}-1`;
+  if(m <= 8) return `${y}-summer`;
+  return `${y}-2`;
+}
+function semesterStart(semId){
+  const [yStr, tag] = semId.split('-');
+  const y = parseInt(yStr, 10);
+  const monthDay = { winter: [0, 1], '1': [2, 1], summer: [6, 1], '2': [8, 1] }[tag];
+  return new Date(y, monthDay[0], monthDay[1]);
+}
+
 // ---- owner check: a read that only succeeds under the owner's account ----
 function checkOwner(){
   return fbDb.collection('meta').doc('owner_check').get()
@@ -126,10 +144,29 @@ function toggleBookmark(btn, href, title, kind, source, sourceLang){
     if(kind === 'class' && marking){
       fbDb.collection('class_log').doc(hrefKey(href)).set({
         href, title, source: source || '', source_lang: sourceLang || '',
+        semester: semesterId(new Date()),
         ts: firebase.firestore.FieldValue.serverTimestamp(),
       }).catch(err => console.error('class_log write failed', err));
     }
   });
+}
+
+// used by the "found this elsewhere" citation form — same effect as
+// clicking the flag icon, just for an article that isn't a Jekyll entry on
+// this site at all (see initCitationForm()).
+function addManualClassEntry(entry){
+  const id = bookmarkDocId('class', entry.href);
+  fbDb.collection('bookmarks').doc(id).set({
+    href: entry.href, title: entry.title, kind: 'class',
+    source: entry.source || 'manual entry', source_lang: entry.source_lang || 'en',
+    ts: firebase.firestore.FieldValue.serverTimestamp(),
+  }).catch(err => console.error('manual entry write failed', err));
+  fbDb.collection('class_log').doc(hrefKey(entry.href)).set({
+    href: entry.href, title: entry.title,
+    source: entry.source || 'manual entry', source_lang: entry.source_lang || 'en',
+    semester: semesterId(new Date()),
+    ts: firebase.firestore.FieldValue.serverTimestamp(),
+  }).catch(err => console.error('manual entry log write failed', err));
 }
 
 function removeBookmark(kind, href){
@@ -215,10 +252,12 @@ function listenBookmarks(){
   }, err => console.error('bookmark listen failed', err));
 }
 
-// ---- semester reading list (permanent class_log, grouped by week) ----
-// window.SEMESTER_CONFIG (see reading-list.html) = {start: "YYYY-MM-DD", skip_weeks: [..]}
-function weekNumber(tsSeconds, startStr){
-  const start = new Date(startStr + 'T00:00:00');
+// ---- semester reading list (permanent class_log, grouped by semester then week) ----
+// window.SEMESTER_SKIPS (see reading-list.html) = {"2026-2": [7, 8], ...} — optional,
+// only needed to force-suppress a week that did get something marked (e.g. by
+// mistake during a break) — a week with nothing marked never appears anyway.
+function weekNumber(tsSeconds, semId){
+  const start = semesterStart(semId);
   const d = new Date(tsSeconds * 1000);
   const days = Math.floor((d - start) / 86400000);
   return Math.floor(days / 7) + 1;
@@ -226,43 +265,53 @@ function weekNumber(tsSeconds, startStr){
 
 function renderSemesterList(){
   const container = document.getElementById('semester-weeks');
-  if(!container || !window.SEMESTER_CONFIG || !window.SEMESTER_CONFIG.start) return;
-  const skip = new Set(window.SEMESTER_CONFIG.skip_weeks || []);
-  const byWeek = {};
+  if(!container) return;
+  const skips = window.SEMESTER_SKIPS || {};
+  const bySemester = {};
   Object.values(classLogCache).forEach(item => {
     if(!item.ts?.seconds) return;
-    const wk = weekNumber(item.ts.seconds, window.SEMESTER_CONFIG.start);
-    if(wk < 1 || skip.has(wk)) return;
-    (byWeek[wk] = byWeek[wk] || []).push(item);
+    const sem = item.semester || semesterId(new Date(item.ts.seconds * 1000));
+    const wk = weekNumber(item.ts.seconds, sem);
+    if(wk < 1 || (skips[sem] || []).includes(wk)) return;
+    (bySemester[sem] = bySemester[sem] || {})[wk] = (bySemester[sem][wk] || []).concat([item]);
   });
-  const weeks = Object.keys(byWeek).map(Number).sort((a, b) => a - b);
+  const semesters = Object.keys(bySemester).sort().reverse(); // most recent first
   container.innerHTML = '';
   const empty = document.getElementById('semester-empty');
-  if(empty) empty.style.display = weeks.length ? 'none' : 'block';
-  weeks.forEach(wk => {
-    const items = byWeek[wk].sort((a, b) => (a.ts.seconds || 0) - (b.ts.seconds || 0));
-    const section = document.createElement('div');
-    section.className = 'semester-week';
-    const h = document.createElement('h3');
-    h.textContent = `Week ${wk}`;
-    section.appendChild(h);
-    const ul = document.createElement('ul');
-    ul.className = 'course-list';
-    items.forEach(b => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = b.href; a.textContent = b.title;
-      li.appendChild(a);
-      if(b.source){
-        const src = document.createElement('span');
-        src.className = 'rl-src ' + (b.source_lang || '');
-        src.textContent = b.source;
-        li.appendChild(src);
-      }
-      ul.appendChild(li);
+  if(empty) empty.style.display = semesters.length ? 'none' : 'block';
+  semesters.forEach(sem => {
+    const block = document.createElement('div');
+    block.className = 'semester-block';
+    const semHead = document.createElement('h2');
+    semHead.textContent = sem;
+    block.appendChild(semHead);
+    const weeks = Object.keys(bySemester[sem]).map(Number).sort((a, b) => a - b);
+    weeks.forEach(wk => {
+      const items = bySemester[sem][wk].sort((a, b) => (a.ts.seconds || 0) - (b.ts.seconds || 0));
+      const section = document.createElement('div');
+      section.className = 'semester-week';
+      const h = document.createElement('h3');
+      h.textContent = `Week ${wk}`;
+      section.appendChild(h);
+      const ul = document.createElement('ul');
+      ul.className = 'course-list';
+      items.forEach(b => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = b.href; a.textContent = b.title;
+        li.appendChild(a);
+        if(b.source){
+          const src = document.createElement('span');
+          src.className = 'rl-src ' + (b.source_lang || '');
+          src.textContent = b.source;
+          li.appendChild(src);
+        }
+        ul.appendChild(li);
+      });
+      section.appendChild(ul);
+      block.appendChild(section);
     });
-    section.appendChild(ul);
-    container.appendChild(section);
+    container.appendChild(block);
   });
 }
 
@@ -275,6 +324,79 @@ function listenClassLog(){
     classLogCache = next;
     renderSemesterList();
   }, err => console.error('class_log listen failed', err));
+}
+
+// ---- "found this elsewhere" citation form (Reading List page, owner only) ----
+// Accepts either a pasted BibTeX entry (parsed client-side — no lookup
+// needed, the export already has everything) or a bare DOI / doi.org URL
+// (resolved live via Crossref's API, which is CORS-open for browser fetch).
+// Deliberately doesn't try to guess arbitrary citation formats or scrape
+// arbitrary URLs — those two inputs cover what Google Scholar/arXiv/Zotero/
+// journal sites actually hand you, reliably, with no backend involved.
+function parseBibtex(text){
+  if(!text.trim().startsWith('@')) return null;
+  const get = (key) => {
+    const m = text.match(new RegExp(key + '\\s*=\\s*[{"]([^}"]+)[}"]', 'i'));
+    return m ? m[1].replace(/[{}]/g, '').trim() : null;
+  };
+  const title = get('title');
+  const doi = get('doi');
+  const url = get('url') || (doi ? `https://doi.org/${doi}` : null);
+  if(!title || !url) return null;
+  const author = get('author');
+  const year = get('year');
+  return {
+    title, href: url,
+    source: (author ? author.split(' and ')[0].split(',')[0].trim() : null) || 'manual entry',
+    source_lang: 'en',
+    date: year || '',
+  };
+}
+
+function isDoiLike(text){
+  return /^(https?:\/\/(dx\.)?doi\.org\/)?10\.\d{4,9}\/\S+$/i.test(text.trim());
+}
+
+function fetchCrossref(text){
+  const doi = text.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, '');
+  return fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`)
+    .then(r => { if(!r.ok) throw new Error('Crossref lookup failed — check the DOI.'); return r.json(); })
+    .then(data => {
+      const m = data.message || {};
+      const title = Array.isArray(m.title) ? m.title[0] : m.title;
+      if(!title) throw new Error('Crossref returned no title for that DOI.');
+      const authors = (m.author || []).map(a => [a.given, a.family].filter(Boolean).join(' '));
+      return {
+        title, href: m.URL || `https://doi.org/${doi}`,
+        source: authors[0] || 'manual entry', source_lang: 'en',
+      };
+    });
+}
+
+function submitCitation(){
+  const input = document.getElementById('citation-input');
+  const status = document.getElementById('citation-status');
+  const text = input.value.trim();
+  if(!text) return;
+  status.textContent = '';
+  status.className = '';
+  const bib = parseBibtex(text);
+  const resolved = bib ? Promise.resolve(bib)
+    : isDoiLike(text) ? (status.textContent = 'Looking up…', fetchCrossref(text))
+    : Promise.reject(new Error('Paste a BibTeX entry (starting with @) or a DOI.'));
+  resolved.then(entry => {
+    requireOwnerAuth(() => addManualClassEntry(entry));
+    status.textContent = `Added: ${entry.title}`;
+    status.className = 'ok';
+    input.value = '';
+  }).catch(err => {
+    status.textContent = err.message;
+    status.className = 'error';
+  });
+}
+
+function initCitationForm(){
+  document.getElementById('citation-submit')?.addEventListener('click', submitCitation);
 }
 
 // ---- Zotero one-click add (owner only — see functions/index.js) ----
@@ -326,6 +448,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initZoteroButtons();
   initAuthStatusClick();
   initClearButtons();
+  initCitationForm();
   if(!initFirebase()) return; // not configured yet — everything above still renders, just inert
   listenBookmarks();
   listenClassLog();

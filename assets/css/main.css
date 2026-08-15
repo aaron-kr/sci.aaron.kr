@@ -463,12 +463,28 @@ section.course{padding:24px; margin:30px 0; background:var(--bg-1); border:1px s
 body.is-owner .course-list li:hover .rl-delete{opacity:1; pointer-events:auto;}
 
 .rl-hr{border:none; border-top:1px solid var(--hair-strong); margin:40px 0 0;}
-.semester-week{margin:26px 0;}
+.semester-block{margin:30px 0;}
+.semester-block h2{font-family:'IBM Plex Mono', monospace; font-size:13px; letter-spacing:.08em; color:var(--gold); margin:0 0 4px; padding-bottom:8px; border-bottom:2px solid var(--gold-dim);}
+.semester-week{margin:20px 0;}
 .semester-week h3{font-family:'Playfair Display', serif; font-size:17px; margin:0 0 8px; color:var(--ink);}
 .semester-week .course-list{gap:6px;}
 .semester-week .course-list li{padding:7px 0; font-size:13px;}
+
+/* "found this elsewhere" citation form — owner only, same reasoning as the
+   Zotero button: no reason for a public visitor to ever see this. */
+.add-citation-box{display:none;}
+body.is-owner .add-citation-box{display:block;}
+.citation-input{
+  width:100%; background:var(--bg); border:1px solid var(--hair-strong); border-radius:var(--radius);
+  color:var(--ink); font-family:'IBM Plex Mono', monospace; font-size:12.5px; padding:10px; resize:vertical;
+  margin-bottom:10px;
+}
+.citation-status{font-family:'IBM Plex Mono', monospace; font-size:12px; margin:0 0 10px; min-height:1.4em;}
+.citation-status.ok{color:var(--jade);}
+.citation-status.error{color:var(--magenta);}
+
 @media print{
-  .subnav-stick, .filters, #back-to-top, .site-alert, .course-print{display:none !important;}
+  .subnav-stick, .filters, #back-to-top, .site-alert, .course-print, .add-citation-box{display:none !important;}
   .bg-grid, #rain{display:none !important;}
   body{background:#fff; color:#111;}
 }
@@ -493,11 +509,12 @@ section.sources{padding:34px 0; border-top:1px solid var(--hair); margin-top:20p
   background:var(--bg-1); border:1px solid var(--hair-strong); border-radius:var(--radius); padding:18px 20px; margin-top:20px;
 }
 .suggest-box p{margin:0 0 12px; font-size:13px; color:var(--ink-dim); line-height:1.6;}
-.suggest-box a.suggest-cta{
+.suggest-box .suggest-cta{
   display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
   background:var(--magenta); color:#fff; border-radius:20px; padding:8px 16px; text-decoration:none;
+  border:none; cursor:pointer;
 }
-.suggest-box a.suggest-cta:hover{background:#e34e8c;}
+.suggest-box .suggest-cta:hover{background:#e34e8c;}
 
 footer{position:relative; z-index:1; padding:26px 0 50px; border-top:1px solid var(--hair); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
 footer a{color:var(--ink-dim); text-decoration:none;}
