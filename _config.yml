@@ -43,6 +43,7 @@ exclude:
   - CLAUDE.md
   - README.md
   - SETUP.md
+  - AUTH_SETUP.md
   - US_ROADMAP.md
   - Claude-code-v1-notes.md
   - LICENSE
@@ -52,4 +53,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - scripts
+  - functions
+  - firebase.json
+  - firestore.rules
   - requirements.txt

@@ -6,3 +6,6 @@ vendor/
 Gemfile.lock
 __pycache__/
 *.pyc
+functions/node_modules/
+.firebase/
+firebase-debug.log

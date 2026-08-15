@@ -27,6 +27,14 @@ layout: default
 
   <p class="entry-page-cta-row">
     <a class="pill-cta pill-cta-big" href="{{ page.source_url }}" target="_blank" rel="noopener" data-en="Read the original article ↗" data-ko="원문 기사 보기 ↗">Read the original article ↗</a>
+    {% if page.kind == "research" %}
+    <button class="heart-btn" data-bookmark-href="{{ page.url | relative_url }}" data-bookmark-title="{{ page.title_en | default: page.title | escape }}" data-bookmark-kind="research" aria-pressed="false" aria-label="Mark as interesting" title="Mark as interesting"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M12 21s-7.5-4.6-10.2-9.2C.3 9 1 5.6 4 4.2 6.4 3 9 3.8 12 7c3-3.2 5.6-4 8-2.8 3 1.4 3.7 4.8 2.2 7.6C19.5 16.4 12 21 12 21z"/></svg></button>
+    {% assign arxiv_id = "" %}
+    {% if page.source_url contains "arxiv.org" %}{% assign arxiv_id = page.source_url | split: "/abs/" | last | split: "v" | first %}{% endif %}
+    <button class="zotero-btn" data-zotero-title="{{ page.title_en | default: page.title | escape }}" data-zotero-url="{{ page.source_url }}" data-zotero-date="{{ page.date | date: '%Y-%m-%d' }}" data-zotero-arxiv-id="{{ arxiv_id }}" data-zotero-authors="{{ page.authors | jsonify | escape }}" title="Add to Zotero" aria-label="Add to Zotero">Z</button>
+    {% else %}
+    <button class="bookmark-btn" data-bookmark-href="{{ page.url | relative_url }}" data-bookmark-title="{{ page.title | escape }}" data-bookmark-kind="news" aria-pressed="false" aria-label="Bookmark this article" title="Bookmark this article"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/></svg></button>
+    {% endif %}
   </p>
 
   {% if page.tags and page.tags.size > 0 %}

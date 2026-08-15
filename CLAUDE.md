@@ -2,7 +2,122 @@
 
 Session handoff file. Read this first.
 
-## Session 5 changes (this session) — site is now live at sci.aaron.kr
+## Session 6 changes (this session) — Firebase auth, Firestore bookmarks, Zotero
+
+**Not live yet — needs Aaron to complete Firebase Console setup.** See
+`AUTH_SETUP.md` for his side; everything below degrades quietly (buttons
+render, do nothing) until `assets/js/firebase-config.js` has real values.
+
+### Why this exists
+
+localStorage-based bookmarks (Session 5) don't survive across devices, and
+Aaron specifically wants to read/bookmark from his phone. Cross-device means
+a real backend; a real backend that anyone could write to means anyone could
+tamper with his data — hence auth. **Critical constraint carried over from a
+past incident on the attend app** (courses.aaron.kr/attend): Aaron's email
+got hardcoded into a committed file once before and he had to have it
+scrubbed. This build keeps his email out of every file in this repo,
+committed or not, full stop:
+- Firebase's client config (`apiKey`, `projectId`, etc.) **is** committed
+  directly in `assets/js/firebase-config.js` — these are genuinely not
+  secrets (Firebase's own docs say so; security is Firestore rules + Auth,
+  not obscuring these values), so there's no need for a GitHub-Secrets
+  build-time-injection dance for them.
+- His **email** lives in exactly two places, neither of them this repo:
+  pasted by hand into the Firebase Console's Firestore Rules editor, and (if
+  he sets up Zotero) `firebase functions:secrets:set OWNER_EMAIL`, which
+  stores it in Google Secret Manager. `firestore.rules` in this repo is a
+  template with the literal string `OWNER_EMAIL` — same pattern as the
+  attend app's `firestore.rules`, which already solved this problem once.
+
+### Architecture: "confirmed owner", not just "signed in"
+
+Firebase Auth's Google popup lets *anyone* sign in with *their own* Google
+account — Auth alone doesn't restrict who can authenticate, only Firestore
+rules restrict who can *write*. So the client never checks "is there a
+user" and calls it done; `checkOwner()` in `auth.js` attempts to `get()` a
+throwaway doc (`meta/owner_check`) that `firestore.rules` only allows the
+real owner to read. Read succeeds → owner. Read throws `permission-denied`
+→ some other Google account, silently not-owner (no error UI that would
+tell a random visitor anything). This is also how the auth status dot
+(`#auth-status`, next to the language toggle) decides whether to show
+green — matches Aaron's "robot power light" framing: dim gray = off (still
+clickable, doubles as a manual sign-in trigger), bright green = confirmed
+owner, no text change either way, no dedicated login page or icon.
+
+`requireOwnerAuth(action)` is the gate every write-ish button goes through:
+runs `action` immediately if already owner-confirmed, otherwise shows a
+blurred backdrop (`.auth-overlay`) and triggers the Google popup, running
+`action` only if that resolves to the owner. Buttons stay visible whether
+signed in or not (per Aaron: hiding them gains nothing since Firestore rules
+are the real gate, and it's worse UX) — the sole exception is the Zotero "Z"
+button, hidden via `body.is-owner` until confirmed, since it's pointless
+clutter for anyone who isn't Aaron.
+
+### Bookmarks (`bookmarks` Firestore collection)
+
+One collection, `kind: "research"` (hearts, entry-card.html /
+entry.html) or `kind: "news"` (bookmark icon, news-row.html / entry.html),
+doc ID = a short hash of the href (`hrefKey()` in auth.js — Firestore doc
+IDs can't contain slashes, and hashing keeps them short instead of
+URL-encoding the whole href). Public read (harmless — "Aaron liked this"
+isn't sensitive, and it means the Reading List page renders without
+visitors needing to sign in), owner-only write. Live `onSnapshot` listener
+keeps every bookmark/heart button's visual state in sync across tabs
+without a page reload.
+
+Research hearts are deliberately **not** surfaced anywhere else (Aaron: "it
+doesn't need to show up on the Reading List page") — they're just a visual
+"interesting to me" flag in place on the card. News bookmarks *do* feed the
+Reading List's "Bookmarked articles — News" section, same as Session 5, now
+reading live from Firestore instead of localStorage. "Clear all" there is
+now a real Firestore batch-delete (owner-gated through `requireOwnerAuth`
+too, with a confirm dialog) rather than a `localStorage.clear()`.
+
+### Zotero: two independent features, only one needs a backend
+
+- **Public** (works today, zero setup, zero backend): Highwire Press
+  citation `<meta>` tags in `_layouts/default.html`'s `<head>`, rendered
+  only when `page.kind == "research"`. Anyone with the Zotero Connector
+  browser extension already installed gets automatic correct item detection
+  — this is the actual standard mechanism every academic site relies on;
+  Zotero has no generic "add to *anyone's* library via URL" scheme, so this
+  is genuinely the whole public-facing feature, not a stopgap. No on-page
+  button for this — the extension supplies its own toolbar affordance.
+- **Owner-only** (needs `AUTH_SETUP.md` §4, optional): a "Z" button that
+  calls `functions/index.js`'s `addToZotero` Cloud Function via
+  `firebase.functions().httpsCallable(...)`, which holds Aaron's personal
+  Zotero API key + user ID as Secret-Manager-backed params (`defineSecret`)
+  — never in client code, never in this repo. The function independently
+  re-checks `request.auth.token.email === OWNER_EMAIL.value()` before
+  spending the key, since Cloud Functions run with elevated trust and must
+  not assume "authenticated" means "authorized." **Untested against a real
+  Zotero API key** — item-type field names (`preprint`, `creators`,
+  `repository`/`archiveID`) follow Zotero's published Web API v3 schema,
+  flagged in both `functions/index.js` and `AUTH_SETUP.md` for Aaron to
+  sanity-check on first real use.
+- Citation quality depends on having authors, which the data model didn't
+  capture before this session — `fetch_arxiv.py` now parses
+  `<author><name>` from the Atom feed into a new `authors: []` front-matter
+  field (`scripts/lib.py`'s `DEFAULT_FRONT_MATTER`). RSS/Naver sources don't
+  get this — Zotero/citations are a research-paper concept, scoped to
+  arXiv only on purpose.
+
+### Bug fixed while debugging this session's build
+
+`scripts/translate_papago.py`'s `field()` helper returned front-matter
+values **still containing their original YAML escaping** (e.g. a title with
+a quote in it stayed as `\"` in the extracted string), but titles get reused
+as `hook_en`/`hook_ko` verbatim for English-source entries — and
+`write_hooks()`'s `esc()` then escaped that *already-escaped* text a second
+time, producing invalid YAML (`\\"` — an escaped backslash followed by an
+unescaped quote, breaking the file's front matter and failing the Jekyll
+build for that one entry). Fixed by unescaping in `field()` so every caller
+works with true string values, with `esc()` remaining the single place
+re-escaping happens on the way back out. One already-corrupted live file
+(`_news/.../from-sandbox-escapes-...md`) repaired by hand.
+
+## Session 5 changes (previous session) — site is now live at sci.aaron.kr
 
 Thirteen items from Aaron, addressed after the site went live and he could
 see real behavior for the first time. Grouped by theme:
@@ -795,6 +910,7 @@ enabled   — optional, default true; set false to keep a source documented but 
 title_en, title (news items use `title` in the source's own language; research
   items use `title_en` since arXiv/Semantic Scholar/PubMed are English-only),
 hook_en, hook_ko (single sentence each, Papago-translated, empty string until translate_papago.py runs),
+authors[] (arXiv only as of Session 6 — parsed from the Atom feed, feeds citation_author meta tags for Zotero),
 source, source_lang, source_url, topic, tags[],
 date, thumb (news only, nullable — null unless the RSS feed actually supplied one),
 coverage_en, coverage_ko, gap ("en_only"|"ko_only"|null) — metadata only, see above,

@@ -21,6 +21,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
+{% if page.kind == "research" %}
+<!-- Highwire Press citation tags — the standard the Zotero Connector (and
+     Google Scholar, Mendeley, etc.) look for. This is the entire "public
+     add to Zotero" feature: no button needed, no backend, works for any
+     visitor who already has the Zotero browser extension installed. See
+     CLAUDE.md "Zotero integration" for why this replaces a public API flow. -->
+<meta name="citation_title" content="{{ page.title_en | default: page.title }}">
+{% for author in page.authors %}<meta name="citation_author" content="{{ author }}">
+{% endfor %}
+{% if page.date %}<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">{% endif %}
+{% if page.source %}<meta name="citation_publisher" content="{{ page.source }}">{% endif %}
+{% if page.source_url %}
+<meta name="citation_public_url" content="{{ page.source_url }}">
+{% if page.source_url contains "arxiv.org" %}
+{% assign arxiv_id = page.source_url | split: "/abs/" | last | split: "v" | first %}
+<meta name="citation_arxiv_id" content="{{ arxiv_id }}">
+{% endif %}
+{% endif %}
+{% endif %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,5 +83,15 @@
 <button id="back-to-top" aria-label="Back to top" data-en="&uarr;" data-ko="&uarr;">↑</button>
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+<!-- Firebase Auth + Firestore-backed bookmarks — see AUTH_SETUP.md.
+     Everything degrades quietly if firebase-config.js still has placeholder
+     values (see auth.js's firebaseReady() check). -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-functions-compat.js"></script>
+<script src="{{ '/assets/js/firebase-config.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/auth.js' | relative_url }}"></script>
 </body>
 </html>

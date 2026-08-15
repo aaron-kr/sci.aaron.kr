@@ -1,0 +1,33 @@
+// Paste into: Firebase Console → Firestore Database → Rules tab
+// Replace OWNER_EMAIL with your actual Google account email before publishing.
+// This file is a reference template — the real, deployed rules (with your
+// real email) live only in the Firebase Console, never in this repo.
+// Same pattern as courses.aaron.kr/attend's firestore.rules.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Owner check ──────────────────────────────────────────────
+    // Client code "reads" this doc (it doesn't need to exist) to find out
+    // whether the signed-in user is really the owner: the read succeeds
+    // only if the rule below matches, which is the one place the owner's
+    // identity is ever checked. This is how the site tells "you signed in
+    // with some Google account" apart from "you signed in as the owner" —
+    // without ever needing to know or store your email client-side.
+    match /meta/owner_check {
+      allow get: if request.auth != null
+                 && request.auth.token.email == "OWNER_EMAIL";
+    }
+
+    // ── Bookmarks (research "interested in" hearts + news bookmarks) ──
+    // Public read (harmless — "Aaron liked this paper" isn't sensitive,
+    // and it lets the Reading List page render without requiring visitors
+    // to sign in). Only the owner can write.
+    match /bookmarks/{id} {
+      allow read: if true;
+      allow write: if request.auth != null
+                   && request.auth.token.email == "OWNER_EMAIL";
+    }
+  }
+}

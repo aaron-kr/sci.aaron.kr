@@ -48,9 +48,14 @@ def parse_entries(xml_bytes):
         arxiv_id = entry.findtext(f"{ATOM_NS}id", "").strip()
         title = " ".join(entry.findtext(f"{ATOM_NS}title", "").split())
         published = entry.findtext(f"{ATOM_NS}published", "")[:10]
+        authors = [
+            " ".join(name.text.split())
+            for name in entry.findall(f"{ATOM_NS}author/{ATOM_NS}name")
+            if name.text and name.text.strip()
+        ]
         if not arxiv_id or not title:
             continue
-        yield {"arxiv_id": arxiv_id, "title": title, "date": published}
+        yield {"arxiv_id": arxiv_id, "title": title, "date": published, "authors": authors}
 
 
 def main():
@@ -78,6 +83,7 @@ def main():
                 "source": source["label"],
                 "source_lang": "en",
                 "source_url": item["arxiv_id"],
+                "authors": item["authors"],
                 "topic": source["topic"],
                 "tags": source.get("tags", []),
                 "date": item["date"] or datetime.date.today().isoformat(),

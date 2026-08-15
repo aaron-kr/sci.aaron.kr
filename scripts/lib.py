@@ -58,6 +58,7 @@ DEFAULT_FRONT_MATTER = {
     "hook_en": "",
     "hook_ko": "",
     "tags": [],
+    "authors": [],
     "embedded": False,
     "health_flourishing": False,
     "ai_education": False,

@@ -82,6 +82,7 @@ header.masthead{padding:34px 0 0;}
 .mast-title .dot{color:var(--accent); font-size:.5em;}
 .mast-tagline{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-dim); margin:9px 0 0; letter-spacing:.03em;}
 .mast-tagline .ko{color:var(--jade);}
+.mast-lang-col{display:flex; flex-direction:column; align-items:flex-end; gap:8px; flex-shrink:0;}
 .lang-toggle{
   display:flex; align-items:center; gap:2px; background:var(--bg-1);
   border:1px solid var(--hair-strong); border-radius:20px; padding:3px;
@@ -94,6 +95,31 @@ header.masthead{padding:34px 0 0;}
 }
 .lang-toggle button.active{background:var(--cyan); color:#0c1620;}
 .lang-toggle button[data-lang="ko"].active{background:var(--jade); color:#0e2620;}
+
+/* auth status — a quiet "robot power light", not a login button. Dim/gray
+   when signed out (still clickable — doubles as a manual sign-in trigger),
+   bright green only once confirmed as the owner (see auth.js: this is
+   never just "signed in", it's "signed in AND the owner"). */
+.auth-status{
+  display:flex; align-items:center; gap:5px; cursor:pointer;
+  font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.06em;
+  color:var(--ink-faint); opacity:.45; transition:opacity .2s, color .2s; user-select:none;
+}
+.auth-status::after{content:""; width:6px; height:6px; border-radius:50%; background:currentColor;}
+.auth-status.on{color:#57e389; opacity:1;}
+.auth-status:hover{opacity:.8;}
+
+.auth-overlay{
+  position:fixed; inset:0; z-index:200;
+  background:rgba(12,16,22,0.4); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .2s;
+}
+.auth-overlay.open{opacity:1; pointer-events:auto;}
+.auth-overlay-msg{
+  font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--ink);
+  background:var(--bg-1); border:1px solid var(--hair-strong); border-radius:20px; padding:10px 20px;
+}
 
 /* sticky anchor nav */
 .subnav-stick{
@@ -351,6 +377,33 @@ section.news{padding:6px 0 10px;}
 .bookmark-btn.marked{color:var(--magenta);}
 .bookmark-btn.marked svg{fill:currentColor; stroke:none;}
 .bookmark-btn:active{transform:scale(.88);}
+
+/* heart icon on research cards — "papers I'm personally interested in",
+   separate from the authoritative This week's set. Same interaction
+   pattern as .bookmark-btn, red instead of pink so the two read as
+   distinct actions at a glance. */
+.heart-btn{background:none; border:none; cursor:pointer; padding:0; line-height:0; color:var(--ink-faint); flex-shrink:0; transition:color .15s, transform .1s; margin-left:auto;}
+.heart-btn svg{fill:none; stroke:currentColor; stroke-width:1.6;}
+.heart-btn:hover{color:#ff6b6b;}
+.heart-btn.marked{color:#ff6b6b;}
+.heart-btn.marked svg{fill:currentColor; stroke:none;}
+.heart-btn:active{transform:scale(.88);}
+
+/* Zotero one-click add — owner only (see functions/index.js). Hidden until
+   auth.js confirms the owner is signed in; the public-facing Zotero story
+   is the citation <meta> tags in default.html's <head>, not this button. */
+.zotero-btn{
+  display:none; align-items:center; justify-content:center;
+  width:22px; height:22px; border-radius:5px; flex-shrink:0;
+  background:none; border:1px solid var(--hair-strong); color:var(--ink-faint);
+  font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:12px; cursor:pointer;
+  transition:color .15s, border-color .15s, background .15s;
+}
+body.is-owner .zotero-btn{display:inline-flex;}
+.zotero-btn:hover{border-color:#CC2936; color:#CC2936;}
+.zotero-btn.done{border-color:var(--jade); color:var(--jade);}
+.zotero-btn.error{border-color:var(--magenta); color:var(--magenta);}
+.zotero-btn:disabled{opacity:.5; cursor:wait;}
 
 /* ---------- entry permalink page ---------- */
 .entry-page{padding:30px 0 60px;}

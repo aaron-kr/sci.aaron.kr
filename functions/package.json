@@ -1,0 +1,10 @@
+{
+  "name": "scientia-ai-functions",
+  "description": "Cloud Function backing the owner-only 'Add to Zotero' button — the public Zotero feature (citation meta tags) needs no backend at all, see CLAUDE.md.",
+  "engines": { "node": "20" },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^5.0.0"
+  },
+  "private": true
+}

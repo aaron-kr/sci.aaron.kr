@@ -2,6 +2,8 @@
 {% assign e = include.entry %}
 {% assign tag_str = e.tags | join: " " %}
 {% assign has_summary = e.content | strip | size %}
+{% assign arxiv_id = "" %}
+{% if e.source_url contains "arxiv.org" %}{% assign arxiv_id = e.source_url | split: "/abs/" | last | split: "v" | first %}{% endif %}
 <article class="entry{% if e.raw_wire %} wire{% endif %}{% if has_summary > 0 %} has-summary{% else %} no-summary{% endif %}" data-tags="all {{ tag_str }}{% if e.embedded %} low-cost-embedded{% endif %}{% if e.health_flourishing %} health-flourishing{% endif %}{% if e.ai_education %} ai-education{% endif %}">
   <div class="entry-time"><span class="date">{{ e.date | date: "%m.%d" }}</span>{{ e.date | date: "%Y" }}</div>
   <div>
@@ -28,6 +30,8 @@
     <div class="entry-tags">{% for t in e.tags %}<button class="tag" onclick="filterByTag('{{ t }}')">{{ t }}</button>{% endfor %}</div>
     <div class="entry-actions">
       <a class="pill-cta" href="{{ e.source_url }}" target="_blank" rel="noopener" data-en="read article ↗" data-ko="기사 보기 ↗">read article ↗</a>
+      <button class="heart-btn" data-bookmark-href="{% if has_summary > 0 %}{{ e.url | relative_url }}{% else %}{{ e.source_url }}{% endif %}" data-bookmark-title="{{ e.title_en | escape }}" data-bookmark-kind="research" aria-pressed="false" aria-label="Mark as interesting" title="Mark as interesting"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 21s-7.5-4.6-10.2-9.2C.3 9 1 5.6 4 4.2 6.4 3 9 3.8 12 7c3-3.2 5.6-4 8-2.8 3 1.4 3.7 4.8 2.2 7.6C19.5 16.4 12 21 12 21z"/></svg></button>
+      <button class="zotero-btn" data-zotero-title="{{ e.title_en | escape }}" data-zotero-url="{{ e.source_url }}" data-zotero-date="{{ e.date | date: '%Y-%m-%d' }}" data-zotero-arxiv-id="{{ arxiv_id }}" data-zotero-authors="{{ e.authors | jsonify | escape }}" title="Add to Zotero" aria-label="Add to Zotero">Z</button>
     </div>
   </div>
 </article>

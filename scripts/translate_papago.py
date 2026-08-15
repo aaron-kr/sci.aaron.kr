@@ -53,7 +53,13 @@ def read_front_matter(path):
 
 def field(fm_text, key):
     m = re.search(rf'^{key}: "?(.*?)"?$', fm_text, re.MULTILINE)
-    return m.group(1) if m else None
+    if not m:
+        return None
+    # the regex captures the raw YAML-escaped text between the quotes (e.g.
+    # a literal title containing a quote is stored as \"); unescape here so
+    # every caller works with the true string — write_hooks()'s esc() is the
+    # only place re-escaping should happen, once, on the way back out.
+    return m.group(1).replace('\\"', '"').replace("\\\\", "\\")
 
 
 def needs_translation(fm_text):
