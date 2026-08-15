@@ -14,9 +14,11 @@ people too.
 ## What it does
 
 - Pulls research papers first — arXiv (and eventually Semantic Scholar,
-  PubMed) — across four topics, in priority order: **Physical AI → General AI
-  → Handwritten script recognition/OCR → Biomedical AI**. Each topic gets its
-  own section, most recent first.
+  PubMed) — across five topics, in priority order: **Physical AI → General AI
+  → Handwritten script recognition/OCR → Biomedical AI → AI Education**.
+  Each topic gets its own section, most recent first, navigable via a sticky
+  tab bar (click a section title, or just scroll — it tracks which section
+  you're in and stays stuck under the nav until you reach News).
 - Two cross-cutting lenses run across those topics rather than being their
   own sections: **low-cost/embedded AI** (Aaron's likely long-term research
   niche — small, cheap AI for classrooms and labs without major funding) and
@@ -39,7 +41,20 @@ people too.
   commentary essay/video if one exists.
 - A separate **reading list page** (`/reading-list/`) — not the homepage —
   serves the CBNU course, so a general visitor doesn't land on a
-  course-specific widget.
+  course-specific widget. Built on Firebase Auth + Firestore (Google
+  sign-in, restricted to Aaron's account by security rules, not by hiding
+  anything client-side): a flag icon marks a paper for class ("This week's
+  set," resettable, feeding a permanent semester-long archive auto-grouped
+  as `2026-1`/`2026-summer`/`2026-2`/`2026-winter`), a bookmark icon does the
+  same for news, and a small form accepts pasted BibTeX or a bare DOI for
+  papers found elsewhere entirely. State follows Aaron across devices —
+  no login page, just a quiet status dot and a Google popup triggered by
+  whichever action needs it.
+- A heart icon and a one-click "add to Zotero" button live on research
+  cards too — Zotero's public-facing side needs no button or backend at all
+  (citation `<meta>` tags on every permalink page are enough for anyone with
+  the Zotero Connector installed); the one-click version is Aaron's own,
+  gated behind a small Cloud Function holding his personal API key.
 - Lets other professors (or anyone) suggest a source via a GitHub issue
   template — no live form writing to the site directly, which matters now
   that this is public.
@@ -67,8 +82,12 @@ API usage).
   Aaron writes the real summary himself (see `SETUP.md` for the (small)
   cost reality).
 - Resend for an optional weekly email digest.
-- `jekyll-sitemap`, Open Graph/Twitter meta, JSON-LD — basic SEO, since this
-  is meant to be found.
+- Firebase Auth + Firestore for cross-device bookmarks/class-marks (owner-only
+  writes, public reads, enforced server-side by security rules — see
+  `AUTH_SETUP.md`), plus one Cloud Function for the Zotero one-click add.
+- `jekyll-sitemap`, Open Graph/Twitter meta, JSON-LD, Highwire Press citation
+  tags — basic SEO/citation-tooling support, since this is meant to be found
+  and cited.
 
 ## Design
 
@@ -94,6 +113,9 @@ secrets, the custom domain, and a checklist of RSS feeds still worth
 confirming. The site works without any of this (arXiv + RSS already run
 live, see `_research/`/`_news/`), just with less content until you do.
 
+See **`AUTH_SETUP.md`** for the Firebase side (bookmarks, class-marks,
+Zotero) — also fully optional; everything degrades quietly without it.
+
 ## Copyright note
 
 This aggregates headlines, one-sentence hooks, and links — it does not
@@ -103,8 +125,9 @@ summaries are his own writing, not machine translations of the source. See
 
 ## Status
 
-Near-live. Real fetched content exists (`_research/`, `_news/`), the Jekyll
-site builds cleanly, and pailab.io already links here. Remaining before
-fully live: DNS for the custom domain, Naver/Anthropic/Resend credentials
-(all in `SETUP.md`), and Aaron actually writing summaries beyond the one demo
-entry. See `CLAUDE.md` for the full decision log.
+Live at [sci.aaron.kr](https://sci.aaron.kr), fetching daily, Firebase auth
+configured and working. Ongoing: Aaron actually writing summaries (the
+site's real point — everything else is scaffolding for that habit), and a
+`prune_news.py` retention job keeping the `_news/` archive from growing
+unbounded (deletes old, unbookmarked, unsummarized entries — see
+`CLAUDE.md`). See `CLAUDE.md` for the full session-by-session decision log.

@@ -67,6 +67,46 @@ function toggleNote(btn){
 // Firestore-backed so they follow Aaron across devices instead of being
 // stuck in one browser's localStorage. See auth.js and AUTH_SETUP.md.
 
+// ---- sticky research section tabs: click-to-scroll + scroll-spy ----
+// The "sticky turns off at News" behavior needs no JS at all — see
+// .research-tabs-scope in main.css. This only handles which tab looks
+// "current" and the sliding underline under it.
+function initSectionTabs(){
+  const bar = document.getElementById('section-tabs');
+  const indicator = document.getElementById('section-tab-indicator');
+  const tabs = bar ? Array.from(bar.querySelectorAll('.section-tab')) : [];
+  if(!bar || !tabs.length) return;
+
+  function moveIndicator(){
+    const cur = tabs.find(t => t.classList.contains('current'));
+    if(!cur || !indicator) return;
+    indicator.style.left = cur.offsetLeft + 'px';
+    indicator.style.width = cur.offsetWidth + 'px';
+  }
+
+  function setCurrent(id){
+    tabs.forEach(t => t.classList.toggle('current', t.dataset.target === id));
+    moveIndicator();
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.getElementById(tab.dataset.target)?.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  const sections = tabs.map(t => document.getElementById(t.dataset.target)).filter(Boolean);
+  if('IntersectionObserver' in window){
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if(entry.isIntersecting) setCurrent(entry.target.id); });
+    }, {rootMargin: '-110px 0px -65% 0px', threshold: 0});
+    sections.forEach(s => observer.observe(s));
+  }
+
+  window.addEventListener('resize', moveIndicator);
+  moveIndicator();
+}
+
 // ---- reading frequency calendar: on narrow screens it scrolls (see CSS);
 // start scrolled to the right so the most recent weeks are what's visible ----
 function initFreqScroll(){
@@ -149,6 +189,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initRain();
   initSubnavToggle();
+  initSectionTabs();
   initFreqScroll();
   try{
     const savedLang = localStorage.getItem('scientia-lang');

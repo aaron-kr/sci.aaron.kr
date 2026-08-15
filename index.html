@@ -54,7 +54,22 @@ description: "A bilingual (English/Korean) reading log — research papers first
 {% endif %}
 
 {% assign physical = site.research | where: "topic", "physical-ai" | sort: "date" | reverse %}
-<div class="filter-group t1">
+{% assign general = site.research | where: "topic", "general-ai" | sort: "date" | reverse %}
+{% assign ocr = site.research | where: "topic", "ocr-handwriting" | sort: "date" | reverse %}
+{% assign biomedical = site.research | where: "topic", "biomedical-ai" | sort: "date" | reverse %}
+{% assign ai_edu = site.research | where: "topic", "ai-education" | sort: "date" | reverse %}
+
+<div class="research-tabs-scope">
+<nav class="section-tabs" id="section-tabs">
+  <button class="section-tab t1 current" data-target="physical-ai"><span class="rank">01</span><span class="tab-label" data-en="Physical AI" data-ko="피지컬 AI">Physical AI</span></button>
+  <button class="section-tab t2" data-target="general-ai"><span class="rank">02</span><span class="tab-label" data-en="General AI" data-ko="일반 AI">General AI</span></button>
+  <button class="section-tab t3" data-target="ocr-handwriting"><span class="rank">03</span><span class="tab-label" data-en="OCR" data-ko="OCR">OCR</span></button>
+  <button class="section-tab t4" data-target="biomedical-ai"><span class="rank">04</span><span class="tab-label" data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</span></button>
+  <button class="section-tab t5" data-target="ai-education"><span class="rank">05</span><span class="tab-label" data-en="AI Education" data-ko="AI 교육">AI Education</span></button>
+  <span class="section-tab-indicator" id="section-tab-indicator" aria-hidden="true"></span>
+</nav>
+
+<div class="filter-group t1" id="physical-ai">
 <div class="topic-head t1"><span class="rank">01</span><h3 data-en="Physical AI" data-ko="피지컬 AI">Physical AI</h3></div>
 <p class="topic-sub" data-en="Top priority — the core of KSPAI and pailab.io's focus. Showing {{ physical.size }}, most recent first." data-ko="최우선 순위 — KSPAI 및 pailab.io의 핵심 분야. 최신순 {{ physical.size }}건.">Top priority — the core of KSPAI and pailab.io's focus.</p>
 <section class="log">
@@ -62,8 +77,7 @@ description: "A bilingual (English/Korean) reading log — research papers first
 </section>
 </div>
 
-{% assign general = site.research | where: "topic", "general-ai" | sort: "date" | reverse %}
-<div class="filter-group t2">
+<div class="filter-group t2" id="general-ai">
 <div class="topic-head t2"><span class="rank">02</span><h3 data-en="General AI" data-ko="일반 AI">General AI</h3></div>
 <p class="topic-sub" data-en="Broader ML/AI research, not embodiment-specific. Showing {{ general.size }}, most recent first." data-ko="체화 여부와 무관한 일반 머신러닝·AI 연구. 최신순 {{ general.size }}건.">Broader ML/AI research, not embodiment-specific.</p>
 <section class="log">
@@ -71,8 +85,7 @@ description: "A bilingual (English/Korean) reading log — research papers first
 </section>
 </div>
 
-{% assign ocr = site.research | where: "topic", "ocr-handwriting" | sort: "date" | reverse %}
-<div class="filter-group t3">
+<div class="filter-group t3" id="ocr-handwriting">
 <div class="topic-head t3"><span class="rank">03</span><h3 data-en="Handwritten Script Recognition / OCR" data-ko="필기체 인식 · OCR">Handwritten Script Recognition / OCR</h3></div>
 <p class="topic-sub" data-en="Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest. Lower volume by nature. Showing {{ ocr.size }}." data-ko="아론의 박사 논문 분야(만주문자, 한글) — 체로키어는 최근 관심 분야. {{ ocr.size }}건.">Aaron's Ph.D. thesis field (Manchu, Hangul) — Cherokee is a newer interest.</p>
 <section class="log">
@@ -80,8 +93,7 @@ description: "A bilingual (English/Korean) reading log — research papers first
 </section>
 </div>
 
-{% assign biomedical = site.research | where: "topic", "biomedical-ai" | sort: "date" | reverse %}
-<div class="filter-group t4">
+<div class="filter-group t4" id="biomedical-ai">
 <div class="topic-head t4"><span class="rank">04</span><h3 data-en="Biomedical AI" data-ko="바이오메디컬 AI">Biomedical AI</h3></div>
 <p class="topic-sub" data-en="Newest, thinnest section — includes the health &amp; human-flourishing lens (sleep, behavior, wearables). Showing {{ biomedical.size }}." data-ko="가장 최근에 추가된 섹션 — 수면·행동·웨어러블 등 건강·플러리싱 관점 포함. {{ biomedical.size }}건.">Newest, thinnest section — includes the health &amp; human-flourishing lens.</p>
 <section class="log">
@@ -89,13 +101,13 @@ description: "A bilingual (English/Korean) reading log — research papers first
 </section>
 </div>
 
-{% assign ai_edu = site.research | where: "topic", "ai-education" | sort: "date" | reverse %}
-<div class="filter-group t5">
+<div class="filter-group t5" id="ai-education">
 <div class="topic-head t5"><span class="rank">05</span><h3 data-en="AI Education" data-ko="AI 교육">AI Education</h3></div>
 <p class="topic-sub" data-en="Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education. Showing {{ ai_edu.size }}, most recent first." data-ko="아론의 현재 최고 출판 분야 — 교실에서의 ChatGPT·LLM 활용, 인지적 아웃소싱, 컴퓨팅·공학 교육. 최신순 {{ ai_edu.size }}건.">Aaron's strongest current publication niche — ChatGPT/LLM use in classrooms, cognitive offloading, and computing/engineering education.</p>
 <section class="log">
   {% for e in ai_edu limit: 10 %}{% include entry-card.html entry=e %}{% endfor %}
 </section>
+</div>
 </div>
 
 <div class="filter-group">

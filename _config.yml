@@ -44,6 +44,7 @@ exclude:
   - README.md
   - SETUP.md
   - AUTH_SETUP.md
+  - PAPERS.md
   - US_ROADMAP.md
   - Claude-code-v1-notes.md
   - LICENSE

@@ -218,6 +218,49 @@ section.major-head{padding:30px 0 4px;}
 .topic-head.t5 .rank{background:var(--orange); color:#2a1400;}
 
 .filter-group.hidden{display:none;}
+.filter-group[id]{scroll-margin-top:104px;} /* clears the fixed subnav + sticky section-tabs bar */
+
+/* ---------- sticky research section tabs ---------- */
+/* .research-tabs-scope is what makes the sticky bar turn "off" at News with
+   zero JS: position:sticky releases the moment its own containing block's
+   bottom scrolls past the sticky offset, so wrapping only the 5 research
+   .filter-groups (not News) is the entire mechanism — no scroll listener
+   needed to detect "we've left the research zone." */
+.research-tabs-scope{position:relative;}
+.section-tabs{
+  position:sticky; top:var(--nav-h); z-index:40;
+  display:flex; align-items:center; gap:22px; flex-wrap:nowrap; overflow-x:auto;
+  background:rgba(22,28,39,0.92); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--hair-strong);
+  margin:0 -24px 24px; padding:12px 24px;
+}
+.section-tab{
+  position:relative; flex-shrink:0;
+  background:none; border:none; cursor:pointer; display:flex; align-items:center; gap:7px;
+  padding:2px 0;
+  opacity:.5; filter:grayscale(1); transform:scale(.78); transform-origin:left center;
+  transition:opacity .25s, filter .25s, transform .25s;
+}
+.section-tab:hover{opacity:.8;}
+.section-tab.current{opacity:1; filter:grayscale(0); transform:scale(1);}
+.section-tab .rank{
+  font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:12px;
+  border-radius:3px; padding:3px 7px; letter-spacing:.03em; flex-shrink:0;
+}
+.section-tab .tab-label{font-family:'Playfair Display', serif; font-weight:600; font-size:15px; color:var(--ink); white-space:nowrap;}
+.section-tab.t1 .rank{background:var(--cyan); color:#0c1620;}
+.section-tab.t2 .rank{background:var(--jade); color:#0e2620;}
+.section-tab.t3 .rank{background:var(--magenta); color:#2a0e1c;}
+.section-tab.t4 .rank{background:var(--gold); color:#20160a;}
+.section-tab.t5 .rank{background:var(--orange); color:#2a1400;}
+.section-tab-indicator{
+  position:absolute; bottom:-12px; left:0; height:2px; width:0; background:var(--accent);
+  transition:left .3s cubic-bezier(.2,.7,.2,1), width .3s cubic-bezier(.2,.7,.2,1);
+}
+@media (max-width:640px){
+  .section-tabs{margin:0 -16px 20px; padding:10px 16px;}
+  .section-tab .tab-label{font-size:13px;}
+}
 
 /* Within a topic section, every use of --accent (pill-cta background, title
    hover, tag hover, entry-actions hover) picks up that topic's fixed color

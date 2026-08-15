@@ -53,15 +53,37 @@ and the semester log in one write, exactly like clicking the flag icon on a
 real entry, just for an article that has no corresponding Jekyll page on
 this site at all (its `href` just points straight at the DOI/BibTeX `url`).
 
-### Deferred (discussed, not built): tabbed UI
+### Homepage sticky section tabs (built after discussion — Reading List tabs skipped, still just one page)
 
-Aaron raised two tab-related ideas — collapsing the Reading List page's two
-sections into tabs, and turning the homepage's 5 research sections into a
-sticky, click-to-switch tab bar (current section full-size, others
-70%-scaled/grayscale). Recommendation given, not yet built: skip tabs on
-Reading List (it's short enough that full-page is fine), but the homepage
-sticky-tabs idea is worth building — deferred pending confirmation since
-it's a real scroll-spy/IntersectionObserver undertaking, not a small change.
+Recommended skipping tabs on the Reading List page (short enough that
+full-page is fine) but building the homepage version, since 5 long research
+sections is a real "where's the section I want" problem. Built as:
+
+- `<nav class="section-tabs">` (`index.html`) — 5 compact tab buttons (rank +
+  short label; full titles stay in each section's own in-flow `.topic-head`,
+  unchanged and undeleted — the tab bar is additive, not a replacement, so
+  nothing breaks for no-JS/print/SEO).
+- **The "sticky turns off at News" behavior needed zero JS.** The bar and
+  the 5 research `.filter-group`s are wrapped in one `.research-tabs-scope`
+  div; `position:sticky` releases natively once its own containing block's
+  bottom edge scrolls past the sticky offset. Wrapping only the research
+  sections (not News) *is* the entire mechanism — worth remembering next
+  time a "sticky within a range" need comes up, since the instinct to reach
+  for a scroll-event listener would have been unnecessary complexity here.
+- Current/inactive styling uses `transform:scale()` + `opacity` + grayscale
+  `filter`, not `font-size` — transforms don't affect layout box size, so
+  switching tabs never reflows/jumps neighboring tabs. A sliding underline
+  (`.section-tab-indicator`) repositions via `offsetLeft`/`offsetWidth` on
+  every tab change, giving the "moves" animation Aaron asked about without
+  literally repositioning text.
+- Scroll-spy via `IntersectionObserver` (`initSectionTabs()` in `main.js`),
+  `rootMargin: '-110px 0px -65% 0px'` — the standard docs-site trick: shrink
+  the observed viewport to a thin band near the top (below the two sticky
+  bars), so exactly one section is "intersecting" at a time as the user
+  scrolls, independent of clicking a tab.
+- `scroll-margin-top:104px` on each `.filter-group[id]` so `scrollIntoView`
+  (from a tab click) doesn't tuck the section's top under the sticky nav +
+  tab bar — native CSS, no manual scroll-offset math in JS.
 
 ## Session 7 changes (previous session) — "mark for class" moves to Firestore, semester list, pruning
 
