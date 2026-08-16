@@ -1,7 +1,7 @@
 ---
 hook_en: "Roundtables: Inside the “Censorship-Industrial Complex” Idea Shaping US Policy"
 hook_ko: "원탁회의: 미국 정책을 형성하는 '검열-산업 복합체' 개념의 내부"
-tags: []
+tags: ["policy"]
 embedded: false
 health_flourishing: false
 coverage_en: null

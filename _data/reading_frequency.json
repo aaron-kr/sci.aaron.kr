@@ -4,53 +4,6 @@
    "month_label": "Aug",
    "days": [
     {
-     "date": "2025-08-10",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-11",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-12",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-13",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-14",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-15",
-     "count": 0,
-     "level": 0,
-     "future": false
-    },
-    {
-     "date": "2025-08-16",
-     "count": 0,
-     "level": 0,
-     "future": false
-    }
-   ]
-  },
-  {
-   "month_label": null,
-   "days": [
-    {
      "date": "2025-08-17",
      "count": 0,
      "level": 0,
@@ -2490,9 +2443,56 @@
      "future": false
     }
    ]
+  },
+  {
+   "month_label": null,
+   "days": [
+    {
+     "date": "2026-08-16",
+     "count": 0,
+     "level": 0,
+     "future": false
+    },
+    {
+     "date": "2026-08-17",
+     "count": 0,
+     "level": 0,
+     "future": true
+    },
+    {
+     "date": "2026-08-18",
+     "count": 0,
+     "level": 0,
+     "future": true
+    },
+    {
+     "date": "2026-08-19",
+     "count": 0,
+     "level": 0,
+     "future": true
+    },
+    {
+     "date": "2026-08-20",
+     "count": 0,
+     "level": 0,
+     "future": true
+    },
+    {
+     "date": "2026-08-21",
+     "count": 0,
+     "level": 0,
+     "future": true
+    },
+    {
+     "date": "2026-08-22",
+     "count": 0,
+     "level": 0,
+     "future": true
+    }
+   ]
   }
  ],
  "total": 0,
  "streak": 0,
- "generated": "2026-08-15"
+ "generated": "2026-08-16"
 }

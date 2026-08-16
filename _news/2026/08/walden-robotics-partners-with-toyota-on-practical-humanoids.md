@@ -1,7 +1,7 @@
 ---
 hook_en: "Walden Robotics Partners With Toyota on Practical Humanoids"
 hook_ko: "월든 로보틱스, 실용적인 휴머노이드 로봇 개발 위해 토요타와 협력"
-tags: []
+tags: ["humanoids", "industry"]
 embedded: false
 health_flourishing: false
 coverage_en: null
