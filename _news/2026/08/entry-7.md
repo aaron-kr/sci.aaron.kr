@@ -1,7 +1,7 @@
 ---
 hook_en: "University of Science and Technology of China develops flexible electronic skin for robots"
 hook_ko: "중국과학기술대, 로봇용 플렉시블 전자 피부 개발"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
