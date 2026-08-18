@@ -1,7 +1,7 @@
 ---
 hook_en: "Removing Temporal Note Redundancy Improves Multimodal Reinforcement Learning for Medicine"
 hook_ko: "시간적 노트 중복 제거가 의학 분야의 멀티모달 강화학습을 향상시킨다"
-tags: []
+tags: ["biomedical", "training-efficiency"]
 authors: ["Chenran Weng", "Joo Seung Lee", "Malini Mahendra", "Anil Aswani"]
 embedded: false
 health_flourishing: false

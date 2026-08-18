@@ -1,7 +1,7 @@
 ---
 hook_en: "DEF CON crowd suspected in fake-hotspot attack on Delta flight"
 hook_ko: "델타 항공편에 대한 가짜 핫스팟 공격에 DEF CON 팬들이 연루된 것으로 의심받아"
-tags: []
+tags: ["industry"]
 embedded: false
 health_flourishing: false
 coverage_en: null

@@ -1,7 +1,7 @@
 ---
 hook_en: "THRIVE: Therapeutic Humanoid Robot In Virtual Environment"
 hook_ko: "THRIVE: 가상 환경에서의 치료용 휴머노이드 로봇"
-tags: []
+tags: ["humanoids"]
 authors: ["Jin Xu", "Yu-Ping Chen", "Ayanna Howard"]
 embedded: false
 health_flourishing: false

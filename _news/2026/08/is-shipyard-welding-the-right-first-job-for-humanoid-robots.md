@@ -1,7 +1,7 @@
 ---
 hook_en: "Is Shipyard Welding the Right First Job for Humanoid Robots?"
 hook_ko: "조선소 용접이 휴머노이드 로봇에게 적합한 첫 번째 일자리일까?"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

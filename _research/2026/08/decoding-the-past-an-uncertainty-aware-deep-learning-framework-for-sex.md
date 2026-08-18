@@ -1,7 +1,7 @@
 ---
 hook_en: "Decoding the Past: An Uncertainty-Aware Deep Learning Framework for Sex Attribution in Prehistoric Hand Stencils"
 hook_ko: "과거 해독하기: 선사시대 손 스텐실의 성별 추정을 위한 불확실성 인지 딥러닝 프레임워크"
-tags: []
+tags: ["historical-documents", "biomedical"]
 authors: ["Karel Becerra", "Boris Mederos", "Dean Snow", "Ramón A. Mollineda"]
 embedded: false
 health_flourishing: false
