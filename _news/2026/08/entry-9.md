@@ -1,7 +1,7 @@
 ---
 hook_en: "Chinese company Aegibot teams up with XMOB to accelerate robot technology that mimics human expression"
 hook_ko: "中 애지봇, 엑스모브와 손잡고 사람처럼 표현하는 로봇 기술 박차"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

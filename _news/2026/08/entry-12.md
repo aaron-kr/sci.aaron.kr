@@ -1,7 +1,7 @@
 ---
-hook_en: "[Books] How Should We Work in the Age of AI"
-hook_ko: "[Books] AI 시대 어떻게 일할 것인가"
-tags: ["ai-education"]
+hook_en: "Unichem Enters the Electronic Skin Market for Humanoids"
+hook_ko: "유니켐, 휴머노이드용 전자피부 시장 진출"
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "[Books] AI 시대 어떻게 일할 것인가"
+title: "유니켐, 휴머노이드용 전자피부 시장 진출"
 source: "로봇신문 (전체기사)"
 source_lang: "ko"
-source_url: "https://www.irobotnews.com/news/articleView.html?idxno=47962"
+source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48007"
 topic: "physical-ai"
-date: "2026-08-17"
+date: "2026-08-19"
 thumb: null
-dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=47962"
+dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48007"
 ---

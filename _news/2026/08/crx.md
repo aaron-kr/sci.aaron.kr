@@ -1,7 +1,7 @@
 ---
 hook_en: "US-based Legal, Rexnod, and Fanuc launch integrated linear axis for CRX collaborative robots"
 hook_ko: "美 리걸 렉스노드-화낙, CRX 협동로봇용 통합 선형 축 출시"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

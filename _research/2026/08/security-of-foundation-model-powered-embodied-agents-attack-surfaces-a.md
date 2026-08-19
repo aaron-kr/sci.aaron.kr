@@ -1,7 +1,7 @@
 ---
 hook_en: "Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks, Defenses, and Evaluation"
 hook_ko: "기초 모델 기반 구현 에이전트의 보안: 공격 표면, 공격, 방어 및 평가"
-tags: []
+tags: ["humanoids", "evaluation"]
 authors: ["Jiawei Liu", "Jiacheng Guo", "Tian Zhang", "Yiwei Xu", "Juan Wang", "Jinlin Fan", "Bowen Xiao"]
 embedded: false
 health_flourishing: false
