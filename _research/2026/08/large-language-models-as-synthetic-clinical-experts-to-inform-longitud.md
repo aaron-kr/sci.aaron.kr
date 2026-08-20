@@ -1,7 +1,7 @@
 ---
 hook_en: "Large language models as synthetic clinical experts to inform longitudinal rare-disease modeling"
 hook_ko: "종단적 희귀질환 모델링을 지원하기 위한 합성 임상 전문가로서의 대규모 언어 모델"
-tags: []
+tags: ["clinical", "reasoning"]
 authors: ["Clemens Schächter", "Astrid Pechmann", "Janbernd Kirschner", "Jan Hasenauer", "Harald Binder"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Drones With Claws Perch on Arctic Icebergs"
 hook_ko: "발톱을 가진 드론들이 북극의 빙산 위에 앉아 있다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

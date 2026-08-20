@@ -1,7 +1,7 @@
 ---
 hook_en: "ControlledShifts: Towards Standardizing Robustness Evaluation in Trajectory Prediction Under Distribution Shifts"
 hook_ko: "컨트롤 시프트: 분포 변화 하에서 궤적 예측의 견고성 평가 표준화를 향하여"
-tags: []
+tags: ["benchmark", "evaluation"]
 authors: ["Ingrid navarro", "Pablo Ortega-Kral", "Yutong Duan", "Jonathan Francis", "Jean Oh"]
 embedded: false
 health_flourishing: false

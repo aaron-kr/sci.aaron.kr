@@ -1,7 +1,7 @@
 ---
 hook_en: "Delegation Asymmetry in Agentic Recommender Systems: Measuring Two-Sided Receptivity in Online Dating"
 hook_ko: "에이전트 추천 시스템에서의 위임 비대칭: 온라인 데이트에서 양방향 수용성 측정하기"
-tags: []
+tags: ["multi-agent", "evaluation"]
 authors: ["Daria Leshchikova", "Valentina V. Kuskova", "Dmitry Zaytsev", "Valerii Klimov"]
 embedded: false
 health_flourishing: false

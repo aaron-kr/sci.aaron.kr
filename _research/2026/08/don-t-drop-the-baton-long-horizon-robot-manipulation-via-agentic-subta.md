@@ -1,7 +1,7 @@
 ---
 hook_en: "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory"
 hook_ko: "바통을 떨어뜨리지 마라: 에이전트 하위 작업 탐색과 전이 인지 메모리를 통한 장기적 로봇 조작"
-tags: []
+tags: ["manipulation", "reasoning"]
 authors: ["Bingxin Xu", "Yuzhang Shang", "Emilio Ferrara"]
 embedded: false
 health_flourishing: false

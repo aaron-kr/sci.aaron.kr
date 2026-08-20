@@ -1,7 +1,7 @@
 ---
 hook_en: "PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing"
 hook_ko: "PRISM: 다중 모달 센싱을 활용한 정밀하고 접촉이 풍부한 실제 산업 기술 데이터셋"
-tags: []
+tags: ["dataset", "manipulation"]
 authors: ["Tengbo Yu", "Jiahao Wu", "Hanning Wang", "Rui Chen", "Chuanhou Liu", "Chuang Sun", "Hangxin Liu"]
 embedded: false
 health_flourishing: false

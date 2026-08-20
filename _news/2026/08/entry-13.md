@@ -1,7 +1,7 @@
 ---
 hook_en: "German company Schaeffler unveils a shape-shifting wave gear reducer for humanoid robots"
 hook_ko: "獨 섀플러, 휴머노이드 로봇용 형상 변형 파동 기어 감속기 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
