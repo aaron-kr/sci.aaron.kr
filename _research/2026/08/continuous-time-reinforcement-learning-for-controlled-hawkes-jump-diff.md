@@ -1,7 +1,7 @@
 ---
 hook_en: "Continuous-Time Reinforcement Learning for Controlled Hawkes Jump-Diffusions"
 hook_ko: "제어된 호크스 점프-확산을 위한 연속시간 강화학습"
-tags: []
+tags: ["reasoning"]
 authors: ["Tomasz R. Bielecki", "Thibaut Mastrolia", "Haoze Yan"]
 embedded: false
 health_flourishing: false

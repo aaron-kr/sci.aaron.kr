@@ -1,14 +1,14 @@
 ---
 hook_en: "RealWorld selected as the first cohort for AWS’s “Physical AI Frontier Program.”"
 hook_ko: "리얼월드, AWS '피지컬 AI 프론티어 프로그램' 1기 선정"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
 coverage_en: null
-coverage_ko: null
-gap: null
+coverage_ko: 2
+gap: "ko_only"
 marked_for_class: false
 commentary_worthy: false
 commentary_url: null

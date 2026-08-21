@@ -1,7 +1,7 @@
 ---
 hook_en: "A Theoretical Framework for Parallel Lifelong MAPF Using Group Decentralized Planning"
 hook_ko: "집단 분산 계획을 활용한 평행 평생 MAPF를 위한 이론적 프레임워크"
-tags: []
+tags: ["multi-agent", "navigation"]
 authors: ["Alex DeWeese", "Jiaoyang Li", "Guannan Qu"]
 embedded: false
 health_flourishing: false

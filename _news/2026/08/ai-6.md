@@ -1,7 +1,7 @@
 ---
 hook_en: "MI Cube Solution to Build AI Autonomous Manufacturing Platform at Ramen Factory in Paldo"
 hook_ko: "엠아이큐브솔루션, 팔도 라면 공장에 AI 자율제조 플랫폼 구축"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
