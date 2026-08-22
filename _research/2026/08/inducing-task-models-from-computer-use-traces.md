@@ -1,7 +1,7 @@
 ---
 hook_en: "Inducing Task Models from Computer-Use Traces"
 hook_ko: "컴퓨터 사용 흔적로부터 작업 모델 유도하기"
-tags: []
+tags: ["human-in-the-loop", "reasoning"]
 authors: ["Yucheng Jiang", "Zora Zhiruo Wang", "Ruishi Chen", "Diyi Yang"]
 embedded: false
 health_flourishing: false

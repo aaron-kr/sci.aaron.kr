@@ -1,7 +1,7 @@
 ---
 hook_en: "Planning-Oriented End-to-End Autonomous Driving: Architectures, Evaluation, and Emerging Paradigms"
 hook_ko: "계획 지향형 엔드투엔드 자율주행: 아키텍처, 평가, 그리고 새롭게 등장하는 패러다임"
-tags: []
+tags: ["autonomous-driving", "planning", "evaluation"]
 authors: ["Yanchen Guan", "Xingcheng Liu", "Bin Rao", "Chengyue Wang", "Guofa Li", "Yunjian Li", "Lishengsa Yue", "Zhiyong Cui", "Chengzhong Xu", "Zhenning Li"]
 embedded: false
 health_flourishing: false

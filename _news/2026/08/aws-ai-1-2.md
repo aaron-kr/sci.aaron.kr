@@ -1,7 +1,7 @@
 ---
 hook_en: "Tumorobo Robotics Selected for AWS Physical AI Frontier 1st Cohort"
 hook_ko: "투모로 로보틱스, AWS 피지컬 AI 프론티어 1기 선정"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

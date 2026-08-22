@@ -1,7 +1,7 @@
 ---
 hook_en: "Daedong integrates physical AI into manufacturing sites…Full-scale manufacturing of AX at the Daegu plant begins"
 hook_ko: "대동, 제조현장에 피지컬 AI 접목…대구공장 제조 AX 본격화"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

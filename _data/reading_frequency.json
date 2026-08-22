@@ -2487,12 +2487,12 @@
      "date": "2026-08-22",
      "count": 0,
      "level": 0,
-     "future": true
+     "future": false
     }
    ]
   }
  ],
  "total": 0,
  "streak": 0,
- "generated": "2026-08-21"
+ "generated": "2026-08-22"
 }

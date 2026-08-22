@@ -1,7 +1,7 @@
 ---
 hook_en: "CACSurv: Concordance-Aligned Comparative Learning with Large Language Models for Cancer Survival Prediction"
 hook_ko: "CACSurv: 암 생존 예측을 위한 대형 언어 모델과의 일치도 기반 비교 학습"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: ["Tianqi Xiang", "Qixiang Zhang", "Xinpeng Ding", "Yi Li", "Xiaomeng Li"]
 embedded: false
 health_flourishing: false

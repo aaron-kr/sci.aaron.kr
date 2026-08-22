@@ -1,7 +1,7 @@
 ---
 hook_en: "Autonomous Agricultural Tractor: Integrated Weed Detection and LiDAR Navigation for Precision Paddy Farming"
 hook_ko: "자율 농업용 트랙터: 정밀 벼농사를 위한 통합 잡초 탐지 및 LiDAR 내비게이션"
-tags: []
+tags: ["autonomous-driving", "navigation", "dataset"]
 authors: ["Benjamin Merryman-Smith", "Tony Nguyen", "Bilal Dogutas", "Krish Shah", "Anthony Raphael", "Sudip Dhakal"]
 embedded: false
 health_flourishing: false
