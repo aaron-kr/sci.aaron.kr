@@ -1,7 +1,7 @@
 ---
 hook_en: "Exponential Convex Calibration Dimension for the Multi-Label Jaccard Measure"
 hook_ko: "다중 라벨 자카드 측정을 위한 지수적 볼록 보정 차원"
-tags: []
+tags: ["evaluation"]
 embedded: false
 health_flourishing: false
 coverage_en: null

@@ -1,7 +1,7 @@
 ---
 hook_en: "A knowledge-guided agentic framework for mitigating patient-context ambiguity in health queries"
 hook_ko: "건강 질의에서 환자 맥락의 모호성을 완화하기 위한 지식 기반 에이전트 프레임워크"
-tags: []
+tags: ["reasoning", "human-in-the-loop"]
 authors: ["Mahyar Abbasian", "Saba A. Farahani", "Arshia Ilaty", "Hung Cao", "Ramesh Jain", "Amir M. Rahmani"]
 embedded: false
 health_flourishing: false
