@@ -1,7 +1,7 @@
 ---
 hook_en: "ViTacPhys: Physical Property-Aware Grasping from Human Visual-Tactile Demonstrations"
 hook_ko: "ViTacPhys: 인간의 시각-촉각 시연으로부터 물리적 특성 인식 포착하기"
-tags: []
+tags: ["manipulation", "human-in-the-loop"]
 authors: ["Yiwen Liu", "Yujun Zhu", "Kui Jia", "Zhao Liao", "Yangwei You", "Shuaijun Wang"]
 embedded: false
 health_flourishing: false

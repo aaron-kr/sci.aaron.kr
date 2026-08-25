@@ -2463,7 +2463,7 @@
      "date": "2026-08-25",
      "count": 0,
      "level": 0,
-     "future": true
+     "future": false
     },
     {
      "date": "2026-08-26",
@@ -2494,5 +2494,5 @@
  ],
  "total": 0,
  "streak": 0,
- "generated": "2026-08-24"
+ "generated": "2026-08-25"
 }

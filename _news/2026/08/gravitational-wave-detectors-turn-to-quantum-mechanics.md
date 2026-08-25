@@ -1,7 +1,7 @@
 ---
 hook_en: "Gravitational Wave Detectors Turn to Quantum Mechanics"
 hook_ko: "중력파 탐지기가 양자역학으로 눈을 돌리다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

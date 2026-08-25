@@ -1,7 +1,7 @@
 ---
 hook_en: "PerturbRx: Learning Treatment-Conditioned Latent Transitions for Patient Drug Response Prediction"
 hook_ko: "PerturbRx: 환자의 약물 반응 예측을 위한 치료 조건화된 잠재 전이 학습"
-tags: []
+tags: ["biomedical", "clinical"]
 authors: ["Yoshitaka Inoue", "Minoh Jeong", "Alfred Hero", "Rui Kuang", "Augustin Luna"]
 embedded: false
 health_flourishing: false

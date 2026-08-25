@@ -1,7 +1,7 @@
 ---
 hook_en: "Autonomous A2Z Selected for the Ministry of SMEs and Startups’ ‘Global TIPS’ Program"
 hook_ko: "오토노머스에이투지, 중기부 ‘글로벌 팁스’ 선정"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
