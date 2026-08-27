@@ -1,7 +1,7 @@
 ---
 hook_en: "VIALS: A Benchmark for Visual Interpretation of Artifacts in the Life Sciences"
 hook_ko: "VIALS: 생명과학 분야에서 유물의 시각적 해석을 위한 벤치마크"
-tags: []
+tags: ["benchmark", "biomedical"]
 authors: ["Elaine Lau", "Thanuka Udumulla", "Lee Izhaki-Tavor", "Francisco Guzmán", "Nicholas Magazine", "Jonas Mueller"]
 embedded: false
 health_flourishing: false

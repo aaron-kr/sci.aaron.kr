@@ -1,7 +1,7 @@
 ---
 hook_en: "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation"
 hook_ko: "해부학 기반 신경망: 손실과 구조에서 해부학적 사전 지식을 인코딩하고, Guidewire에 의해 유도된 대동맥-장골 변형의 SE(3) 공식화"
-tags: []
+tags: ["biomedical", "training-efficiency"]
 authors: ["David P. Stonko"]
 embedded: false
 health_flourishing: false

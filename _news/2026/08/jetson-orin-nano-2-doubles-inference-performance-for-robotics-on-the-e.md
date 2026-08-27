@@ -1,13 +1,13 @@
 ---
 hook_en: "Jetson Orin Nano 2 doubles inference performance for robotics on the edge, says NVIDIA"
 hook_ko: "NVIDIA, Jetson Orin Nano 2가 엣지 로봇의 추론 성능을 두 배로 향상시킨다고 밝혀"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
-coverage_en: null
-coverage_ko: null
+coverage_en: 1
+coverage_ko: 1
 gap: null
 marked_for_class: false
 commentary_worthy: false

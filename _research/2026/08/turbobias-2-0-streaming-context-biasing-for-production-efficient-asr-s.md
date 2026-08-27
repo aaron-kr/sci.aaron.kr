@@ -1,7 +1,7 @@
 ---
 hook_en: "TurboBias 2.0: Streaming Context-Biasing for Production-Efficient ASR Systems"
 hook_ko: "TurboBias 2.0: 운영 효율이 높은 ASR 시스템을 위한 스트리밍 컨텍스트 바이어싱"
-tags: []
+tags: ["training-efficiency", "industry"]
 authors: ["Vladimir Bataev", "Lilit Grigoryan", "Andrei Andrusenko", "Nikolay Karpov", "Vitaly Lavrukhin", "Boris Ginsburg"]
 embedded: false
 health_flourishing: false
