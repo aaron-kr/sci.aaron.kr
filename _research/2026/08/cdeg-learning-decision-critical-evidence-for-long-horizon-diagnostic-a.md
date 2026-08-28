@@ -1,7 +1,7 @@
 ---
 hook_en: "CDEG: Learning Decision-Critical Evidence for Long-Horizon Diagnostic Agents"
 hook_ko: "CDEG: 장기 진단제를 위한 의사결정 핵심 증거 학습"
-tags: []
+tags: ["reasoning", "clinical"]
 authors: ["Xiwei Dai", "Zijie Meng", "Zhiting Fan", "Yixuan Tang", "Ziru Niu", "Zuozhu Liu"]
 embedded: false
 health_flourishing: false

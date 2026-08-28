@@ -1,7 +1,7 @@
 ---
 hook_en: "China’s Grip on Erbium and Yttrium Could Choke Data-Center Growth"
 hook_ko: "중국의 에르븀과 이트륨 장악이 데이터 센터 성장을 저해할 수 있다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

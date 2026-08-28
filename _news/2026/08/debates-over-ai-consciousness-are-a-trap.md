@@ -1,7 +1,7 @@
 ---
 hook_en: "Debates over AI consciousness are a trap"
 hook_ko: "AI 의식에 대한 논쟁은 함정이다"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

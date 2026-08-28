@@ -1,7 +1,7 @@
 ---
 hook_en: "Masking Is Not Enough: Generative Restoration for Multimodal De-Identification in Medical AI"
 hook_ko: "마스킹만으로는 부족하다: 의료 AI에서 다중 모달 비식별화를 위한 생성적 복원"
-tags: []
+tags: ["biomedical", "dataset"]
 authors: ["Shiva Shrestha", "Zongxing Xie", "Chen Zhao", "Liran Ma", "Zhipeng Cai", "Honghui Xu"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "HIRA: A Human-in-the-Loop Retrieval-Augmented Cascade for Document Classification in Regulated Industries"
 hook_ko: "HIRA: 규제 산업에서 문서 분류를 위한 인간 참여형 검색 보강 캐스케이드"
-tags: []
+tags: ["human-in-the-loop", "document-parsing", "industry"]
 authors: ["Shangxuan Tian", "Yanhui Chen", "Carlos Queiroz"]
 embedded: false
 health_flourishing: false

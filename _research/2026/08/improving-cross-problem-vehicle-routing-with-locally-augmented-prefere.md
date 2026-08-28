@@ -1,7 +1,7 @@
 ---
 hook_en: "Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement"
 hook_ko: "지역적으로 증강된 선호도와 표현 분리 기법을 활용한 교차 문제 차량 경로 개선"
-tags: []
+tags: ["benchmark", "reasoning"]
 authors: ["Arthur Corrêa", "Paulo Nascimento", "Samuel Moniz"]
 embedded: false
 health_flourishing: false

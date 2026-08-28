@@ -1,7 +1,7 @@
 ---
 hook_en: "KREL: Automatic Medical Coding via Knowledge-Guided Reasoning over Clinical Evidence with LLMs"
 hook_ko: "KREL: LLM을 활용한 임상 증거 기반 지식 기반 추론을 통한 자동 의료 코딩"
-tags: []
+tags: ["clinical", "reasoning"]
 authors: ["Xubin Chen", "Yipeng Zhou", "Wen Sun", "Chengkai Huang", "Xiaoming Fu", "Quan Z. Sheng"]
 embedded: false
 health_flourishing: false

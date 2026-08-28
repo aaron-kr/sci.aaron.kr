@@ -1,7 +1,7 @@
 ---
 hook_en: "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL"
 hook_ko: "SPO++: 비동기 에이전트 강화학습을 위한 스트림 정렬 정책 최적화"
-tags: []
+tags: ["multi-agent", "training-efficiency"]
 authors: ["Kai Ruan", "Jinghao Lin", "Qianshan Wei", "Ziqi Zhou", "Zihe Huang"]
 embedded: false
 health_flourishing: false
