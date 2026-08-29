@@ -1,7 +1,7 @@
 ---
 hook_en: "The Shipping Industry Has a Growing Appetite for Methanol Fuel"
 hook_ko: "해운업계, 메탄올 연료에 대한 수요 증가"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

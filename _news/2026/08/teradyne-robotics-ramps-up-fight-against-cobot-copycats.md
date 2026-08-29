@@ -1,7 +1,7 @@
 ---
 hook_en: "Teradyne Robotics ramps up fight against cobot copycats"
 hook_ko: "테라다인 로보틱스, 협동로봇 모방자들과의 싸움에 박차를 가하다"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

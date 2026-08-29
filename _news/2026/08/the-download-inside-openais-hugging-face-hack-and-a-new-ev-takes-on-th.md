@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: inside OpenAI’s Hugging Face hack, and a new EV takes on the US"
 hook_ko: "다운로드: 내부 열기AI의 허깅 페이스 해킹과 새로운 전기차가 미국 시장에 도전하다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

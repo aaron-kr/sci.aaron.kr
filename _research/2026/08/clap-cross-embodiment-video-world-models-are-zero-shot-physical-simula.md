@@ -1,7 +1,7 @@
 ---
 hook_en: "CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators"
 hook_ko: "CLAP: 교차 구현 비디오 세계 모델은 제로샷 물리 시뮬레이터입니다"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: ["Kechen Liu", "Ola Shorinwa"]
 embedded: false
 health_flourishing: false

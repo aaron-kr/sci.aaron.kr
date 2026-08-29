@@ -1,7 +1,7 @@
 ---
 hook_en: "MedFG-VQA: Low-Frequency Memory and Graph Attention for Lightweight Medical VQA"
 hook_ko: "MedFG-VQA: 경량 의료 VQA를 위한 저주파 메모리와 그래프 어텐션"
-tags: []
+tags: ["biomedical", "evaluation"]
 authors: ["Haowen Gu", "Gensheng Pei", "Zeren Sun", "Mingwu Ren", "Xiangbo Shu", "Yazhou Yao", "Fumin Shen"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "A startup claims it’s found a drug to make your blood young"
 hook_ko: "한 스타트업이 혈액을 젊게 만드는 약을 발견했다고 주장했다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "The U.S. is Building CHIPS Act Fabs but Neglecting R&D"
 hook_ko: "미국은 CHIPS 법안을 만들고 있지만 연구개발은 소홀히 하고 있다"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

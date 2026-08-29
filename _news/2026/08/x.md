@@ -1,7 +1,7 @@
 ---
 hook_en: "Advanced Drone and Counter-Drone Technologies Gathered in One Place…‘Unmanned Mobility X Civil-Military Cooperation Expo’ Opens"
 hook_ko: "드론·대드론 첨단기술 한자리에…‘무인이동체 X 민군협력 엑스포’ 개막"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

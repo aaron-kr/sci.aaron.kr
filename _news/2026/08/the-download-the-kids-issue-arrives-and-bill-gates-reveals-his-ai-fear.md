@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: the Kids issue arrives, and Bill Gates reveals his AI fears"
 hook_ko: "The Download: the Kids 호가 도착했고, 빌 게이츠가 자신의 AI에 대한 우려를 밝혔다"
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

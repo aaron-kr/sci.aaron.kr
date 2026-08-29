@@ -1,7 +1,7 @@
 ---
 hook_en: "TADP: Task-Aware Deformable Prediction for Single-Stage 3D Object Detection"
 hook_ko: "TADP: 단일 단계 3D 객체 탐지를 위한 작업 인지 변형 예측"
-tags: []
+tags: ["benchmark"]
 authors: ["Su Wang", "Yaochen Li", "Min Yang", "Jiaohao Nie", "Chang Liu", "Yuehu Liu"]
 embedded: false
 health_flourishing: false
