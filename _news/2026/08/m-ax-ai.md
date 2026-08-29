@@ -1,7 +1,7 @@
 ---
 hook_en: "M.AX Alliance Connects AI Robot Sites with Young Talent"
 hook_ko: "M.AX 얼라이언스, AI로봇 현장과 청년 인재를 잇다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Authorities arrest 2 alleged members of prolific hacking group TeamPCP"
 hook_ko: "당국, 다수의 해킹 그룹 TeamPCP의 혐의자 2명 체포"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

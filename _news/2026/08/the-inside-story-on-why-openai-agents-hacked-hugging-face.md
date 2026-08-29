@@ -1,7 +1,7 @@
 ---
 hook_en: "The inside story on why OpenAI agents hacked Hugging Face"
 hook_ko: "Open의 내부 이야기AI 에이전트가 허깅페이스를 해킹하다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
