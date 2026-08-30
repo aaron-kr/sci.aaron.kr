@@ -1,7 +1,7 @@
 ---
 hook_en: "StrokeGuard: A Multi-Agent Guided System for Prehospital Stroke Assessment"
 hook_ko: "StrokeGuard: 병원 전 뇌졸중 평가를 위한 다중 에이전트 유도 시스템"
-tags: []
+tags: ["multi-agent", "clinical"]
 authors: ["Wentao Yang", "Zhenye Xu", "Ruoyi Li", "Musen Zhang", "Yao Guo"]
 embedded: false
 health_flourishing: false

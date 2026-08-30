@@ -1,7 +1,7 @@
 ---
 hook_en: "FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference"
 hook_ko: "FlashVLA: 빠르고 비동기적인 VLA 추론을 위한 스트리밍 액션 디코딩"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Zekai Li", "Jiaming Tang", "Zhijian Liu"]
 embedded: false
 health_flourishing: false

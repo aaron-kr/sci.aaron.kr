@@ -1,7 +1,7 @@
 ---
 hook_en: "Taking your temperature from the inside"
 hook_ko: "내부에서 체온을 재다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false
