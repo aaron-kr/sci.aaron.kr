@@ -1,7 +1,7 @@
 ---
 hook_en: "Germany’s Neura Robotics acquires cleaning specialist Adratous Robotics"
 hook_ko: "獨 뉴라 로보틱스, 청소 전문 ‘아드라투스 로보틱스’ 인수"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
