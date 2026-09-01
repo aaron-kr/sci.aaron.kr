@@ -1,7 +1,7 @@
 ---
 hook_en: "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction"
 hook_ko: "AcrossVAM1.0: 텍스트 지원 로봇 영상 예측을 위한 입자 세계 모델링"
-tags: []
+tags: ["manipulation", "dataset"]
 authors: ["Yafei Zhang", "Nan Wu"]
 embedded: false
 health_flourishing: false

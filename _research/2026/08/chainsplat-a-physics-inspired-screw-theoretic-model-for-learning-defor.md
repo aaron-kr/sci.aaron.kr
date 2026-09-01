@@ -1,7 +1,7 @@
 ---
 hook_en: "ChainSplat: A Physics-Inspired Screw-Theoretic Model for Learning Deformable Linear Object Dynamics from Multi-View RGB Videos"
 hook_ko: "ChainSplat: 다중 뷰 RGB 영상으로부터 변형 가능한 선형 물체 역학을 학습하는 물리학에서 영감을 받은 나사 이론 모델"
-tags: []
+tags: ["manipulation", "dataset"]
 authors: ["Seungyeon Kim", "Noémie Jaquier"]
 embedded: false
 health_flourishing: false

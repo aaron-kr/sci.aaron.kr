@@ -1,7 +1,7 @@
 ---
 hook_en: "Skild AI unveils S1 flagship robot foundation model"
 hook_ko: "Skild AI가 S1 플래그십 로봇 기반 모델을 공개했습니다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

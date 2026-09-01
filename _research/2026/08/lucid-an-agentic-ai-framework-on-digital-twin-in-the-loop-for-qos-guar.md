@@ -1,7 +1,7 @@
 ---
 hook_en: "LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control"
 hook_ko: "LUCID: QoS 보장을 위한 디지털 트윈 루프 내 에이전트형 AI 프레임워크"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: ["Hyeonsu Lyu", "Minwoo Kim", "Sehyun Ryu", "Hyun Jong Yang"]
 embedded: false
 health_flourishing: false

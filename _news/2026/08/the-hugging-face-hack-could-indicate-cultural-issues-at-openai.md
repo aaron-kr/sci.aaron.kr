@@ -1,7 +1,7 @@
 ---
 hook_en: "The Hugging Face hack could indicate cultural issues at OpenAI"
 hook_ko: "Hugging Face 해킹 사건은 OpenAI에서의 문화적 문제를 시사할 수 있습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
