@@ -1,7 +1,7 @@
 ---
 hook_en: "DARP: A Calibrated Dual-Arm RGB-D-IR Dataset for Multi-View Robotic Perception"
 hook_ko: "DARP: 다중 시점 로봇 인식을 위한 보정된 이중 팔 RGB-D-IR 데이터셋"
-tags: []
+tags: ["dataset", "humanoids"]
 authors: ["Manish Kansana", "Mohammed Yusuf Mujawar", "Sudip Mittal", "Shahram Rahimi", "Noorbakhsh Amiri Golilarz"]
 embedded: false
 health_flourishing: false

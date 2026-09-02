@@ -1,7 +1,7 @@
 ---
 hook_en: "LLM Judges Verify Presence, Not Absence: Omission Blindness in AI Clinical Notes and What Recovers It"
 hook_ko: "LLM은 존재 여부를 판단할 뿐, 부재 여부를 판단하지는 않습니다: AI 임상 기록에서의 누락 맹목과 이를 회복하는 방법"
-tags: []
+tags: ["clinical", "evaluation"]
 authors: ["Sebastian Fox", "Luke Markham", "Ryan Lail", "Michael Karotsieris"]
 embedded: false
 health_flourishing: false

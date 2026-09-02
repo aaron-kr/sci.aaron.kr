@@ -1,7 +1,7 @@
 ---
 hook_en: "BLOOM-WILT: Logit Tilting for Behaviour Elicitation in Automated LLM Auditing"
 hook_ko: "BLOOM-WILT: 자동화된 LLM 감사에서 행동 유도를 위한 로짓 틸팅"
-tags: []
+tags: ["evaluation"]
 authors: ["Adrians Skapars", "Edoardo Manino"]
 embedded: false
 health_flourishing: false

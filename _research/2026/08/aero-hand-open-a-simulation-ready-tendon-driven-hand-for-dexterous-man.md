@@ -1,7 +1,7 @@
 ---
 hook_en: "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning"
 hook_ko: "Aero Hand Open: 교정적 조작 학습을 위한 시뮬레이션 준비 완료된 힘줄 구동 손"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Nan Wang", "Mohit Yadav", "Jonathan Wulff", "Aidan Rosenbaum", "Kezhou Chen", "Yuvan Sharma", "Xu Dong", "Yiwei Tao"]
 embedded: false
 health_flourishing: false
