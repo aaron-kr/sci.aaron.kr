@@ -7,11 +7,11 @@ health_flourishing: false
 coverage_en: 2
 coverage_ko: null
 gap: null
-marked_for_class: true
+marked_for_class: false
 commentary_worthy: true
 commentary_url: null
 commentary_video_url: null
-pin_priority: 1
+pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false

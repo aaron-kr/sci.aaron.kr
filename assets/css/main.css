@@ -132,6 +132,10 @@ nav.subnav{position:relative; display:flex; gap:22px; flex-wrap:wrap; align-item
 nav.subnav a{text-decoration:none; padding-bottom:4px; border-bottom:2px solid transparent; cursor:pointer;}
 nav.subnav a:hover, nav.subnav a.current{color:var(--ink); border-color:var(--accent);}
 nav.subnav .subnav-name{margin-right:auto; color:var(--ink-faint); font-weight:600; letter-spacing:.08em;}
+/* Reading list stays gold at all times (not just hover/current) — it's this
+   week's actionable task, so it needs to read as "look here" at a glance. */
+nav.subnav a.subnav-gold{color:var(--gold); font-weight:600;}
+nav.subnav a.subnav-gold:hover, nav.subnav a.subnav-gold.current{color:var(--gold); border-color:var(--gold);}
 .subnav-links{display:flex; gap:22px; align-items:center; flex-wrap:wrap;}
 .subnav-divider{width:1px; height:14px; background:var(--hair-strong);}
 .subnav-toggle{display:none; background:none; border:none; color:var(--ink-dim); font-size:17px; line-height:1; cursor:pointer; padding:4px 2px;}
@@ -229,7 +233,12 @@ section.major-head{padding:30px 0 4px;}
 .research-tabs-scope{position:relative;}
 .section-tabs{
   position:sticky; top:var(--nav-h); z-index:40;
-  display:flex; align-items:center; gap:22px; flex-wrap:nowrap; overflow-x:auto;
+  /* overflow-y:hidden is required, not decorative — per spec, a lone
+     overflow-x:auto with no overflow-y set computes overflow-y as auto too
+     (UAs won't pair auto/scroll with visible), which was giving this bar a
+     needless vertical scrollbar since its content is a couple px taller
+     than the box. */
+  display:flex; align-items:center; gap:22px; flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden;
   background:rgba(22,28,39,0.92); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
   border-bottom:1px solid var(--hair-strong);
   margin:0 -24px 24px; padding:12px 24px;
@@ -479,6 +488,11 @@ section.course{padding:24px; margin:30px 0; background:var(--bg-1); border:1px s
 .course-head h3, .course-head h1{font-family:'Playfair Display', serif; font-size:20px; margin:0;}
 .course-head span{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--accent);}
 .course-sub{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-dim); margin:0 0 16px; line-height:1.6;}
+/* "This week's set" gets the same gold treatment as .semester-block h2 below
+   — same signal (this is the live, current-week thing), so it should read
+   as visually related to that section. */
+.course-head .week-badge{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.04em; color:var(--gold); font-weight:600;}
+hr.week-hr{border:none; border-top:2px solid var(--gold-dim); margin:2px 0 16px;}
 .course-list{list-style:none; margin:0; padding:0; display:grid; gap:10px;}
 .course-list li{display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-bottom:1px solid var(--hair); font-size:13.5px;}
 .course-list li a{text-decoration:none; border-bottom:1px solid transparent;}
@@ -552,12 +566,58 @@ section.sources{padding:34px 0; border-top:1px solid var(--hair); margin-top:20p
   background:var(--bg-1); border:1px solid var(--hair-strong); border-radius:var(--radius); padding:18px 20px; margin-top:20px;
 }
 .suggest-box p{margin:0 0 12px; font-size:13px; color:var(--ink-dim); line-height:1.6;}
-.suggest-box .suggest-cta{
+/* not scoped to .suggest-box — also used standalone, e.g. the Discussions
+   link on /tools/, which isn't inside a .suggest-box card. */
+.suggest-cta{
   display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
   background:var(--magenta); color:#fff; border-radius:20px; padding:8px 16px; text-decoration:none;
   border:none; cursor:pointer;
 }
-.suggest-box .suggest-cta:hover{background:#e34e8c;}
+.suggest-cta:hover{background:#e34e8c;}
+
+/* ---------- Tools page (/tools/) — citation converter, discussion
+   templates, AI self-check. Reuses .suggest-box as the card shell (public,
+   unlike .add-citation-box which is owner-only) and .chip for style tabs. ---------- */
+.tool-btn{
+  font-family:'IBM Plex Mono', monospace; font-size:12px; background:none;
+  border:1px solid var(--hair-strong); color:var(--ink-dim); padding:8px 16px;
+  border-radius:20px; cursor:pointer; transition:all .15s;
+}
+.tool-btn:hover{border-color:var(--accent); color:var(--ink);}
+.tool-btn.primary{background:var(--gold); border-color:var(--gold); color:#20160a; font-weight:600;}
+.tool-btn.primary:hover{background:#ddb662; border-color:#ddb662; color:#20160a;}
+.tool-actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px;}
+.cite-style-tabs{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;}
+.cite-style-tabs[hidden]{display:none;}
+.cite-output-box{
+  background:var(--bg); border:1px solid var(--hair-strong); border-radius:var(--radius);
+  padding:14px 16px; margin-top:12px;
+}
+.cite-output{
+  font-family:'IBM Plex Mono', monospace; font-size:12.5px; line-height:1.7; color:var(--ink);
+  white-space:pre-wrap; word-break:break-word; margin:0 0 12px;
+}
+.template-textarea{
+  width:100%; background:var(--bg); border:1px solid var(--hair-strong); border-radius:var(--radius);
+  color:var(--ink); font-family:'IBM Plex Mono', monospace; font-size:12.5px; line-height:1.75;
+  padding:14px; resize:vertical;
+}
+.ai-check-line{font-family:'IBM Plex Mono', monospace; font-size:12.5px; line-height:1.7; margin:0 0 8px;}
+.ai-check-line code{background:var(--bg-2); padding:1px 5px; border-radius:3px; font-size:11.5px;}
+.ai-check-warn{color:var(--orange);}
+.ai-check-ok{color:var(--jade);}
+.ai-check-meta{color:var(--ink-faint);}
+.ai-check-result{margin-top:14px;}
+.how-to-list{margin:0; padding-left:22px; display:grid; gap:8px;}
+.how-to-list li{font-size:13.5px; line-height:1.7; color:var(--ink-dim);}
+.how-to-list strong{color:var(--ink); font-weight:600;}
+.glossary-list{margin:0; display:grid; gap:10px;}
+.glossary-list > div{display:grid; grid-template-columns:110px 1fr; gap:14px; align-items:baseline;}
+.glossary-list dt{font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600; color:var(--accent); margin:0;}
+.glossary-list dd{margin:0; font-size:13px; color:var(--ink-dim); line-height:1.6;}
+@media(max-width:640px){
+  .glossary-list > div{grid-template-columns:1fr; gap:2px;}
+}
 
 footer{position:relative; z-index:1; padding:26px 0 50px; border-top:1px solid var(--hair); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
 footer a{color:var(--ink-dim); text-decoration:none;}

@@ -7,6 +7,10 @@ description: >-
   because it's also useful to other researchers, students, and professors.
 url: "https://sci.aaron.kr"
 baseurl: ""
+# Set once the Weekly Reading Discussions repo/category exists (see
+# US_ROADMAP.md-style planning notes) — linked from /tools/. Leave blank to
+# hide that link until then.
+discussions_url: "https://github.com/aaronkr-2026-2/research-methods-course/discussions"
 author: Aaron Snowberger
 twitter_handle: ""
 lang: en

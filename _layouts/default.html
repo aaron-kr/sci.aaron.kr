@@ -83,6 +83,7 @@
 <button id="back-to-top" aria-label="Back to top" data-en="&uarr;" data-ko="&uarr;">↑</button>
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{% if page.extra_js %}<script src="{{ page.extra_js | relative_url }}"></script>{% endif %}
 
 <!-- Firebase Auth + Firestore-backed bookmarks — see AUTH_SETUP.md.
      Everything degrades quietly if firebase-config.js still has placeholder

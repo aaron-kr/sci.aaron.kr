@@ -115,6 +115,33 @@ function initFreqScroll(){
   scroller.scrollLeft = scroller.scrollWidth;
 }
 
+// ---- "This week's set" date badge on the Reading List page — reuses
+// semesterId()/semesterStart() from auth.js (already defined by the time
+// DOMContentLoaded fires, since that script runs earlier in document order)
+// so the week number here always matches the one the semester log groups
+// by, with zero config beyond what's already in _data/semester.yml. ----
+function renderWeekBadge(){
+  const el = document.getElementById('week-badge');
+  if(!el || typeof semesterId !== 'function') return;
+  const now = new Date();
+  const sem = semesterId(now);
+  const start = semesterStart(sem);
+  const wk = Math.max(1, Math.floor((now - start) / 86400000 / 7) + 1);
+  const weekStart = new Date(start.getTime() + (wk - 1) * 7 * 86400000);
+  const weekEnd = new Date(weekStart.getTime() + 6 * 86400000);
+  const MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const enDate = (d) => `${MONTHS_EN[d.getMonth()]} ${d.getDate()}`;
+  const koDate = (d) => `${d.getMonth() + 1}월 ${d.getDate()}일`;
+  const enRange = weekStart.getMonth() === weekEnd.getMonth()
+    ? `${enDate(weekStart)}–${weekEnd.getDate()}`
+    : `${enDate(weekStart)}–${enDate(weekEnd)}`;
+  const enText = `Week ${wk} · ${enRange}, ${weekEnd.getFullYear()}`;
+  const koText = `${wk}주차 · ${koDate(weekStart)}–${koDate(weekEnd)}`;
+  el.setAttribute('data-en', enText);
+  el.setAttribute('data-ko', koText);
+  el.textContent = enText; // setLang(), called right after this on load, applies the saved language
+}
+
 // ---- mobile hamburger for the sticky subnav ----
 function initSubnavToggle(){
   const btn = document.getElementById('subnav-toggle');
@@ -191,6 +218,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSubnavToggle();
   initSectionTabs();
   initFreqScroll();
+  renderWeekBadge();
   try{
     const savedLang = localStorage.getItem('scientia-lang');
     if(savedLang) setLang(savedLang);

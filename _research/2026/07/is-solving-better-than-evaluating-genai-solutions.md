@@ -12,7 +12,7 @@ marked_for_class: false
 commentary_worthy: false
 commentary_url: null
 commentary_video_url: null
-pin_priority: null
+pin_priority: 1
 pin_own_research: false
 pin_image: null
 raw_wire: false
