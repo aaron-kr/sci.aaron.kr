@@ -1,7 +1,7 @@
 ---
 hook_en: "AI Efficiency Could Cost Us the Next Generation of Experts"
 hook_ko: "AI 효율성은 우리에게 다음 세대 전문가를 잃게 할 수도 있다"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

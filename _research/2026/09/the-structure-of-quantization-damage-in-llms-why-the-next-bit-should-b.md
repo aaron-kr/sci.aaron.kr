@@ -1,7 +1,7 @@
 ---
 hook_en: "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally"
 hook_ko: "LLM에서 양자화 손상의 구조: 다음 비트를 전 세계적으로 사용해야 하는 이유"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Jundong Hu", "Shekar Ramachandran"]
 embedded: false
 health_flourishing: false

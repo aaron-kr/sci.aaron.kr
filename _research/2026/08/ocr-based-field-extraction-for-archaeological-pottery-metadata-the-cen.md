@@ -1,7 +1,7 @@
 ---
 hook_en: "OCR-Based Field Extraction for Archaeological Pottery Metadata: The CENTURIA Dataset"
 hook_ko: "고고학 도자기 메타데이터를 위한 OCR 기반 필드 추출: CENTURIA 데이터셋"
-tags: []
+tags: ["ocr", "dataset", "historical-documents"]
 authors: ["Gissu Valentina Naghavi", "Dominik Hagmann", "Martin Kampel", "Irene Ballester"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "HowToRobot and Robotics Australia Group partner on platform to encourage robot adoption"
 hook_ko: "HowToRobot과 Robotics Australia 그룹, 로봇 보급 촉진을 위한 플랫폼 협력"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

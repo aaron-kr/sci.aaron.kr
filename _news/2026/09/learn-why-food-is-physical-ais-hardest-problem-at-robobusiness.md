@@ -1,7 +1,7 @@
 ---
 hook_en: "Learn why food is physical AI’s hardest problem at RoboBusiness"
 hook_ko: "RoboBusiness에서 음식이 물리적 AI의 가장 어려운 문제인 이유를 알아보세요"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

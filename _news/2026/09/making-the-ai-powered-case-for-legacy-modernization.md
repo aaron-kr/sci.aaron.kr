@@ -1,7 +1,7 @@
 ---
 hook_en: "Making the AI-powered case for legacy modernization"
 hook_ko: "AI 기반의 기존 시스템 현대화 필요성 제시"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

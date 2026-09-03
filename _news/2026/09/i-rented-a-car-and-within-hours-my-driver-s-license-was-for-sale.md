@@ -1,7 +1,7 @@
 ---
 hook_en: "I rented a car, and within hours, my driver's license was for sale"
 hook_ko: "나는 차를 빌렸고, 몇 시간 만에 내 운전면허증이 판매 중이었다"
-tags: []
+tags: ["autonomous-driving", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

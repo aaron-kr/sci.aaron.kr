@@ -1,7 +1,7 @@
 ---
 hook_en: "Chonbuk National University selected as a 'Graduate School Specialized in Robotics'…Leaping Forward as a Hub for Developing Physical AI Talent"
 hook_ko: "전북대, '로봇 특성화대학원' 선정…피지컬 AI 인재양성 거점 도약"
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

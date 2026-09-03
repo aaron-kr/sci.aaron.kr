@@ -1,7 +1,7 @@
 ---
 hook_en: "Learn how physical AI is being used to do real work at RoboBusiness"
 hook_ko: "RoboBusiness에서 물리적 AI가 실제 업무에 어떻게 활용되는지 알아보세요"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

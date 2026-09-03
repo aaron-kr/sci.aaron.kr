@@ -1,7 +1,7 @@
 ---
 hook_en: "AIR to use Elmo Motion Control technology in uncrewed cargo aircraft"
 hook_ko: "무인 화물 항공기에 Elmo 모션 제어 기술을 적용할 예정인 AIR"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

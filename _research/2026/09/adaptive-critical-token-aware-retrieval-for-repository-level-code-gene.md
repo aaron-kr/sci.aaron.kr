@@ -1,7 +1,7 @@
 ---
 hook_en: "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation"
 hook_ko: "저장소 수준 코드 생성을 위한 적응형 중요 토큰 인지 검색"
-tags: []
+tags: ["training-efficiency", "benchmark"]
 authors: ["Kefeng Duan", "Dewu Zheng", "Yanlin Wang", "Terry Yue Zhuo", "Mingwei Liu", "Jianxing Yu", "Jiachi Chen", "Ensheng Shi", "Xilin Liu", "Yuchi Ma", "Zibin Zheng"]
 embedded: false
 health_flourishing: false

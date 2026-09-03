@@ -1,7 +1,7 @@
 ---
 hook_en: "K-UAM safety operation technology will be demonstrated in an actual operational environment for three years starting next year"
 hook_ko: "K-UAM 안전운용기술, 내년부터 3년간 실제 운용환경서 실증한다"
-tags: []
+tags: ["autonomous-driving", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

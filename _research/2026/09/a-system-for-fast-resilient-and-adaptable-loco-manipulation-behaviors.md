@@ -1,7 +1,7 @@
 ---
 hook_en: "A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots"
 hook_ko: "휴머노이드 로봇의 빠르고 탄력적이며 적응력 있는 로코-매니퓰레이션 행동을 위한 시스템"
-tags: []
+tags: ["humanoids", "locomotion", "manipulation"]
 authors: ["Duncan Calvert", "Luigi Penco", "Dexton Anderson", "Tomasz Bialek", "Arghya Chatterjee", "Beomyeong Park", "Robert Griffin"]
 embedded: false
 health_flourishing: false

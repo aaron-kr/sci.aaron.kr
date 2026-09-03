@@ -1,7 +1,7 @@
 ---
 hook_en: "Betting on AI and Robots to Automate Superconductor Discovery"
 hook_ko: "AI와 로봇에 기대어 초전도체 발견을 자동화하다"
-tags: []
+tags: ["automation", "materials-science"]
 authors: []
 embedded: false
 health_flourishing: false

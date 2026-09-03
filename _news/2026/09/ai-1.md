@@ -1,7 +1,7 @@
 ---
 hook_en: "The “National Safety Industry Fund No. 1,” which invests in AI and robotics companies specializing in disaster safety, is gaining attention"
 hook_ko: "재난안전 AI·로봇 기업에 투자하는 ‘국민안전산업펀드 1호’ 뜬다"
-tags: []
+tags: ["humanoids", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

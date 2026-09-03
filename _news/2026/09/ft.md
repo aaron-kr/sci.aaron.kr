@@ -1,7 +1,7 @@
 ---
 hook_en: "FT: \"China’s real robot revolution is not humanoid\""
 hook_ko: "FT \"중국의 진짜 로봇 혁명은 휴머노이드가 아니다\""
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "NexCOBOT discusses physical AI market hurdles and acceleration"
 hook_ko: "NexCOBOT이 물리적 AI 시장의 장애물과 가속화에 대해 논의하다"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

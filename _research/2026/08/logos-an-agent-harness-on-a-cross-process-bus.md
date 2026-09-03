@@ -1,7 +1,7 @@
 ---
 hook_en: "Logos: An Agent Harness on a Cross-Process Bus"
 hook_ko: "로고스: 크로스 프로세스 버스 위의 에이전트 하니스"
-tags: []
+tags: ["multi-agent"]
 authors: ["Hanzhang Jia", "Liheng Zeng", "Hao Cheng", "Yi Gao", "Bo Ma"]
 embedded: false
 health_flourishing: false

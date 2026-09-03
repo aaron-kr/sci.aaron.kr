@@ -1,7 +1,7 @@
 ---
 hook_en: "China’s robotics industry moving beyond “Made in China” to “Defined by China”"
 hook_ko: "‘Made in China’를 넘어 ‘Defined by China’로 가는 중국 로봇 산업"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "V-Drift, a remote-controlled robot→ Supplying 'V-Dock,' an AI kit for autonomous walking transition"
 hook_ko: "비드래프트, 원격조종 로봇→자율보행 전환 AI 키트 ‘비독’ 공급"
-tags: []
+tags: ["humanoids", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

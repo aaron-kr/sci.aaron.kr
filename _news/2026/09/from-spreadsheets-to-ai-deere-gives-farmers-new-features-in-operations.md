@@ -1,7 +1,7 @@
 ---
 hook_en: "From spreadsheets to AI: Deere gives farmers new features in Operations Center, JD"
 hook_ko: "스프레드시트부터 AI까지: 디어가 운영 센터 JD에 농부들을 위한 새로운 기능을 제공하다"
-tags: []
+tags: ["industry", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

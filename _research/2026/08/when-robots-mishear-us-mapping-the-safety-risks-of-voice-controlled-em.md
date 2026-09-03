@@ -1,7 +1,7 @@
 ---
 hook_en: "When Robots Mishear Us: Mapping the Safety Risks of Voice-Controlled Embodied AI"
 hook_ko: "로봇이 우리의 말을 잘못 들을 때: 음성 제어 구현 AI의 안전 위험성 분석"
-tags: []
+tags: ["humanoids", "human-in-the-loop"]
 authors: ["Sihan Jia", "Oliver Lemon"]
 embedded: false
 health_flourishing: false

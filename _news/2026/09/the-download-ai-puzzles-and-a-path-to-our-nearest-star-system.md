@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI puzzles and a path to our nearest star system"
 hook_ko: "다운로드: AI 퍼즐과 우리에게 가장 가까운 별자리로 가는 길"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

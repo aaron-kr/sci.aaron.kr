@@ -1,7 +1,7 @@
 ---
 hook_en: "Cash in on the AI Boom by Renting Out Your Spare Compute"
 hook_ko: "남는 컴퓨팅 파워를 임대해 AI 붐에서 수익을 내세요"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
