@@ -1,7 +1,7 @@
 ---
 hook_en: "Protecting Dynamic Industrial Robot Cable Carriers"
 hook_ko: "동적 산업용 로봇 케이블 캐리어 보호하기"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Researchers Quantum Teleport Data Across 100 Channels at Once"
 hook_ko: "연구진, 100개 채널에서 동시에 데이터 양자 텔레포트 성공"
-tags: []
+tags: ["quantum-computing"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "T2LSC-Bench: Benchmarking Localized Semantic Control in Text-to-Image Generation"
 hook_ko: "T2LSC-Bench: 텍스트-이미지 생성에서 국소 의미 제어 벤치마킹"
-tags: []
+tags: ["benchmark", "evaluation"]
 authors: ["Yan Wang", "Xinyi Hou", "Weiguo Lin", "Junjun Si", "Siwei Ma"]
 embedded: false
 health_flourishing: false

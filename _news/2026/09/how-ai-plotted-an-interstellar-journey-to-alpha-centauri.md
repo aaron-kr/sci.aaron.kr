@@ -1,7 +1,7 @@
 ---
 hook_en: "How AI plotted an interstellar journey to Alpha Centauri"
 hook_ko: "AI가 알파 센타우리로의 성간 여행을 어떻게 계획했는가"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

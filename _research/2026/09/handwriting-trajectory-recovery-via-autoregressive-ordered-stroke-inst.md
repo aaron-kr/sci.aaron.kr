@@ -1,7 +1,7 @@
 ---
 hook_en: "Handwriting Trajectory Recovery via Autoregressive Ordered Stroke Instance Prediction"
 hook_ko: "자기회귀 순서형 획 인스턴스 예측을 통한 필기 궤적 복원"
-tags: []
+tags: ["handwriting", "stroke-prediction"]
 authors: ["En-Guang Wang", "Yan-Ming Zhang", "Fei Yin", "Cheng-Lin Liu"]
 embedded: false
 health_flourishing: false

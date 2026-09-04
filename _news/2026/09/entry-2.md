@@ -1,7 +1,7 @@
 ---
 hook_en: "Australia’s Nexis Technology acquires wind power maintenance robot company “Bladebug”"
 hook_ko: "호주 넥시스테크놀로지, 풍력 발전 유지보수 로봇기업 '블레이드버그' 인수"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

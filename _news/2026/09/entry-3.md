@@ -1,7 +1,7 @@
 ---
 hook_en: "\"Robots also make and sell ice cream\"…Chinese global chain stores adopt humanoids"
 hook_ko: "“로봇이 아이스크림도 만들어 판다”…中 글로벌 체인점, 휴머노이드 도입"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

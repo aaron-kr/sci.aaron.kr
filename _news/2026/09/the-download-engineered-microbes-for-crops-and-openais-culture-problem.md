@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: engineered microbes for crops, and OpenAI’s culture problem"
 hook_ko: "다운로드: 작물을 위한 유전자 조작 미생물, 그리고 열기AI의 문화 문제"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

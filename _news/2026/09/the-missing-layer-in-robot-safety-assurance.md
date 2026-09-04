@@ -1,7 +1,7 @@
 ---
 hook_en: "The Missing Layer in Robot Safety Assurance"
 hook_ko: "로봇 안전 보장의 빠진 한 겹"
-tags: []
+tags: ["humanoids", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

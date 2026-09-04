@@ -1,7 +1,7 @@
 ---
 hook_en: "A Common Measure of Communication for Speech Brain-Computer Interfaces"
 hook_ko: "음성 뇌-컴퓨터 인터페이스를 위한 공통 커뮤니케이션 측정기"
-tags: []
+tags: ["benchmark"]
 authors: ["Dulhan Jayalath", "Benjamin Ballyk", "Oiwi Parker Jones"]
 embedded: false
 health_flourishing: false

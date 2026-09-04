@@ -1,7 +1,7 @@
 ---
 hook_en: "Discriminative World Models for Web Agents"
 hook_ko: "웹 에이전트를 위한 차별적 세계 모델"
-tags: []
+tags: ["reasoning"]
 authors: ["Kelvin Li", "Dhruv Pendharkar", "Anish Pahilajani", "Chuyi Shang", "Leon Oks", "Leonid Karlinsky", "Rogerio Feris", "Trevor Darrell", "Roei Herzig"]
 embedded: false
 health_flourishing: false

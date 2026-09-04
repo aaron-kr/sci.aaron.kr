@@ -1,7 +1,7 @@
 ---
 hook_en: "Lion Robotics recruits Vice President Heo Cheol as CBO…Full-scale expansion of global business underway"
 hook_ko: "라이온로보틱스, 허철 부사장 CBO 영입…글로벌 사업 확장 본격화"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
