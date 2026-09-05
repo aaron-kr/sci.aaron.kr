@@ -1,7 +1,7 @@
 ---
 hook_en: "How to sign up for a virtual power plant—and decide whether you should"
 hook_ko: "가상 발전소에 가입하는 방법과 가입 여부를 결정하는 법"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

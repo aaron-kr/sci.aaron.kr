@@ -1,7 +1,8 @@
 ---
-hook_en: "Video Friday: Lift Happens"
-hook_ko: "금요일 영상: 리프트가 일어나다"
-tags: ["humanoids", "manipulation"]
+hook_en: "Cyborg Roaches Can Stab You With Needles"
+hook_ko: "사이보그 바퀴벌레는 바늘로 찌를 수 있다"
+tags: ["humanoids"]
+authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
@@ -16,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Video Friday: Lift Happens"
+title: "Cyborg Roaches Can Stab You With Needles"
 source: "IEEE Spectrum Robotics"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/video-friday-darpa-heavy-lift-challenge"
+source_url: "https://spectrum.ieee.org/cyborg-rescue-roach"
 topic: "physical-ai"
-date: "2026-08-14"
+date: "2026-09-05"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/video-friday-darpa-heavy-lift-challenge"
+dedup_key: "https://spectrum.ieee.org/cyborg-rescue-roach"
 ---

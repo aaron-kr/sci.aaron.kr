@@ -1,7 +1,7 @@
 ---
 hook_en: "Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers"
 hook_ko: "엔트로피를 통한 선택적 에이전트 지도: 불완전한 VLM 교사로부터 자율 정책 학습하기"
-tags: []
+tags: ["multi-agent", "training-efficiency"]
 authors: ["Matteo Merler", "Giovanni Bonetta", "Davide Zago", "Rossella Cancelliere", "Bernardo Magnini"]
 embedded: false
 health_flourishing: false

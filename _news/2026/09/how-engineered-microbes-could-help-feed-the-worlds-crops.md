@@ -1,7 +1,7 @@
 ---
 hook_en: "How engineered microbes could help feed the world’s crops"
 hook_ko: "유전자 조작 미생물이 세계 농작물 사료 공급에 어떻게 도움을 줄 수 있을까"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

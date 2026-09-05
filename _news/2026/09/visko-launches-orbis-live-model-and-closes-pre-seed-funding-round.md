@@ -1,7 +1,7 @@
 ---
 hook_en: "Visko launches Orbis live model and closes pre-seed funding round"
 hook_ko: "비스코, 오르비스 라이브 모델 출시 및 프리시드 투자 유치 종료"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

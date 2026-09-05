@@ -1,7 +1,7 @@
 ---
 hook_en: "A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle"
 hook_ko: "소형 아커만 차량을 위한 저비용, 종단 간 자율주행 오픈 플랫폼"
-tags: []
+tags: ["autonomous-driving", "locomotion"]
 authors: ["Gustavo Claudio Karl Couto", "Eric Aislan Antonelo", "Gabriel George Zipperer"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Chinese robot reducer company “LeaderDrive” begins Hong Kong IPO process"
 hook_ko: "中 로봇 감속기 기업 '리더드라이브', 홍콩 IPO 절차 들어간다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

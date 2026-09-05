@@ -1,7 +1,7 @@
 ---
 hook_en: "NC AI selected for a national project on autonomous humanoid technology…Plant it in a human-action robot"
 hook_ko: "NC AI, 자율형 휴머노이드 국책과제 선정…인간의 동작 로봇에 심다"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

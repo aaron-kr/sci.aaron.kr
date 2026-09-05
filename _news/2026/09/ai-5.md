@@ -1,7 +1,7 @@
 ---
 hook_en: "Professor Yoon Byung-dong’s team at Seoul National University embarks on building a 'full-stack AI factory' to lead manufacturing autonomy"
 hook_ko: "서울대 윤병동 교수팀, 제조 자율화 이끌 ‘풀스택 AI 팩토리’ 구축 나서"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

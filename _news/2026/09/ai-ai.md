@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea AI·Robot Industry Association listens to on-site voices from AI and robot companies in the southwest region"
 hook_ko: "한국AI·로봇산업협회, 서남권 AI·로봇기업 현장 목소리 청취"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

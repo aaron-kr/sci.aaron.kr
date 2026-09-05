@@ -1,7 +1,7 @@
 ---
 hook_en: "VMware migration reduces Tottenham Hotspur's licensing fees by 85 percent"
 hook_ko: "VMware 마이그레이션으로 토트넘 홋스퍼의 라이선스 비용이 85% 감소했습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

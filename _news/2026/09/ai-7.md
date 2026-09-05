@@ -1,7 +1,7 @@
 ---
 hook_en: "Japanese robot startup “Jizai” pre-sells the desktop AI robot “Palimomo”"
 hook_ko: "일본 로봇 스타트업 '지자이', 탁상형 AI 로봇 '팔미모' 선행 판매"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

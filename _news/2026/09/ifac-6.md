@@ -1,7 +1,7 @@
 ---
 hook_en: "The 'Wearable Robot Challenge\" successfully concluded at the IFAC World Congress…Students from six countries compete with ideas on the same robot platform"
 hook_ko: "IFAC 세계대회서 ‘웨어러블 로봇 챌린지’ 성료…6개국 학생들, 동일 로봇 플랫폼 위에서 아이디어 겨뤄"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

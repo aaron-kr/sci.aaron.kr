@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Digit Redecorates"
 hook_ko: "비디오 금요일: 손가락을 새롭게 꾸미다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

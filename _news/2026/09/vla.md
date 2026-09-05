@@ -1,7 +1,7 @@
 ---
 hook_en: "Ace Robotics teams up with the University of Hong Kong to announce a “time-interpretation” VLA model"
 hook_ko: "中 에이스로보틱스, 홍콩대와 손잡고 '시간 이해' VLA 모델 발표"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false
