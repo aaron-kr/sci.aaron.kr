@@ -1,7 +1,7 @@
 ---
 hook_en: "BGP hijack infecting networks caused by a comedy of errors that’s not funny at all"
 hook_ko: "BGP 하이재킹 감염 네트워크는 전혀 웃기지 않은 실수들의 코미디로 인해 발생했다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

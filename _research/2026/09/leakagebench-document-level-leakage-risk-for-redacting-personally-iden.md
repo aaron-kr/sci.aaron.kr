@@ -1,7 +1,7 @@
 ---
 hook_en: "LeakageBench: Document-Level Leakage Risk for Redacting Personally Identifiable Information in Document Images"
 hook_ko: "LeakageBench: 문서 이미지에서 개인 식별 정보를 삭제하기 위한 문서 수준 누수 위험"
-tags: []
+tags: ["document-parsing", "benchmark", "dataset"]
 authors: ["Vishnu Prasad Vijaya Kumar", "Santhosh Venkatesh", "Ivan P. Yamshchikov"]
 embedded: false
 health_flourishing: false

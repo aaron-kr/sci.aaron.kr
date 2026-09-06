@@ -1,7 +1,7 @@
 ---
 hook_en: "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions"
 hook_ko: "훈련을 통해 컴파일하기: 자연어 명세를 로컬 신경 함수로 변환하기"
-tags: []
+tags: ["reasoning", "training-efficiency"]
 authors: ["Yuntian Deng", "Pengyu Nie", "Stuart Shieber"]
 embedded: false
 health_flourishing: false

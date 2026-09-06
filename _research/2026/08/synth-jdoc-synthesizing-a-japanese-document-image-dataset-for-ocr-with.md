@@ -1,7 +1,7 @@
 ---
 hook_en: "Synth-JDoc: Synthesizing a Japanese Document Image Dataset for OCR with Diverse Layouts and Embedded Images"
 hook_ko: "Synth-JDoc: 다양한 레이아웃과 내장 이미지를 포함한 OCR용 일본 문서 이미지 데이터셋 합성"
-tags: []
+tags: ["ocr", "dataset", "document-parsing"]
 authors: ["Keito Sasagawa", "Shuhei Kurita", "Daisuke Kawahara"]
 embedded: false
 health_flourishing: false
