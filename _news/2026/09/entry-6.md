@@ -1,7 +1,7 @@
 ---
 hook_en: "US-based Goos Automation adopts Auster LiDAR in its orchard spraying robot"
 hook_ko: "美 거스 오토메이션, 과수원 분무 로봇에 아우스터 라이다 채택"
-tags: []
+tags: ["automation", "robotics"]
 authors: []
 embedded: false
 health_flourishing: false

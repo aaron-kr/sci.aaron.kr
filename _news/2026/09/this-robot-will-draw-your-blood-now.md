@@ -1,6 +1,6 @@
 ---
-hook_en: "Top 10 robotics stories of August 2026"
-hook_ko: "2026년 8월 로봇 관련 10대 이야기"
+hook_en: "This Robot Will Draw Your Blood Now"
+hook_ko: "이 로봇이 이제 당신의 피를 뽑을 겁니다"
 tags: ["humanoids", "industry"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Top 10 robotics stories of August 2026"
-source: "The Robot Report"
+title: "This Robot Will Draw Your Blood Now"
+source: "IEEE Spectrum Robotics"
 source_lang: "en"
-source_url: "https://www.therobotreport.com/top-10-robotics-stories-of-august-2026/"
+source_url: "https://spectrum.ieee.org/blood-draw-robot-vitestro-aletta"
 topic: "physical-ai"
-date: "2026-09-01"
+date: "2026-09-07"
 thumb: null
-dedup_key: "https://www.therobotreport.com/top-10-robotics-stories-of-august-2026/"
+dedup_key: "https://spectrum.ieee.org/blood-draw-robot-vitestro-aletta"
 ---
