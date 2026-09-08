@@ -1,7 +1,7 @@
 ---
-hook_en: "From AI Copilots to Agent Swarms"
-hook_ko: "AI 코파일럿에서 에이전트 스웜까지"
-tags: ["multi-agent"]
+hook_en: "Rivian’s Gambit for Full Autonomy"
+hook_ko: "완전 자율주행을 위한 리비안의 전략"
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "From AI Copilots to Agent Swarms"
+title: "Rivian’s Gambit for Full Autonomy"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/amd-agent-swarms"
+source_url: "https://spectrum.ieee.org/rivian-self-driving"
 topic: "general-ai"
-date: "2026-08-17"
+date: "2026-09-08"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/amd-agent-swarms"
+dedup_key: "https://spectrum.ieee.org/rivian-self-driving"
 ---

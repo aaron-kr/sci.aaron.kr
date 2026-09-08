@@ -1,7 +1,7 @@
 ---
 hook_en: "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models"
 hook_ko: "같은 궤적, 상반된 보상 (ROBORMBENCH): 시각 언어 보상 모델에서의 패러프레이즈 취약성"
-tags: []
+tags: ["benchmark", "evaluation"]
 authors: ["Wonje Jeung", "Sangyeon Yoon", "Hyesoo Hong", "Yoonjun Cho", "Dongjae Jeon", "Bumjun Kim", "Jean Oh", "Youngjae Yu", "Albert No"]
 embedded: false
 health_flourishing: false

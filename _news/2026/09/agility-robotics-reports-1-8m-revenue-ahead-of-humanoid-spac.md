@@ -1,7 +1,7 @@
 ---
 hook_en: "Agility Robotics reports $1.8M revenue ahead of humanoid SPAC"
 hook_ko: "Agility Robotics는 1달러를 보고합니다.휴머노이드 SPAC를 앞서 800만 달러 매출"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

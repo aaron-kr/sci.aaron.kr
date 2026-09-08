@@ -1,7 +1,7 @@
 ---
 hook_en: "Figure AI partners with EnScale to build a large-scale training infrastructure for 'Physical AI\""
 hook_ko: "피규어 AI, 엔스케일과 손잡고 ‘피지컬 AI’ 대규모 학습 인프라 구축"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

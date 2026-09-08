@@ -1,0 +1,28 @@
+---
+hook_en: "The Download: our 35 Innovators Under 35 this year"
+hook_ko: "다운로드: 올해 35세 이하 혁신가 35명"
+tags: []
+authors: []
+embedded: false
+health_flourishing: false
+ai_education: false
+coverage_en: null
+coverage_ko: null
+gap: null
+marked_for_class: false
+commentary_worthy: false
+commentary_url: null
+commentary_video_url: null
+pin_priority: null
+pin_own_research: false
+pin_image: null
+raw_wire: false
+title: "The Download: our 35 Innovators Under 35 this year"
+source: "MIT Technology Review"
+source_lang: "en"
+source_url: "https://www.technologyreview.com/2026/09/08/1143615/the-download-35-innovators-under-35-spiderwebs-measuring-nature/"
+topic: "general-ai"
+date: "2026-09-08"
+thumb: null
+dedup_key: "https://www.technologyreview.com/2026/09/08/1143615/the-download-35-innovators-under-35-spiderwebs-measuring-nature/"
+---

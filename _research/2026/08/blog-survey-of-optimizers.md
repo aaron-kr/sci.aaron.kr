@@ -1,7 +1,7 @@
 ---
 hook_en: "Blog: Survey of Optimizers"
 hook_ko: "블로그: 최적화 도구 조사"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Ruoran Xu"]
 embedded: false
 health_flourishing: false
