@@ -1,7 +1,7 @@
 ---
 hook_en: "VeriPhy: Agentic Physical Reasoning for World Model Evaluation and Refinement"
 hook_ko: "VeriPhy: 세계 모델 평가 및 개선을 위한 에이전트 기반 물리적 추론"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Wenzhuo Xu", "Yuchen Zhu", "Chongjian Ge", "Xuan Shen", "Jing Shi", "Jason Kuen", "Yongxin Chen", "Molei Tao", "Christopher McComb", "Noelia Grande Gutiérrez", "Jiuxiang Gu"]
 embedded: false
 health_flourishing: false

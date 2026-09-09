@@ -1,7 +1,7 @@
 ---
 hook_en: "UNIST unites different robots’ distinct “eyes” into one…Development of a “distance-awareness” federated learning technique"
 hook_ko: "UNIST, 이기종 로봇 서로 다른 ‘눈’을 하나로…‘거리 인식’ 연합학습 기술 개발"
-tags: []
+tags: ["multi-agent", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

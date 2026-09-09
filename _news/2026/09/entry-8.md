@@ -1,7 +1,7 @@
 ---
 hook_en: "Kong Geun-taek, Group Head of Power Auto Robotics, Receives Presidential Citation on “Technology Developers’ Day”"
 hook_ko: "파워오토로보틱스 공근택 그룹장, ‘기술개발인의 날’ 대통령 표창"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: "The role of the astronaut is in flux"
-hook_ko: "우주비행사의 역할은 변동 중이다"
+hook_en: "Batteries just broke another record in the US"
+hook_ko: "배터리가 미국에서 또 다른 기록을 깼다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "The role of the astronaut is in flux"
+title: "Batteries just broke another record in the US"
 source: "MIT Technology Review"
 source_lang: "en"
-source_url: "https://www.technologyreview.com/2026/08/18/1141614/book-review-astronaut-role-in-flux/"
+source_url: "https://www.technologyreview.com/2026/09/09/1143680/batteries-us-record/"
 topic: "general-ai"
-date: "2026-08-18"
+date: "2026-09-09"
 thumb: null
-dedup_key: "https://www.technologyreview.com/2026/08/18/1141614/book-review-astronaut-role-in-flux/"
+dedup_key: "https://www.technologyreview.com/2026/09/09/1143680/batteries-us-record/"
 ---

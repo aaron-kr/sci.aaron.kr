@@ -1,7 +1,7 @@
 ---
 hook_en: "A Structured Debate-Mixture-of-Agents Framework for Complex Clinical Diagnostic Decision Support"
 hook_ko: "복잡한 임상 진단 의사결정 지원을 위한 구조화된 토론-에이전트 혼합 프레임워크"
-tags: []
+tags: ["clinical", "reasoning", "multi-agent"]
 authors: ["Chang Xia", "Leilei Ouyang", "Huimin Wang", "Yong Zhao", "Kang Li"]
 embedded: false
 health_flourishing: false

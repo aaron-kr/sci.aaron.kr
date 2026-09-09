@@ -1,7 +1,7 @@
 ---
 hook_en: "Now Robotics signs supply contract with VPK for hybrid vehicle battery pack holder assembly equipment"
 hook_ko: "나우로보틱스, VPK와 하이브리드차 배터리팩 홀더 조립 설비 공급 계약"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "KIMM: “The Decisive Evolution of the K-Industrial Ecosystem with Robotics and Physical AI Is Soon to Arrive”"
 hook_ko: "기계연 “로봇·피지컬 AI와 함께 K-산업생태계 결정적 진화 곧 도래”"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
