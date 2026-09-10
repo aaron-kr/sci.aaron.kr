@@ -1,7 +1,7 @@
 ---
 hook_en: "Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering"
 hook_ko: "관측 게이트 필터링을 활용한 자율 능동 매핑에서 학습된 점유 재고하기"
-tags: []
+tags: ["autonomous-driving", "navigation"]
 authors: ["Jiahui Zhang", "Bonian Han", "Gongbo Liang", "Yu Zhang"]
 embedded: false
 health_flourishing: false

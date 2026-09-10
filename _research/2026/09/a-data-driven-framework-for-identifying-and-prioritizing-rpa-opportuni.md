@@ -1,7 +1,7 @@
 ---
 hook_en: "A Data-Driven Framework for Identifying and Prioritizing RPA Opportunities in Healthcare Processes"
 hook_ko: "의료 프로세스에서 RPA 기회를 식별하고 우선순위를 정하기 위한 데이터 기반 프레임워크"
-tags: []
+tags: ["industry", "dataset"]
 authors: ["Maria Alejandra Gomez", "Juan Manuel Castillo"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Performance of Clinical AI System and Physicians and Frontier Language Models in primary care diagnostics"
 hook_ko: "일차 진료 진단에서 임상 AI 시스템과 의사 및 최첨단 언어 모델의 성능"
-tags: []
+tags: ["clinical", "evaluation", "reasoning"]
 authors: ["Andy Nkansah", "Hanna Plotnitskaya", "Stanislau Salavei", "Anna Kozlova", "Piotr Gibas", "Julian Milek", "Viktar Harbachou", "Aleksey Ropan", "Pavel Satalkin"]
 embedded: false
 health_flourishing: false

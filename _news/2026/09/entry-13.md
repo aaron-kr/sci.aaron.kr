@@ -1,7 +1,7 @@
 ---
 hook_en: "B&Be Steel Holds First Demonstration Event for Agricultural 'Cowbot”"
 hook_ko: "비앤비스틸, 농업용 ‘카우봇’ 첫 시연회 개최"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

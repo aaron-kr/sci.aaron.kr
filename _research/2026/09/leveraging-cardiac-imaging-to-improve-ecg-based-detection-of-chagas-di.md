@@ -1,7 +1,7 @@
 ---
 hook_en: "Leveraging Cardiac Imaging to Improve ECG-Based Detection of Chagas Disease in Resource-Constrained Settings"
 hook_ko: "자원이 제한된 환경에서 심장 영상 기법을 활용한 심전도 기반 샤가스병 진단 개선"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: ["Laura Alvarez-Florez", "Daniel Uyterlinde", "Samuel Ruipérez-Campillo", "Lukas P. A. Arts", "Folkert W. Asselbergs", "Fleur V. Y. Tjong"]
 embedded: false
 health_flourishing: false

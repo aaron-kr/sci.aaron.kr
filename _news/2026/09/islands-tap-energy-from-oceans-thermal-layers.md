@@ -1,6 +1,6 @@
 ---
-hook_en: "Carbon Capture Goes Electric"
-hook_ko: "탄소 포집에 전기가 더해지다"
+hook_en: "Islands Tap Energy From Oceans’ Thermal Layers"
+hook_ko: "섬들은 바다의 열층에서 에너지를 끓여낸다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Carbon Capture Goes Electric"
+title: "Islands Tap Energy From Oceans’ Thermal Layers"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/direct-air-carbon-capture-electric"
+source_url: "https://spectrum.ieee.org/ocean-thermal-energy-conversion"
 topic: "general-ai"
-date: "2026-08-19"
+date: "2026-09-10"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/direct-air-carbon-capture-electric"
+dedup_key: "https://spectrum.ieee.org/ocean-thermal-energy-conversion"
 ---

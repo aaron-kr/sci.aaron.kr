@@ -1,7 +1,7 @@
 ---
 hook_en: "NOAH: Learning the Full Patient Journey. A Longitudinal Multimodal Time-Aware Model for Representation and Forecasting"
 hook_ko: "NOAH: 환자의 전체 여정을 배우기. 표현과 예측을 위한 종방향 다중 모드 시간 인지 모델"
-tags: []
+tags: ["clinical", "dataset", "benchmark"]
 authors: ["Tobias Susetzky", "Raphael Rehms", "Dmitrii Seletkov", "Özgün Turgut", "Michelle Espranita Liman", "Lisa Steinhelfer", "Rickmer Braren", "Daniel Rueckert"]
 embedded: false
 health_flourishing: false

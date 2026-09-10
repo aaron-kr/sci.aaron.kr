@@ -1,7 +1,7 @@
 ---
 hook_en: "Samsung SDS declares entry into the RX business…'Multidimensional AI Full-Stack' Strategy Revealed"
 hook_ko: "삼성SDS, RX 사업 진출 선언…‘다차원 AI 풀스택’ 전략 공개"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

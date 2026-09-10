@@ -1,7 +1,7 @@
 ---
 hook_en: "AI Helps Spot Wildfires From Space Before They Get Out of Control"
 hook_ko: "AI가 산불이 통제 불능 상태가 되기 전에 우주에서 산불을 감지하는 데 도움을 줍니다"
-tags: []
+tags: ["industry", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

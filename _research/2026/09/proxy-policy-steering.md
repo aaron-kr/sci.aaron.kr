@@ -1,7 +1,7 @@
 ---
 hook_en: "Proxy Policy Steering"
 hook_ko: "프록시 정책 관리"
-tags: []
+tags: ["human-in-the-loop"]
 authors: ["Chuanruo Ning", "Tianrui Wang", "Wei-Chiu Ma", "Kuan Fang"]
 embedded: false
 health_flourishing: false
