@@ -1,7 +1,7 @@
 ---
 hook_en: "Korean Air to Participate in the World Smart City Expo, Presenting a Blueprint for the Future of Aviation"
 hook_ko: "대한항공, ‘월드스마트시티엑스포’ 참가 미래 항공 청사진 제시"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

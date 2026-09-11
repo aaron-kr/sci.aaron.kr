@@ -1,7 +1,7 @@
 ---
 hook_en: "JarvisGUI: Towards Cross-Device GUI Agents with Dynamic Task Composition"
 hook_ko: "JarvisGUI: 동적 작업 구성으로 기기 간 GUI 에이전트를 향하여"
-tags: []
+tags: ["multi-agent", "benchmark"]
 authors: ["Zixiang Chen", "Yuheng Lu", "Zihao Cheng", "Zeming Liu", "Jizeng Bai", "Ziye Huang", "Zhiyin Lin", "Zihan Li", "Yuhang Guo", "Yunhong Wang", "Haifeng Wang"]
 embedded: false
 health_flourishing: false

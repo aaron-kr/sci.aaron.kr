@@ -1,7 +1,7 @@
 ---
 hook_en: "Ulsan City and Jeonnam-Gwangju Integrated Special City join forces to promote the transition of car manufacturing to artificial intelligence"
 hook_ko: "울산시-전남광주통합특별시 “車 제조 인공지능 전환 추진 힘 모은다”"
-tags: []
+tags: ["industry", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe"
 hook_ko: "한국의 공개 API를 활용한 다단계 툴 호출: 벤치마크와 데이터 합성 방법"
-tags: []
+tags: ["benchmark", "dataset"]
 authors: ["Dain Kim", "Eungi Cho", "Kyumin Kim", "Shinyeong Noh", "Kyuseong Lim"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "“So that delivery robots can safely move around apartments”…Hyundai Engineering & Construction to Establish Safety Standards"
 hook_ko: "“배송로봇이 아파트에 안전하게 다니도록”…현대건설, 안전기준 세운다"
-tags: []
+tags: ["autonomous-driving", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

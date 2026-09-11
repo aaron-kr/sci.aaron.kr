@@ -1,7 +1,7 @@
 ---
 hook_en: "Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support"
 hook_ko: "응급실 재방문 품질 검토 선별: 인간 의사결정과 인공지능 지원 탐구"
-tags: []
+tags: ["clinical", "human-in-the-loop"]
 authors: ["Jonathan A. Handler", "Marlene I. Robles-Granda", "Jacob E. Mefford", "Jeremy S. McGarvey", "Gregory S. Podolej", "Colleen J. Klein", "Matthew D. Dalstrom", "William F. Bond"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "A Trust-Network-Based Federated Learning Framework for Multi-Center Aging Clock Prediction"
 hook_ko: "다중 센터 노화 시계 예측을 위한 신뢰 네트워크 기반 연합 학습 프레임워크"
-tags: []
+tags: ["biomedical", "multi-agent"]
 authors: ["Chunxu Zhang", "Bo Li", "Wenliang Wang", "Yang Liu", "Di Jiang", "Yuan Huang", "Yo-ichi Nabeshima", "Akinori Yamamura", "Bo Yang", "Qiang Yang"]
 embedded: false
 health_flourishing: false

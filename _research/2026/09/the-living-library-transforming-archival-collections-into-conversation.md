@@ -1,7 +1,7 @@
 ---
 hook_en: "The Living Library: Transforming Archival Collections into Conversational Knowledge Systems -- Lessons from the Theodore Roosevelt Presidential Library"
 hook_ko: "살아있는 도서관: 아카이브 소장품을 대화형 지식 시스템으로 전환하기 — 시어도어 루스벨트 대통령 도서관에서 얻은 교훈"
-tags: []
+tags: ["historical-documents", "document-parsing"]
 authors: ["Pengce Wang", "Lucia Ronchi Darre", "Matt Briney", "Michaell Bakalars", "Dan Rutkowski", "Ursula Hardy", "David Wolf", "Laura Hoffman", "Allen Kim", "Shawn Wright", "Juan Lavista Ferres"]
 embedded: false
 health_flourishing: false
