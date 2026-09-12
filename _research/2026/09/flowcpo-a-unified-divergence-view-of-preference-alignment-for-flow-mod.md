@@ -1,7 +1,7 @@
 ---
 hook_en: "FlowCPO: A Unified Divergence View of Preference Alignment for Flow Models"
 hook_ko: "FlowCPO: 플로우 모델의 선호 정렬에 대한 통합 발산 관점"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Yansen Han", "Shengyi Liao", "Peng Sun", "Deyuan Liu", "Yuanxing Zhang", "Pengfei Wan", "Tao Lin"]
 embedded: false
 health_flourishing: false

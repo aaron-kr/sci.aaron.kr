@@ -1,7 +1,7 @@
 ---
 hook_en: "Siseon AI builds an AI coding and security automation platform for defense networks…“I Dream of K-Palantir”"
 hook_ko: "시선AI, 국방망 AI 코딩·보안 자동화 플랫폼 구축…\"K-팔란티어 꿈꾼다\""
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

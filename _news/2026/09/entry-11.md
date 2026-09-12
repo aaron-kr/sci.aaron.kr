@@ -1,7 +1,7 @@
 ---
 hook_en: "“Chinese Military Explores Military Applications of Humanoid Robots”"
 hook_ko: "\"중국군, 휴머노이드 로봇 군사적 활용 방안 모색\""
-tags: []
+tags: ["humanoids", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

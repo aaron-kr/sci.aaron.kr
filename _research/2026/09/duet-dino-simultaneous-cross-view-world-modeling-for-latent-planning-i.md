@@ -1,7 +1,7 @@
 ---
 hook_en: "DUET-DINO: Simultaneous Cross-View World Modeling for Latent Planning in Robot Manipulation"
 hook_ko: "DUET-DINO: 로봇 조작에서 잠재 계획을 위한 동시 교차 시점 세계 모델링"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Nisarga Nilavadi", "Ralf Römer", "Moritz Reuss", "Michael Krawez", "Tobias Jülg", "Angela P. Schoellig", "Rudolf Lioutikov", "Wolfram Burgard"]
 embedded: false
 health_flourishing: false

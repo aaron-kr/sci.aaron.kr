@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Humanoid Robot Takes On Monkey Bars"
 hook_ko: "비디오 금요일: 휴머노이드 로봇이 원숭이 철봉에 도전하다"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

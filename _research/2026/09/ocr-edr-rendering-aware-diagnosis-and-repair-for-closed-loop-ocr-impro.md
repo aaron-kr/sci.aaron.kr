@@ -1,7 +1,7 @@
 ---
 hook_en: "OCR-EDR: Rendering-Aware Diagnosis and Repair for Closed-Loop OCR Improvement"
 hook_ko: "OCR-EDR: 폐쇄 루프 OCR 개선을 위한 렌더링 인지 진단 및 수리"
-tags: []
+tags: ["ocr", "evaluation"]
 authors: ["Linnan Zhao", "Kang Liu", "Hao Yu", "Jiabo Zhan", "Chong Sun", "Chen Li"]
 embedded: false
 health_flourishing: false

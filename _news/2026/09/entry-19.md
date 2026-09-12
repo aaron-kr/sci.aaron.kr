@@ -1,7 +1,7 @@
 ---
 hook_en: "Big Wave Robotics strengthens its growth pillars for entering the North American market and humanoid technology through its KOSDAQ listing"
 hook_ko: "빅웨이브로보틱스, 코스닥 상장 통해 ‘휴머노이드·북미 진출’ 성장축 키운다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data"
 hook_ko: "데이터 희소성과 모델 희소성: 반복된 데이터에 대해 전문가 혼합 모델이 더 과적합한다"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Atindra Jha", "Margaret Li", "Jure Leskovec", "Percy Liang", "Luke Zettlemoyer"]
 embedded: false
 health_flourishing: false
