@@ -1,7 +1,7 @@
 ---
 hook_en: "Cross-Lingual Clinical Annotation Projection as Constrained Text Generation: A Six-Language Study"
 hook_ko: "제약된 텍스트 생성으로서의 교차언어 임상 주석 투영: 여섯 언어 연구"
-tags: []
+tags: ["clinical", "dataset"]
 authors: ["Álvaro Rey-Blanes", "Francisco J. Moreno-Barea", "Francisco J. Veredas"]
 embedded: false
 health_flourishing: false

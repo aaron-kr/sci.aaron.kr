@@ -1,7 +1,7 @@
 ---
 hook_en: "US ARM Labs Announces Request for Defense Manufacturing Technology Project"
 hook_ko: "美 ARM 연구소, 방위 제조 기술 프로젝트 요청서 발표"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

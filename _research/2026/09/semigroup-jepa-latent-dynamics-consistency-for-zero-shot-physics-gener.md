@@ -1,7 +1,7 @@
 ---
 hook_en: "Semigroup-JEPA: Latent Dynamics Consistency for Zero-Shot Physics Generalization"
 hook_ko: "Semigroup-JEPA: 제로샷 물리학 일반화를 위한 잠재 동역학 일관성"
-tags: []
+tags: ["reasoning"]
 authors: ["Andy Zeyi Liu", "Haoran Sun", "Lucas Baker", "Randall Balestriero", "John Sous"]
 embedded: false
 health_flourishing: false
