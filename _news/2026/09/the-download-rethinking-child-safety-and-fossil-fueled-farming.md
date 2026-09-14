@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: rethinking child safety and fossil-fueled farming"
 hook_ko: "다운로드: 아동 안전과 화석 연료 농업에 대한 재고"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Unitree shares down 53% from IPO debut"
 hook_ko: "유니트리가 IPO 데뷔가 53% 하락했다고 밝혔다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
