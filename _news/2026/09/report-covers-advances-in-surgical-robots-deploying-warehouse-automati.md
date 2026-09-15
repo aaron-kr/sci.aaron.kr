@@ -1,7 +1,7 @@
 ---
 hook_en: "Report covers advances in surgical robots, deploying warehouse automation in the real world"
 hook_ko: "보고서는 수술용 로봇의 발전과 실제 환경에서의 창고 자동화 적용을 다룹니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

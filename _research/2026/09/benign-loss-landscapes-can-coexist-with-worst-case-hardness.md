@@ -1,7 +1,7 @@
 ---
 hook_en: "Benign Loss Landscapes Can Coexist with Worst-Case Hardness"
 hook_ko: "양성 손실 지형은 최악의 경도와 공존할 수 있다"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Zach Furman", "Stephan Wäldchen", "Yangda Bei", "Liam Hodgkinson"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model"
 hook_ko: "다이닌-로보틱스: 전모달 통합 확산 시각-언어-행동 모델"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Hoeun Lee", "Jaeik Kim", "Jusang Oh", "Jinhyeok Kim", "Geon Choi", "Hyeonggeun Kim", "Jaeyoung Do"]
 embedded: false
 health_flourishing: false

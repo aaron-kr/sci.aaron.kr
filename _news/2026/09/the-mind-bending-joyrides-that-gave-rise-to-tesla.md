@@ -1,6 +1,6 @@
 ---
-hook_en: "What It Takes to Be an Adaptable Engineer"
-hook_ko: "적응력 있는 엔지니어가 되기 위해 필요한 것"
+hook_en: "The Mind-bending Joyrides That Gave Rise to Tesla"
+hook_ko: "테슬라를 탄생시킨 정신을 뒤흔드는 기분 좋은 드라이빙"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "What It Takes to Be an Adaptable Engineer"
+title: "The Mind-bending Joyrides That Gave Rise to Tesla"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/adaptable-engineer-core-skills"
+source_url: "https://spectrum.ieee.org/elon-musk-tesla"
 topic: "general-ai"
-date: "2026-08-24"
+date: "2026-09-15"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/adaptable-engineer-core-skills"
+dedup_key: "https://spectrum.ieee.org/elon-musk-tesla"
 ---

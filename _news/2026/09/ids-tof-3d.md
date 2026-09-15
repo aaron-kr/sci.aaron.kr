@@ -1,7 +1,7 @@
 ---
 hook_en: "DWD IDS Imaging Launches NiON Industrial Infrared ToF-Based 3D Sensor"
 hook_ko: "獨 IDS 이미징, 니온 산업용 적외선 ToF 기반 3D센서 출시"
-tags: []
+tags: ["benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

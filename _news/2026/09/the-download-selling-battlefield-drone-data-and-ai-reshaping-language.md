@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: selling battlefield drone data and AI reshaping language"
 hook_ko: "다운로드: 전장 드론 데이터 판매와 AI가 언어를 재구성하다"
-tags: []
+tags: ["autonomous-driving", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

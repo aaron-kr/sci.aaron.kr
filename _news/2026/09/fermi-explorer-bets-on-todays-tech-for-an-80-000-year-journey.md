@@ -1,7 +1,7 @@
 ---
 hook_en: "Fermi Explorer Bets on Today’s Tech for an 80,000 Year Journey"
 hook_ko: "페르미 익스플로러 B, 8만 년 여정을 위한 오늘날 기술에 도전하다"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

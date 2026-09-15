@@ -1,7 +1,7 @@
 ---
 hook_en: "Non-invasive autonomous blood collection robot 'Aletta” receives FDA approval in the U.S"
 hook_ko: "비테스트로 자율 채혈로봇 '알레타', 美 FDA 승인 획득"
-tags: []
+tags: ["humanoids", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false
