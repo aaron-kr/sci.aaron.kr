@@ -1,7 +1,7 @@
 ---
 hook_en: "Online Video Agent Harness for Long Video Understanding"
 hook_ko: "장기 비디오 이해를 위한 온라인 비디오 에이전트 하니스"
-tags: []
+tags: ["multi-agent", "benchmark"]
 authors: ["Sen Yang", "Boqiang Duan", "Jing Yang", "Weihao Bo", "Jie Liu", "Boyuan Tong", "Ze Feng", "Wenkang Zhang", "Jingdong Wang", "Hua Wu"]
 embedded: false
 health_flourishing: false

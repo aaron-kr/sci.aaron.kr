@@ -1,7 +1,7 @@
 ---
 hook_en: "A Chosen Future Can Still Be Rewritten: Causal Writability in Video Models"
 hook_ko: "선택된 미래도 여전히 다시 쓸 수 있다: 비디오 모델에서의 인과적 가독성"
-tags: []
+tags: ["video-generation", "causality"]
 authors: ["Xingyun Wang", "Haomin Zheng", "Man Yuan", "Leqian Yang", "Ziming Liu"]
 embedded: false
 health_flourishing: false

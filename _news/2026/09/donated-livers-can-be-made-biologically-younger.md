@@ -1,7 +1,7 @@
 ---
 hook_en: "Donated livers can be made biologically younger"
 hook_ko: "기증된 간은 생물학적으로 더 젊게 만들 수 있다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

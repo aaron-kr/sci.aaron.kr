@@ -1,7 +1,7 @@
 ---
 hook_en: "Professor Kim Dae-seok’s team at Pukyong National University develops high-power artificial muscle…Expectations for Application in the Soft Robotics Field"
 hook_ko: "국립부경대 김대석 교수팀, 고출력 인공근육 개발…소프트 로봇 분야 활용 기대"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Touch2Trace: Tactile-Driven Imitation Learning for Dexterous Cable Tracing"
 hook_ko: "터치2트레이스: 촉각 기반 모방 학습을 통한 정교한 케이블 추적"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: ["Matteo Grimaldi", "David Klee", "Ziling Chen", "Tong Jian", "Wonju Lee", "Wenjie Lu", "Tao Yu", "Saleh Nabi"]
 embedded: false
 health_flourishing: false

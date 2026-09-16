@@ -1,7 +1,7 @@
 ---
 hook_en: "From Visual Attribution to Clinical Reasoning: Explainable Parkinson's Disease Screening from Hand-Drawn Patterns"
 hook_ko: "시각적 귀속에서 임상적 추론으로: 손으로 그린 패턴을 활용한 설명 가능한 파킨슨병 선별 검사"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: ["Aritra Dey", "Utsav Kumar Nareti", "Chandranath Adak", "Soumi Chattopadhyay", "Krishna Gopal Sasmal", "Saeed Anwar"]
 embedded: false
 health_flourishing: false
