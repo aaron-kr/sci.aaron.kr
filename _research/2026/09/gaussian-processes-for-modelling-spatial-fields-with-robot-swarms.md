@@ -1,7 +1,7 @@
 ---
 hook_en: "Gaussian Processes for Modelling Spatial Fields with Robot Swarms"
 hook_ko: "로봇 무리를 이용한 공간 필드 모델링을 위한 가우시안 프로세스"
-tags: []
+tags: ["multi-agent", "navigation"]
 authors: ["Guillermo Legarda Herranz", "Gianpiero Francesca", "Mauro Birattari"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Reflection on Participation in the Global IC-PBL Extracurricular Program by the Intelligent Robot Business Group"
 hook_ko: "지능형 로봇 사업단 글로벌 IC-PBL 비교과 프로그램 참가 소감문"
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

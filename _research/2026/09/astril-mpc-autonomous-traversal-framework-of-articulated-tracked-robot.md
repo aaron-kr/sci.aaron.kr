@@ -1,7 +1,7 @@
 ---
 hook_en: "ASTRIL-MPC: Autonomous Traversal Framework of Articulated Tracked Robots with Language-Guided Neural-Kinematic MPC"
 hook_ko: "ASTRIL-MPC: 언어 기반 신경-운동 MPC를 활용한 관절형 궤도 로봇의 자율 주행 프레임워크"
-tags: []
+tags: ["humanoids", "locomotion", "navigation"]
 authors: ["Zhenfeng Gan", "Yanbo Chen", "Lirong Che", "Junbo Tan", "Xueqian Wang"]
 embedded: false
 health_flourishing: false

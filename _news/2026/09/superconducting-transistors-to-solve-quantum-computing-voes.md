@@ -1,7 +1,7 @@
 ---
-hook_en: "A New NASA Design Turbocharges Nuclear Spacecraft"
-hook_ko: "새로운 NASA 설계가 핵 우주선에 터보차저를 장착하다"
-tags: ["industry"]
+hook_en: "Superconducting Transistors to Solve Quantum Computing Voes"
+hook_ko: "양자 컴퓨팅 난제를 해결할 초전도 트랜지스터"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "A New NASA Design Turbocharges Nuclear Spacecraft"
+title: "Superconducting Transistors to Solve Quantum Computing Voes"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/bimodal-nuclear-spacecraft"
+source_url: "https://spectrum.ieee.org/superconducting-transistors"
 topic: "general-ai"
-date: "2026-08-26"
+date: "2026-09-17"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/bimodal-nuclear-spacecraft"
+dedup_key: "https://spectrum.ieee.org/superconducting-transistors"
 ---

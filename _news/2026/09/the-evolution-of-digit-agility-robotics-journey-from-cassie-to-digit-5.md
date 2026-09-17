@@ -1,7 +1,7 @@
 ---
 hook_en: "The evolution of Digit: Agility Robotics’ journey from Cassie to Digit 5"
 hook_ko: "디짓의 진화: 애질리티 로보틱스의 캐시에서 디짓 5까지의 여정"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

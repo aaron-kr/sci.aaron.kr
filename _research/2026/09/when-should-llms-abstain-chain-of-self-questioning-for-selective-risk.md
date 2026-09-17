@@ -1,7 +1,7 @@
 ---
 hook_en: "When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control"
 hook_ko: "LLM은 언제 자제해야 할까? 선택적 위험 관리를 위한 자기 연쇄 질문"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Ali Şenol"]
 embedded: false
 health_flourishing: false

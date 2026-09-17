@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI’s trillion-dollar gamble and OpenAI’s biology data bid"
 hook_ko: "다운로드: AI의 조 단위 도박과 오픈AI의 생물학 데이터 입찰"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

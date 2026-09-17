@@ -1,7 +1,7 @@
 ---
 hook_en: "Roundtables: Could AI really kill us all?"
 hook_ko: "원탁회의: AI가 정말 우리 모두를 죽일 수 있을까?"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

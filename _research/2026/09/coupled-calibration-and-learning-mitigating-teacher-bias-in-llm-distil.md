@@ -1,7 +1,7 @@
 ---
 hook_en: "Coupled Calibration and Learning: Mitigating Teacher Bias in LLM Distillation without Target-Domain Reward Feedback"
 hook_ko: "결합 보정과 학습: 목표 도메인 보상 피드백 없이 LLM 증류에서 교사 편향 완화하기"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Haichen Hu", "Yuheng Zhang", "David Simchi-Levi"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Robotive opens Korean website…Targeting the market with a focus on 'contact layer and automation integration\""
 hook_ko: "로보티크, 한국어 웹사이트 오픈…‘접촉 레이어·자동화 통합’ 내세워 시장 공략"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
