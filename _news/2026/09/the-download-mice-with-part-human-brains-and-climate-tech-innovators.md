@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: mice with part-human brains and climate tech innovators"
 hook_ko: "다운로드: 부분적으로 인간 뇌를 가진 쥐와 기후 기술 혁신가들"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

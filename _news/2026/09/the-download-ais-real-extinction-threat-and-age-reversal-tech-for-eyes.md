@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI’s real extinction threat and age-reversal tech for eyes"
 hook_ko: "다운로드: AI의 진짜 멸종 위협과 눈을 위한 나이 되돌리기 기술"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

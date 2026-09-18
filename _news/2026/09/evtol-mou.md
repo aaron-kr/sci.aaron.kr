@@ -1,6 +1,6 @@
 ---
-hook_en: "Daegu City to Fully Launch Urban Air Mobility (UAM) Regional Pilot Project"
-hook_ko: "대구시, 도심항공교통(UAM) 지역시범사업 본격 추진"
+hook_en: "Japan’s SkyDrive signs MOU with Korea’s Verti for eVTOL cooperation"
+hook_ko: "日 스카이드라이브, 한국 버티와 eVTOL 분야 협력 MOU"
 tags: ["autonomous-driving"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "대구시, 도심항공교통(UAM) 지역시범사업 본격 추진"
+title: "日 스카이드라이브, 한국 버티와 eVTOL 분야 협력 MOU"
 source: "로봇신문 (전체기사)"
 source_lang: "ko"
-source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48542"
+source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48589"
 topic: "physical-ai"
-date: "2026-09-16"
+date: "2026-09-18"
 thumb: null
-dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48542"
+dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48589"
 ---

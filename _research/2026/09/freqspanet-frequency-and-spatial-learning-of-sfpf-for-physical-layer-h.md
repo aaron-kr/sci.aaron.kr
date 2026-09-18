@@ -1,7 +1,7 @@
 ---
 hook_en: "FreqSpaNet: Frequency and Spatial Learning of SFPF for Physical Layer Hardware Integrity Detection"
 hook_ko: "FreqSpaNet: 물리 계층 하드웨어 무결성 검출을 위한 SFPF의 주파수 및 공간 학습"
-tags: []
+tags: ["benchmark"]
 authors: ["Xiaoxuan Huang", "Jinlong Xu", "YiZhe Wang", "Meng Zhang", "Xian Li", "Yuying Bian"]
 embedded: false
 health_flourishing: false

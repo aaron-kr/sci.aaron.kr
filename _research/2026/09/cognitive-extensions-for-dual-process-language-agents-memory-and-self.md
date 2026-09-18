@@ -1,7 +1,7 @@
 ---
 hook_en: "Cognitive Extensions for Dual-Process Language Agents: Memory and Self-Reflection in Interactive Environments"
 hook_ko: "이중 처리 언어 에이전트를 위한 인지 확장: 인터랙티브 환경에서의 기억과 자기성찰"
-tags: []
+tags: ["reasoning", "human-in-the-loop"]
 authors: ["João Meneses dos Santos", "Arlindo L. Oliveira"]
 embedded: false
 health_flourishing: false
