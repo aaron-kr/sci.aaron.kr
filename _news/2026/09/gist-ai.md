@@ -1,7 +1,7 @@
 ---
 hook_en: "\"Understanding the role of the handle and buttons\"…GIST Develops Robotic AI Technology That Cuts Through Object Parts and Functions"
 hook_ko: "“손잡이·버튼 역할 이해”…GIST, 물체 부품·기능 꿰뚫는 로봇 AI 기술 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

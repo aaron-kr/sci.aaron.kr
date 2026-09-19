@@ -1,7 +1,7 @@
 ---
 hook_en: "Facilitating AI integration with simplicity at scale"
 hook_ko: "대규모로 간편하게 AI 통합을 지원하다"
-tags: []
+tags: ["industry", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

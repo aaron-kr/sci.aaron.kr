@@ -1,7 +1,7 @@
 ---
 hook_en: "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation"
 hook_ko: "StageGuard: 에이전틱 증류를 통한 장기 로봇 과제의 학습 단계 전이"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Jinbang Huang", "Yuanzhao Hu", "Zhiyuan Li", "Ran Qi", "Yixin Xiao", "Yangzheng Wu", "Tengyue Ba", "Zhanguang Zhang", "Yingxue Zhang"]
 embedded: false
 health_flourishing: false

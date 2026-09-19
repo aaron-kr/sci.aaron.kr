@@ -1,7 +1,7 @@
 ---
 hook_en: "Samsung SDS to hold 'RX ART 2026' in the United States… RX synergy fully underway"
 hook_ko: "삼성SDS, 미국서 'RX ART 2026' 개최… RX 시너지 본격화"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

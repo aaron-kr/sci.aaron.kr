@@ -1,7 +1,7 @@
 ---
 hook_en: "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies"
 hook_ko: "지오AAC: VLA 정책에서 잡음 제거 궤적을 활용한 기하학 기반 적응형 행동 청킹"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Xin Chen", "Sen Chen", "Yujuan Ding", "Jian Liu", "Guoqing Wang", "Wei Ye", "Heng Tao Shen", "Yi Bin"]
 embedded: false
 health_flourishing: false
