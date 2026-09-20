@@ -1,7 +1,7 @@
 ---
 hook_en: "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference"
 hook_ko: "rMuscle: 효율적인 시각-언어-행동 모델 추론을 위한 로봇 근육 기억"
-tags: []
+tags: ["humanoids", "training-efficiency"]
 authors: ["Kaijun Zhou", "Zhiyang Li", "Le Chen", "Jinyu Gu"]
 embedded: false
 health_flourishing: false

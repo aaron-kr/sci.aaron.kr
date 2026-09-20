@@ -1,7 +1,7 @@
 ---
 hook_en: "Autonomous Research for Open-Ended Problems: A Case Study on Telecom Ticket Retrieval"
 hook_ko: "개방형 문제를 위한 자율 연구: 통신 티켓 검색 사례 연구"
-tags: []
+tags: ["autonomous-driving", "benchmark"]
 authors: ["Junghyun Min", "Huseyin Uzunalioglu", "Mohamed Trabelsi"]
 embedded: false
 health_flourishing: false
