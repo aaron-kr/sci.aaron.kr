@@ -1,7 +1,7 @@
 ---
 hook_en: "ClickFix attacks infecting PCs and Macs are going viral"
 hook_ko: "ClickFix 공격으로 감염된 PC와 Mac이 확산되고 있습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

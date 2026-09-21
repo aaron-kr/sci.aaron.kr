@@ -1,7 +1,7 @@
 ---
 hook_en: "KnowBench: Effort Reduction as a Unified, Deployment-Grounded Benchmark for Clinical AI"
 hook_ko: "KnowBench: 임상 AI를 위한 통합 배포 기반 벤치마크로서의 노력 감소"
-tags: []
+tags: ["benchmark", "clinical", "evaluation"]
 authors: ["Jocelyn Kang", "Caroline Zhang"]
 embedded: false
 health_flourishing: false

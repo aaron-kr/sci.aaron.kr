@@ -1,7 +1,7 @@
 ---
 hook_en: "How to select the right rack and pinion system for high-precision linear motion"
 hook_ko: "고정밀 선형 운동을 위한 적합한 랙 앤 피니언 시스템 선택 방법"
-tags: []
+tags: ["manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
