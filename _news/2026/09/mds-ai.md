@@ -1,7 +1,7 @@
 ---
 hook_en: "MDS Tech Joins AI-Englance Technology Development Consortium"
 hook_ko: "MDS테크, AI-인글라스 기술개발 컨소시엄 참여"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

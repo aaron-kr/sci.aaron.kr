@@ -1,7 +1,7 @@
 ---
 hook_en: "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself"
 hook_ko: "CodeMidas: 코드 자체로부터 에이전틱 코딩 강화학습 환경 확장하기"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Bowen Ye", "Lei Li", "Shicheng Li", "Zihao Yue", "Linghao Zhang", "Hanglong Lv", "Yuanxin Liu", "Wenhan Ma", "Hao Tian", "Rang Li", "Jinhao Dong", "Yikai Zhao", "Xiangwei Deng", "Hailin Zhang", "Liang Zhao", "Qi Liu", "Lingpeng Kong", "Tong Yang", "Fuli Luo"]
 embedded: false
 health_flourishing: false

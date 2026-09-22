@@ -6,7 +6,7 @@ authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
-coverage_en: 3
+coverage_en: 4
 coverage_ko: null
 gap: "en_only"
 marked_for_class: false

@@ -1,12 +1,12 @@
 ---
 hook_en: "The Download: investigating deaths at the US border’s “virtual wall”"
 hook_ko: "다운로드: 미국 국경의 '가상 장벽'에서 발생한 사망 사건 조사"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
-coverage_en: 3
+coverage_en: 4
 coverage_ko: null
 gap: "en_only"
 marked_for_class: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation"
 hook_ko: "SeeQ: 장기 로봇 조작을 위한 일반화된 가치 함수 학습"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Saksham Singh", "Zheyuan Hu", "Max Sobol Mark", "Jeffrey Yu", "Zackory Erickson", "Aviral Kumar"]
 embedded: false
 health_flourishing: false
