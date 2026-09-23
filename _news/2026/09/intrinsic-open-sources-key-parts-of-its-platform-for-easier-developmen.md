@@ -1,7 +1,7 @@
 ---
 hook_en: "Intrinsic open sources key parts of its platform for easier development"
 hook_ko: "내재된 오픈 소스는 개발을 용이하게 하는 플랫폼의 핵심 요소입니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

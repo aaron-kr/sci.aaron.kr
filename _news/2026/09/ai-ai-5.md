@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea AI·Robot Industry Association Joins Forces with Korea Federation of Design Organizations to Build an 'AI·Robot × Design' Converged Ecosystem"
 hook_ko: "한국AI·로봇산업협회, 한국디자인단체총연합회와 손잡고 ‘AI·로봇 × 디자인’ 융합 생태계 구축 나선다"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

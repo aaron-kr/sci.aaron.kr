@@ -1,7 +1,7 @@
 ---
 hook_en: "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses"
 hook_ko: "RRSI: 에이전트 하네스의 정규화된 재귀적 자기개선"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Peng Xia", "Rujun Han", "Zifeng Wang", "Yanfei Chen", "Yufan Zhang", "Yoonho Lee", "Chengsong Huang", "Han Yu", "Zhongying CuiZhu", "Yifei Ming", "Huaxiu Yao", "Burak Gokturk", "Tomas Pfister", "Chen-Yu Lee"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Visuomotor Robotic Pruning in Planar Orchards Using Hybrid Reinforcement Learning"
 hook_ko: "하이브리드 강화학습을 활용한 평면 과수원의 시각운동 로봇 가지치기"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: ["Abhinav Jain", "Cindy Grimm", "Stefan Lee"]
 embedded: false
 health_flourishing: false
