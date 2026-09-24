@@ -1,7 +1,7 @@
 ---
 hook_en: "Universal Thermodynamic Interatomic Potentials for Crystalline Materials"
 hook_ko: "결정성 물질을 위한 보편적인 열역학적 원자간 퍼텐셜"
-tags: []
+tags: ["dataset"]
 authors: ["Juno Nam", "Bowen Deng", "Xiaochen Du", "Luis Barroso-Luque", "Benjamin Kurt Miller", "Rafael Gómez-Bombarelli"]
 embedded: false
 health_flourishing: false

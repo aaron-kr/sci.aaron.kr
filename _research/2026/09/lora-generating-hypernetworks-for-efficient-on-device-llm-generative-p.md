@@ -1,7 +1,7 @@
 ---
 hook_en: "LoRA-generating hypernetworks for efficient on-device LLM generative personalization"
 hook_ko: "효율적인 디바이스 내 LLM 생성 개인화를 위한 LoRA 생성 하이퍼네트워크"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Sean Augenstein", "Li Ding", "Jihwan Lee", "Keith Rush", "Andrey Zhmoginov"]
 embedded: false
 health_flourishing: false

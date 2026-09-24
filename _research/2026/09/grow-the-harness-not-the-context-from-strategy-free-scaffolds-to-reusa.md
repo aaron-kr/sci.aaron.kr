@@ -1,7 +1,7 @@
 ---
 hook_en: "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents"
 hook_ko: "맥락이 아니라 수단을 키우세요: 전략 없는 지원 도구에서 재사용 가능한 전문 에이전트까지"
-tags: []
+tags: ["training-efficiency", "multi-agent"]
 authors: ["Laizhen Li", "Jiarui Li", "Juanjuan Zhao", "Kejiang Ye", "Ye Li", "Cheng-zhong Xu", "Xitong Gao"]
 embedded: false
 health_flourishing: false

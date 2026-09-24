@@ -1,6 +1,6 @@
 ---
-hook_en: "Applying Different Forms of Mentorship"
-hook_ko: "다양한 형태의 멘토링 적용하기"
+hook_en: "Measure Distant Asteroids With a DIY Rig"
+hook_ko: "DIY 장비로 먼 소행성 측정하기"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Applying Different Forms of Mentorship"
+title: "Measure Distant Asteroids With a DIY Rig"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/forms-of-engineering-mentorship"
+source_url: "https://spectrum.ieee.org/asteroid-shadow"
 topic: "general-ai"
-date: "2026-09-02"
+date: "2026-09-24"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/forms-of-engineering-mentorship"
+dedup_key: "https://spectrum.ieee.org/asteroid-shadow"
 ---

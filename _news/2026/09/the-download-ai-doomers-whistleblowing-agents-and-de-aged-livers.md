@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI doomers, whistleblowing agents, and de-aged livers"
 hook_ko: "다운로드: AI 파멸론자들, 내부고발자들, 그리고 노화된 간들"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

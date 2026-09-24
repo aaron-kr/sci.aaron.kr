@@ -1,7 +1,7 @@
 ---
 hook_en: "Gyeongnam Province Appoints Park Tae-hoon as New Director of the Gyeongnam Robot Land Foundation"
 hook_ko: "경남도, 경남로봇랜드재단 박태훈 신임 원장 임용"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

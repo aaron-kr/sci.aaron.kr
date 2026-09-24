@@ -1,7 +1,7 @@
 ---
 hook_en: "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue"
 hook_ko: "SpeakerMem-R1: 다자간 대화를 위한 화자 중심 이중 트랙 메모리"
-tags: []
+tags: ["multi-agent"]
 authors: ["Haobo Zheng", "Tan Tang", "Yan Chen", "Weijie Wang", "Yingcai Wu"]
 embedded: false
 health_flourishing: false
