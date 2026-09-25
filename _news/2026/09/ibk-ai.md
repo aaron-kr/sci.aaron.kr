@@ -1,7 +1,7 @@
 ---
 hook_en: "IBK Investment & Securities: \"Naver Emerges as the Only Integrated AI Factory Operator in Asia\""
 hook_ko: "IBK투자증권 \"네이버, 아시아 유일 통합 AI 팩토리 사업자로 부상\""
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

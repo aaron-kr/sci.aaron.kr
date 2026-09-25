@@ -1,7 +1,7 @@
 ---
 hook_en: "Harness-Zero: Harness Distillation via Agent-as-Harness"
 hook_ko: "하니스-제로: 에이전트-애즈-하니스를 이용한 하니스 증류"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Haoran Ye", "Yuxing Lu", "Haonan Dong", "Zhaochen Su", "Guojie Song"]
 embedded: false
 health_flourishing: false

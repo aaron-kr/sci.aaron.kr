@@ -1,7 +1,7 @@
 ---
 hook_en: "Can LLMs Reason About Runtime Behavior? A Repository-Level Dynamic Benchmark"
 hook_ko: "LLM이 런타임 동작에 대해 추론할 수 있을까? 저장소 수준 동적 벤치마크"
-tags: []
+tags: ["reasoning", "benchmark"]
 authors: ["Hamed Taherkhani", "Mohammad Abdollahi", "Melika Sepidband", "Hridya Dhulipala", "Tien N. Nguyen", "Hadi Hemmati"]
 embedded: false
 health_flourishing: false

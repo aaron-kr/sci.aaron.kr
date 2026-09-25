@@ -1,7 +1,7 @@
 ---
 hook_en: "There's a new way to break RSA that's faster than anything we've seen before"
 hook_ko: "지금까지 본 것 중 가장 빠른 RSA 해독 방법이 나왔습니다"
-tags: []
+tags: ["cryptography"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "This Digital Radio Gets Messages to the World’s Remotest Locations"
 hook_ko: "이 디지털 라디오가 세계에서 가장 외진 지역에 메시지를 전달합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

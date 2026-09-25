@@ -1,7 +1,7 @@
 ---
 hook_en: "EquivSVA: A Formally Verified Dataset of Behavioral Assertions Across Equivalent RTL Implementations"
 hook_ko: "EquivSVA: 동등한 RTL 구현 간 행동 검증이 완료된 데이터셋"
-tags: []
+tags: ["dataset", "benchmark"]
 authors: ["FNU Aditi"]
 embedded: false
 health_flourishing: false
