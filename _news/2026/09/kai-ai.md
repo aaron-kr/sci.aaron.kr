@@ -1,7 +1,7 @@
 ---
 hook_en: "Supergate Begins Development of Domestic On-Device AI Semiconductor for KAI Drones"
 hook_ko: "수퍼게이트, KAI 드론용 국산 온디바이스 AI 반도체 개발 착수"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

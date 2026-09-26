@@ -1,7 +1,7 @@
 ---
 hook_en: "Why you should look beyond the spec sheet when choosing motion architecture"
 hook_ko: "모션 아키텍처를 선택할 때 사양서 너머를 살펴봐야 하는 이유"
-tags: []
+tags: ["manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

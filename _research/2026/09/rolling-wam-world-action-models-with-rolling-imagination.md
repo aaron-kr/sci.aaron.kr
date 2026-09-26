@@ -1,7 +1,7 @@
 ---
 hook_en: "Rolling-WAM: World Action Models with Rolling Imagination"
 hook_ko: "롤링-WAM: 상상력을 더한 세계 행동 모델"
-tags: []
+tags: ["reasoning"]
 authors: ["Yinghua Zhou", "Junjie Ye", "Yiqi Zhao", "Hao Dong", "Celina Shiyu Wang", "Ruohai Ge", "Tingyi Yang", "Basile Van Hoorick", "Gaurav Sukhatme", "Vitor Guizilini", "Yue Wang"]
 embedded: false
 health_flourishing: false

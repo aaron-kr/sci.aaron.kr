@@ -1,7 +1,7 @@
 ---
 hook_en: "Zynga Moves to Take Legal Action Against Teradyne Robotics Over Patent Infringement Allegations"
 hook_ko: "자카, 테라다인 로보틱스의 특허 침해 주장에 법적 대응 추진"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

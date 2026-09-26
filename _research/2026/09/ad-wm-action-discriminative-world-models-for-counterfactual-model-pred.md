@@ -1,7 +1,7 @@
 ---
 hook_en: "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control"
 hook_ko: "AD-WM: 반사실적 모델 예측 제어를 위한 행동-판별적 세계 모델"
-tags: []
+tags: ["reasoning"]
 authors: ["Jiabin Qiu", "Zixuan Chen", "Hongye Cao", "Jieqi Shi", "Jing Huo", "Yang Gao"]
 embedded: false
 health_flourishing: false

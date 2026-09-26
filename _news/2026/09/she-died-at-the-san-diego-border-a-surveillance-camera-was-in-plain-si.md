@@ -1,7 +1,7 @@
 ---
 hook_en: "She died at the San Diego border. A surveillance camera was in plain sight"
 hook_ko: "그녀는 샌디에이고 국경에서 사망했다. 감시 카메라가 눈에 잘 띄는 곳에 설치되어 있었다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

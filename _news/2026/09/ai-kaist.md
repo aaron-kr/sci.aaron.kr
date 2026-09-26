@@ -1,7 +1,7 @@
 ---
 hook_en: "\"Concentrating Physical AI Autonomous Manufacturing Capabilities\"…KAIST, Sky Intelligence, and Dime Research Join Forces"
 hook_ko: "“피지컬 AI 자율제조 역량 결집”…KAIST·스카이인텔리전스·다임리서치 맞손"
-tags: []
+tags: ["humanoids", "manipulation", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

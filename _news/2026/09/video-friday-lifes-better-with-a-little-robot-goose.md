@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Life’s Better With a Little Robot Goose"
 hook_ko: "금요일 영상: 작은 로봇 거위와 함께라면 삶이 더 좋아진다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

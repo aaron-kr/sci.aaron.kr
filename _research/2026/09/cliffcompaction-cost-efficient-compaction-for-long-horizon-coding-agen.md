@@ -1,7 +1,7 @@
 ---
 hook_en: "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents"
 hook_ko: "절벽 다짐: 장기 코딩 에이전트를 위한 비용 효율적인 압축 기법"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Trang Nguyen", "Eulrang Cho", "Bingqing Chen", "Tim Dettmers"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "AI is dominating the conversation at Climate Week"
 hook_ko: "기후 주간에서 AI가 논의를 주도하고 있습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
