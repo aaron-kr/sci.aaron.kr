@@ -1,7 +1,7 @@
 ---
 hook_en: "Tiny Flaws in Glass Fiber Can Help Reveal Undersea Cable Threats"
 hook_ko: "유리 섬유의 미세한 결함이 해저 케이블 위협을 밝히는 데 도움을 줄 수 있습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

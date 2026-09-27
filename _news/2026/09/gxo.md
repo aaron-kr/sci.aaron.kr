@@ -1,7 +1,7 @@
 ---
 hook_en: "US-based GXO-Fot Exotech automates fulfillment at a facility in Geest, Netherlands"
 hook_ko: "美 GXO-佛 엑소텍, 네덜란드 펜로 게스 시설 풀필먼트 자동화"
-tags: []
+tags: ["humanoids", "manipulation", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

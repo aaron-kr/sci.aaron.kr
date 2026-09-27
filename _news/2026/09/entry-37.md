@@ -1,7 +1,7 @@
 ---
 hook_en: "Are Agility Robotics launching a wheeled humanoid robot?"
 hook_ko: "애질리티 로보틱스, 바퀴형 휴머노이드 로봇 출시하나?"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

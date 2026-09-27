@@ -1,7 +1,7 @@
 ---
-hook_en: "Measure Distant Asteroids With a DIY Rig"
-hook_ko: "DIY 장비로 먼 소행성 측정하기"
-tags: ["benchmark"]
+hook_en: "Poetry for Engineers: The UI Designer’s Dream"
+hook_ko: "엔지니어를 위한 시: UI 디자이너의 꿈"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Measure Distant Asteroids With a DIY Rig"
+title: "Poetry for Engineers: The UI Designer’s Dream"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/asteroid-shadow"
+source_url: "https://spectrum.ieee.org/poetry-user-interface-design"
 topic: "general-ai"
-date: "2026-09-24"
+date: "2026-09-27"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/asteroid-shadow"
+dedup_key: "https://spectrum.ieee.org/poetry-user-interface-design"
 ---

@@ -1,7 +1,7 @@
 ---
 hook_en: "With the new VENTUNO Q board, Arduino hopes to make robotics development easier"
 hook_ko: "새로운 VENTUNO Q 보드를 통해 아두이노는 로봇 개발을 더 쉽게 만들고자 합니다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
