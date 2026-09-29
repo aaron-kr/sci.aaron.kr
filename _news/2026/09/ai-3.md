@@ -1,7 +1,7 @@
 ---
 hook_en: "\"Robots Learn on Their Own\"…Skilled AI develops 'physical self-play' technology"
 hook_ko: "“로봇이 스스로 배운다”…스킬드 AI, ‘피지컬 셀프플레이’ 기술 개발"
-tags: []
+tags: ["humanoids", "training-efficiency"]
 authors: []
 embedded: false
 health_flourishing: false

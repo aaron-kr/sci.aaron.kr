@@ -1,7 +1,7 @@
 ---
 hook_en: "Interview with Cho Young-hoon, President of the Korea Institute for Robot Industry Advancement"
 hook_ko: "조영훈 한국로봇산업진흥원 원장 취임 인터뷰"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

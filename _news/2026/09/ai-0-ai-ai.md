@@ -1,7 +1,7 @@
 ---
 hook_en: "In the era of humanoids, is physical AI enough? (0) The Two Worlds Robots Encounter - Physical AI and Social AI"
 hook_ko: "휴머노이드 시대, 피지컬 AI만으로 충분한가? (0) 로봇이 마주하는 두 세계 - 피지컬 AI와 소셜 AI"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

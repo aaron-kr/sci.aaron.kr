@@ -1,6 +1,6 @@
 ---
-hook_en: "How Sound Could Make Sense of Big Data"
-hook_ko: "소리가 빅데이터를 이해하는 데 어떻게 도움이 될 수 있을까"
+hook_en: "Here’s How Delhi Achieved Its Epic Power-Grid Fix"
+hook_ko: "델리가 어떻게 대단한 전력망 문제를 해결했는지 알려드립니다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "How Sound Could Make Sense of Big Data"
+title: "Here’s How Delhi Achieved Its Epic Power-Grid Fix"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/data-sonification-stephen-roddy"
+source_url: "https://spectrum.ieee.org/delhi-electricity-loss"
 topic: "general-ai"
-date: "2026-09-06"
+date: "2026-09-28"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/data-sonification-stephen-roddy"
+dedup_key: "https://spectrum.ieee.org/delhi-electricity-loss"
 ---
