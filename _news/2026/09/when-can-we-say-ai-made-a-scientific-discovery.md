@@ -1,7 +1,7 @@
 ---
 hook_en: "When can we say AI made a scientific discovery?"
 hook_ko: "언제 AI가 과학적 발견을 했다고 말할 수 있을까요?"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

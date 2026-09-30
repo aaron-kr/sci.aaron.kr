@@ -1,7 +1,7 @@
 ---
 hook_en: "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem"
 hook_ko: "A2M: MCP 생태계에서의 트레이스 최적화 에이전트 하이재킹"
-tags: []
+tags: ["multi-agent", "reasoning"]
 authors: ["Laizhen Li", "Xuan Wang", "Peicheng Zhao", "Juanjuan Zhao", "Kejiang Ye", "Cheng-zhong Xu", "Xitong Gao"]
 embedded: false
 health_flourishing: false

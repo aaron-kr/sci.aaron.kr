@@ -1,6 +1,6 @@
 ---
-hook_en: "Robot Calendar of the Week (2026. 9. 28 ~ 10. 4)"
-hook_ko: "금주의 로봇 캘린더(2026. 9. 28 ~ 10. 4)"
+hook_en: "Newbility unveils hybrid humanoid 'Billy' for the first time"
+hook_ko: "뉴빌리티, 하이브리드 휴머노이드 ‘빌리’ 최초 공개"
 tags: ["humanoids"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "금주의 로봇 캘린더(2026. 9. 28 ~ 10. 4)"
+title: "뉴빌리티, 하이브리드 휴머노이드 ‘빌리’ 최초 공개"
 source: "로봇신문 (전체기사)"
 source_lang: "ko"
-source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48709"
+source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48741"
 topic: "physical-ai"
-date: "2026-09-27"
+date: "2026-09-30"
 thumb: null
-dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48709"
+dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48741"
 ---

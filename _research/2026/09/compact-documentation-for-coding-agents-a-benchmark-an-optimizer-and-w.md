@@ -1,7 +1,7 @@
 ---
 hook_en: "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer"
 hook_ko: "코딩 에이전트를 위한 컴팩트 문서: 벤치마크, 최적화 도구, 그리고 전이되지 않는 이유"
-tags: []
+tags: ["benchmark", "vibe-coding"]
 authors: ["Md Shohel Arman", "Igor Molybog"]
 embedded: false
 health_flourishing: false

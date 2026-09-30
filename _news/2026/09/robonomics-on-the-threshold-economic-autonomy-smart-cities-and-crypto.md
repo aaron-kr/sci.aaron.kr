@@ -1,7 +1,7 @@
 ---
 hook_en: "Robonomics on the threshold: Economic autonomy, smart cities, and crypto wallets for humanoids"
 hook_ko: "로보노믹스의 문턱: 경제적 자율성, 스마트 시티, 그리고 휴머노이드를 위한 암호화폐 지갑"
-tags: []
+tags: ["humanoids", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

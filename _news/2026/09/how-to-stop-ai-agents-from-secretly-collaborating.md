@@ -1,7 +1,7 @@
 ---
-hook_en: "Rivian’s Gambit for Full Autonomy"
-hook_ko: "완전 자율주행을 위한 리비안의 전략"
-tags: ["autonomous-driving", "industry"]
+hook_en: "How to Stop AI Agents From Secretly Collaborating"
+hook_ko: "AI 에이전트가 몰래 협업하는 것을 막는 방법"
+tags: ["multi-agent", "policy"]
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Rivian’s Gambit for Full Autonomy"
+title: "How to Stop AI Agents From Secretly Collaborating"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/rivian-self-driving"
+source_url: "https://spectrum.ieee.org/ai-agent-security"
 topic: "general-ai"
-date: "2026-09-08"
+date: "2026-09-29"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/rivian-self-driving"
+dedup_key: "https://spectrum.ieee.org/ai-agent-security"
 ---

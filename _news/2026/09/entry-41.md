@@ -1,7 +1,7 @@
 ---
 hook_en: "Now Robotics enters the 'defense industry,' a new growth engine...Convening of an extraordinary general meeting of shareholders and addition of business objectives"
 hook_ko: "나우로보틱스, 신성장동력 ‘방위산업’ 진출…임시주총 소집·사업목적 추가"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
