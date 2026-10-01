@@ -1,7 +1,7 @@
 ---
 hook_en: "Humanoid Loco-Manipulation With Discrete VLA Model"
 hook_ko: "이산 VLA 모델을 이용한 휴머노이드 로코-조작"
-tags: []
+tags: ["humanoids", "manipulation", "locomotion"]
 authors: ["Wenxin Shao", "Siqi Chai", "Kun Li", "Kerou Zhang", "Xinzhou Jiang", "Wei Xu", "Qiang Liu"]
 embedded: false
 health_flourishing: false

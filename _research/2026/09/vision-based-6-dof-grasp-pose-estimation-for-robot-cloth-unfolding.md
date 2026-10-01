@@ -1,7 +1,7 @@
 ---
 hook_en: "Vision-Based 6-DoF Grasp Pose Estimation for Robot Cloth Unfolding"
 hook_ko: "로봇 천 펼침을 위한 시각 기반 6자유도 그립 포즈 추정"
-tags: []
+tags: ["humanoids", "manipulation", "vision"]
 authors: ["Domen Tabernik", "Peter Nimac", "Jan Jerićević", "Danijel Skočaj", "Andrej Gams"]
 embedded: false
 health_flourishing: false

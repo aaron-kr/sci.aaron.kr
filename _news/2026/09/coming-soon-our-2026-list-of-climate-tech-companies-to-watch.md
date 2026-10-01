@@ -1,7 +1,7 @@
 ---
 hook_en: "Coming soon: Our 2026 list of Climate Tech Companies to Watch"
 hook_ko: "곧 출시 예정: 2026년 주목할 기후 기술 기업 리스트"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

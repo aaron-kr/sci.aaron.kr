@@ -1,7 +1,7 @@
 ---
 hook_en: "SatNav: A Scalable Benchmark for Long-Horizon UAV Vision-Language Navigation from Satellite Imagery"
 hook_ko: "SatNav: 위성 영상을 활용한 장기적 UAV 비전-언어 내비게이션을 위한 확장 가능한 벤치마크"
-tags: []
+tags: ["benchmark", "navigation", "dataset"]
 authors: ["Jiajun Jiang", "Chunliang Hua", "Zichun Chen", "Yanxing Wu", "Zeyuan Yang", "Jie Song", "Xiao Hu"]
 embedded: false
 health_flourishing: false

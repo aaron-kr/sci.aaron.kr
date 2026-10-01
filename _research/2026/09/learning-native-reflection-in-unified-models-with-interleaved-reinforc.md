@@ -1,7 +1,7 @@
 ---
 hook_en: "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning"
 hook_ko: "교차 강화학습을 활용한 통합 모델에서의 네이티브 리플렉션 학습"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Yijia Fan", "Ziqi Huang", "Zhongang Cai", "Yan Li", "Zimo Wen", "Wanqi Yin", "Haiwen Diao", "Ziwei Liu"]
 embedded: false
 health_flourishing: false

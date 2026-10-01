@@ -1,6 +1,6 @@
 ---
-hook_en: "An Engineer’s Guide to Surviving a Layoff"
-hook_ko: "해고를 견뎌내는 엔지니어 가이드"
+hook_en: "A Brief History of the Bloomberg Terminal"
+hook_ko: "블룸버그 터미널의 간략한 역사"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "An Engineer’s Guide to Surviving a Layoff"
+title: "A Brief History of the Bloomberg Terminal"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/how-to-survive-a-layoff"
+source_url: "https://spectrum.ieee.org/bloomberg-terminal"
 topic: "general-ai"
-date: "2026-09-09"
+date: "2026-09-30"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/how-to-survive-a-layoff"
+dedup_key: "https://spectrum.ieee.org/bloomberg-terminal"
 ---

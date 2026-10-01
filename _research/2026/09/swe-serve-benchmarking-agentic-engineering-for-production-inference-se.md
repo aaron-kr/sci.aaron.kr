@@ -1,7 +1,7 @@
 ---
 hook_en: "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving"
 hook_ko: "SWE-서빙: 생산 추론 서빙을 위한 에이전틱 엔지니어링 벤치마킹"
-tags: []
+tags: ["benchmark", "reasoning"]
 authors: ["Jennifer Williams", "Dave Farris", "Jeff Farris", "Jiantao Jiao"]
 embedded: false
 health_flourishing: false
