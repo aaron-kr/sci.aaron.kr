@@ -1,7 +1,7 @@
 ---
 hook_en: "Culture through Robots… Korean Teams Present Creative Solutions at the WRO Asia-Pacific Conference"
 hook_ko: "로봇으로 만나는 문화… 한국 팀들, WRO 아시아·태평양 대회서 창의적 해법 선보여"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

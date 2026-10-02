@@ -1,7 +1,7 @@
 ---
 hook_en: "X-Reset: Scaling Object-Centric Reinforcement Learning via Cross-Embodiment Resets"
 hook_ko: "X-리셋: 교차 체화 리셋을 통한 객체 중심 강화학습 확장"
-tags: []
+tags: ["multi-agent", "training-efficiency"]
 authors: ["Prithwish Dan", "Chenyang Ma", "Wei Zhan"]
 embedded: false
 health_flourishing: false

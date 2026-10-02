@@ -1,7 +1,7 @@
 ---
 hook_en: "Who’s liable when AI agents go rogue?"
 hook_ko: "AI 에이전트가 악성으로 변할 때 누가 책임을 지나요?"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

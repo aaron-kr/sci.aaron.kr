@@ -1,7 +1,7 @@
 ---
 hook_en: "World’s First Fully Implanted Cochlear Implant Reaches Patients"
 hook_ko: "세계 최초의 완전 이식형 인공와우, 환자들에게 전달되다"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

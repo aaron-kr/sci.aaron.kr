@@ -1,6 +1,6 @@
 ---
-hook_en: "Islands Tap Energy From Oceans’ Thermal Layers"
-hook_ko: "섬들은 바다의 열층에서 에너지를 끓여낸다"
+hook_en: "Electricity Theft Is Rampant, but Delhi Found a Fix"
+hook_ko: "전기 절도가 만연하지만, 델리가 해결책을 찾았다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Islands Tap Energy From Oceans’ Thermal Layers"
+title: "Electricity Theft Is Rampant, but Delhi Found a Fix"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/ocean-thermal-energy-conversion"
+source_url: "https://spectrum.ieee.org/electricity-theft"
 topic: "general-ai"
-date: "2026-09-10"
+date: "2026-10-01"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/ocean-thermal-energy-conversion"
+dedup_key: "https://spectrum.ieee.org/electricity-theft"
 ---

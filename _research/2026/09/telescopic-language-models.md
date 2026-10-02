@@ -1,7 +1,7 @@
 ---
 hook_en: "Telescopic Language Models"
 hook_ko: "텔레스코픽 언어 모델"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Zhilin Guo", "Boqiao Zhang", "Hakan Aktas", "Kyle Fogarty", "Nursena Koprucu Aslan", "Wenzhao Li", "Canberk Baykal", "Albert Miao", "Siyu Hong", "Yixiao Liu", "Adam Wu", "Ashish Kumar Singh", "Sakar Khattar", "Chenliang Zhou", "Weihao Xia", "Cristina Nader Vasconcelos", "Cengiz Oztireli"]
 embedded: false
 health_flourishing: false

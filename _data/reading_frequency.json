@@ -2481,7 +2481,7 @@
      "date": "2026-10-02",
      "count": 0,
      "level": 0,
-     "future": true
+     "future": false
     },
     {
      "date": "2026-10-03",
@@ -2494,5 +2494,5 @@
  ],
  "total": 0,
  "streak": 0,
- "generated": "2026-10-01"
+ "generated": "2026-10-02"
 }

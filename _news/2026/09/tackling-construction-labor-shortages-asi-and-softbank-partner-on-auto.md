@@ -1,7 +1,7 @@
 ---
 hook_en: "Tackling construction labor shortages: ASI and SoftBank partner on autonomous fleets"
 hook_ko: "건설 인력 부족 문제 해결: ASI와 소프트뱅크, 자율주행 차량 공동 개발"
-tags: []
+tags: ["humanoids", "autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
