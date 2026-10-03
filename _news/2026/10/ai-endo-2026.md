@@ -1,7 +1,7 @@
 ---
 hook_en: "Mediintech expands global touchpoints for AI robotic endoscopy...Participated in 'ENDO 2026'"
 hook_ko: "메디인테크, AI 로봇내시경 글로벌 접점 확대…‘ENDO 2026’ 참가"
-tags: []
+tags: ["biomedical", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

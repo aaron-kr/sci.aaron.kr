@@ -1,7 +1,7 @@
 ---
 hook_en: "Superconducting Transistors to Solve Quantum Computing Voes"
 hook_ko: "양자 컴퓨팅 난제를 해결할 초전도 트랜지스터"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

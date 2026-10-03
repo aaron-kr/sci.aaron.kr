@@ -1,7 +1,7 @@
 ---
 hook_en: "Boston Dynamics drops pinkie on new humanoid hand"
 hook_ko: "보스턴 다이내믹스가 새로운 휴머노이드 손에 손가락을 꽂았다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

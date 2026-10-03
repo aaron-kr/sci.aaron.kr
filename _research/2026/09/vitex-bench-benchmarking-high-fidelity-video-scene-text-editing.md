@@ -1,7 +1,7 @@
 ---
 hook_en: "ViTeX-Bench: Benchmarking High-Fidelity Video Scene Text Editing"
 hook_ko: "ViTeX-Bench: 고충실도 비디오 장면 텍스트 편집 벤치마킹"
-tags: []
+tags: ["benchmark", "document-parsing"]
 authors: ["Xinghao Chen", "Xiangbo Gao", "Jiongze Yu", "Yuheng Wu", "Zhengzhong Tu"]
 embedded: false
 health_flourishing: false

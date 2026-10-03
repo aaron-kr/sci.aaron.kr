@@ -1,7 +1,7 @@
 ---
 hook_en: "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents"
 hook_ko: "WorldAuditBench: 멀티모달 에이전트를 활용한 인터랙티브 3D 월드 오딧팅"
-tags: []
+tags: ["benchmark", "multi-agent"]
 authors: ["Ziyan Jiang", "Jingbo Yang", "Jiabao Ji", "Yujian Liu", "Qiucheng Wu", "Tommi Jaakkola", "Yang Zhang", "Shiyu Chang"]
 embedded: false
 health_flourishing: false

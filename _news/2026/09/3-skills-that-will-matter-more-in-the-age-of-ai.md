@@ -1,7 +1,7 @@
 ---
 hook_en: "3 Skills That Will Matter More in the Age of AI"
 hook_ko: "AI 시대에 더 중요해질 3가지 기술"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

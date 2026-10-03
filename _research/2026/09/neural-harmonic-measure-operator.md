@@ -1,7 +1,7 @@
 ---
 hook_en: "Neural Harmonic Measure Operator"
 hook_ko: "신경 고조파 측정 연산자"
-tags: []
+tags: ["reasoning"]
 authors: ["Jinjin He", "Sinan Wang", "Yuchen Sun", "Bo Zhu"]
 embedded: false
 health_flourishing: false

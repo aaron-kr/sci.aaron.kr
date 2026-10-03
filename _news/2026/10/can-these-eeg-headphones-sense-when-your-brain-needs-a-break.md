@@ -1,7 +1,7 @@
 ---
 hook_en: "Can These EEG Headphones Sense When Your Brain Needs a Break?"
 hook_ko: "이 EEG 헤드폰이 뇌가 휴식이 필요할 때를 감지할 수 있을까요?"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false
