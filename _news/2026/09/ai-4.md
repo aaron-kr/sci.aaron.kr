@@ -1,7 +1,7 @@
 ---
 hook_en: "Optrontec expands cooperation in European defense and robotics...Targeting the Physical AI Market"
 hook_ko: "옵트론텍, 유럽 방산·로보틱스 협력 확대…피지컬 AI 시장 공략"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

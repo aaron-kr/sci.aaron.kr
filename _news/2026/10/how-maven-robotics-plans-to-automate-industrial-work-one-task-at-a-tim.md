@@ -1,7 +1,7 @@
 ---
 hook_en: "How Maven Robotics plans to automate industrial work, one task at a time"
 hook_ko: "Maven Robotics가 한 번에 한 가지 작업씩 산업 현장의 업무를 자동화하는 계획"
-tags: []
+tags: ["humanoids", "manipulation", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

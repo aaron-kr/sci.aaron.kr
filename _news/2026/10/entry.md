@@ -1,7 +1,7 @@
 ---
 hook_en: "[Opinion] Finding Solutions to Regional Industrial Transition and Demographic Change through Vocational Education"
 hook_ko: "[기고] 지역의 산업전환과 인구변화, 직업교육에서 해법을 찾다"
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

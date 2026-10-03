@@ -1,7 +1,7 @@
 ---
 hook_en: "Gyeongbuk Governor Lee Cheol-woo pledges multifaceted support for the designation of the 'Gyeongbuk-Daegu Robot Specialized Complex'"
 hook_ko: "이철우 경북지사, ‘경북·대구 로봇 특화단지’ 지정에 다각 지원 다짐"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

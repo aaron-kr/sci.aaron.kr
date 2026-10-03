@@ -1,7 +1,7 @@
 ---
 hook_en: "Memory executives expect RAM shortage to continue through 2028"
 hook_ko: "메모리 업계 경영진은 2028년까지 RAM 부족 현상이 계속될 것으로 예상합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Chinese direct-drive robot company 'Direct Drive Tech' lists on Hong Kong Stock Exchange"
 hook_ko: "中 로봇용 직구동 기업 '다이렉트드라이브테크' 홍콩 증시 상장"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

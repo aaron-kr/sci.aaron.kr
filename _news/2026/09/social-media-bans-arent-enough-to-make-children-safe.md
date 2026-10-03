@@ -1,7 +1,7 @@
 ---
 hook_en: "Social Media Bans Aren’t Enough to Make Children Safe"
 hook_ko: "소셜 미디어 금지 조치만으로는 아이들을 안전하게 지킬 수 없습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

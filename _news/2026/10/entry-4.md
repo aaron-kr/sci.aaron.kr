@@ -1,7 +1,7 @@
 ---
 hook_en: "\"From the hand that holds to the hand that operates\"…Boston Dynamics unveils new robotic hand for Atlas"
 hook_ko: "“잡는 손에서 조작하는 손으로”…보스턴 다이나믹스, 아틀라스용 새 로봇 핸드 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

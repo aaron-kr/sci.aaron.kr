@@ -1,7 +1,7 @@
 ---
 hook_en: "Rideflux to collaborate with KGM and Hyundai Mobis…Equipped with 'AI Driver' for finished vehicle B2B"
 hook_ko: "라이드플럭스, KGM·현대모비스와 협력…완성차 B2B ‘AI 드라이버’ 탑재"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

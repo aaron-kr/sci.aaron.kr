@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: a biological de-aging contest and why LLMs don’t reason"
 hook_ko: "다운로드: 생물학적 노화 방지 대회와 LLM이 논리적으로 사고하지 않는 이유"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

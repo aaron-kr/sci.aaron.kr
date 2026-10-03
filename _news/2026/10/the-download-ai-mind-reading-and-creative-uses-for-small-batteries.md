@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI “mind-reading” and creative uses for small batteries"
 hook_ko: "다운로드: AI의 '마음 읽기'와 소형 배터리의 창의적 활용법"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
