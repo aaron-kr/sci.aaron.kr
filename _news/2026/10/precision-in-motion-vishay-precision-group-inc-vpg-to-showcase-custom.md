@@ -1,7 +1,7 @@
 ---
 hook_en: "Precision In Motion. Vishay Precision Group, Inc. (VPG) to Showcase Custom Sensing Capabilities for Humanoid Robotics at RoboBusiness 2026"
 hook_ko: "움직임의 정밀함. 비샤이 프리시전 그룹(VPG), RoboBusiness 2026에서 휴머노이드 로봇용 맞춤형 센싱 역량 선보여"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

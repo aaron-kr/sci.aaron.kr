@@ -1,7 +1,7 @@
 ---
 hook_en: "Runway introduces Praxis-1 world action model for robotics"
 hook_ko: "Runway, 로봇공학을 위한 Praxis-1 월드 액션 모델 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

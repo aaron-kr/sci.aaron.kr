@@ -1,7 +1,7 @@
 ---
 hook_en: "DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication"
 hook_ko: "DuoMind: 의미 기반 통신을 통한 분산 다중 로봇 협동 지원"
-tags: []
+tags: ["multi-agent", "humanoids"]
 authors: ["Hanchu Zhou", "Dechen Gao", "Hang Wang", "Brendan Lynch", "Boqi Zhao", "Qiyao Ma", "Raman Goyal", "Junshan Zhang"]
 embedded: false
 health_flourishing: false

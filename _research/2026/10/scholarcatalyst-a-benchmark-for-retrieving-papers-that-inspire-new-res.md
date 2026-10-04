@@ -1,7 +1,7 @@
 ---
 hook_en: "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research"
 hook_ko: "ScholarCatalyst: 새로운 연구를 자극하는 논문 검색을 위한 벤치마크"
-tags: []
+tags: ["benchmark", "dataset"]
 authors: ["Sohyeon Kim", "Yoonho Lee", "Bo Liu", "Dayoon Ko", "Rulin Shao", "Seungone Kim", "Graham Neubig", "Pang Wei Koh", "Aakanksha Chowdhery", "Akari Asai", "Omar Khattab", "Yejin Choi", "Gunhee Kim", "Chelsea Finn"]
 embedded: false
 health_flourishing: false

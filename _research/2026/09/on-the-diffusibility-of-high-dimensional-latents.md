@@ -1,7 +1,7 @@
 ---
 hook_en: "On the Diffusibility of High-Dimensional Latents"
 hook_ko: "고차원 잠재변수의 확산도에 관하여"
-tags: []
+tags: ["reasoning"]
 authors: ["Chao Feng", "Zhiyang Xu", "Bowei Chen", "Yuanjun Xiong", "Xiyao Wang", "Jui-Hsien Wang", "Richard Zhang", "Zhe Lin", "Andrew Owens", "Yijun Li"]
 embedded: false
 health_flourishing: false

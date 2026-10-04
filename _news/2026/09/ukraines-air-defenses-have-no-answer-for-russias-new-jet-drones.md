@@ -1,7 +1,7 @@
 ---
 hook_en: "Ukraine’s Air Defenses Have No Answer for Russia’s New Jet Drones"
 hook_ko: "우크라이나의 방공 체계는 러시아의 신형 제트 드론에 대응책이 없다"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Your Robot’s Safety Functions Already Work. What If the Input Lies?"
 hook_ko: "로봇의 안전 기능이 이미 작동 중입니다. 입력값이 거짓이라면 어떻게 될까?"
-tags: []
+tags: ["humanoids", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false
