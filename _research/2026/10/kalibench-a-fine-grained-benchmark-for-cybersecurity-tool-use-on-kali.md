@@ -1,7 +1,7 @@
 ---
 hook_en: "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards"
 hook_ko: "KaliBench: 런타임 없이 검증 가능한 보상을 제공하는 칼리 리눅스용 사이버보안 도구 사용 정밀 벤치마크"
-tags: []
+tags: ["benchmark", "evaluation"]
 authors: ["Pengfei Li", "Naufal Suryanto", "Sicheng Zhang", "Muzammal Naseer"]
 embedded: false
 health_flourishing: false
