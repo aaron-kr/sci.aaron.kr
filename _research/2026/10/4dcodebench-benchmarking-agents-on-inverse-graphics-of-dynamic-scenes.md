@@ -1,7 +1,7 @@
 ---
 hook_en: "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes"
 hook_ko: "4DCodeBench: 동적 장면의 역그래픽에서 에이전트 벤치마킹하기"
-tags: []
+tags: ["benchmark", "reasoning"]
 authors: ["Ruihong Shen", "Žiga Kovačič", "Peter Kulits", "Xingrui Wang", "Zizhang Li", "Joshua B. Tenenbaum", "Alan Yuille", "Jieneng Chen", "Jiajun Wu"]
 embedded: false
 health_flourishing: false

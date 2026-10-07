@@ -1,7 +1,7 @@
 ---
 hook_en: "In the era of humanoids, is physical AI enough? (5) Beyond Imitation to Norm Learning – The Combination of Data, Rules, and Supervision"
 hook_ko: "휴머노이드 시대, 피지컬 AI만으로 충분한가? (5) 행동 모방을 넘어 규범 학습으로 – 데이터·규칙·감독의 결합"
-tags: []
+tags: ["humanoids", "human-in-the-loop"]
 authors: []
 embedded: false
 health_flourishing: false

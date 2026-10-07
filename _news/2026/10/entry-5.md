@@ -1,7 +1,7 @@
 ---
 hook_en: "Financial Times: \"Korea and Japan's Shipbuilding Industries Counter China's 'Shipbuilding Hegemony' with Robot Automation\""
 hook_ko: "파이낸셜타임스 “한·일 조선업계, 中 '조선업 패권'에 로봇 자동화로 맞선다”"
-tags: []
+tags: ["industry", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

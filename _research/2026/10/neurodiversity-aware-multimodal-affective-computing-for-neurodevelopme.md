@@ -1,7 +1,7 @@
 ---
 hook_en: "Neurodiversity-Aware Multimodal Affective Computing for Neurodevelopmental Assessment: From Norm-Referenced Classification to Context-Sensitive Decision Support"
 hook_ko: "신경다양성 인지 다중양식 정서 컴퓨팅을 활용한 신경발달 평가: 규준 참조 분류에서 상황 민감 의사결정 지원까지"
-tags: []
+tags: ["biomedical", "evaluation"]
 authors: ["Mateusz Pomianek", "Anna Łężniak-Seruga"]
 embedded: false
 health_flourishing: false
