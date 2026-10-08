@@ -1,7 +1,7 @@
 ---
 hook_en: "Hackers obtain counterfeit TLS certificates for Google and other large services"
 hook_ko: "해커들이 구글 및 기타 대형 서비스를 위해 위조된 TLS 인증서를 획득했습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

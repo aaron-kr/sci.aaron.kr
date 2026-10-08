@@ -1,7 +1,7 @@
 ---
 hook_en: "Recursive Video In-Context Learning for Agentic Robot"
 hook_ko: "에이전트 로봇을 위한 재귀적 비디오 인컨텍스트 학습"
-tags: []
+tags: ["humanoids", "reasoning"]
 authors: ["Wenrui Bao", "Xinxin Liu", "Bingxin Xu", "Yuzhang Shang"]
 embedded: false
 health_flourishing: false

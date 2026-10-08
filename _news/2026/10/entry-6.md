@@ -1,7 +1,7 @@
 ---
 hook_en: "Intel Expands Its Reach in China…Launching a 'Robot Development Kit' in Partnership with Local Companies"
 hook_ko: "中서 보폭 넓히는 인텔…현지 기업 손잡고 '로봇 개발키트' 출시"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

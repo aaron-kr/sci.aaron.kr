@@ -1,7 +1,7 @@
 ---
 hook_en: "Makinarox equips the Pohang Navy ship with 'equipment operation AI staff'…Entry into demonstration"
 hook_ko: "마키나락스, 해군 포항함에 ‘장비운용 AI 참모’ 탑재…실증 돌입"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

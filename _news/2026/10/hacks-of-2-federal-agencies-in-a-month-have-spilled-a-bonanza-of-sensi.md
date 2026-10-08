@@ -1,7 +1,7 @@
 ---
 hook_en: "Hacks of 2 federal agencies in a month have spilled a bonanza of sensitive data"
 hook_ko: "한 달 동안 두 연방 기관의 해킹으로 민감한 데이터가 대량 유출됐다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

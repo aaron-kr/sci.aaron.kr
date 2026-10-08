@@ -1,7 +1,7 @@
 ---
 hook_en: "2026 Climate Tech Companies to Watch"
 hook_ko: "2026년 주목할 기후 기술 기업들"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false
