@@ -1,7 +1,7 @@
 ---
 hook_en: "Sherpa: Teaching LLMs to Teach Adaptively"
 hook_ko: "셰르파어: 적응적으로 가르치도록 LLM을 학습시키기"
-tags: []
+tags: ["ai-education", "human-in-the-loop"]
 authors: ["Weixian Xu", "Yanzhe Zhang", "Zora Zhiruo Wang", "Changyu Chen", "Diyi Yang"]
 embedded: false
 health_flourishing: false

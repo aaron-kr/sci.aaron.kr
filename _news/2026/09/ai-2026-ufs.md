@@ -1,7 +1,7 @@
 ---
 hook_en: "Makinarox applies the military's 'first battlefield network' AI operating environment…First demonstration at the '2026 UFS'"
 hook_ko: "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용…‘2026 UFS’서 첫 실증"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "TAPDreamer: Transferable Adversarial Patches for World Action Models"
 hook_ko: "탭드리머: 세계 행동 모델을 위한 전이 가능한 적대적 패치"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Xuanyu Lu", "Fengqing Jiang", "Kaiyuan Zheng", "Yichen Feng", "Yaorui Ding", "Yuetai Li", "Zhen Xiang", "Bhaskar Ramasubramanian", "Basel Alomair", "Luyao Niu", "Radha Poovendran"]
 embedded: false
 health_flourishing: false

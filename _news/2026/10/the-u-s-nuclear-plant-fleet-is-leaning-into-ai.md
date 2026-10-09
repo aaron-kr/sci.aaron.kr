@@ -1,7 +1,7 @@
 ---
-hook_en: "Fusion Startup Builds Reactor With Magnetic Mirrors"
-hook_ko: "퓨전 스타트업, 자기 거울이 장착된 원자로 건설"
-tags: ["industry"]
+hook_en: "The U.S. Nuclear Plant Fleet Is Leaning Into AI"
+hook_ko: "미국 원자력 발전소들이 인공지능에 의존하고 있다"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Fusion Startup Builds Reactor With Magnetic Mirrors"
+title: "The U.S. Nuclear Plant Fleet Is Leaning Into AI"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/magnetic-mirror-fusion"
+source_url: "https://spectrum.ieee.org/ai-assistants-nuclear-power-plant"
 topic: "general-ai"
-date: "2026-09-23"
+date: "2026-10-08"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/magnetic-mirror-fusion"
+dedup_key: "https://spectrum.ieee.org/ai-assistants-nuclear-power-plant"
 ---

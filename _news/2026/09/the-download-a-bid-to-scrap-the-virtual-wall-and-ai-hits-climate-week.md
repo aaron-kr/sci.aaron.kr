@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: a bid to scrap the virtual wall and AI hits Climate Week"
 hook_ko: "다운로드: 가상 장벽을 허물기 위한 시도와 AI가 기후 주간을 강타하다"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

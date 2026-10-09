@@ -1,7 +1,7 @@
 ---
 hook_en: "Incheon City Takes Steps to Establish a 'Physical AI Demonstration Center'"
 hook_ko: "인천시, '피지컬 AI 실증센터' 구축 나섰다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

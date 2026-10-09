@@ -1,7 +1,7 @@
 ---
 hook_en: "Professor Ki-Seop Kim's Team at DGIST Wins Best Paper Award at the World's Most Prestigious Robotics Conference, 'IROS 2026'"
 hook_ko: "DGIST 김기섭 교수팀, 세계 최고 권위 로봇학회 ‘IROS 2026’ 최우수 논문상"
-tags: []
+tags: ["humanoids", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false
