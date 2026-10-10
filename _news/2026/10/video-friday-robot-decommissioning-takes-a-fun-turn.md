@@ -1,7 +1,7 @@
 ---
-hook_en: "Video Friday: Two Birotors Make a Quadrotor"
-hook_ko: "금요일 영상: 두 개의 바이로터가 쿼드로터를 만든다"
-tags: ["humanoids"]
+hook_en: "Video Friday: Robot Decommissioning Takes a Fun Turn"
+hook_ko: "금요일 영상: 로봇 퇴역 작업이 즐거운 분위기로 전환되다"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Video Friday: Two Birotors Make a Quadrotor"
+title: "Video Friday: Robot Decommissioning Takes a Fun Turn"
 source: "IEEE Spectrum Robotics"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor"
+source_url: "https://spectrum.ieee.org/video-friday-reachy-mini-raps"
 topic: "physical-ai"
-date: "2026-09-18"
+date: "2026-10-09"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor"
+dedup_key: "https://spectrum.ieee.org/video-friday-reachy-mini-raps"
 ---

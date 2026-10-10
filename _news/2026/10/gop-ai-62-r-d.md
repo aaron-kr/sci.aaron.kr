@@ -1,7 +1,7 @@
 ---
 hook_en: "IntelliVix to Develop GOP 'AI Border Guard'Defense Acquisition Program Administration to Launch 6.2 Billion Won R&D Program"
 hook_ko: "인텔리빅스, GOP ‘AI 경계병’ 만든다…방사청 62억원 규모 R&D 착수"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

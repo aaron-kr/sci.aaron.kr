@@ -1,7 +1,7 @@
 ---
 hook_en: "Harmonic Drive to share how integrated actuators can reduce engineering at RoboBusiness"
 hook_ko: "RoboBusiness에서 통합 액추에이터가 엔지니어링 비용을 어떻게 절감할 수 있는지 공유하는 하모닉 드라이브"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

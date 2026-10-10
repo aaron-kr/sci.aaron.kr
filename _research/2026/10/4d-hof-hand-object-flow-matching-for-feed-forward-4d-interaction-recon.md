@@ -1,7 +1,7 @@
 ---
 hook_en: "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction"
 hook_ko: "4D-HOF: 피드포워드 4D 상호작용 재구성을 위한 손-물체 흐름 매칭"
-tags: []
+tags: ["manipulation", "benchmark"]
 authors: ["Shiqi Li", "Sean Cho", "Yijie Li", "Fengzhi Guo", "Bowen Wen", "Cheng Zhang"]
 embedded: false
 health_flourishing: false

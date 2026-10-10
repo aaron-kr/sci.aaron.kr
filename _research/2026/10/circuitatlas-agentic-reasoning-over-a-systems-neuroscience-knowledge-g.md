@@ -1,7 +1,7 @@
 ---
 hook_en: "CircuitATLAS: Agentic reasoning over a systems neuroscience knowledge graph for target discovery in circuitopathies"
 hook_ko: "회로ATLAS: 회로병증에서 표적 발견을 위한 시스템 신경과학 지식 그래프 기반 에이전트 추론"
-tags: []
+tags: ["reasoning", "benchmark"]
 authors: ["Gabriel Ocana-Santero", "Marko Tvrdic"]
 embedded: false
 health_flourishing: false

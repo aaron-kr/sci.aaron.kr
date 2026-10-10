@@ -1,7 +1,7 @@
 ---
 hook_en: "Daegu and Gwangju, Jeollanam-do Join Forces to Develop 'Autonomous Mobility for Factory Workers'"
 hook_ko: "대구·전남광주 손잡고 ‘공장에서 일하는 자율주행 모빌리티’ 개발한다"
-tags: []
+tags: ["autonomous-driving", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

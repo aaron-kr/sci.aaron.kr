@@ -1,7 +1,7 @@
 ---
 hook_en: "Decoupling Exploration from Optimization in RLVR"
 hook_ko: "RLVR에서 탐색과 최적화의 분리"
-tags: []
+tags: ["reasoning"]
 authors: ["Saif Punjwani", "Micah Goldblum"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "LLA-MPC on Embedded Hardware: Rapid Adaptive Control with Thousands of Parallel Models"
 hook_ko: "임베디드 하드웨어에서의 LLA-MPC: 수천 개의 병렬 모델을 활용한 신속 적응 제어"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Henry Z. Liao", "Maitham F. AL-Sunni", "John M. Dolan"]
 embedded: false
 health_flourishing: false

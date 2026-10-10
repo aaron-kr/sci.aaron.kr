@@ -1,7 +1,7 @@
 ---
 hook_en: "Crafton to Launch Joint Research on World Models in Game and Robotics with Seoul National University"
 hook_ko: "크래프톤, 서울대와 게임·로봇 분야 월드모델 공동연구 본격화"
-tags: []
+tags: ["humanoids", "reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

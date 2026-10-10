@@ -1,7 +1,7 @@
 ---
 hook_en: "Autonomous A2Z Begins Pilot Operation of Autonomous Bus in Gwangmyeong City"
 hook_ko: "오토노머스에이투지, 광명시 자율주행 버스 시범운행 시작"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

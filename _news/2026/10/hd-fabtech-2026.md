@@ -1,7 +1,7 @@
 ---
 hook_en: "HD Hyundai Robotics Unveils Welding and Shipbuilding Automation Solutions at 'FABTECH 2026'"
 hook_ko: "HD현대로보틱스, ‘FABTECH 2026’서 용접·조선 자동화 솔루션 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
