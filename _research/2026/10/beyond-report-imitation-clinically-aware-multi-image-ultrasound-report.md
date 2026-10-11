@@ -1,7 +1,7 @@
 ---
 hook_en: "Beyond Report Imitation: Clinically Aware Multi-Image Ultrasound Report Generation from Visible Evidence"
 hook_ko: "보고서 모방을 넘어서: 임상 인지 다중 영상 초음파 보고서 생성: 가시적 증거 기반"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: ["Yuchen Yang", "Xin Wang", "Lufan Wang", "Yinghong Pan", "Yujuan Feng", "Yuqing Yang"]
 embedded: false
 health_flourishing: false

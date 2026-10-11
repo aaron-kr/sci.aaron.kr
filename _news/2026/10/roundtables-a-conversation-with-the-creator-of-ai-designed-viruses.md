@@ -1,7 +1,7 @@
 ---
 hook_en: "Roundtables: A Conversation With the Creator of AI-Designed Viruses"
 hook_ko: "원탁회의: AI가 설계한 바이러스의 창조자와 나눈 대화"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

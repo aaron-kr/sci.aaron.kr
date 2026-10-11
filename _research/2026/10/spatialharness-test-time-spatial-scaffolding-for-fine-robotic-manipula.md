@@ -1,7 +1,7 @@
 ---
 hook_en: "SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation"
 hook_ko: "스페이셜하니스: 정밀 로봇 조작을 위한 테스트 시 공간적 발판 제공"
-tags: []
+tags: ["manipulation", "evaluation"]
 authors: ["Jiayu Wang", "Yue Yu", "Bin Zhu", "Zhiyao Yang", "Jingjing Chen"]
 embedded: false
 health_flourishing: false

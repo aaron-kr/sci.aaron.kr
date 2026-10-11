@@ -1,7 +1,7 @@
 ---
 hook_en: "Licensing costs driving 90 percent of VMware users to explore options: Survey"
 hook_ko: "라이선스 비용이 VMware 사용자 중 90%가 옵션을 탐색하게 만드는 주요 원인입니다: 조사"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

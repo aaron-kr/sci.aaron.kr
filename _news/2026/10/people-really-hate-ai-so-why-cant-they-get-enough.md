@@ -1,7 +1,7 @@
 ---
 hook_en: "People really hate AI, so why can’t they get enough?"
 hook_ko: "사람들은 AI를 정말 싫어하는데, 왜 그걸 질리지 않는 걸까?"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

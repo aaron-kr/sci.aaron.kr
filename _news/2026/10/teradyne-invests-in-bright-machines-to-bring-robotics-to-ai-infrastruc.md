@@ -1,7 +1,7 @@
 ---
 hook_en: "Teradyne invests in Bright Machines to bring robotics to AI infrastructure manufacturing"
 hook_ko: "테라다인은 AI 인프라 제조에 로봇 기술을 도입하기 위해 브라이트 머신스에 투자합니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

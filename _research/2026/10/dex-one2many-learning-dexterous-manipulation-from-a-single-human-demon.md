@@ -1,7 +1,7 @@
 ---
 hook_en: "Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration"
 hook_ko: "Dex-One2Many: 단일 인간 시연으로부터 정교한 조작 학습하기"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: ["Jusuk Lee", "Sungha Kim", "Yeonsoo Park", "Jonguk Cheon", "Yoonkyo Jung", "Yongjun You", "H. Jin Kim", "Jia-Bin Huang", "Furong Huang", "Youngseok Jang", "Seungjae Lee"]
 embedded: false
 health_flourishing: false

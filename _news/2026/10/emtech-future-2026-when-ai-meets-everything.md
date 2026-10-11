@@ -1,7 +1,7 @@
 ---
 hook_en: "EmTech Future 2026: When AI Meets Everything"
 hook_ko: "EmTech 미래 2026: AI가 모든 것을 만날 때"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

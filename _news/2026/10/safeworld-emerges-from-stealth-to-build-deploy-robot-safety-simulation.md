@@ -1,7 +1,7 @@
 ---
 hook_en: "SafeWorld emerges from stealth to build, deploy robot safety simulation technologies"
 hook_ko: "SafeWorld, 로봇 안전 시뮬레이션 기술 구축 및 배포를 위해 비밀리에 등장하다"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

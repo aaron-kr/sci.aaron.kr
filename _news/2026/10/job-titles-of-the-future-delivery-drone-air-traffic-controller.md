@@ -1,7 +1,7 @@
 ---
 hook_en: "Job titles of the future: Delivery drone air traffic controller"
 hook_ko: "미래의 직업 직함: 배송 드론 항공 교통 관제사"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

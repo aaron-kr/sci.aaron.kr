@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: 10 climate tech companies to watch"
 hook_ko: "다운로드: 주목할 10개의 기후 기술 기업"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

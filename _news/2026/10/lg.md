@@ -1,7 +1,7 @@
 ---
 hook_en: "LG Chem to unveil next-generation materials for robots at a European plastics exhibition"
 hook_ko: "LG화학, 유럽 플라스틱 전시회서 로봇용 차세대 소재 공개한다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "The U.S. Nuclear Plant Fleet Is Leaning Into AI"
 hook_ko: "미국 원자력 발전소들이 인공지능에 의존하고 있다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

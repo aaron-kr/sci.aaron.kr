@@ -1,7 +1,7 @@
 ---
 hook_en: "Japan's Hitachi and an agile robotics company to jointly develop a 'physical AI brain'"
 hook_ko: "日 히타치-애자일 로봇, ‘피지컬 AI 두뇌’ 공동 개발한다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

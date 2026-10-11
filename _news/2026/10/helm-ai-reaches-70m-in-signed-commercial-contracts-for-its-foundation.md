@@ -1,7 +1,7 @@
 ---
 hook_en: "Helm.ai reaches $70M in signed commercial contracts for its foundation models"
 hook_ko: "Helm.ai 가 기반 모델 관련 상업 계약 7천만 달러를 체결했습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

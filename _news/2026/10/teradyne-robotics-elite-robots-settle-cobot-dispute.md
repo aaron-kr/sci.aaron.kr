@@ -1,7 +1,7 @@
 ---
 hook_en: "Teradyne Robotics, Elite Robots settle cobot dispute"
 hook_ko: "테라다인 로보틱스와 엘리트 로봇, 협동로봇 분쟁 해결"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

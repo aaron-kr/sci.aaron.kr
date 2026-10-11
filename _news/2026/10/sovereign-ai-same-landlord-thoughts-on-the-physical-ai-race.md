@@ -1,7 +1,7 @@
 ---
 hook_en: "Sovereign AI, same landlord — thoughts on the physical AI race"
 hook_ko: "주권 AI, 같은 집주인 — 물리적 AI 경쟁에 대한 생각"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

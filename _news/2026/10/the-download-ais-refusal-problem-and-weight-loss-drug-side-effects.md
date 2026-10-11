@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI’s refusal problem and weight-loss drug side effects"
 hook_ko: "다운로드: 인공지능의 거부 문제와 체중 감량 약물의 부작용"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

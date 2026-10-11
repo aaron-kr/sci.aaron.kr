@@ -1,7 +1,7 @@
 ---
 hook_en: "Overview AI launches OV Spark line of AI inspection cameras"
 hook_ko: "개요: AI, OV 스파크 AI 검사 카메라 라인 출시"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

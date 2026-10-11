@@ -1,7 +1,7 @@
 ---
 hook_en: "The U.S. Just Bet $1 Billion on Quantum Chip Manufacturing"
 hook_ko: "미국이 양자 칩 제조에 10억 달러를 투자하기로 했다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

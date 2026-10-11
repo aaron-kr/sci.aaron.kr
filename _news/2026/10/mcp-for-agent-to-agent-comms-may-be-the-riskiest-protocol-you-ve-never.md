@@ -1,7 +1,7 @@
 ---
 hook_en: "MCP for agent-to-agent comms may be the riskiest protocol you've never heard of"
 hook_ko: "에이전트 간 통신을 위한 MCP가 아마도 당신이 들어본 적 없는 가장 위험한 프로토콜일지도 모릅니다"
-tags: []
+tags: ["multi-agent"]
 authors: []
 embedded: false
 health_flourishing: false

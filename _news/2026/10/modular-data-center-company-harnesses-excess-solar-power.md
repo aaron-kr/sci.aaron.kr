@@ -1,6 +1,6 @@
 ---
-hook_en: "Apple Takes on Deepfakes With New iPhone Pro"
-hook_ko: "애플, 새로운 아이폰 프로로 딥페이크에 도전하다"
+hook_en: "Modular Data Center Company Harnesses Excess Solar Power"
+hook_ko: "모듈형 데이터 센터 기업, 남는 태양광 전력 활용하다"
 tags: ["industry"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Apple Takes on Deepfakes With New iPhone Pro"
+title: "Modular Data Center Company Harnesses Excess Solar Power"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/apple-reference-image"
+source_url: "https://spectrum.ieee.org/data-center-excess-solar"
 topic: "general-ai"
-date: "2026-09-19"
+date: "2026-10-10"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/apple-reference-image"
+dedup_key: "https://spectrum.ieee.org/data-center-excess-solar"
 ---

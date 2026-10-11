@@ -1,7 +1,7 @@
 ---
 hook_en: "SP-DocReader: Difference-Aware Self-Play for Precise Document OCR"
 hook_ko: "SP-DocReader: 정밀한 문서 OCR을 위한 차이 인식 셀프 플레이"
-tags: []
+tags: ["ocr", "document-parsing"]
 authors: ["Wenjie Liao", "Xiaohui Song", "Liangjie Zhao", "Haonan Lu"]
 embedded: false
 health_flourishing: false
