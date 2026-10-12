@@ -1,7 +1,7 @@
 ---
 hook_en: "Neuromeka Develops AI Technology for Precise Manipulation of Humanoids Without Wrist Cameras with KAIST"
 hook_ko: "뉴로메카, KAIST와 손목 카메라 없는 휴머노이드 정밀조작 AI 기술 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

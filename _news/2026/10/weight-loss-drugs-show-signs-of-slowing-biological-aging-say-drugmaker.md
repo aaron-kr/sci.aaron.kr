@@ -1,7 +1,7 @@
 ---
 hook_en: "Weight-loss drugs show signs of slowing biological aging, say drugmakers"
 hook_ko: "체중 감량 약물이 생물학적 노화를 늦추는 징후를 보인다고 제약사들이 밝혔다"
-tags: []
+tags: ["clinical"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "WeLion New Energy and its semi-solid-state batteries"
 hook_ko: "WeLion 뉴 에너지와 그 반고체 배터리"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

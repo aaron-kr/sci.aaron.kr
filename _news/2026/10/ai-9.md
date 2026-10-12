@@ -1,6 +1,6 @@
 ---
-hook_en: "[Books] Physical AI Robots"
-hook_ko: "[Books] 피지컬 AI 로봇"
+hook_en: "RealWorld to Demonstrate Physical AI Robots in Downtown Tokyo"
+hook_ko: "리얼월드, 도쿄 도심서 피지컬 AI 로봇 실증한다"
 tags: ["humanoids"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "[Books] 피지컬 AI 로봇"
+title: "리얼월드, 도쿄 도심서 피지컬 AI 로봇 실증한다"
 source: "로봇신문 (전체기사)"
 source_lang: "ko"
-source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48609"
+source_url: "https://www.irobotnews.com/news/articleView.html?idxno=48922"
 topic: "physical-ai"
-date: "2026-09-20"
+date: "2026-10-12"
 thumb: null
-dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48609"
+dedup_key: "https://www.irobotnews.com/news/articleView.html?idxno=48922"
 ---

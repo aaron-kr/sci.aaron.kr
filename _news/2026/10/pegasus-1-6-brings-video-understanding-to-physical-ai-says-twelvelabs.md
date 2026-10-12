@@ -1,7 +1,7 @@
 ---
 hook_en: "Pegasus 1.6 brings video understanding to physical AI, says TwelveLabs"
 hook_ko: "TwelveLabs는 페가수스 1.6이 물리적 AI에 영상 이해 기능을 도입했다고 밝혔습니다"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

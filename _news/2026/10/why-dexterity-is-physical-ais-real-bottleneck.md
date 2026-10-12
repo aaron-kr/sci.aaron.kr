@@ -1,7 +1,7 @@
 ---
 hook_en: "Why dexterity is physical AI’s real bottleneck"
 hook_ko: "왜 손재주가 물리적 AI의 진짜 병목인지"
-tags: []
+tags: ["manipulation", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false

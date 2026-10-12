@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Albatross Falls, Spins, Self-Rights, and Sails Away"
 hook_ko: "금요일 영상: 알바트로스의 낙하, 회전, 자기 권리, 그리고 항해"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

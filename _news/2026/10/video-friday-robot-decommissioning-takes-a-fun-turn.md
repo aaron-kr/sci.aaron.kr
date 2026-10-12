@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Robot Decommissioning Takes a Fun Turn"
 hook_ko: "금요일 영상: 로봇 퇴역 작업이 즐거운 분위기로 전환되다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

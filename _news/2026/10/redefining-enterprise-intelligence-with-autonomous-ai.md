@@ -1,7 +1,7 @@
 ---
 hook_en: "Redefining enterprise intelligence with autonomous AI"
 hook_ko: "자율 AI로 기업 인텔리전스의 정의를 새롭게 하다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

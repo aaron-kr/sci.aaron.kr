@@ -1,7 +1,7 @@
 ---
 hook_en: "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model"
 hook_ko: "AdvSim2Real: 웹 월드 모델에서 적응형 프롬프트 인젝션에 대응하는 웹 에이전트 훈련"
-tags: []
+tags: ["training-efficiency", "human-in-the-loop"]
 authors: ["Sarim Hashmi", "Mukul Ranjan", "Kshitij Mishra", "Mikhail Kuznetsov", "Praneeth Vepakomma", "Nils Lukas"]
 embedded: false
 health_flourishing: false

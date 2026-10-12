@@ -1,7 +1,7 @@
 ---
 hook_en: "RoboParty Unveils Open-Source Humanoid Robot 'RP1'"
 hook_ko: "로보파티, 오픈소스 휴머노이드 로봇 'RP1' 공개"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

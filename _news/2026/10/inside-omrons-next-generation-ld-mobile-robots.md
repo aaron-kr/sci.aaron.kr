@@ -1,7 +1,7 @@
 ---
 hook_en: "Inside Omron’s next-generation LD mobile robots"
 hook_ko: "오므론 차세대 LD 이동형 로봇 내부"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

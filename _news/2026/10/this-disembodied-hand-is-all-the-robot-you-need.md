@@ -1,7 +1,7 @@
 ---
 hook_en: "This Disembodied Hand Is All the Robot You Need"
 hook_ko: "이 분리된 손 하나면 로봇이 완성됩니다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

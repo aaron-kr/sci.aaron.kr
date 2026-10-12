@@ -1,7 +1,7 @@
 ---
 hook_en: "Jabil discusses the pace of humanoid robot development and production"
 hook_ko: "자빌이 휴머노이드 로봇 개발 및 생산 속도에 대해 이야기합니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

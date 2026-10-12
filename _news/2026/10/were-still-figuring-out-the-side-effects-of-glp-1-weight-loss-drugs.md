@@ -1,7 +1,7 @@
 ---
 hook_en: "We’re still figuring out the side effects of GLP-1 weight-loss drugs"
 hook_ko: "우리는 아직 GLP-1 체중 감량 약물의 부작용을 파악하는 중입니다"
-tags: []
+tags: ["clinical"]
 authors: []
 embedded: false
 health_flourishing: false

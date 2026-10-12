@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI roadblocks for humanoids and portable rubber dams"
 hook_ko: "다운로드: 휴머노이드 로봇과 휴대용 고무댐의 AI 장애물"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

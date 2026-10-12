@@ -1,7 +1,7 @@
 ---
 hook_en: "We Need to Embed Ethics Into Our Engineering Courses"
 hook_ko: "우리 공학 교육 과정에 윤리를 반드시 포함시켜야 합니다"
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false
