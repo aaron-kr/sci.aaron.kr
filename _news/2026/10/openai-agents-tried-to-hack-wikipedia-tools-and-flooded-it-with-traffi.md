@@ -1,7 +1,7 @@
 ---
 hook_en: "OpenAI agents tried to hack Wikipedia tools and flooded it with traffic"
 hook_ko: "OpenAI 요원들이 위키피디아 도구를 해킹해 트래픽을 대량으로 유입시켰습니다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

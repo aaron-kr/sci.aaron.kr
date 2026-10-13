@@ -1,7 +1,7 @@
 ---
-hook_en: "Nvidia Brings Generative AI to Video Game Lighting"
-hook_ko: "엔비디아, 비디오 게임 조명에 생성형 AI 도입"
-tags: ["industry"]
+hook_en: "First Utility-Scale Enhanced Geothermal Plant Goes Live"
+hook_ko: "최초의 대규모 고도화 지열 발전소 가동 시작"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Nvidia Brings Generative AI to Video Game Lighting"
+title: "First Utility-Scale Enhanced Geothermal Plant Goes Live"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/neural-rendering-nvidia-dlss-5"
+source_url: "https://spectrum.ieee.org/fervo-cape-station-geothermal"
 topic: "general-ai"
-date: "2026-09-21"
+date: "2026-10-12"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/neural-rendering-nvidia-dlss-5"
+dedup_key: "https://spectrum.ieee.org/fervo-cape-station-geothermal"
 ---

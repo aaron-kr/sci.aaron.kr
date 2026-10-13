@@ -1,7 +1,7 @@
 ---
 hook_en: "Roundtables: The Deadly Failures of The Virtual Border Wall"
 hook_ko: "원탁회의: 가상 국경 장벽의 치명적인 실패들"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
