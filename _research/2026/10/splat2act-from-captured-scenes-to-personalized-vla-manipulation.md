@@ -1,7 +1,7 @@
 ---
 hook_en: "Splat2Act: From Captured Scenes to Personalized VLA Manipulation"
 hook_ko: "Splat2Act: 촬영된 장면에서 맞춤형 VLA 조작까지"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: ["Xiaomeng Ye", "Krishna Jaganathan", "Gyubeum Lim", "Gunjan Chhablani", "Muhammad Zubair Irshad", "Zsolt Kira"]
 embedded: false
 health_flourishing: false

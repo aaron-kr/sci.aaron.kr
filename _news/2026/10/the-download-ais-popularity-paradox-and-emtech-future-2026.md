@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI’s popularity paradox and EmTech Future 2026"
 hook_ko: "다운로드: AI의 인기 역설과 EmTech의 2026년 전망"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

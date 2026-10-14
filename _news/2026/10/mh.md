@@ -1,7 +1,7 @@
 ---
 hook_en: "MH Materials to Develop Magnets for Robot Actuator Motors"
 hook_ko: "MH머트리얼즈, 로봇 액추에이터 모터용 자석 개발 나선다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

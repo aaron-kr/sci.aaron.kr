@@ -1,7 +1,7 @@
 ---
 hook_en: "“We’re not going to shoot ourselves in the foot” over hack fallout, says OpenAI’s chief research officer"
 hook_ko: "\"해킹 여파 때문에 우리 스스로 발등을 찍지는 않을 겁니다,\"라고 Open이 말했습니다AI의 최고 연구 책임자"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

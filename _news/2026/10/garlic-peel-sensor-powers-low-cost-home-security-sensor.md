@@ -1,7 +1,7 @@
 ---
 hook_en: "Garlic Peel Sensor Powers Low-Cost Home Security Sensor"
 hook_ko: "마늘 껍질 센서가 저비용 가정용 보안 센서를 구동하다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
