@@ -1,7 +1,7 @@
 ---
 hook_en: "First-Order Stationarity of Reverse Diffusions"
 hook_ko: "역확산의 1차 정상성"
-tags: []
+tags: ["reasoning"]
 authors: ["Zhifeng Chen", "Chenyang Jiang", "Yazhen Wang"]
 embedded: false
 health_flourishing: false

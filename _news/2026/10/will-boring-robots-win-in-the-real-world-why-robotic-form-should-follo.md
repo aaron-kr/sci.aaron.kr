@@ -1,7 +1,7 @@
 ---
 hook_en: "Will ‘boring’ robots win in the real world? Why robotic form should follow workflow"
 hook_ko: "'지루한' 로봇이 실제 세상에서 성공할 수 있을까? 로봇 형태가 워크플로우를 따라야 하는 이유는 무엇인가"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: moon city problems and drone traffic controllers"
 hook_ko: "다운로드: 문 시티 문제와 드론 교통 관제기"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

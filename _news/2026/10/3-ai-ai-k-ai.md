@@ -1,7 +1,7 @@
 ---
 hook_en: "The 3rd Korea Artificial Intelligence Innovation Awards Committee Held…\"Leading the Future of K-AI by Discovering First-Mover Innovators in AI and Physical AI Robotics\""
 hook_ko: "제3회 대한민국 인공지능 혁신대상 위원회 개최…“AI·피지컬 AI 로봇 혁신 퍼스트무버 발굴로 K-AI 미래 선도”"
-tags: []
+tags: ["policy", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

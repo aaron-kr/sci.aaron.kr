@@ -1,7 +1,7 @@
 ---
 hook_en: "We’re putting too much faith in AI’s ability to say no"
 hook_ko: "우리는 AI가 거절할 수 있는 능력에 너무 큰 신뢰를 두고 있습니다"
-tags: []
+tags: ["policy", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false

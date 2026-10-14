@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: weight-loss drugs slowing aging and carbon dioxide batteries"
 hook_ko: "다운로드: 노화를 늦추는 체중 감량 약물과 이산화탄소 배터리"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Why humanoid robot demos still fail the generalization test"
 hook_ko: "왜 휴머노이드 로봇 데모가 여전히 일반화 테스트에 실패하는가"
-tags: []
+tags: ["humanoids", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false
