@@ -1,7 +1,7 @@
 ---
 hook_en: "DDVR-Net: Degradation-Aware Decoupling and Visibility-Guided Restoration for Historical Document Recognition"
 hook_ko: "DDVR-Net: 역사 문서 인식을 위한 열화 인지 분리 및 가시성 기반 복원 기술"
-tags: []
+tags: ["historical-documents", "ocr"]
 authors: ["Jiu Sha", "Yu Weng", "Mengxiao Zhu"]
 embedded: false
 health_flourishing: false

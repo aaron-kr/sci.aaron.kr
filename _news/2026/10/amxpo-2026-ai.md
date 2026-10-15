@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea FESTO Presents AI Smart Factory Vision at AMXPO 2026 Conference"
 hook_ko: "한국훼스토, AMXPO 2026 컨퍼런스서 AI 스마트 팩토리 비전 제시"
-tags: []
+tags: ["industry", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "ChunkAct: Action Chunking for Agentic Robotics"
 hook_ko: "청크행동: 에이전트 로보틱스를 위한 액션 청킹"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Bingxin Xu", "Wenrui Bao", "Xinxin Liu", "Jiawei Zhou", "Yuzhang Shang", "Emilio Ferrara"]
 embedded: false
 health_flourishing: false

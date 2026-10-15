@@ -1,7 +1,7 @@
 ---
 hook_en: "AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards"
 hook_ko: "에이스코드: 분리된 교차 모달 보상을 활용한 미학 코드 생성"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Xin Gao", "Yifan Yang", "Xin Li", "Pan Wang", "Yan Li", "Muzhao Tian", "Mingxi Cheng", "Bei Liu", "Kai Qiu", "Qi Dai", "Dong Chen", "Yue Dong", "Leandros Tassiulas", "Rex Ying", "Ji Li", "Chong Luo"]
 embedded: false
 health_flourishing: false

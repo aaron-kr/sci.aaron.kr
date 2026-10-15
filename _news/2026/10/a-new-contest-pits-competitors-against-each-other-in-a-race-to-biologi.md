@@ -1,7 +1,7 @@
 ---
 hook_en: "A new contest pits competitors against each other in a race to biological youth"
 hook_ko: "새로운 대회가 생물학적 젊음을 향한 경쟁에서 참가자들을 겨룹니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

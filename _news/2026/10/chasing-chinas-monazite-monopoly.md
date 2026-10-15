@@ -1,6 +1,6 @@
 ---
-hook_en: "Fusion Startup Builds Reactor With Magnetic Mirrors"
-hook_ko: "퓨전 스타트업, 자기 거울이 장착된 원자로 건설"
+hook_en: "Chasing China’s Monazite Monopoly"
+hook_ko: "중국의 모나자이트 독점을 추격하다"
 tags: ["industry"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Fusion Startup Builds Reactor With Magnetic Mirrors"
+title: "Chasing China’s Monazite Monopoly"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/magnetic-mirror-fusion"
+source_url: "https://spectrum.ieee.org/china-rare-earth-minerals"
 topic: "general-ai"
-date: "2026-09-23"
+date: "2026-10-15"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/magnetic-mirror-fusion"
+dedup_key: "https://spectrum.ieee.org/china-rare-earth-minerals"
 ---

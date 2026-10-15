@@ -1,7 +1,7 @@
 ---
 hook_en: "Hello Robot, A&K Robotics to discuss how robots navigate crowded indoor spaces at RoboBusiness"
 hook_ko: "안녕하세요 로봇님, A&K Robotics가 RoboBusiness에서 로봇이 혼잡한 실내 공간을 어떻게 이동하는지에 대해 이야기 나눕니다"
-tags: []
+tags: ["humanoids", "navigation"]
 authors: []
 embedded: false
 health_flourishing: false

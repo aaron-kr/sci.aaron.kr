@@ -1,7 +1,7 @@
 ---
 hook_en: "EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ"
 hook_ko: "자아 탐험가: 인간의 로코 조작을 위한 현장 비전-동작-촉각 관측소"
-tags: []
+tags: ["humanoids", "manipulation", "locomotion"]
 authors: ["Yunsong Zhou", "Xuekun Jiang", "Haiqi Shen", "Hangxu Liu", "Chaojian Shi", "Yujie Liu", "Jingyuan Li", "Haoran Yang", "Jiafei Cao", "Dongzhan Zhou", "Dong Wang", "Yao Mu", "Chunhua Shen", "Weinan Zhang"]
 embedded: false
 health_flourishing: false

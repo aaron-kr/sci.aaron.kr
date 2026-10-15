@@ -1,7 +1,7 @@
 ---
 hook_en: "Tracking the Invisible: Self-Supervised Wheel Track Detection with Thermal-RGB Fusion"
 hook_ko: "보이지 않는 것을 추적하다: 열-RGB 융합을 이용한 자기지도 휠 트랙 감지"
-tags: []
+tags: ["benchmark", "dataset"]
 authors: ["Yiming Yang", "Jeremy P. Bos"]
 embedded: false
 health_flourishing: false

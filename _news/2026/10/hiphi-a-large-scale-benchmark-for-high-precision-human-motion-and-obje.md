@@ -1,7 +1,7 @@
 ---
 hook_en: "HiPHI: A Large-Scale Benchmark for High-Precision Human Motion and Object Interaction"
 hook_ko: "HiPHI: 고정밀 인간 동작 및 객체 상호작용을 위한 대규모 벤치마크"
-tags: []
+tags: ["benchmark", "dataset", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
