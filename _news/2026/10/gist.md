@@ -1,7 +1,7 @@
 ---
 hook_en: "GIST, Optonics, and Hwasun Chonnam National University Hospital Develop Customized Bed-Roll Rehabilitation Robot"
 hook_ko: "GIST-옵토닉스-화순전남대병원, 맞춤형 침상 재활로봇 개발"
-tags: []
+tags: ["humanoids", "clinical"]
 authors: []
 embedded: false
 health_flourishing: false

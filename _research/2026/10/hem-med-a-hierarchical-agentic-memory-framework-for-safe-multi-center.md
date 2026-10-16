@@ -1,7 +1,7 @@
 ---
 hook_en: "HEM-Med: A Hierarchical Agentic Memory Framework for Safe Multi-Center Medication Recommendation"
 hook_ko: "HEM-Med: 안전한 다기관 약물 추천을 위한 계층적 에이전트 메모리 프레임워크"
-tags: []
+tags: ["clinical", "multi-agent", "reasoning"]
 authors: ["Min Xiao", "Jin Li", "Shoujin Wang", "Yeguang Zhen", "Yishuo Li", "Wenpeng Lu"]
 embedded: false
 health_flourishing: false

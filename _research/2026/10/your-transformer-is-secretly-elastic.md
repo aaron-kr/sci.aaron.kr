@@ -1,7 +1,7 @@
 ---
 hook_en: "Your Transformer Is Secretly Elastic"
 hook_ko: "당신의 변압기는 몰래 탄성을 가지고 있습니다"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Walter Simoncini", "Dheeraj Varghese", "Gertjan J. Burghouts", "Cees G. M. Snoek"]
 embedded: false
 health_flourishing: false

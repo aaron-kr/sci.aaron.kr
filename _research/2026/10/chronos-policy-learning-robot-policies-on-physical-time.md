@@ -1,7 +1,7 @@
 ---
 hook_en: "Chronos Policy: Learning Robot Policies on Physical Time"
 hook_ko: "크로노스 정책: 물리적 시간에 기반한 로봇 정책 학습"
-tags: []
+tags: ["locomotion", "training-efficiency"]
 authors: ["Changhao Wang", "Jaden Clark", "Shuran Song"]
 embedded: false
 health_flourishing: false

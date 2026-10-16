@@ -1,7 +1,7 @@
 ---
 hook_en: "SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving"
 hook_ko: "SafeDriveVLA: 분쟁 인지형 종단간 자율주행을 위한 내비게이션 조건화 세계 모델 구상"
-tags: []
+tags: ["autonomous-driving", "navigation"]
 authors: ["Shaoyuan Xie", "Zihan Zhang", "Jingxuan Wang", "Jiashu Qu", "Xiaoqing Liang", "Lingdong Kong", "Junchi Lu", "Henrik I. Christensen", "Qi Alfred Chen"]
 embedded: false
 health_flourishing: false

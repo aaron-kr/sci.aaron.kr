@@ -1,7 +1,7 @@
 ---
 hook_en: "Hyundai Mobis to seek robotics collaboration networks in China as well…Launching efforts to discover innovative companies in Shanghai"
 hook_ko: "현대모비스, 로보틱스 협력망 中서도 찾는다…상하이서 혁신기업 발굴 나서"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

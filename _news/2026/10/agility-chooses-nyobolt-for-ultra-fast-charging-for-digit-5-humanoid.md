@@ -1,7 +1,7 @@
 ---
 hook_en: "Agility chooses Nyobolt for ultra-fast charging for Digit 5 humanoid"
 hook_ko: "Agility가 Digit 5 휴머노이드의 초고속 충전을 위해 뇨볼트를 선택했습니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

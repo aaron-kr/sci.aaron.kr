@@ -1,7 +1,7 @@
 ---
 hook_en: "TextVerifier: Seeing Beyond Recognition to Verify Chinese Text Rendering"
 hook_ko: "텍스트 검증기: 인식을 넘어 중국어 텍스트 렌더링 검증하기"
-tags: []
+tags: ["ocr", "document-parsing"]
 authors: ["Yiyang Chen", "Guo-Hua Wang", "Yaoli Liu", "Qing-Guo Chen", "Zhao Xu", "Weihua Luo", "Xiujun Ma"]
 embedded: false
 health_flourishing: false
