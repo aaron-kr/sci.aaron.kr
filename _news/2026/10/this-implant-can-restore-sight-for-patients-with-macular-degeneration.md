@@ -1,7 +1,7 @@
 ---
 hook_en: "This implant can restore sight for patients with macular degeneration"
 hook_ko: "이 임플란트는 황반변성 환자의 시력을 회복시킬 수 있습니다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

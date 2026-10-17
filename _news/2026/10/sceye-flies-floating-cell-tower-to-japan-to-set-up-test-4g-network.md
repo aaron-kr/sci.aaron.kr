@@ -1,7 +1,7 @@
 ---
 hook_en: "Sceye Flies Floating Cell Tower to Japan to Set Up Test 4G Network"
 hook_ko: "Sceye, 일본으로 셀룰러 타워를 띄워 4G 테스트 네트워크 구축 예정"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

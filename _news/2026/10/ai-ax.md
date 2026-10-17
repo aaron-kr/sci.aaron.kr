@@ -1,7 +1,7 @@
 ---
 hook_en: "Ajou University Opens 'Army Pangyo AX Base,' a Defense Physical AI Hub"
 hook_ko: "아주대학교, 국방 피지컬 AI 허브 ‘육군 판교 AX거점’ 개소"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

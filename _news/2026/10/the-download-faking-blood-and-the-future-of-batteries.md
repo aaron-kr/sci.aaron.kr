@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: faking blood and the future of batteries"
 hook_ko: "다운로드: 가짜 혈액과 배터리의 미래"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

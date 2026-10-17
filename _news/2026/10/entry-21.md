@@ -1,7 +1,7 @@
 ---
 hook_en: "The Digital Festival of People, Robots, and Jeju Opens Together"
 hook_ko: "‘사람+로봇+제주’가 함께하는 디지털 체전 개막"
-tags: []
+tags: ["humanoids", "multi-agent"]
 authors: []
 embedded: false
 health_flourishing: false

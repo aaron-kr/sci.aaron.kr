@@ -1,7 +1,7 @@
 ---
 hook_en: "Stryker invests $400M into CMR Surgical"
 hook_ko: "스트라이커가 CMR 서지컬에 4억 달러를 투자합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

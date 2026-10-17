@@ -1,7 +1,7 @@
 ---
 hook_en: "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination"
 hook_ko: "PingpongDuo: 안전한 팀 협력으로 구현한 민첩한 휴머노이드 탁구 복식"
-tags: []
+tags: ["humanoids", "multi-agent"]
 authors: ["Haoran Jiang", "Yichao Zhong", "Kai Zhang", "Cheng Liu", "Yixuan Pan", "Zhenjie Yang", "Jingbo Wang", "Tianyu Li", "Li Chen"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Poetry for Engineers: The UI Designer’s Dream"
 hook_ko: "엔지니어를 위한 시: UI 디자이너의 꿈"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

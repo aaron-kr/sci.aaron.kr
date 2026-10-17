@@ -1,7 +1,7 @@
 ---
 hook_en: "GraphBEAT: Graph-based Bucketized Event Aggregation Over Time for Early Risk Stratification of Gastrointestinal Cancers"
 hook_ko: "그래프이대담자: 위장관암 조기 위험 분류를 위한 시간에 따른 그래프 기반 버킷화 이벤트 집계"
-tags: []
+tags: ["biomedical", "dataset"]
 authors: ["Leo Y. Li-Han", "Chris Varghese", "Elizabeth B. Habermann", "Mark J. Truty", "William R. G. Perry", "Cornelius A. Thiels", "Hojjat Salehinejad"]
 embedded: false
 health_flourishing: false
