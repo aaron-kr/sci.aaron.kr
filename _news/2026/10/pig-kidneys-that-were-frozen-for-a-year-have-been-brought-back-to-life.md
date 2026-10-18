@@ -1,7 +1,7 @@
 ---
 hook_en: "Pig kidneys that were “frozen” for a year have been brought back to life"
 hook_ko: "1년 동안 '냉동' 보관된 돼지 신장이 다시 살아났습니다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

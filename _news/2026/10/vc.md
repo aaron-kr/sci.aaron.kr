@@ -1,7 +1,7 @@
 ---
 hook_en: "Robo Technology Runner-up in Korea Preliminary of 'Startup World Cup' Hosted by U.S. Silicon Valley VCs"
 hook_ko: "로보에테크놀로지, 美 실리콘밸리 VC 주최 ‘스타트업 월드컵’ 한국 예선 준우승"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

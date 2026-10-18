@@ -1,7 +1,7 @@
 ---
 hook_en: "Why opportunity charging is winning as robot fleets scale"
 hook_ko: "로봇 차량 대수가 늘어남에 따라 기회 수익화가 성공하는 이유는 무엇일까"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

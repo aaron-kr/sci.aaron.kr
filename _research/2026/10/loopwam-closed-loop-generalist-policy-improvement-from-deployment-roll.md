@@ -1,7 +1,7 @@
 ---
 hook_en: "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts"
 hook_ko: "LoopWAM: 배포 롤아웃을 통한 폐쇄형 일반 정책 개선"
-tags: []
+tags: ["training-efficiency", "manipulation"]
 authors: ["Wenxuan Guo", "Yingping Liang", "Zhaoguo Wang", "Ziyuan Li", "Angyuan Ma", "Zhenyu Wu", "Chengkun Wang", "Bingyao Yu", "Ze Chen", "Borui Zhang", "Xiuwei Xu", "Meng Zhang", "Erjin Zhou", "Jiwen Lu"]
 embedded: false
 health_flourishing: false

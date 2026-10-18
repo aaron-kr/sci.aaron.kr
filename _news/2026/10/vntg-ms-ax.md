@@ -1,7 +1,7 @@
 ---
 hook_en: "VNTG partners with Microsoft Korea on manufacturing AX…Advancing Together from On-Site Implementation to Commercialization"
 hook_ko: "VNTG, 한국MS와 제조 AX 협력…현장 적용부터 사업화까지 함께 추진"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Timken Precision Drives puts the motion challenge first in humanoid robots"
 hook_ko: "팀켄 프리시전 드라이브스는 휴머노이드 로봇의 동작 과제를 최우선으로 생각합니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

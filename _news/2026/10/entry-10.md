@@ -1,7 +1,7 @@
 ---
 hook_en: "Hangul Day: Meeting Science and Drones at Sejong Central Park"
 hook_ko: "한글날, 세종중앙공원서 과학과 드론을 만나다"
-tags: []
+tags: ["drone"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Lunar Mission Will Explore Old Lava Tubes as Potential Habitats"
 hook_ko: "달 탐사 임무, 잠재적 서식지로서 옛 용암 동굴 탐사 예정"
-tags: []
+tags: ["navigation"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: When Two Robots Become One"
 hook_ko: "금요일 영상: 두 로봇이 하나가 될 때"
-tags: []
+tags: ["humanoids", "multi-agent"]
 authors: []
 embedded: false
 health_flourishing: false
