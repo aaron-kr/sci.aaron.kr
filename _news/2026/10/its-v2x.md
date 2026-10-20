@@ -1,7 +1,7 @@
 ---
 hook_en: "Qualcomm Introduces V2X-Based Traffic Safety Technology at the Gangneung ITS World Congress"
 hook_ko: "퀄컴, 강릉 ITS 세계총회서 V2X 기반 교통 안전 기술 소개"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

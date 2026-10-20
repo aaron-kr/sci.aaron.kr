@@ -1,7 +1,7 @@
 ---
 hook_en: "On-site applications open for companies to join Hanyang University ERICA Innovation Hub at '2026 RoboWorld'"
 hook_ko: "‘2026 로보월드’서 한양대 ERICA 혁신허브 입주기업 모집 현장 접수"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
