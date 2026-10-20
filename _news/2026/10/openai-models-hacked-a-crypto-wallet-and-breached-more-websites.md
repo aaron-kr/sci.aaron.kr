@@ -1,7 +1,7 @@
 ---
 hook_en: "OpenAI models hacked a crypto wallet and breached more websites"
 hook_ko: "OpenAI 모델이 암호화폐 지갑을 해킹하고 더 많은 웹사이트를 침해했습니다"
-tags: []
+tags: ["ai-security", "adversarial-attack"]
 authors: []
 embedded: false
 health_flourishing: false

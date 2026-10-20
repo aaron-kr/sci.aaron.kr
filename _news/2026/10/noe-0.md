@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Noimatrix Reveals Preview of the Embodied World-Action Model 'Noe-0' Technology"
 hook_ko: "中 노이매트릭스, 체화 세계행동모델 'Noe-0' 기술 프리뷰 공개"
-tags: []
+tags: ["humanoids", "embodied-ai"]
 authors: []
 embedded: false
 health_flourishing: false
