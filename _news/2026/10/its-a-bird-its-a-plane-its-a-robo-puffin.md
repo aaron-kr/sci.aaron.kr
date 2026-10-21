@@ -1,7 +1,7 @@
 ---
 hook_en: "It’s a bird, it’s a plane … it’s a robo-puffin?"
 hook_ko: "새인가요, 비행기인가요… 로보 퍼핀인가요?"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

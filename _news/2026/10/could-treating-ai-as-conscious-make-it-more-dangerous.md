@@ -1,7 +1,7 @@
 ---
-hook_en: "How to Stop AI Agents From Secretly Collaborating"
-hook_ko: "AI 에이전트가 몰래 협업하는 것을 막는 방법"
-tags: ["multi-agent", "policy"]
+hook_en: "Could Treating AI as Conscious Make It More Dangerous?"
+hook_ko: "AI를 의식 있는 존재로 다루면 더 위험해질 수 있을까?"
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "How to Stop AI Agents From Secretly Collaborating"
+title: "Could Treating AI as Conscious Make It More Dangerous?"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/ai-agent-security"
+source_url: "https://spectrum.ieee.org/ai-model-welfare"
 topic: "general-ai"
-date: "2026-09-29"
+date: "2026-10-21"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/ai-agent-security"
+dedup_key: "https://spectrum.ieee.org/ai-model-welfare"
 ---

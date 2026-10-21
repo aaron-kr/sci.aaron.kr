@@ -1,7 +1,7 @@
 ---
 hook_en: "AI with Authority, from Application to Silicon"
 hook_ko: "애플리케이션에서 실리콘까지, 권위를 지닌 AI"
-tags: []
+tags: ["industry"]
 authors: ["Jason Hickey"]
 embedded: false
 health_flourishing: false

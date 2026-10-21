@@ -1,7 +1,7 @@
 ---
 hook_en: "Firefighting drones at night, signal-keeping robots at road construction sites…Expansion of New Technology Demonstration"
 hook_ko: "밤엔 산불 진화 드론, 도로 공사장엔 신호수 로봇…신기술 실증 확대"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

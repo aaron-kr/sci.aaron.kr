@@ -1,6 +1,6 @@
 ---
-hook_en: "Making AI an asset, not an expense"
-hook_ko: "AI를 비용이 아닌 자산으로 만들기"
+hook_en: "Eliminating traffic deaths"
+hook_ko: "교통사고 사망자 제로화"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Making AI an asset, not an expense"
+title: "Eliminating traffic deaths"
 source: "MIT Technology Review"
 source_lang: "en"
-source_url: "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/"
+source_url: "https://www.technologyreview.com/2026/10/21/1146141/eliminating-traffic-deaths-impossible-issue/"
 topic: "general-ai"
-date: "2026-09-29"
+date: "2026-10-21"
 thumb: null
-dedup_key: "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/"
+dedup_key: "https://www.technologyreview.com/2026/10/21/1146141/eliminating-traffic-deaths-impossible-issue/"
 ---

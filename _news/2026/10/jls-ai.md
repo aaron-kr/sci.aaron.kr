@@ -1,7 +1,7 @@
 ---
 hook_en: "US-based JLS Automation unveils proprietary vision AI at PACKEXPO"
 hook_ko: "美 JLS 오토메이션, 팩엑스포서 독자 비전 AI 공개"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

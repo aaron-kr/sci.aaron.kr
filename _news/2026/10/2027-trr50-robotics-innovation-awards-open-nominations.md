@@ -1,7 +1,7 @@
 ---
 hook_en: "2027 TRR50 Robotics Innovation Awards open nominations"
 hook_ko: "2027 TRR50 로보틱스 혁신상 후보 접수 시작"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

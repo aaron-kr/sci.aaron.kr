@@ -1,7 +1,7 @@
 ---
 hook_en: "CODA: Cohort- and Drift-aware Foundation Model for Multimodal Clinical Reasoning"
 hook_ko: "CODA: 코호트 및 드리프트 인지 다중 모달 임상 추론을 위한 기초 모델"
-tags: []
+tags: ["clinical", "reasoning"]
 authors: ["Changshuo Liu", "Jiaqi Zhu", "Wenqiao Zhang", "Xiaokui Xiao", "Beng Chin Ooi"]
 embedded: false
 health_flourishing: false

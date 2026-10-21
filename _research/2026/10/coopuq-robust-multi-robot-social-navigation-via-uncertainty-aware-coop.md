@@ -1,7 +1,7 @@
 ---
 hook_en: "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting"
 hook_ko: "CoopUQ: 불확실성을 인지하는 협력적 예측을 통한 강인한 다중 로봇 사회적 내비게이션"
-tags: []
+tags: ["multi-agent", "navigation", "humanoids"]
 authors: ["Zehao Wang", "Jianpeng Yao", "Yuping Wang", "Yiping Li", "Jiaqi Li", "Zhixu Li", "Kanghoon Lee", "Jinfeng Wang", "Cong Liu", "Zhaowei Tan", "Jinkyoo Park", "Jiachen Li"]
 embedded: false
 health_flourishing: false
