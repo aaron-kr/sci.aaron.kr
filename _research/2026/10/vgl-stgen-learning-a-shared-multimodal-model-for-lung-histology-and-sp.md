@@ -1,7 +1,7 @@
 ---
 hook_en: "VGL-stGen: Learning a shared multimodal model for lung histology and spatial transcriptomics"
 hook_ko: "VGL-stGen: 폐 조직학과 공간 전사체학을 위한 공유 멀티모달 모델 학습"
-tags: []
+tags: ["biomedical", "dataset"]
 authors: ["Haenara Shin", "Dongjoo Lee", "Sungwoo Bae", "Kwon Joong Na", "Daeseung Lee", "Hongyoon Choi"]
 embedded: false
 health_flourishing: false

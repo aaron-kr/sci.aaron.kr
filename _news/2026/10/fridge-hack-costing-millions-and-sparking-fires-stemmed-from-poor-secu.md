@@ -1,7 +1,7 @@
 ---
 hook_en: "Fridge hack costing millions and sparking fires stemmed from poor security"
 hook_ko: "수백만 달러의 피해와 화재를 일으킨 냉장고 해킹은 보안 취약점에서 비롯됐다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

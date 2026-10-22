@@ -1,6 +1,6 @@
 ---
-hook_en: "A Brief History of the Bloomberg Terminal"
-hook_ko: "블룸버그 터미널의 간략한 역사"
+hook_en: "Why AI Can’t Replace Engineering Teams"
+hook_ko: "왜 AI가 엔지니어링 팀을 대체할 수 없는가"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "A Brief History of the Bloomberg Terminal"
+title: "Why AI Can’t Replace Engineering Teams"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/bloomberg-terminal"
+source_url: "https://spectrum.ieee.org/engineering-jobs-that-ai-cant-replace"
 topic: "general-ai"
-date: "2026-09-30"
+date: "2026-10-22"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/bloomberg-terminal"
+dedup_key: "https://spectrum.ieee.org/engineering-jobs-that-ai-cant-replace"
 ---
