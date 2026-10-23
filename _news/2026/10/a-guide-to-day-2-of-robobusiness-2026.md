@@ -1,7 +1,7 @@
 ---
 hook_en: "A guide to Day 2 of RoboBusiness 2026"
 hook_ko: "로보비즈니스 2026 2일차 가이드"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

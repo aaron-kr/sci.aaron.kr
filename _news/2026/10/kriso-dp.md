@@ -1,7 +1,7 @@
 ---
 hook_en: "KRISO conducts the first domestic sea trial of its self-developed DP technology…Enhance technological maturity"
 hook_ko: "KRISO, 자체 개발 DP 기술 국내 최초 해상 실증…기술 완성도 높여"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

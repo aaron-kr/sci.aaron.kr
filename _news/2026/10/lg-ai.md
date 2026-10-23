@@ -1,7 +1,7 @@
 ---
 hook_en: "LG Electronics and Korea Water Resources Corporation embark on AI transition for the world’s largest tidal power plant"
 hook_ko: "LG전자, 한국수자원공사와 세계 최대 조력발전소 AI 전환 나서"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

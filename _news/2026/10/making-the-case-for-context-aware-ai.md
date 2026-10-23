@@ -1,7 +1,7 @@
 ---
 hook_en: "Making the case for context-aware AI"
 hook_ko: "상황 인지형 AI의 필요성을 설명하다"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

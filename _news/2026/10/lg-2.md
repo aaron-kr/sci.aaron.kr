@@ -1,7 +1,7 @@
 ---
 hook_en: "LG Innotek partners with Nvidia to develop sensing solutions for robots"
 hook_ko: "LG이노텍, 엔비디아 손잡고 로봇용 센싱 솔루션 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
