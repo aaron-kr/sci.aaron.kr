@@ -1,7 +1,7 @@
 ---
 hook_en: "Meta Muse exposes users' personal and business secrets when they share conversations"
 hook_ko: "Meta Muse는 사용자가 대화를 공유할 때 개인 및 기업 비밀을 노출시킵니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning"
 hook_ko: "METTA: 메타 강화 학습을 위한 기억 기반 테스트 시 적응"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Ali Najar", "Hosein Hasani", "Amir Kooshan Fattah", "Yasamin Rajabi", "Mahdieh Soleymani Baghshah"]
 embedded: false
 health_flourishing: false

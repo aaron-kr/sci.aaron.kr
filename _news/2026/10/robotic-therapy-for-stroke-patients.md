@@ -1,7 +1,7 @@
 ---
 hook_en: "Robotic therapy for stroke patients"
 hook_ko: "뇌졸중 환자를 위한 로봇 치료"
-tags: []
+tags: ["humanoids", "clinical"]
 authors: []
 embedded: false
 health_flourishing: false

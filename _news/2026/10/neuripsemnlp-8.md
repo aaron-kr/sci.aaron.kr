@@ -1,7 +1,7 @@
 ---
 hook_en: "Professor Lee Jung-woo's team at Seoul National University has had 8 papers accepted at the international conferences NeurIPS and EMNLP"
 hook_ko: "서울대 이정우 교수팀, 국제학술대회 NeurIPS·EMNLP에 논문 8편 채택"
-tags: []
+tags: ["benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

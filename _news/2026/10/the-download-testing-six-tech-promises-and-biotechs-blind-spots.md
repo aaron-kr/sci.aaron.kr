@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: testing six tech promises and biotech’s blind spots"
 hook_ko: "다운로드: 여섯 가지 기술 약속과 생명공학의 맹점을 검증하다"
-tags: []
+tags: ["evaluation", "biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

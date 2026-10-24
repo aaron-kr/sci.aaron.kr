@@ -1,7 +1,7 @@
 ---
 hook_en: "Here’s how our climate team picked 10 promising companies to watch"
 hook_ko: "우리 기후 팀이 주목할 만한 유망 기업 10곳을 선정한 방법을 소개합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

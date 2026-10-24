@@ -1,7 +1,7 @@
 ---
 hook_en: "From Prompt Rules to Golden Data Model: Production-Scale Generation of Personalized, Compliant Pharmaceutical Claims"
 hook_ko: "프롬프트 규칙에서 골든 데이터 모델까지: 맞춤형 규정 준수 제약 청구서의 생산 규모 생성"
-tags: []
+tags: ["dataset", "industry"]
 authors: ["Suyash Mishra", "Qiang Li", "Subhabrata Adak", "Upender Phogat", "Srikanth Patil", "Satyanarayan Pati"]
 embedded: false
 health_flourishing: false

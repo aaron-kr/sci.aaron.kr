@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: preserving the Arctic permafrost, and playful AI agents"
 hook_ko: "다운로드: 북극 영구동토층 보존과 창의적인 AI 에이전트"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

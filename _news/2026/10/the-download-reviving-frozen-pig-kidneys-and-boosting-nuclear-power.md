@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: reviving frozen pig kidneys and boosting nuclear power"
 hook_ko: "다운로드: 냉동 돼지 신장 회복과 원자력 발전 활성화"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

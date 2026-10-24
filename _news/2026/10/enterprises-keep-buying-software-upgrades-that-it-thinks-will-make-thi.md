@@ -1,7 +1,7 @@
 ---
 hook_en: "Enterprises keep buying software upgrades that IT thinks will make things worse"
 hook_ko: "기업들은 상황을 악화시킬 것이라고 생각하는 IT의 소프트웨어 업그레이드를 계속 구매합니다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "ReactOS reaches major milestone with NTFS install support"
 hook_ko: "ReactOS, NTFS 설치 지원으로 주요 이정표 달성"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

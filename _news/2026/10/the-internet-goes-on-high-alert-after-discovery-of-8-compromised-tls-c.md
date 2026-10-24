@@ -1,7 +1,7 @@
 ---
 hook_en: "The Internet goes on high alert after discovery of 8 compromised TLS certs"
 hook_ko: "8개의 탈취된 TLS 인증서가 발견되면서 인터넷이 비상 경계 태세에 들어갔습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

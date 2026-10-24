@@ -1,7 +1,7 @@
 ---
 hook_en: "Reservoir launches new agricultural robotics incubator for Washington growers"
 hook_ko: "리저버, 워싱턴 농가를 위한 새로운 농업 로봇 인큐베이터 출범"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
