@@ -1,7 +1,7 @@
 ---
 hook_en: "The ecologist revealing the invisible networks that revive rainforests"
 hook_ko: "열대우림을 되살리는 보이지 않는 네트워크를 밝히는 생태학자"
-tags: []
+tags: ["dataset"]
 authors: []
 embedded: false
 health_flourishing: false

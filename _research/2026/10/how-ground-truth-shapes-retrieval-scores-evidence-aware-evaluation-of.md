@@ -1,7 +1,7 @@
 ---
 hook_en: "How Ground Truth Shapes Retrieval Scores: Evidence-Aware Evaluation of a Retrieval-Augmented Generation System for Breast Lesions"
 hook_ko: "그라운드 트루스가 검색 점수에 미치는 영향: 유방 병변 검색 증강 생성 시스템의 근거 기반 평가"
-tags: []
+tags: ["biomedical", "evaluation"]
 authors: ["Miguel Mochizuki Silva", "Samuel Ismael", "Mateus C. Dias", "Thaís Gaudêncio", "Yuri Malheiros", "Barufaldi"]
 embedded: false
 health_flourishing: false
