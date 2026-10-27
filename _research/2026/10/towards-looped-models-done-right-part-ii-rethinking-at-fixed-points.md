@@ -1,7 +1,7 @@
 ---
 hook_en: "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points"
 hook_ko: "올바른 루프 모델을 향하여, 2부: 고정점에서 다시 생각하기"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Benhao Huang", "Chufan Shi", "Junlin Chen", "Shicheng Wen", "Zhengzhong Liu", "Eric Xing", "Xuezhe Ma"]
 embedded: false
 health_flourishing: false

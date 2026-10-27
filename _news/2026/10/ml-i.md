@@ -1,7 +1,7 @@
 ---
 hook_en: "SOS Lab develops 'ML-I,' a smart infrastructure-optimizing LiDAR"
 hook_ko: "에스오에스랩, 스마트 인프라 최적화 라이다 ‘ML-I’ 개발"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false
