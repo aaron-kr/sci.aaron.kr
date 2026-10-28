@@ -1,7 +1,7 @@
 ---
 hook_en: "China's state-owned telecom company 'China Telecom' enters the humanoid robot business"
 hook_ko: "中 국유 통신사 '차이나텔레콤', 휴머노이드 로봇 사업 진출"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

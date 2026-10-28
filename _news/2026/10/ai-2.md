@@ -1,7 +1,7 @@
 ---
 hook_en: "Gyeongbuk Province Establishes Regional Robot Industry Communication System Ahead of the Launch of the Northern AI Robot Companies Council"
 hook_ko: "경북도, 북부권 AI로봇기업협의회 출범 전 권역 로봇산업 소통체계 구축"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

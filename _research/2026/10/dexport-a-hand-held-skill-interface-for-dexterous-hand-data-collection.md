@@ -1,7 +1,7 @@
 ---
 hook_en: "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection"
 hook_ko: "DexPort: 정교한 손 데이터 수집을 위한 휴대용 스킬 인터페이스"
-tags: []
+tags: ["humanoids", "manipulation", "dataset"]
 authors: ["Amber Xie", "Jiawei Fu", "Xiaofeng Guo", "Carmelo Sferrazza", "Guanya Shi", "Haozhi Qi"]
 embedded: false
 health_flourishing: false

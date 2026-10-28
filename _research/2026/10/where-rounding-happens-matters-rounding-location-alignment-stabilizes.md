@@ -1,7 +1,7 @@
 ---
 hook_en: "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning"
 hook_ko: "반올림이 일어나는 위치가 중요하다: 반올림 위치 정렬이 LLM 강화학습을 안정화한다"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Yijing Ke", "Tianle Cai", "Ruosong Wang"]
 embedded: false
 health_flourishing: false

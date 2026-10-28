@@ -1,7 +1,7 @@
 ---
 hook_en: "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing"
 hook_ko: "SpectralCanary: T2I 데이터셋용 저주파 트레이스, 감사 기능 활용하기 - 다소 민망할 정도로 간단함"
-tags: []
+tags: ["dataset"]
 authors: ["Sy-Tuyen Ho", "Anirudh Satheesh", "Soham Chawathe", "Huy Nghiem", "Yongkyun Lee", "Andrew Adams Schoen", "Furong Huang"]
 embedded: false
 health_flourishing: false

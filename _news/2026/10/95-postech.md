@@ -1,7 +1,7 @@
 ---
 hook_en: "'Young Robotics Engineer' (95) Professor Ahn Hye-min, POSTECH"
 hook_ko: "‘젊은 로봇 공학자’ (95) POSTECH 안혜민 교수"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

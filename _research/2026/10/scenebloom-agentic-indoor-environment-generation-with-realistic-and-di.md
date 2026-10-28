@@ -1,7 +1,7 @@
 ---
 hook_en: "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning"
 hook_ko: "블룸의 장: 체화 학습을 위한 현실적이고 다양한 레이아웃을 갖춘 에이전틱 실내 환경 생성"
-tags: []
+tags: ["humanoids", "dataset", "embodied-learning"]
 authors: ["Yuhan Liu", "Lianhui Qin", "Shenji Wan"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms"
 hook_ko: "RobustRLlib: 강인 강화학습 알고리즘을 위한 통합 라이브러리 및 벤치마크"
-tags: []
+tags: ["benchmark", "training-efficiency"]
 authors: ["Xi Chen", "Fengqi Hu", "Zeyu Shen", "Jiaying Xu", "Shangding Gu", "Pan Xu", "Anqi Liu", "Laixi Shi"]
 embedded: false
 health_flourishing: false
