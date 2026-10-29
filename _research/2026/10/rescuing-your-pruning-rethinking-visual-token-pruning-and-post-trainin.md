@@ -1,7 +1,7 @@
 ---
 hook_en: "Rescuing Your Pruning: Rethinking Visual Token Pruning and Post-Training Recovery in MLLMs"
 hook_ko: "가지치기 후 회복시키기: MLLM에서 시각 토큰 가지치기와 사후 학습 복구에 대한 재고"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Peiran Yin", "Hao Wu", "Zihao Yang", "Haozhe Hu", "Xudong Wang", "Xiaoyu Shen"]
 embedded: false
 health_flourishing: false

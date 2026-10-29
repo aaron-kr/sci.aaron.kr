@@ -1,6 +1,6 @@
 ---
-hook_en: "Changing Your Career Isn’t Easy"
-hook_ko: "커리어를 바꾸는 일은 쉽지 않다"
+hook_en: "FAA Gets Serious About Aviation Airwaves"
+hook_ko: "FAA, 항공 전파 규제에 본격 나서다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Changing Your Career Isn’t Easy"
+title: "FAA Gets Serious About Aviation Airwaves"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/career-pivots-for-software-engineers"
+source_url: "https://spectrum.ieee.org/faa-aviation-airwaves"
 topic: "general-ai"
-date: "2026-10-07"
+date: "2026-10-28"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/career-pivots-for-software-engineers"
+dedup_key: "https://spectrum.ieee.org/faa-aviation-airwaves"
 ---
