@@ -1,7 +1,7 @@
 ---
 hook_en: "Pairing industrial AI autonomy and human control"
 hook_ko: "산업용 AI 자율성과 인간 제어의 결합"
-tags: []
+tags: ["human-in-the-loop", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

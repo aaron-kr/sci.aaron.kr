@@ -1,7 +1,7 @@
 ---
 hook_en: "TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information"
 hook_ko: "TeamGym: 분산 정보를 활용한 AI 에이전트 팀의 의사결정을 위한 체육관"
-tags: []
+tags: ["multi-agent", "benchmark"]
 authors: ["Chanwoo Park", "Jaywoong Jeong", "Zachary Wojtowicz", "Yubin Kim", "Taekyun Lee", "Kaiqing Zhang", "Asuman Ozdaglar"]
 embedded: false
 health_flourishing: false

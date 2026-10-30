@@ -1,7 +1,7 @@
 ---
 hook_en: "KPPax: preprocess differentiable kinetic ODE for machine learning in atmospheric chemistry"
 hook_ko: "KPPax: 대기 화학 분야 머신러닝을 위한 미분 가능한 동역학 ODE 전처리기"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Wenqing Peng", "Michael Boy", "Zhi-Song Liu"]
 embedded: false
 health_flourishing: false

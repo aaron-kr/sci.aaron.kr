@@ -1,7 +1,7 @@
 ---
 hook_en: "Daincube launches 'TP Suit,' an innovative solution that transforms a tablet PC into an industrial teaching pendant"
 hook_ko: "다인큐브, 테블릿 PC를 산업용 티치 펜던트로 탈바꿈시키는 혁신 솔루션 'TP Suit' 신규 출시"
-tags: []
+tags: ["manipulation", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

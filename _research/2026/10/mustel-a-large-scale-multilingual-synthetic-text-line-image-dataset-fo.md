@@ -1,7 +1,7 @@
 ---
 hook_en: "MuSTEL: A Large-Scale Multilingual Synthetic Text-Line Image Dataset for OCR"
 hook_ko: "MuSTEL: OCR을 위한 대규모 다국어 합성 텍스트-라인 이미지 데이터셋"
-tags: []
+tags: ["ocr", "dataset", "multilingual"]
 authors: ["Majid Adibian", "Hossein Saberi", "Hossein Zeinali"]
 embedded: false
 health_flourishing: false

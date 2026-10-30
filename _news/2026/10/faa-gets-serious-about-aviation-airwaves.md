@@ -1,7 +1,7 @@
 ---
 hook_en: "FAA Gets Serious About Aviation Airwaves"
 hook_ko: "FAA, 항공 전파 규제에 본격 나서다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false
