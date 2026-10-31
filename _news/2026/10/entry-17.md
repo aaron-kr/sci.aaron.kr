@@ -1,7 +1,7 @@
 ---
 hook_en: "[Contribution] The Beginning of Precision Measurement Is 'Calibration Technology'"
 hook_ko: "[기고] 정밀측정의 시작은 ‘교정기술’이다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

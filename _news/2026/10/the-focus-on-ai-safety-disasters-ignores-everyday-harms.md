@@ -1,7 +1,7 @@
 ---
 hook_en: "The focus on AI safety disasters ignores everyday harms"
 hook_ko: "AI 안전 재난에만 집중하는 것은 일상적인 피해를 간과하는 것입니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

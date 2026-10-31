@@ -1,7 +1,7 @@
 ---
 hook_en: "Rethinking Neural Thickets Without Weight Perturbations"
 hook_ko: "무게 교란 없이 신경 덤불을 재고하다"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Nicolas Dufour", "Elouan Gardès", "Amil Dravid", "Patrick Pérez", "Loic Landrieu"]
 embedded: false
 health_flourishing: false

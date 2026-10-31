@@ -1,7 +1,7 @@
 ---
 hook_en: "Percepto launches Axion AI platform to unify inspection data analysis"
 hook_ko: "퍼셉토, 검사 데이터 분석 통합을 위한 Axion AI 플랫폼 출시"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

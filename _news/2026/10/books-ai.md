@@ -1,7 +1,7 @@
 ---
 hook_en: "[Books] Exploding Potential, AI Disinformation Tech"
 hook_ko: "[Books] 포텐 폭발, AI 분신테크"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

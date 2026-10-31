@@ -1,7 +1,7 @@
 ---
 hook_en: "Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models"
 hook_ko: "Progress Probes $P^2$: 비전-언어-액션 모델을 위한 경량 런타임 모니터링"
-tags: []
+tags: ["evaluation", "reasoning"]
 authors: ["Atiksh Bhardwaj", "Edward W. Duan", "Junwon Seo", "Prithwish Dan", "Wei-Chiu Ma", "Andrea Bajscy", "Preston Culbertson"]
 embedded: false
 health_flourishing: false

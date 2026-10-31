@@ -1,7 +1,7 @@
 ---
 hook_en: "Pathrobotics Launches Logistics Robot Subscription Service (RaaS)"
 hook_ko: "파스토로보틱스, 물류로봇 구독 서비스(RaaS) 본격화"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

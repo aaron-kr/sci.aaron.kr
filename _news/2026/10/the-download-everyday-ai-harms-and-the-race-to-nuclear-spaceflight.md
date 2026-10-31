@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: everyday AI harms and the race to nuclear spaceflight"
 hook_ko: "다운로드: 일상 속 AI의 피해와 핵 우주 비행 경쟁"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

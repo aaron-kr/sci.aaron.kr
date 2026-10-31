@@ -1,7 +1,7 @@
 ---
 hook_en: "SymAnt: Grounding Long-Horizon Action Anticipation with Adaptable Symbolic Priors"
 hook_ko: "SymAnt: 적응 가능한 상징적 사전 지식을 활용한 장기 행동 기대의 기반 마련"
-tags: []
+tags: ["reasoning", "navigation"]
 authors: ["Fnu Aryan", "Yaqi Xie", "Joseph Campbell", "Woojun Kim", "Kwonjoon Lee", "Hossein Nourkhiz Mahjoub", "Ehsan Moradi-Pari", "Katia Sycara", "Simon Stepputtis"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI agent tracking and climate feedback loops"
 hook_ko: "다운로드: AI 에이전트 추적과 기후 피드백 루프"
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

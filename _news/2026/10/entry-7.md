@@ -1,7 +1,7 @@
 ---
 hook_en: "Trump judges 'imported robots and industrial machinery' as a threat to national security…Tariff imposition to be deferred"
 hook_ko: "트럼프, '수입 로봇·산업기계' 국가 안보에 위협 판단…관세 부과는 유보"
-tags: []
+tags: ["autonomous-driving", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

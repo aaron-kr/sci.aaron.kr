@@ -1,7 +1,7 @@
 ---
 hook_en: "Gym-Anything for Robotics: Scaling physical simulations with digital agents"
 hook_ko: "로봇공학을 위한 모든 체육관: 디지털 에이전트로 물리 시뮬레이션 확장하기"
-tags: []
+tags: ["benchmark", "manipulation"]
 authors: ["Pranjal Aggarwal", "Sean Welleck"]
 embedded: false
 health_flourishing: false

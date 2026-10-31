@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: dead startups fueling AI and interspecies communication"
 hook_ko: "다운로드: AI와 종 간 소통을 촉진하는 죽은 스타트업들"
-tags: []
+tags: ["ai-education", "policy"]
 authors: []
 embedded: false
 health_flourishing: false
