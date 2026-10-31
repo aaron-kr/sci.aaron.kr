@@ -1,7 +1,7 @@
 ---
 hook_en: "uTHCD-C: A Corruption-Robustness Benchmark for Tamil Handwritten Character Recognition"
 hook_ko: "uTHCD-C: 타밀어 필기 문자 인식을 위한 부정행위 저항성 벤치마크"
-tags: []
+tags: ["handwriting", "benchmark", "dataset"]
 authors: ["Preethi S", "Meeradevi T", "Arun Prakash A"]
 embedded: false
 health_flourishing: false

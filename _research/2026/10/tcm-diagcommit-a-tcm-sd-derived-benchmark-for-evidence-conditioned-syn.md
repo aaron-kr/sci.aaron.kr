@@ -1,7 +1,7 @@
 ---
 hook_en: "TCM-DiagCommit: A TCM-SD-Derived Benchmark for Evidence-Conditioned Syndrome Selection and Commitment"
 hook_ko: "TCM-DiagCommit: 근거 기반 증후군 선택 및 전념을 위한 TCM-SD 파생 벤치마크"
-tags: []
+tags: ["benchmark", "dataset"]
 authors: ["Erwei Hou", "Yue Hu"]
 embedded: false
 health_flourishing: false

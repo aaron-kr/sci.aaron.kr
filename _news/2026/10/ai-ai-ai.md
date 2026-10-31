@@ -1,7 +1,7 @@
 ---
 hook_en: "MAUM AI Unveils 'AI Patrol Robot That Detects Risks on Site' at Gyeonggi Province's Physical AI Transformation Ceremony"
 hook_ko: "마음AI, 경기도 피지컬 AI 대전환 선포식서 ‘현장 위험 스스로 감지하는 AI 순찰로봇’ 선보여"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

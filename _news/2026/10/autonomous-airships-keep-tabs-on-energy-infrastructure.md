@@ -1,7 +1,7 @@
 ---
 hook_en: "Autonomous Airships Keep Tabs on Energy Infrastructure"
 hook_ko: "자율 비행선이 에너지 인프라를 모니터링하다"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
