@@ -1,7 +1,7 @@
 ---
 hook_en: "2026 Robotics Handbook looks at humanoids, AI, and design choices"
 hook_ko: "2026 로보틱스 핸드북은 휴머노이드, 인공지능, 그리고 디자인 선택에 대해 다룹니다"
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

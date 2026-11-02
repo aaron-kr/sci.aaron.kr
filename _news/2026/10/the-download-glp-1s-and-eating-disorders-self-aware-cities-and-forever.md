@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: GLP-1s and eating disorders, self-aware cities, and forever chemicals"
 hook_ko: "다운로드: GLP-1과 섭식 장애, 자기 인식 도시, 그리고 영구 화학물질"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

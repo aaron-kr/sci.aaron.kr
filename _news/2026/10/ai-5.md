@@ -1,7 +1,7 @@
 ---
 hook_en: "Italian company Generativity Bionics opens an AI data factory for Humanoid Physical"
 hook_ko: "伊 제너러티브 바이오닉스, 휴머노이드 피지컬 AI데이터 공장"
-tags: []
+tags: ["humanoids", "dataset"]
 authors: []
 embedded: false
 health_flourishing: false

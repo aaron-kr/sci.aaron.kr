@@ -1,7 +1,7 @@
 ---
 hook_en: "Creating AI value with enterprise context"
 hook_ko: "기업 환경에서 AI 가치를 창출하기"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
