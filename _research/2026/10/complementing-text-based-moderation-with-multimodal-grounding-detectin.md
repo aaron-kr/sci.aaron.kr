@@ -1,7 +1,7 @@
 ---
 hook_en: "Complementing Text Based Moderation with Multimodal Grounding: Detecting Fraudulent Inducement Behaviors on Short Video Platforms"
 hook_ko: "텍스트 기반 중재에 멀티모달 그라운딩을 결합하기: 짧은 동영상 플랫폼에서의 사기 유도 행위 탐지"
-tags: []
+tags: ["dataset", "multi-agent"]
 authors: ["Xiaoyong Yu"]
 embedded: false
 health_flourishing: false

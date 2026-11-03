@@ -1,7 +1,7 @@
 ---
 hook_en: "PSA: Patch your Plex media server before someone hacks it"
 hook_ko: "공지: 누군가 해킹하기 전에 Plex 미디어 서버를 패치하세요"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

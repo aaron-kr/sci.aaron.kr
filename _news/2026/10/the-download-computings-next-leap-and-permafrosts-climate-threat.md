@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: computing’s next leap and permafrost’s climate threat"
 hook_ko: "다운로드: 컴퓨팅의 다음 도약과 영구동토층이 초래하는 기후 위협"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: "First Utility-Scale Enhanced Geothermal Plant Goes Live"
-hook_ko: "최초의 대규모 고도화 지열 발전소 가동 시작"
+hook_en: "What Would a U.S. Telecommunications Act 2.0 Look Like?"
+hook_ko: "미국 통신법 2.0은 어떤 모습일까요?"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "First Utility-Scale Enhanced Geothermal Plant Goes Live"
+title: "What Would a U.S. Telecommunications Act 2.0 Look Like?"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/fervo-cape-station-geothermal"
+source_url: "https://spectrum.ieee.org/telecommunications-act-reform"
 topic: "general-ai"
-date: "2026-10-12"
+date: "2026-11-02"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/fervo-cape-station-geothermal"
+dedup_key: "https://spectrum.ieee.org/telecommunications-act-reform"
 ---
