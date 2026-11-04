@@ -1,7 +1,7 @@
 ---
 hook_en: "When Should We Intervene at Test Time?"
 hook_ko: "시험 시간에 언제 개입해야 할까요?"
-tags: []
+tags: ["human-in-the-loop", "evaluation"]
 authors: ["Jiahao Zhang", "Xinling Wen", "Liangliang Li", "Yu Chen"]
 embedded: false
 health_flourishing: false

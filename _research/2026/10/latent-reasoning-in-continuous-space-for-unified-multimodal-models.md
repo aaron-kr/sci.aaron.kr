@@ -1,7 +1,7 @@
 ---
 hook_en: "Latent Reasoning in Continuous Space for Unified Multimodal Models"
 hook_ko: "통합 멀티모달 모델을 위한 연속 공간 잠재 추론"
-tags: []
+tags: ["reasoning", "multimodal"]
 authors: ["Byungwoo Jeon", "Yoonwoo Jeong", "Hyunseok Lee", "Minsu Cho", "Jinwoo Shin"]
 embedded: false
 health_flourishing: false

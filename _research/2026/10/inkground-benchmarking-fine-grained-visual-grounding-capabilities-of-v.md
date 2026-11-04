@@ -1,7 +1,7 @@
 ---
 hook_en: "inkGround: Benchmarking Fine-grained Visual Grounding Capabilities of Vision-Language Models for Cursive Handwriting in the Wild"
 hook_ko: "잉크 바닥면: 야외 필기 쓰기를 위한 비전-언어 모델의 세밀한 시각 기반 접지 능력 벤치마킹"
-tags: []
+tags: ["benchmark", "handwriting", "evaluation"]
 authors: ["Sidra Hanif"]
 embedded: false
 health_flourishing: false

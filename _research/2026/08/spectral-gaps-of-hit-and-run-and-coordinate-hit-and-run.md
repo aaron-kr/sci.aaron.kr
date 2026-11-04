@@ -1,7 +1,7 @@
 ---
 hook_en: "Spectral Gaps of Hit-and-Run and Coordinate Hit-and-Run"
 hook_ko: "히트 앤 런과 좌표 히트 앤 런의 스펙트럼 갭"
-tags: []
+tags: ["reasoning"]
 authors: ["Yunbum Kook", "Santosh S. Vempala"]
 embedded: false
 health_flourishing: false

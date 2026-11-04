@@ -1,7 +1,7 @@
 ---
 hook_en: "Physiological Trajectories and Observation Patterns in ICU Mortality Prediction: Transportability Under Changing Measurement Conditions"
 hook_ko: "중환자실 사망률 예측에서의 생리학적 경로와 관찰 패턴: 변화하는 측정 조건에서의 이동성"
-tags: []
+tags: ["clinical", "evaluation"]
 authors: ["Benjamin T. Pike"]
 embedded: false
 health_flourishing: false
