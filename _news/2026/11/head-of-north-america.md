@@ -1,7 +1,7 @@
 ---
 hook_en: "BigWave Robotics Launches Full-Scale Push into the North American Market… Recruitment of Ha Yeon-heun as Head of North America"
 hook_ko: "빅웨이브로보틱스, 북미 시장 공략 본격화… ‘하연흔’ 북미 총괄(Head of North America) 영입"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

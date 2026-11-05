@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea Institute for Robot Industry Advancement Supports Robot Startups with Investment and Market Entry"
 hook_ko: "한국로봇산업진흥원, 로봇 스타트업 투자와 시장 진출 지원"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

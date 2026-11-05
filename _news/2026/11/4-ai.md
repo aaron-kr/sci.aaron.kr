@@ -1,7 +1,7 @@
 ---
 hook_en: "U.S. 'OpenTron Labs' Raises $40 Million in Funding…Expanding the AI-based laboratory automation business"
 hook_ko: "美 '오픈트론스 랩웍스', 4천만 달러 투자 유치…AI 기반 실험실 자동화 사업 확대"
-tags: []
+tags: ["industry", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Haier sees a surge in robot sales...Aggressive store expansion"
 hook_ko: "中 하이얼, 로봇 매출 급증...매장도 공격적 확장"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

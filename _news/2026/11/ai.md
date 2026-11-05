@@ -1,7 +1,7 @@
 ---
 hook_en: "U.S. Wonder-Aibrave Expands AI-Based Robot Deployment Partnership"
 hook_ko: "美 원더-애브라이드, AI기반 로봇 배치 제휴 확대"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

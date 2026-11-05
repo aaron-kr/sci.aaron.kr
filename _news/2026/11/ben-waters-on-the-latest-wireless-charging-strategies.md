@@ -1,7 +1,7 @@
 ---
 hook_en: "Ben Waters on the latest wireless charging strategies"
 hook_ko: "벤 워터스가 전하는 최신 무선 충전 전략"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

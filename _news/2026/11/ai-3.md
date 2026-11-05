@@ -1,7 +1,7 @@
 ---
 hook_en: "Hwaseong City to \"Activate Robot Integration\"... \"Lead AI Transformation in Manufacturing\""
 hook_ko: "‘로봇 연계 활성화’ 화성市...”제조업의 AI 전환 주도\""
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

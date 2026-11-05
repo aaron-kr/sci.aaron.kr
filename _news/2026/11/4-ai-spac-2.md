@@ -1,7 +1,7 @@
 ---
 hook_en: "Koyoung Technology Successfully Concludes the 4th AI Competition…POSTECH SPaC Team Wins for the Second Consecutive Time"
 hook_ko: "고영테크놀러지, 제4회 AI 경진대회 성료…포스텍 SPaC팀 2회 연속 우승"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

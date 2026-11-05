@@ -1,7 +1,7 @@
 ---
 hook_en: "Ace Robotics partners with a university in Singapore to unveil a world model of a physics-interacting robot"
 hook_ko: "中 에이스로보틱스, 싱가포르 대학 손잡고 물리 상호작용 로봇 월드모델 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

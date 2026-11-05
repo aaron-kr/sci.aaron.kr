@@ -1,7 +1,7 @@
 ---
 hook_en: "Tsinghua University in China and Aijibot: \"Using Robots as 'Teachers' Boosts Success Rate↑\""
 hook_ko: "中 칭화대-애지봇, \"로봇끼리 '선생님' 삼으니 작업 성공률↑\""
-tags: []
+tags: ["multi-agent"]
 authors: []
 embedded: false
 health_flourishing: false

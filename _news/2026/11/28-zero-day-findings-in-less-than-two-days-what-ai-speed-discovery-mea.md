@@ -1,7 +1,7 @@
 ---
 hook_en: "28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics"
 hook_ko: "2일도 채 안 되는 기간에 발견된 28건의 제로데이 취약점: AI-스피드 발견이 로봇공학에 의미하는 바는 무엇일까"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

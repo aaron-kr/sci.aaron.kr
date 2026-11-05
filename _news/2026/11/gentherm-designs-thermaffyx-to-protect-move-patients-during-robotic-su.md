@@ -1,7 +1,7 @@
 ---
 hook_en: "Gentherm designs ThermAffyx to protect, move patients during robotic surgeries"
 hook_ko: "젠테름은 로봇 수술 중 환자를 보호하고 이동시키기 위해 ThermAffyx를 설계했습니다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

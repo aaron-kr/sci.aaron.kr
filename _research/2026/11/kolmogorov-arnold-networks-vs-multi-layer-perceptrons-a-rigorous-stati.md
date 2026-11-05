@@ -1,7 +1,7 @@
 ---
 hook_en: "Kolmogorov-Arnold Networks vs. Multi-Layer Perceptrons: A Rigorous Statistical Benchmark on Clinical Tabular Data"
 hook_ko: "콜모고로프-아놀드 네트워크 대. 다층 퍼셉트론: 임상 표준화 데이터에 대한 엄격한 통계적 벤치마크"
-tags: []
+tags: ["benchmark", "clinical"]
 authors: ["Rafał Wodziński", "Paweł Szczerbiak"]
 embedded: false
 health_flourishing: false

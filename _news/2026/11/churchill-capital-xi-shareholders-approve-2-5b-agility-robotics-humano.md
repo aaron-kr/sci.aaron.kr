@@ -1,7 +1,7 @@
 ---
 hook_en: "Churchill Capital XI shareholders approve $2.5B Agility Robotics humanoid SPAC"
 hook_ko: "처칠 캐피탈 XI 주주들이 25억 달러 규모의 애질리티 로보틱스 휴머노이드 SPAC을 승인했습니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

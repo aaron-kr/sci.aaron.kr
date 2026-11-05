@@ -1,7 +1,7 @@
 ---
 hook_en: "How a Kenyan Startup Is Rethinking AI for Small Businesses"
 hook_ko: "케냐 스타트업이 소규모 비즈니스를 위해 AI를 재고하는 방법"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

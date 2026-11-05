@@ -1,7 +1,7 @@
 ---
 hook_en: "Mondrian AI releases beta of 'Run Your Bot,' a personal AI assistant that 'sends' instead of 'answers'… Coming soon to official release"
 hook_ko: "몬드리안AI, ‘대답 말고, 대신’ 개인 AI 비서 ‘런유어봇’ 베타 무료 공개… 곧 정식 출시"
-tags: []
+tags: ["human-in-the-loop"]
 authors: []
 embedded: false
 health_flourishing: false
