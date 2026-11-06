@@ -1,7 +1,7 @@
 ---
-hook_en: "Chasing China’s Monazite Monopoly"
-hook_ko: "중국의 모나자이트 독점을 추격하다"
-tags: ["industry"]
+hook_en: "Use Your Year-End Review to Reach for a Promotion"
+hook_ko: "연말 결산을 활용해 승진 기회를 잡으세요"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Chasing China’s Monazite Monopoly"
+title: "Use Your Year-End Review to Reach for a Promotion"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/china-rare-earth-minerals"
+source_url: "https://spectrum.ieee.org/how-to-get-a-promotion"
 topic: "general-ai"
-date: "2026-10-15"
+date: "2026-11-05"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/china-rare-earth-minerals"
+dedup_key: "https://spectrum.ieee.org/how-to-get-a-promotion"
 ---

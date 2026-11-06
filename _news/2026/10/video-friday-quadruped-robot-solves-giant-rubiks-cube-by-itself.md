@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Quadruped Robot Solves Giant Rubik’s Cube by Itself"
 hook_ko: "금요일 영상: 네 발 로봇이 거대한 루빅스 큐브를 혼자 풀다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

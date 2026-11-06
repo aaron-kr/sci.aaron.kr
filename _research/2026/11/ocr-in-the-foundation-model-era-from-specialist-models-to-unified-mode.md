@@ -1,7 +1,7 @@
 ---
 hook_en: "OCR in the Foundation Model Era: From Specialist Models to Unified Models"
 hook_ko: "기초 모델 시대의 OCR: 전문 모델에서 통합 모델로"
-tags: []
+tags: ["ocr", "evaluation"]
 authors: ["Zhiheng Li", "Zongyang Ma", "Jiaxian Chen", "Cheng Cui", "Yi Liu", "Ziqi Zhang", "Chunfeng Yuan", "Bing Li", "Xiang Bai", "Weiming Hu"]
 embedded: false
 health_flourishing: false

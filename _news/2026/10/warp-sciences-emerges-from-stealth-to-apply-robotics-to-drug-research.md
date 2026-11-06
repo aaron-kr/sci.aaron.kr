@@ -1,7 +1,7 @@
 ---
 hook_en: "Warp Sciences emerges from stealth, to apply robotics to drug research"
 hook_ko: "워프 사이언스, 은밀함을 넘어 로봇공학을 약물 연구에 적용하다"
-tags: []
+tags: ["industry", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

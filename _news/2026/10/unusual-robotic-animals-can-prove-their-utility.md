@@ -1,7 +1,7 @@
 ---
 hook_en: "Unusual robotic animals can prove their utility"
 hook_ko: "특이한 로봇 동물들이 그 유용성을 입증할 수 있다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

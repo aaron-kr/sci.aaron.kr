@@ -1,7 +1,7 @@
 ---
 hook_en: "Under-Skin Implant Controls Prosthetic Arms"
 hook_ko: "피부 아래 이식 장치가 의수를 제어하다"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
