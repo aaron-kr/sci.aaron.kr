@@ -1,7 +1,7 @@
 ---
 hook_en: "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues"
 hook_ko: "무료 차단: 두 개의 단안 거리 단서 간 불일치를 통해 차단을 감지하기"
-tags: []
+tags: ["evaluation"]
 authors: ["Chibueze Praise Onyenweaku", "Toyibat Adele", "Sikirulahi Opeyemi Abdulkareem", "Obed Honour Eje"]
 embedded: false
 health_flourishing: false

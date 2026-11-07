@@ -1,7 +1,7 @@
 ---
 hook_en: "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories"
 hook_ko: "BEAKER: 자율주행 화학 실험실에서 구현된 뇌를 위한 전문가 주도 벤치마크"
-tags: []
+tags: ["benchmark", "autonomous-driving", "dataset"]
 authors: ["Fei Lin", "Tengchao Zhang", "Ziyang Gong", "Xiaotong Yu", "Bohan Zhang", "Yifan Zhou", "Qihao Yang", "Ji Dai", "Dong Li", "Yining Jiang", "Qinghua Ni", "Jun Huang", "Qiang Zhang", "Yue Zhou", "Zhihang Zhong", "Yonglin Tian", "Fei-Yue Wang", "Xue Yang"]
 embedded: false
 health_flourishing: false

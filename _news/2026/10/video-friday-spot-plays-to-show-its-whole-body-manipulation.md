@@ -1,7 +1,7 @@
 ---
 hook_en: "Video Friday: Spot Plays to Show Its Whole-Body Manipulation"
 hook_ko: "금요일 영상: 스팟 플레이가 전신 조작을 보여주다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

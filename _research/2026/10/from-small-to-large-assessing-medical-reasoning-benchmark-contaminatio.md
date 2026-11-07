@@ -1,7 +1,7 @@
 ---
 hook_en: "From Small to Large: Assessing Medical Reasoning, Benchmark Contamination, and Model Size in Language Models"
 hook_ko: "작게부터 크게: 의료 추론 평가, 오염 벤치마크, 그리고 언어 모델의 모델 크기"
-tags: []
+tags: ["reasoning", "benchmark", "biomedical"]
 authors: ["Navapat Nananukul", "Mayank Kejriwal"]
 embedded: false
 health_flourishing: false

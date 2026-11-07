@@ -1,7 +1,7 @@
 ---
 hook_en: "GUILD: Guided Iterative Data Collection for Imitation Learning"
 hook_ko: "길드: 모방 학습을 위한 안내된 반복 데이터 수집"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Shivin Dass", "Kevin Nguyen", "Rohan Yelandur", "Junhong Xu", "Roberto Martín-Martín"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000 Blackwell Workstation Edition Fueled by PNY-Supplied GPUs"
 hook_ko: "AI 혁신을 시작하세요: PNY 공급 GPU로 구동되는 NVIDIA RTX PRO 6000 블랙웰 워크스테이션 에디션의 강력함"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

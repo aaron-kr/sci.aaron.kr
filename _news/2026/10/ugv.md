@@ -1,7 +1,7 @@
 ---
 hook_en: "Ukrainian company 'Ratel Robotics' to develop UGVs capable of launching interceptor drones"
 hook_ko: "우크라이나 '라텔 로보틱스', 요격 드론 발사 UGV 개발한다"
-tags: []
+tags: ["humanoids", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

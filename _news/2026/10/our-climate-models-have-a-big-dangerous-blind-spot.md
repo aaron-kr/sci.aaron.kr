@@ -1,7 +1,7 @@
 ---
 hook_en: "Our climate models have a big, dangerous blind spot"
 hook_ko: "우리의 기후 모델에는 크고 위험한 맹점이 있습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

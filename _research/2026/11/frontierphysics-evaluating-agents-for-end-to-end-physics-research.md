@@ -1,7 +1,7 @@
 ---
 hook_en: "FrontierPhysics: Evaluating Agents for End-to-End Physics Research"
 hook_ko: "변방물리학: 종단 간 물리 연구를 위한 에이전트 평가"
-tags: []
+tags: ["benchmark", "reasoning"]
 authors: ["Bingran You", "Wenjun Ke", "Ria Rosenauer", "Bo Liu", "Wenbo Chen", "Min Chen", "Shuqi Xu", "Yue Ma", "Jiechao Feng", "Bo Chen", "Xiangkai Sun", "Jiarui Liu", "Jinen Guo", "Zeyu Zhou", "Xu Huang", "Zhuohan Li", "Haoyu Li", "Heguang Lin", "Lijie Ding", "Yadong Zeng", "Kangqi Zhang", "Xinge Liu", "Hanwen Liu", "Zhenghong Li", "Alexander von Recum", "Yuchen Zhu", "Felix Schwarzfischer", "Yizhou Zhao", "Jicheng Wang", "Binxu Li", "Qian Yu", "Chan Li", "Cheng Dai", "Di Wang", "Haoyu Zhang", "Jiankai Sun", "Kaituo Feng", "Mian Qin", "Ruihong Yin", "Yiqun Luo", "Weiwei Wu", "Shihong Pan", "Tsung Yeh Hsieh", "Xiao Huang", "Yan Zhang", "Sihan Li", "Zirui Ren", "Zengji Tu", "Kyoung Whan Choe", "Ke Sun", "Vincenzo Galia", "Vaisakhi Mishra", "Jiashu He", "Hongyang Wang", "Zhiheng Yang", "Shubham Gaur", "Yifan Gu", "Shuyi Wang", "Zihao Zuo", "Steven Dillmann", "Yiyou Sun", "Xinyang Han", "Hanchung Lee", "Molei Tao", "Yue Zhao", "Shilong Liu", "Yuchen Wu", "Xuandong Zhao", "Xiangyi Li", "Florian Brand", "Gerbrand Ceder", "Hartmut Haeffner"]
 embedded: false
 health_flourishing: false
