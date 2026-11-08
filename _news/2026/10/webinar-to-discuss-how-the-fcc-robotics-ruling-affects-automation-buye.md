@@ -1,7 +1,7 @@
 ---
 hook_en: "Webinar to discuss how the FCC robotics ruling affects automation buyers"
 hook_ko: "FCC 로봇 규제가 자동화 구매자에게 미치는 영향을 논의하는 웨비나"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

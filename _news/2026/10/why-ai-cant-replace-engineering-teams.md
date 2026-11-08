@@ -1,7 +1,7 @@
 ---
 hook_en: "Why AI Can’t Replace Engineering Teams"
 hook_ko: "왜 AI가 엔지니어링 팀을 대체할 수 없는가"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information"
 hook_ko: "같은 행동, 다른 메커니즘: 유한 실험이 통합 정보에 대해 무엇을 증명할 수 있는가"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Linqian Wu", "Diaoxuan He"]
 embedded: false
 health_flourishing: false

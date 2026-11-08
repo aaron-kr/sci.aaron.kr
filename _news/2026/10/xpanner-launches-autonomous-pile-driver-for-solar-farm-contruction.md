@@ -1,7 +1,7 @@
 ---
 hook_en: "Xpanner launches autonomous pile driver for solar farm contruction"
 hook_ko: "Xpanner, 태양광 발전소 건설용 자율 말뚝 박기 장치 출시"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

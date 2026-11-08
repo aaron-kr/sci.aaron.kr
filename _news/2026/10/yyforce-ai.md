@@ -1,7 +1,7 @@
 ---
 hook_en: "YYForce to Train AI Humanoid Room Management Robot at Novotel Hotel"
 hook_ko: "YYForce, 노보텔 호텔서 AI 휴머노이드 객실 관리 로봇 학습 추진"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

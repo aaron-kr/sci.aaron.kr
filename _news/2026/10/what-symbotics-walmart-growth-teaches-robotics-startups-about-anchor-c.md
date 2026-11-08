@@ -1,7 +1,7 @@
 ---
 hook_en: "What Symbotic’s Walmart growth teaches robotics startups about anchor customers"
 hook_ko: "Symbotic의 월마트 성장이 로봇 스타트업에게 앵커 고객에 대해 가르쳐 주는 것은 무엇인가"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

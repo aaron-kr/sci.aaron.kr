@@ -1,7 +1,7 @@
 ---
 hook_en: "White House makes Section 232 determination regarding foreign-made robots"
 hook_ko: "백악관, 외국산 로봇에 대한 섹션 232 결정 내림"
-tags: []
+tags: ["policy", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

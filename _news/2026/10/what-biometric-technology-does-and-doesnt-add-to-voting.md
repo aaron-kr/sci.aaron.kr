@@ -1,7 +1,7 @@
 ---
 hook_en: "What Biometric Technology Does and Doesn’t Add to Voting"
 hook_ko: "생체 인식 기술이 투표에 더하는 것과 더하지 않는 것"
-tags: []
+tags: ["policy", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false

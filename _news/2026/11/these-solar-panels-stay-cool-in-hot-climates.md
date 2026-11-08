@@ -1,6 +1,6 @@
 ---
-hook_en: "This Hidden Device Could Free Up Gigawatts of Grid Power"
-hook_ko: "이 숨겨진 장치가 기가와트 규모의 전력망을 확보할 수 있습니다"
+hook_en: "These Solar Panels Stay Cool in Hot Climates"
+hook_ko: "이 태양광 패널은 더운 기후에서도 시원함을 유지합니다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "This Hidden Device Could Free Up Gigawatts of Grid Power"
+title: "These Solar Panels Stay Cool in Hot Climates"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/variable-frequency-drives"
+source_url: "https://spectrum.ieee.org/solar-panel-cooling"
 topic: "general-ai"
-date: "2026-10-17"
+date: "2026-11-07"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/variable-frequency-drives"
+dedup_key: "https://spectrum.ieee.org/solar-panel-cooling"
 ---

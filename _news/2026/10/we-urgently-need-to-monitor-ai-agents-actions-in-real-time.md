@@ -1,7 +1,7 @@
 ---
 hook_en: "We urgently need to monitor AI agents’ actions in real time"
 hook_ko: "우리는 AI 에이전트의 행동을 실시간으로 긴급히 모니터링해야 합니다"
-tags: []
+tags: ["human-in-the-loop"]
 authors: []
 embedded: false
 health_flourishing: false

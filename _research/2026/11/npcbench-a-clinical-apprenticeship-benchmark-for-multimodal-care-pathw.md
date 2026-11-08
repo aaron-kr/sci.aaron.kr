@@ -1,7 +1,7 @@
 ---
 hook_en: "NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma"
 hook_ko: "NPCBench: 비인두암에서 다중 모달 치료 경로 추론을 위한 임상 수련 벤치마크"
-tags: []
+tags: ["benchmark", "clinical", "reasoning"]
 authors: ["Pengkai Wang", "Wei-Wei Zhang", "Yan Li", "Min Tang", "Zhitian Hou", "Zeyu Liu", "Guanghao Zhu", "Yuanyi Wang", "Yanggan Gu", "Wenjun Wang", "Minheng Ni", "Congkai Xie", "Zhijie Sang", "Jianmin Wu", "Ying Sun", "Hongxia Yang"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "WorldOracle Tests Whether World Models Can Reliably Predict Real-World Executions"
 hook_ko: "WorldOracle, 세계 모델이 실제 실행을 신뢰성 있게 예측할 수 있는지 테스트하다"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: []
 embedded: false
 health_flourishing: false

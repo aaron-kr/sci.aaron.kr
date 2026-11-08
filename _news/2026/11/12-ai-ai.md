@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea Aerospace University to hold a 'Physical AI and World Models' seminar on the 12th… A Two-Way Look at Next-Generation AI"
 hook_ko: "한국항공대, 12일 ‘피지컬 AI와 월드 모델’ 세미나 개최… 차세대 AI 두 갈래 조망"
-tags: []
+tags: ["humanoids", "reasoning"]
 authors: []
 embedded: false
 health_flourishing: false
