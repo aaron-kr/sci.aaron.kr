@@ -1,6 +1,6 @@
 ---
-hook_en: "Hera Mission Prepares for Follow-Up Asteroid Imaging"
-hook_ko: "헤라 미션, 후속 소행성 이미지 촬영 준비 완료"
+hook_en: "Implant Zaps Excess Sugar Directly From Blood"
+hook_ko: "임플란트가 혈액 속 과잉 당분을 직접 제거합니다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Hera Mission Prepares for Follow-Up Asteroid Imaging"
+title: "Implant Zaps Excess Sugar Directly From Blood"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/esa-hera-dimorphos-rendezvous"
+source_url: "https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant"
 topic: "general-ai"
-date: "2026-10-18"
+date: "2026-11-08"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/esa-hera-dimorphos-rendezvous"
+dedup_key: "https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant"
 ---

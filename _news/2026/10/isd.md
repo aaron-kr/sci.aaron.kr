@@ -1,7 +1,7 @@
 ---
 hook_en: "Mistri ISD Launches Palletizing-De-palletizing Bidirectional Processing Module"
 hook_ko: "美 ISD, 팔레타이징-디팔레타이징 양방향 처리 모듈 출시"
-tags: []
+tags: ["manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
