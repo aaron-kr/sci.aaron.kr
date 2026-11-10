@@ -1,6 +1,6 @@
 ---
-hook_en: "The Robot I Didn’t Expect to Build"
-hook_ko: "내가 만들 줄 몰랐던 로봇"
+hook_en: "Can Agentic Robotics Solve Robotics’ Data Scaling Problem?"
+hook_ko: "에이전틱 로보틱스가 로보틱스의 데이터 확장 문제를 해결할 수 있을까?"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "The Robot I Didn’t Expect to Build"
+title: "Can Agentic Robotics Solve Robotics’ Data Scaling Problem?"
 source: "IEEE Spectrum Robotics"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/agility-robotics-digit-5-redesign"
+source_url: "https://spectrum.ieee.org/agentic-robotics"
 topic: "physical-ai"
-date: "2026-10-19"
+date: "2026-11-09"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/agility-robotics-digit-5-redesign"
+dedup_key: "https://spectrum.ieee.org/agentic-robotics"
 ---
