@@ -1,7 +1,7 @@
 ---
 hook_en: "PatternBloom: Empowering Agentic RAG with Externalized RL-Distilled Graph Patterns"
 hook_ko: "PatternBloom: 외부화된 RL-정제 그래프 패턴으로 에이전틱 RAG 강화하기"
-tags: []
+tags: ["reasoning"]
 authors: ["Yi Ge", "Heng Huang"]
 embedded: false
 health_flourishing: false

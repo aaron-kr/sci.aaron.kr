@@ -1,7 +1,7 @@
 ---
 hook_en: "Multi-Objective Adaptation After Deployment: A Position on World Models for Remote Robot Teams"
 hook_ko: "배치 후 다목적 적응: 원격 로봇 팀을 위한 월드 모델에 대한 입장"
-tags: []
+tags: ["multi-agent", "humanoids"]
 authors: ["Jamie Santos", "Kagan Tumer"]
 embedded: false
 health_flourishing: false

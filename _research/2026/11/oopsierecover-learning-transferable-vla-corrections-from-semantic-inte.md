@@ -1,7 +1,7 @@
 ---
 hook_en: "OopsieRecover: Learning Transferable VLA Corrections from Semantic Interventions"
 hook_ko: "OopsieRecover: 의미적 중재로부터 전이 가능한 VLA 교정 학습하기"
-tags: []
+tags: ["manipulation", "training-efficiency"]
 authors: ["Arpit Bahety", "Skand Peri", "Sriniket Ambatipudi", "Chen Xu", "Haruki Nishimura", "Masha Itkina", "Roberto Martín-Martín"]
 embedded: false
 health_flourishing: false
