@@ -1,7 +1,7 @@
 ---
 hook_en: "LUCQUE: A lung cancer screening dataset from Québec for reliable AI evaluation"
 hook_ko: "LUCQUE: 신뢰할 수 있는 AI 평가를 위한 퀘벡 폐암 검진 데이터셋"
-tags: []
+tags: ["biomedical", "dataset", "evaluation"]
 authors: ["Johanna Topalis", "Yannick Lemaréchal", "Gabriel Couture", "Hanife Ersay", "Loran Nas", "Balthasar Schachtner", "Bastian Oliver Sabel", "Michael Ingrisch", "Philippe Després", "Katharina Jeblick"]
 embedded: false
 health_flourishing: false

@@ -1,6 +1,6 @@
 ---
-hook_en: "Eliminating traffic deaths"
-hook_ko: "교통사고 사망자 제로화"
+hook_en: "What to know about this year’s UN climate talks"
+hook_ko: "올해 유엔 기후 회담에 대해 알아야 할 점은 무엇인가"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Eliminating traffic deaths"
+title: "What to know about this year’s UN climate talks"
 source: "MIT Technology Review"
 source_lang: "en"
-source_url: "https://www.technologyreview.com/2026/10/21/1146141/eliminating-traffic-deaths-impossible-issue/"
+source_url: "https://www.technologyreview.com/2026/11/11/1148308/un-climate-talks/"
 topic: "general-ai"
-date: "2026-10-21"
+date: "2026-11-11"
 thumb: null
-dedup_key: "https://www.technologyreview.com/2026/10/21/1146141/eliminating-traffic-deaths-impossible-issue/"
+dedup_key: "https://www.technologyreview.com/2026/11/11/1148308/un-climate-talks/"
 ---

@@ -1,7 +1,7 @@
 ---
 hook_en: "MaxIM: Maximally Informative Incremental Summarization via Reinforcement Learning"
 hook_ko: "MaxIM: 강화학습을 통한 최대 정보량 증분 요약"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Jihwan Jeong", "Guy Tennenholtz", "Yinlam Chow", "Chih-Wei Hsu", "Craig Boutilier"]
 embedded: false
 health_flourishing: false

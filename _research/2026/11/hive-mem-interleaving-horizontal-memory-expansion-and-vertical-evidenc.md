@@ -1,7 +1,7 @@
 ---
 hook_en: "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents"
 hook_ko: "HiVe-Mem: 다중 모달 에이전트를 위한 수평 메모리 확장과 수직 증거 구성의 교차 적용"
-tags: []
+tags: ["multi-agent"]
 authors: ["Haozhen Zhang", "Bohan Liu", "Jianzhu Bao", "Qingyuan Liu", "Haodong Yue", "Xiao Li", "Zi Pong Lim", "Wenya Wang"]
 embedded: false
 health_flourishing: false
