@@ -1,7 +1,7 @@
 ---
 hook_en: "Clo봇 wins a 7.3 billion won national AI project for humanoid robots and recruits Dr. Park Soon-yong, formerly of Naver Labs…Physical AI · Spatial Intelligence Development"
 hook_ko: "클로봇, 73억원 규모 휴머노이드 로봇 AI 국책과제 수주·네이버랩스 출신 박순용 박사 영입…Physical AI·공간지능 육성"
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

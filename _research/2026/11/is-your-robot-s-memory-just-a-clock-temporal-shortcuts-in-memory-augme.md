@@ -1,7 +1,7 @@
 ---
 hook_en: "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies"
 hook_ko: "당신의 로봇 기억력은 정말 시계 수준인가요? 메모리 증강 VLA 정책에서의 시간적 지름길"
-tags: []
+tags: ["humanoids", "reasoning"]
 authors: ["Chubin Zhang", "Bo An"]
 embedded: false
 health_flourishing: false

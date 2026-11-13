@@ -1,7 +1,7 @@
 ---
 hook_en: "Japan's AI Robot Association unveils the robot foundation model 'AIRoA-0'"
 hook_ko: "日 AI로봇협회, 로봇 파운데이션 모델 'AIRoA-0' 공개"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

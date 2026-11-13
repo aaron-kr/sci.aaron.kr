@@ -1,7 +1,7 @@
 ---
 hook_en: "AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules"
 hook_ko: "AI 텍스트 워터마킹이 유럽연합의 새로운 규칙을 충족하지 못할 수도 있다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

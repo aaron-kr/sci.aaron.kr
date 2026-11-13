@@ -1,7 +1,7 @@
 ---
 hook_en: "Boston Dynamics adds wheels to Atlas humanoid to test whole-body control"
 hook_ko: "보스턴 다이내믹스가 아틀라스 휴머노이드에 바퀴를 추가해 전신 제어를 시험합니다"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

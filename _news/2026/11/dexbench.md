@@ -1,7 +1,7 @@
 ---
 hook_en: "RealWorld unveils 'DexBench,' a benchmark for evaluating precise humanoid hand manipulation"
 hook_ko: "리얼월드, 휴머노이드 정밀 손 조작 평가 벤치마크 ‘덱스벤치(DexBench)’ 공개"
-tags: []
+tags: ["humanoids", "manipulation", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Axon invests $1.2B into Skydio and becomes its U.S. public safety distributor"
 hook_ko: "Axon이 Skydio에 12억 달러를 투자하고 미국 공공 안전 유통업체가 되었습니다"
-tags: []
+tags: ["industry", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

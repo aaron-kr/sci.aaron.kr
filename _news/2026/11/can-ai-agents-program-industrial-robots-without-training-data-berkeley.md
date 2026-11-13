@@ -1,7 +1,7 @@
 ---
 hook_en: "Can AI agents program industrial robots without training data? Berkeley says yes"
 hook_ko: "AI 에이전트가 학습 데이터 없이 산업용 로봇을 프로그래밍할 수 있나요? 버클리는 그렇다고 말한다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

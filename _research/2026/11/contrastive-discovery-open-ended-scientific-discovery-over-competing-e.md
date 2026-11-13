@@ -1,7 +1,7 @@
 ---
 hook_en: "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations"
 hook_ko: "대조적 발견: 경쟁하는 설명들보다 개방형 과학적 발견이 더 중요하다"
-tags: []
+tags: ["reasoning"]
 authors: ["Ziang Liu", "James J. Kim", "Yijia Dai", "Jennifer J. Sun"]
 embedded: false
 health_flourishing: false

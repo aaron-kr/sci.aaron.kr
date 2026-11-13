@@ -1,7 +1,7 @@
 ---
 hook_en: "Are Drone Ports the Next Annoying Tech Neighbor?"
 hook_ko: "드론 항구가 다음 골칫거리 기술 이웃이 될까?"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

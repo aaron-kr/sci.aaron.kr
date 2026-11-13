@@ -1,7 +1,7 @@
 ---
 hook_en: "RealWorld showcases on-site distributed physical AI technology at the China International Import Expo (CIIE 2026)"
 hook_ko: "리얼월드, 중국국제수입박람회(CIIE 2026)에서 현장 배포 중심 피지컬 AI 기술 선봬"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

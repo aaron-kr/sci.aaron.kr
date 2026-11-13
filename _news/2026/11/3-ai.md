@@ -1,7 +1,7 @@
 ---
 hook_en: "Three European semiconductor companies enter the race to dominate the physical AI market"
 hook_ko: "유럽 반도체 3사, 피지컬 AI 시장 선점 경쟁 나서"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

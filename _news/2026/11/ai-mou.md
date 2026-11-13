@@ -1,7 +1,7 @@
 ---
 hook_en: "XYZ and Dayton Sign MOU for Supply of Semi-Humanoid 'DUEs' and Robot AI Technology Collaboration"
 hook_ko: "엑스와이지·데이톤, 세미 휴머노이드 ‘듀스’ 공급 및 로봇AI 기술협력 MOU 체결"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

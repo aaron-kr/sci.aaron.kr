@@ -1,7 +1,7 @@
 ---
 hook_en: "Daekyung University and YoungHyun Robotics Sign Joint Technology Development Agreement on Physical AI and Bio"
 hook_ko: "대경대학교와 영현로보틱스, 피지컬 AI·바이오 공동 기술개발 협약 체결"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

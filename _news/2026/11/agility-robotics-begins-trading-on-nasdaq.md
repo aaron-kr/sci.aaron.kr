@@ -1,7 +1,7 @@
 ---
 hook_en: "Agility Robotics begins trading on Nasdaq"
 hook_ko: "애질리티 로보틱스가 나스닥에서 거래를 시작합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "A new bill could change how the US builds energy infrastructure"
 hook_ko: "새로운 법안이 미국의 에너지 인프라 구축 방식을 바꿀 수 있습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Can Agentic Robotics Solve Robotics’ Data Scaling Problem?"
 hook_ko: "에이전틱 로보틱스가 로보틱스의 데이터 확장 문제를 해결할 수 있을까?"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "印 Gracenium Acquires U.S. Company 'Cyte Bionics'"
 hook_ko: "印 그레이오렌지, 美 ‘사이트 바이오닉스’ 인수"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

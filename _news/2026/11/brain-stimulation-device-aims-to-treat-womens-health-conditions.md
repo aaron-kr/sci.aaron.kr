@@ -1,7 +1,7 @@
 ---
 hook_en: "Brain Stimulation Device Aims to Treat Women’s Health Conditions"
 hook_ko: "뇌 자극 장치, 여성 건강 질환 치료 목표"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

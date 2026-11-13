@@ -1,7 +1,7 @@
 ---
 hook_en: "China unveils an industrial Imbodyd AI platform integrating logistics and manufacturing"
 hook_ko: "중국, 물류·제조 통합하는 산업용 임바디드 AI 플랫폼 공개"
-tags: []
+tags: ["industry", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

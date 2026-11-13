@@ -1,7 +1,7 @@
 ---
 hook_en: "Chainalysis says hackers stole credentials and tokens for all of its customers"
 hook_ko: "체이널리시스는 해커들이 모든 고객의 자격 증명과 토큰을 탈취했다고 밝혔습니다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

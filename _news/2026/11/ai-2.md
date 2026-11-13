@@ -1,7 +1,7 @@
 ---
 hook_en: "Vek Robotics unveils 'Physical AI Vision,' connecting manufacturing, logistics, and service sites for the first time"
 hook_ko: "벡트로보틱스, 제조·물류·서비스 현장 연결하는 '피지컬 AI 비전' 첫 선"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
