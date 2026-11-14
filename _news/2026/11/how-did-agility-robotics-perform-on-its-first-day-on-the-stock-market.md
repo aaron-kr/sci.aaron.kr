@@ -1,7 +1,7 @@
 ---
 hook_en: "How did Agility Robotics perform on its first day on the stock market?"
 hook_ko: "Agility Robotics는 주식시장에 첫 상장한 날 어떻게 성과를 냈나요?"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "U.S. company Reelbotics launches 'Eco,' a humanoid robot supporting human-robot interaction"
 hook_ko: "美 리얼보틱스, 인간-로봇 상호작용 지원 휴머노이드로봇 ‘에코’ 출시"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

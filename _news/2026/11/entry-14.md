@@ -1,7 +1,7 @@
 ---
 hook_en: "Development of an 'elastic diode' that reduces 'tactile' errors in 'robotic skin'"
 hook_ko: "로봇 피부‘촉각’오류 줄이는‘신축성 다이오드’개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

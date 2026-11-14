@@ -1,7 +1,7 @@
 ---
 hook_en: "German Infineon and U.S. Qualcomm Collaborate to Develop Autonomous Vehicle Computers"
 hook_ko: "獨 인피니언-美 퀄컴, 자율주행용 자동차 컴퓨터 개발 협력"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "C&M Signs Supply Contract for Robot Actuators with OpenPath Robotics"
 hook_ko: "씨앤엠, 오픈패스로보틱스와 로봇 액추에이터 공급계약 체결"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

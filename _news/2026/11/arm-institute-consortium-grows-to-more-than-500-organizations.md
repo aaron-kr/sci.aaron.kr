@@ -1,7 +1,7 @@
 ---
 hook_en: "ARM Institute consortium grows to more than 500 organizations"
 hook_ko: "ARM 연구소 컨소시엄, 500개 이상의 기관으로 확대"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

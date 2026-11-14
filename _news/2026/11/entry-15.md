@@ -1,7 +1,7 @@
 ---
 hook_en: "Lenovo China announces 'elevator installation robot' with Otis"
 hook_ko: "中 레노버, 오티스와 '엘리베이터 설치 로봇' 발표"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

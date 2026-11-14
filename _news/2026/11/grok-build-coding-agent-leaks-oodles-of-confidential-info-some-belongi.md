@@ -1,7 +1,7 @@
 ---
 hook_en: "Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI"
 hook_ko: "Grok Build 코딩 에이전트가 SpaceXSI 소유의 일부를 포함해 방대한 기밀 정보를 유출했습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

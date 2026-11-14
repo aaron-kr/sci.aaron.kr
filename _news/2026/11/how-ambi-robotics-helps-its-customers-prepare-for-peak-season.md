@@ -1,7 +1,7 @@
 ---
 hook_en: "How Ambi Robotics helps its customers prepare for peak season"
 hook_ko: "앰비 로보틱스가 고객들의 성수기 준비를 어떻게 돕는지"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

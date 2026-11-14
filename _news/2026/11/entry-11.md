@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Fudu Robotics Launches Full-Scale Offensive in the Humanoid Market…Announced to Compete with Tesla"
 hook_ko: "중국 푸두로보틱스, 휴머노이드 시장 본격 공략…테슬라와 경쟁 예고"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

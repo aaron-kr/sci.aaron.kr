@@ -1,7 +1,7 @@
 ---
 hook_en: "TrialDesignBench: Benchmarking Language Models for Phase-I Trial Design Against Clinical Knowledge"
 hook_ko: "TrialDesignBench: 임상 지식과 비교하여 1상 임상시험 설계를 위한 언어 모델 벤치마킹"
-tags: []
+tags: ["benchmark", "clinical", "biomedical"]
 authors: ["Yihan Hank Tang", "Peng Yang", "Jiayi Xin", "Tianqi Shang", "Xuyang Chen", "Ying Yuan", "Yi Lian", "Qi Long"]
 embedded: false
 health_flourishing: false

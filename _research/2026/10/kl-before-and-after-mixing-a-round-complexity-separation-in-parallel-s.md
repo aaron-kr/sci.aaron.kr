@@ -1,7 +1,7 @@
 ---
 hook_en: "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling"
 hook_ko: "KL 전후 혼합: 병렬 샘플링에서의 라운드 복잡도 분리"
-tags: []
+tags: ["reasoning"]
 authors: ["Tianyi Wu"]
 embedded: false
 health_flourishing: false

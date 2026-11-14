@@ -1,7 +1,7 @@
 ---
 hook_en: "Philadelphia, USA, citizens protest the spread of delivery robots…Controversy over infringement on pedestrian rights and jobs"
 hook_ko: "美 필라델피아, 배달로봇 확산에 시민 반발…보행권·일자리 침해 논란"
-tags: []
+tags: ["humanoids", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

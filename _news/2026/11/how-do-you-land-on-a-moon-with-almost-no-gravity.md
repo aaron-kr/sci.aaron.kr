@@ -1,7 +1,7 @@
 ---
 hook_en: "How Do You Land on a Moon With Almost No Gravity?"
 hook_ko: "중력이 거의 없는 달에 어떻게 착륙하나요?"
-tags: []
+tags: ["locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

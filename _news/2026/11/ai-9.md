@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea AI·Robot Industry Association and Gyeonggi Center for Creative Economy and Innovation Sign Memorandum of Understanding"
 hook_ko: "한국AI·로봇산업협회-경기창조경제혁신센터 업무 협약 체결"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

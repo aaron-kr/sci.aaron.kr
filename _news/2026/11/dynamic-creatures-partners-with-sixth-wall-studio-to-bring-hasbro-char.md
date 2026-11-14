@@ -1,7 +1,7 @@
 ---
 hook_en: "Dynamic Creatures partners with Sixth Wall Studio to bring Hasbro characters to life with robots"
 hook_ko: "다이나믹 크리처스가 식스스 월 스튜디오와 협력해 로봇으로 해즈브로 캐릭터에 생명을 불어넣습니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Nvidia automates robot development using OpenAI's 'GPT-6 Astra'"
 hook_ko: "엔비디아, 오픈 AI 'GPT-6 아스트라' 활용해 로봇 개발 자동화"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

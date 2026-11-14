@@ -1,7 +1,7 @@
 ---
 hook_en: "Clo봇 to Apply 'Multi-Humanoid Collaboration Technology' in Automotive Factories"
 hook_ko: "클로봇, ‘다중 휴머노이드 협업 기술 개발’로 자동차 공장 현장 적용 추진"
-tags: []
+tags: ["humanoids", "multi-agent", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

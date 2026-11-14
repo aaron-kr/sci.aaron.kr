@@ -1,7 +1,7 @@
 ---
 hook_en: "ETRI Unveils 9 Advanced AIoT Technologies Driving Future Innovation"
 hook_ko: "ETRI, 미래혁신 이끄는 첨단 AIoT 기술 9종 공개"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant for Emergency Response Scenarios"
 hook_ko: "HandsOnAid: 긴급 대응 상황을 위한 오프라인 응급처치 보조기기 구축 및 평가"
-tags: []
+tags: ["human-in-the-loop", "benchmark"]
 authors: ["Rezwan Islam Salvi", "Saiyma Sittul Muna", "Mushfiqur Rahman Mushfique"]
 embedded: false
 health_flourishing: false

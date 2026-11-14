@@ -1,7 +1,7 @@
 ---
 hook_en: "Boston Dynamics built Stretch Gen 2 for reliable, consistent performance"
 hook_ko: "보스턴 다이내믹스는 신뢰할 수 있고 일관된 성능을 위해 스트레치 젠 2를 제작했습니다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false
