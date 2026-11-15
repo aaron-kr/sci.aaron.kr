@@ -1,7 +1,7 @@
 ---
 hook_en: "Hx2Dx: From Anamnesis to Diagnosis - A Multimodal Arena for Conversational Clinical Reasoning in LLMs"
 hook_ko: "Hx2Dx: 병력 청취에서 진단까지 - LLM의 대화형 임상 추론을 위한 다중 모달 환경"
-tags: []
+tags: ["clinical", "reasoning", "benchmark"]
 authors: ["Federico Ravenda", "Mirko Cesarini", "Daniele Montagnani", "Volodymyr Karpenko", "Antonietta Mira", "Andrea Raballo"]
 embedded: false
 health_flourishing: false

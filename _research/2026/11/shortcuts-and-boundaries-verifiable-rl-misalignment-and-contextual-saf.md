@@ -1,7 +1,7 @@
 ---
 hook_en: "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning"
 hook_ko: "지름길과 경계: 검증 가능한 강화학습 불일치와 상황적 안전 학습"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Xinjie Shen"]
 embedded: false
 health_flourishing: false

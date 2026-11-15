@@ -1,7 +1,7 @@
 ---
 hook_en: "Nippon Panasonic develops AI for real-time robotic control that responds to fingertip touch"
 hook_ko: "日 파나소닉, 손끝 촉각으로 실시간 반응하는 로봇 조작 AI 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

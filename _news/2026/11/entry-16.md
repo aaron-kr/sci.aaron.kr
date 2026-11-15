@@ -1,7 +1,7 @@
 ---
 hook_en: "China Announces Technical Standards for 'Apple Harvesting Robots\""
 hook_ko: "中 '사과 수확 로봇' 기술 표준 발표"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

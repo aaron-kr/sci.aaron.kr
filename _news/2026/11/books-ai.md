@@ -1,7 +1,7 @@
 ---
 hook_en: "[Books] The Future of Logistics Changed by AI"
 hook_ko: "[Books] AI가 바꿀 물류의 미래"
-tags: []
+tags: ["industry", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "AgentSSL: Can MLE Agents Leverage Unlabeled Data?"
 hook_ko: "AgentSSL: MLE 에이전트가 라벨 없는 데이터를 활용할 수 있을까?"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Ethan Lin", "Akanksha Sarkar", "Ziang Liu", "Kristin Branson", "Jennifer J. Sun"]
 embedded: false
 health_flourishing: false

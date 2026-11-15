@@ -1,7 +1,7 @@
 ---
 hook_en: "How Rhoda AI is using video data to create generalized AI models for robots"
 hook_ko: "Rhoda AI가 로봇용 범용 AI 모델을 만들기 위해 영상 데이터를 활용하는 방법"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

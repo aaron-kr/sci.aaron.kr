@@ -1,7 +1,7 @@
 ---
 hook_en: "Classical Energies Learn to Reason 1,000x Faster than Looped Models"
 hook_ko: "고전 에너지로 루프 모델보다 1,000배 빠르게 추론하는 법을 배워보세요"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Benjamin Hoover", "Hugh Blayney", "James C. R. Whittington"]
 embedded: false
 health_flourishing: false

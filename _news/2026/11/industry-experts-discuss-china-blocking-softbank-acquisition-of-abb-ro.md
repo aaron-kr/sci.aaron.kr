@@ -1,7 +1,7 @@
 ---
 hook_en: "Industry experts discuss China blocking SoftBank acquisition of ABB Robotics"
 hook_ko: "업계 전문가들이 중국이 소프트뱅크의 ABB 로보틱스 인수를 차단하는 것에 대해 논의하다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

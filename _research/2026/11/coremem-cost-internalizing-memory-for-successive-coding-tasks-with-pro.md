@@ -1,7 +1,7 @@
 ---
 hook_en: "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation"
 hook_ko: "CoReMem: 전망 평가를 통한 연속 코딩 과제의 비용 내재화 기억"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Peiwen Li", "Harshit Verma", "Sophia Zhou", "Haiwen Wang", "Ngoc Bui", "Heng Chang", "Fei Fei", "David van Dijk", "Rex Ying"]
 embedded: false
 health_flourishing: false

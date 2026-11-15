@@ -1,7 +1,7 @@
 ---
 hook_en: "Intel and Altera expand collaboration to simplify sensor integration for physical AI"
 hook_ko: "인텔과 알테라, 물리적 AI를 위한 센서 통합 간소화를 위해 협력 확대"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

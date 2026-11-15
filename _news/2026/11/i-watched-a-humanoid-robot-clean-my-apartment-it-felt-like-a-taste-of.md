@@ -1,7 +1,7 @@
 ---
 hook_en: "I watched a humanoid robot clean my apartment. It felt like a taste of the future."
 hook_ko: "나는 휴머노이드 로봇이 내 아파트를 청소하는 모습을 봤다. 마치 미래의 맛을 보는 듯한 기분이었다."
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

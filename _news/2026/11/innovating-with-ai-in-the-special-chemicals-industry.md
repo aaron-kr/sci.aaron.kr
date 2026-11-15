@@ -1,7 +1,7 @@
 ---
 hook_en: "Innovating with AI in the special chemicals industry"
 hook_ko: "특수 화학 산업에서 AI로 혁신하기"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

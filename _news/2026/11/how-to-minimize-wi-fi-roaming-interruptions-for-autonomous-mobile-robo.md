@@ -1,7 +1,7 @@
 ---
 hook_en: "How to minimize Wi-Fi roaming interruptions for autonomous mobile robots"
 hook_ko: "자율 이동 로봇의 와이파이 로밍 중단을 최소화하는 방법"
-tags: []
+tags: ["navigation", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

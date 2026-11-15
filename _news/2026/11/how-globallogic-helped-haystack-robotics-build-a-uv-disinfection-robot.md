@@ -1,7 +1,7 @@
 ---
 hook_en: "How GlobalLogic helped Haystack Robotics build a UV disinfection robot"
 hook_ko: "GlobalLogic이 Haystack Robotics의 UV 소독 로봇 개발을 어떻게 도왔는가"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

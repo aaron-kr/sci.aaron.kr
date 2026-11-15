@@ -1,7 +1,7 @@
 ---
 hook_en: "How “reverse game theory” could keep AI agents in check"
 hook_ko: "\"역게임 이론\"이 AI 에이전트를 어떻게 견제할 수 있을까"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

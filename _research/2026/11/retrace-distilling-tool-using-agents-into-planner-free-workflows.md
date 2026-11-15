@@ -1,7 +1,7 @@
 ---
 hook_en: "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows"
 hook_ko: "ReTrace: 에이전트를 활용한 플래너 없는 워크플로우 증류 도구"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Kaiyuan Hou", "Yang Ping Kuo", "Indranil Bhattacharya", "Rohith Nama", "Arushi Gupta", "Carlos D. Castillo", "Prathap Ramachandra", "Xiaofan Jiang", "Francesco Carbone"]
 embedded: false
 health_flourishing: false

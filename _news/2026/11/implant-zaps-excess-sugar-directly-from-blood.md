@@ -1,7 +1,7 @@
 ---
 hook_en: "Implant Zaps Excess Sugar Directly From Blood"
 hook_ko: "임플란트가 혈액 속 과잉 당분을 직접 제거합니다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false
