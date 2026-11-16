@@ -1,7 +1,7 @@
 ---
 hook_en: "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation"
 hook_ko: "ProtoVis-Nav: 시각-공간 정렬 UAV 내비게이션을 위한 전형적 시각적 상상력"
-tags: []
+tags: ["navigation", "humanoids"]
 authors: ["Guangyuan Sui", "Yunzhong Hou", "Chi Harold Liu"]
 embedded: false
 health_flourishing: false

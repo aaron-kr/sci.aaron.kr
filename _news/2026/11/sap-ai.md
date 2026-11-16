@@ -1,7 +1,7 @@
 ---
 hook_en: "Intel and SAP demonstrate the actual operation of Physical AI and autonomous warehouses"
 hook_ko: "인텔-SAP, 피지컬AI·자율 창고 실제 작동 모습 시연"
-tags: []
+tags: ["humanoids", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Robotics Startup Radar 2026"
 hook_ko: "로보틱스 스타트업 레이더 2026"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

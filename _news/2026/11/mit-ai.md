@@ -1,7 +1,7 @@
 ---
 hook_en: "US MIT Develops Robot AI Capable of Understanding Hidden Intentions in Human Speech"
 hook_ko: "美 MIT, 사람의 말 속 숨은 의도까지 이해하는 로봇 AI 개발"
-tags: []
+tags: ["humanoids", "reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

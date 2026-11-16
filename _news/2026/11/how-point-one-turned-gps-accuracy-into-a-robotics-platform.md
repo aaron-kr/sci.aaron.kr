@@ -1,7 +1,7 @@
 ---
 hook_en: "How Point One turned GPS accuracy Into a robotics platform"
 hook_ko: "포인트 원이 GPS 정확도를 로봇 플랫폼으로 전환한 방법"
-tags: []
+tags: ["humanoids", "navigation"]
 authors: []
 embedded: false
 health_flourishing: false

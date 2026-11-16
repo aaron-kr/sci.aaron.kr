@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Ant Group releases the universal robot tactile AI model 'Ringbot Touch' as open source"
 hook_ko: "중국 앤트그룹, 범용 로봇 촉각 AI 모델 '링봇 터치' 오픈소스 공개"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Tirobotics develops core 'hot-swapping' technology for humanoids"
 hook_ko: "티로보틱스, 휴머노이드 핵심 '핫스왑' 기술 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

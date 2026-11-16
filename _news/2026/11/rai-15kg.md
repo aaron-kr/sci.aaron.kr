@@ -1,7 +1,7 @@
 ---
 hook_en: "US RAI Labs Enables Autonomous Operation of 15kg Tires Using Full-Body Robotics Technology"
 hook_ko: "美 RAI 연구소, 로봇 전신 조작 기술로 15kg 타이어 자율 조작"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

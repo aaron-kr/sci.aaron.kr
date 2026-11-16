@@ -1,7 +1,7 @@
 ---
 hook_en: "Runway’s Praxis-1 world action model for robotics is now available"
 hook_ko: "Runway의 Praxis-1 로봇 세계 액션 모델이 이제 이용 가능합니다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

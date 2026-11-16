@@ -1,7 +1,7 @@
 ---
 hook_en: "More autonomy, fewer NDAs: Volunteers have new requests for brain implant trials"
 hook_ko: "더 많은 자율성, 더 적은 NDA: 자원자들이 뇌 이식 임상시험에 대한 새로운 요청을 제기하다"
-tags: []
+tags: ["policy", "human-in-the-loop"]
 authors: []
 embedded: false
 health_flourishing: false

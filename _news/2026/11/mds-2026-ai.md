@@ -1,7 +1,7 @@
 ---
 hook_en: "MDS Tech to Showcase Physical AI Solutions with Global Partners at '2026 RoboWorld'"
 hook_ko: "MDS테크, ‘2026 로보월드’서 글로벌 파트너와 피지컬 AI 솔루션 선보여"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

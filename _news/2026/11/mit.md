@@ -1,7 +1,7 @@
 ---
 hook_en: "US MIT Develops Soft Robot Endoscope That Moves Like a Snake Through Collections"
 hook_ko: "美 MIT, 뱀처럼 소장 누비는 소프트 로봇 내시경 개발"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

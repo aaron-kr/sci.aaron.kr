@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea Institute of Robot Convergence Holds 'KIRO Partnership Day 2026'… Growth with Robot Companies Kicks Off in Full Swing"
 hook_ko: "한국로봇융합연구원, ‘KIRO Partnership Day 2026’ 개최… 로봇기업과 동반성장 본격화"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

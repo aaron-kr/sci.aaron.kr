@@ -1,7 +1,7 @@
 ---
 hook_en: "Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility"
 hook_ko: "업계에서 실현 가능성에 대해 공개적으로 의문을 제기하는 가운데, 엔비디아는 칩 밀수를 막기 위해 추적할 수 있다고 비공개로 확인했습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

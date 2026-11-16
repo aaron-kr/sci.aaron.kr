@@ -1,7 +1,7 @@
 ---
 hook_en: "KISTEP: \"Korea's Humanoid Competitiveness Must Expand Beyond Hardware to AI and Data Ecosystems\""
 hook_ko: "KISTEP \"한국 휴머노이드 경쟁력, 하드웨어 넘어 AI·데이터 생태계로 확장해야\""
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

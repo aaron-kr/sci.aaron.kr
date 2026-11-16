@@ -1,7 +1,7 @@
 ---
 hook_en: "LiberAI Unveils Liber-0, a World Action Model That Grounds Human Experience in Robot Action"
 hook_ko: "LiberAI가 인간의 경험을 로봇 행동에 기반하는 세계 행동 모델, Liber-0을 공개하다"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

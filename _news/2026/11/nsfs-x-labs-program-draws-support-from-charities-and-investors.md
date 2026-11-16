@@ -1,7 +1,7 @@
 ---
 hook_en: "NSF’s X-Labs Program Draws Support From Charities and Investors"
 hook_ko: "NSF의 X-랩스 프로그램, 자선단체와 투자자들의 지지 받다"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

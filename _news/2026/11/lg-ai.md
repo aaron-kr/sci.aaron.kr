@@ -1,7 +1,7 @@
 ---
 hook_en: "NVIDIA Expands Korean Physical AI Ecosystem with Samsung, LG Electronics, and Kakao Mobility"
 hook_ko: "엔비디아, 삼성·LG전자·카카오모빌리티와 한국 피지컬 AI 생태계 확대"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Hyundai Motor Company Opens Applications for 'Future Mobility School'"
 hook_ko: "현대자동차, '미래모빌리티학교' 참가 모집"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Unbundling Multimodal Vision Encoding"
 hook_ko: "다중 모달 시각 인코딩의 분해"
-tags: []
+tags: ["multimodal"]
 authors: ["Ellis Brown", "Chris Hoang", "Shengyi Qian", "Shang-Wen Li", "Mike Lewis", "Marjan Ghazvininejad", "Luke Zettlemoyer", "Lucas Beyer", "Mengye Ren", "Jakob Verbeek", "Saining Xie", "Hu Xu"]
 embedded: false
 health_flourishing: false

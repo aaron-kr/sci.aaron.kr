@@ -1,7 +1,7 @@
 ---
 hook_en: "MIPS Unveils Physical AI Semiconductor Platform for Humanoid Joint Control"
 hook_ko: "美 MIPS, 휴머노이드 관절 제어용 피지컬 AI 반도체 플랫폼 공개"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

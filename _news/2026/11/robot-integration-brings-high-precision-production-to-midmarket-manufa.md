@@ -1,7 +1,7 @@
 ---
 hook_en: "Robot integration brings high-precision production to midmarket manufacturers"
 hook_ko: "로봇 통합이 중소 제조업체에 고정밀 생산을 가능하게 합니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

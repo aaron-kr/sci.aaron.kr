@@ -1,7 +1,7 @@
 ---
 hook_en: "KRISO 'Crabster CR200' Registered as a National Important Science and Technology Data Item"
 hook_ko: "KRISO ‘크랩스터 CR200’, 국가중요과학기술자료 등록"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

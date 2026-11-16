@@ -1,7 +1,7 @@
 ---
 hook_en: "Raising the quality of insights in agentic analytics"
 hook_ko: "에이전틱 분석에서 인사이트 품질 향상하기"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

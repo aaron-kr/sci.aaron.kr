@@ -1,7 +1,7 @@
 ---
 hook_en: "Beyond Robotics unveils the humanoid strawberry autonomous harvesting robot 'PICKY' at KIEMSTA"
 hook_ko: "비욘드로보틱스, KIEMSTA서 딸기 자율 수확로봇 휴머노이드 ‘PICKY’ 공개"
-tags: []
+tags: ["humanoids", "manipulation", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

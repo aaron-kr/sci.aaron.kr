@@ -1,7 +1,7 @@
 ---
 hook_en: "Nancy Pelosi’s replacement is ready to regulate AI"
 hook_ko: "낸시 펠로시의 후임자가 AI 규제를 준비하고 있다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

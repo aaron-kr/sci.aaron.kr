@@ -1,7 +1,7 @@
 ---
 hook_en: "Memories.ai builds standardized egocentric video pipeline"
 hook_ko: "Memories.ai 에서 표준화된 자기중심 영상 파이프라인을 개발했습니다"
-tags: []
+tags: ["dataset"]
 authors: []
 embedded: false
 health_flourishing: false

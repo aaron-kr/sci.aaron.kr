@@ -1,7 +1,7 @@
 ---
 hook_en: "Fine-Tuned Small Language Model for Synthetic Clinical Data Generation and Predictive Healthcare Analytics"
 hook_ko: "합성 임상 데이터 생성 및 예측 의료 분석을 위한 미세 조정 소형 언어 모델"
-tags: []
+tags: ["clinical", "training-efficiency"]
 authors: ["Mihnea Sebastian Burlacu", "Ionut Anghel", "Tudor Cioara"]
 embedded: false
 health_flourishing: false

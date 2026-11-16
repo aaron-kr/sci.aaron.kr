@@ -1,7 +1,7 @@
 ---
 hook_en: "NVIDIA replaces CEO amid China AI and robotics concerns"
 hook_ko: "중국의 AI 및 로봇 공해 우려 속에서 엔비디아, CEO 교체"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Tirobotics signs MOU with KAIST Institute of Manufacturing Physical AI… Strengthening collaboration in the commercialization of physical AI"
 hook_ko: "티로보틱스, KAIST 제조피지컬AI연구소와 MOU 체결… 피지컬 AI 사업화 협력 강화"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

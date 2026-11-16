@@ -1,7 +1,7 @@
 ---
 hook_en: "NVIDIA launches GR00T 2 and Isaac Lab 3.0 at CoRL"
 hook_ko: "NVIDIA가 CoRL에서 GR00T 2와 Isaac Lab 3.0을 공개했습니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
