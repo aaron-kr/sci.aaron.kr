@@ -1,7 +1,7 @@
 ---
 hook_en: "Cowin Robotics Secures New Order for Integrated Robot System for Global ESS Company"
 hook_ko: "코윈로보틱스, 글로벌 ESS 기업향 로봇 통합 시스템 신규 수주"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

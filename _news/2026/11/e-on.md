@@ -1,7 +1,7 @@
 ---
 hook_en: "German company Neurorobots develops grid management robots with energy company E.ON"
 hook_ko: "독일 뉴라로보틱스, 에너지 기업 E.ON과 전력망 관리용 로봇 개발"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

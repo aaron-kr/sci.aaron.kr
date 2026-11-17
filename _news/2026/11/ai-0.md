@@ -1,7 +1,7 @@
 ---
 hook_en: "China's River AI unveils 'River-0,' a world action model that operates based on human experience"
 hook_ko: "中 리버AI, 인간 경험 기반으로 행동하는 월드 액션 모델 ‘리버-0’ 공개"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

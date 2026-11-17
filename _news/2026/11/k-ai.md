@@ -1,7 +1,7 @@
 ---
 hook_en: "Ministry of Trade, Industry and Energy Accelerates K-Device AI Semiconductors Through 'Co-prosperity'"
 hook_ko: "산업부, K-온디바이스 AI반도체 ‘상생’으로 속도낸다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
