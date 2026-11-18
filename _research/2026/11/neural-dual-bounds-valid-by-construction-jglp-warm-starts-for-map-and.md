@@ -1,7 +1,7 @@
 ---
 hook_en: "Neural Dual Bounds: Valid-by-Construction JGLP Warm-Starts for MAP and Constrained MAP"
 hook_ko: "신경 이중 경계: MAP 및 제약 MAP을 위한 구성 유효 JGLP 웜 스타트"
-tags: []
+tags: ["reasoning"]
 authors: ["Akshay Vyas", "Shivvrat Arya", "Brij Malhotra", "Tahrima Rahman", "Vibhav Gogate", "Nicholas Ruozzi"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Cache or Denoise Less? Residual Reuse in a Flow-Matching World Action Model"
 hook_ko: "캐시와 노이즈 감소 중 어느 것을 선택할까? 플로우 매칭 월드 액션 모델에서의 잔여 재사용"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Abhinav Gupta", "Nissan Pow"]
 embedded: false
 health_flourishing: false

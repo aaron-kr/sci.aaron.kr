@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Baidu and Pudong Join Forces...Robot Training and Data Collaboration"
 hook_ko: "中 바이두-푸두 손잡았다...로봇 훈련 및 데이터 협력"
-tags: []
+tags: ["humanoids", "dataset"]
 authors: []
 embedded: false
 health_flourishing: false

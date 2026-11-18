@@ -1,7 +1,7 @@
 ---
 hook_en: "DRA-HTR: Disentangling Representation and Adaptation for Handwritten Text Recognition"
 hook_ko: "DRA-HTR: 손글씨 인식을 위한 표현과 적응의 구분"
-tags: []
+tags: ["handwriting", "training-efficiency"]
 authors: ["Gayan H. Pathirage", "Florent Imbert", "Denis Coquenet", "Elisa H. Barney Smith"]
 embedded: false
 health_flourishing: false

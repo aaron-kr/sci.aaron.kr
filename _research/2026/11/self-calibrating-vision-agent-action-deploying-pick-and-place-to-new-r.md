@@ -1,7 +1,7 @@
 ---
 hook_en: "Self-Calibrating Vision-Agent-Action: Deploying Pick-and-Place to New Robot Cells without Demonstrations or Fine-Tuning"
 hook_ko: "자동 보정 시각-에이전트-행동: 시연이나 미세 조정 없이 새로운 로봇 셀에 픽 앤 플레이스 적용하기"
-tags: []
+tags: ["manipulation", "humanoids"]
 authors: ["Jae Hun Hwang", "Yechan Seo", "Hong-In Won"]
 embedded: false
 health_flourishing: false

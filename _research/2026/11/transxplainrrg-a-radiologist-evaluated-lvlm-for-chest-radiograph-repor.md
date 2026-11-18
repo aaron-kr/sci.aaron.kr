@@ -1,7 +1,7 @@
 ---
 hook_en: "TransXplainRRG: A Radiologist-Evaluated LVLM for Chest Radiograph Report Generation"
 hook_ko: "TransXplainRRG: 흉부 방사선 사진 판독 보고서 생성을 위한 방사선 전문의 평가 LVLM"
-tags: []
+tags: ["biomedical", "evaluation"]
 authors: ["Chayan Mondal", "Duc-Son Pham", "Tele Tan", "Ashu Gupta", "Vincent T. Y. Tiong", "Shreya Ghosh", "Tom Gedeon"]
 embedded: false
 health_flourishing: false

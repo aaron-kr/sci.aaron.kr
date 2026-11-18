@@ -1,7 +1,7 @@
 ---
 hook_en: "ROUNDS: Source-Framed Diagnostic Revision after Multi-Turn Clinical Evidence"
 hook_ko: "라운드: 다수의 임상 근거를 바탕으로 한 원인 중심 진단 개정안"
-tags: []
+tags: ["clinical", "reasoning"]
 authors: ["Jinrui Fang", "Runhan Chen", "Yining Wu", "Jiawei Xu", "Xu Yang", "Jian Yu", "Wenqi Shi", "Ying Ding", "Yuji Zhang"]
 embedded: false
 health_flourishing: false
