@@ -1,7 +1,7 @@
 ---
 hook_en: "Ego2Sim2Humanoid: Agentic Real-to-Sim for Learning Loco-Manipulation VLAs without Robot Demonstrations"
 hook_ko: "에고2심2휴머노이드: 로봇 시연 없이 로코 조작 VLA를 학습하기 위한 에이전틱 리얼-투-심"
-tags: []
+tags: ["humanoids", "manipulation", "locomotion"]
 authors: ["Chen Liu", "Nikolaus Correll"]
 embedded: false
 health_flourishing: false

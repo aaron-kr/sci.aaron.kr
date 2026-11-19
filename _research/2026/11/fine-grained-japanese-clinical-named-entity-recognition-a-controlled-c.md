@@ -1,7 +1,7 @@
 ---
 hook_en: "Fine-Grained Japanese Clinical Named Entity Recognition: A Controlled Comparison of BERT and Open-Weight Large Language Models"
 hook_ko: "미세 그레이딩 일본어 임상 명명 개체 인식: BERT와 오픈 웨이트 대형 언어 모델의 통제 비교"
-tags: []
+tags: ["clinical", "biomedical"]
 authors: ["Feng Han", "Ayako Yagahara", "Kenji Hirata", "Atsushi Yoshida", "Kohsuke Kudo"]
 embedded: false
 health_flourishing: false

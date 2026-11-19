@@ -1,7 +1,7 @@
 ---
 hook_en: "Hangcha Unveils LINGTRA AI-Fork Robot and Presents 2030 Vision at Global Dealer Conference"
 hook_ko: "항차, 글로벌 딜러 콘퍼런스에서 LINGTRA AI-Fork 로봇 공개하고 2030 비전 제시"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

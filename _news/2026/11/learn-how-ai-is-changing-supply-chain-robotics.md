@@ -1,7 +1,7 @@
 ---
 hook_en: "Learn how AI is changing supply chain robotics"
 hook_ko: "AI가 공급망 로보틱스를 어떻게 변화시키고 있는지 알아보세요"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

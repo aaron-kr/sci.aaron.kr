@@ -1,7 +1,7 @@
 ---
 hook_en: "Boston Dynamics' 'Atlas' expected to be equipped with 70 Samsung SDI batteries…Capacity: 1.3 kWh"
 hook_ko: "보스턴다이내믹스 '아틀라스', 삼성SDI 배터리 70개 탑재 전망…용량 1.3kWh"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

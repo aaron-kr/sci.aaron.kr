@@ -1,7 +1,7 @@
 ---
 hook_en: "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises"
 hook_ko: "시나리오포지: 리소스 기반 생성 및 사이버 훈련 실행 검증"
-tags: []
+tags: ["benchmark", "dataset"]
 authors: ["Jaime C. Acosta", "Anantaa Kotal", "Aritran Piplai"]
 embedded: false
 health_flourishing: false

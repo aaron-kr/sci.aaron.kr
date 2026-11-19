@@ -1,7 +1,7 @@
 ---
 hook_en: "KAIST GCC Successfully Concludes 'DETO 2026' Robotics and Advanced Manufacturing Technology Forum…Discussion on Strategies to Strengthen Industrial Competitiveness in the Era of Physical AI"
 hook_ko: "KAIST GCC, ‘DETO 2026’ 로보틱스·첨단제조 기술포럼 성료…피지컬 AI 시대 산업 경쟁력 강화 전략 논의"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

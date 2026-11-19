@@ -1,7 +1,7 @@
 ---
 hook_en: "[Opinion] How to Include 'No-Right-Answer Questions' in Collaborative Robot Practice"
 hook_ko: "[기고] 협동로봇 실습에 ‘정답 없는 문제’를 들이려면"
-tags: []
+tags: ["humanoids", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

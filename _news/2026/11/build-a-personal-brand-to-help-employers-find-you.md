@@ -1,7 +1,7 @@
 ---
-hook_en: "FAA Gets Serious About Aviation Airwaves"
-hook_ko: "FAA, 항공 전파 규제에 본격 나서다"
-tags: ["policy"]
+hook_en: "Build a Personal Brand to Help Employers Find You"
+hook_ko: "고용주가 당신을 찾을 수 있도록 개인 브랜드를 구축하세요"
+tags: []
 authors: []
 embedded: false
 health_flourishing: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "FAA Gets Serious About Aviation Airwaves"
+title: "Build a Personal Brand to Help Employers Find You"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/faa-aviation-airwaves"
+source_url: "https://spectrum.ieee.org/personal-branding-for-engineers"
 topic: "general-ai"
-date: "2026-10-28"
+date: "2026-11-18"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/faa-aviation-airwaves"
+dedup_key: "https://spectrum.ieee.org/personal-branding-for-engineers"
 ---

@@ -1,7 +1,7 @@
 ---
 hook_en: "Serve Robotics opens robot delivery network for others to build on"
 hook_ko: "Serve Robotics가 다른 기업들이 확장할 수 있는 로봇 배송 네트워크를 개설했습니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

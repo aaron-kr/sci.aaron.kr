@@ -1,7 +1,7 @@
 ---
 hook_en: "New ISO interoperability standard covers collaboration among mobile robots from multiple vendors"
 hook_ko: "새로운 ISO 상호운용성 표준이 여러 공급업체의 이동형 로봇 간 협업을 다룹니다"
-tags: []
+tags: ["multi-agent"]
 authors: []
 embedded: false
 health_flourishing: false

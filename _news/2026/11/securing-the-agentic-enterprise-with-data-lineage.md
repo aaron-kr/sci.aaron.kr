@@ -1,7 +1,7 @@
 ---
 hook_en: "Securing the agentic enterprise with data lineage"
 hook_ko: "데이터 계보를 통해 에이전트 기반 기업을 보호하기"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

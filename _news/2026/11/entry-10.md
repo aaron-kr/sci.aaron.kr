@@ -1,7 +1,7 @@
 ---
 hook_en: "China's Unitree: Even with Mass Production of Robots, Assembly Remains Human-Centered…Early Stage of Automation"
 hook_ko: "중국 유니트리, 로봇 양산에도 조립은 여전히 사람 중심…자동화 초기 단계"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

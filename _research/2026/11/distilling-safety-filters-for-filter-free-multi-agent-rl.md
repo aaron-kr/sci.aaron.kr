@@ -1,7 +1,7 @@
 ---
 hook_en: "Distilling Safety Filters for Filter-free Multi-agent RL"
 hook_ko: "필터 없는 다중 에이전트 강화학습을 위한 안전 필터 증류"
-tags: []
+tags: ["multi-agent", "training-efficiency"]
 authors: ["Srikar Babu Gadipudi", "Somayeh Sojoudi", "Claire J. Tomlin"]
 embedded: false
 health_flourishing: false
