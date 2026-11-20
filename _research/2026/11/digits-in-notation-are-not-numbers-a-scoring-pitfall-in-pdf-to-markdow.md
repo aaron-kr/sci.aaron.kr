@@ -1,7 +1,7 @@
 ---
 hook_en: "Digits in Notation Are Not Numbers: A Scoring Pitfall in PDF-to-Markdown Conversion of Japanese Technical Documents (Preliminary Evaluation)"
 hook_ko: "표기된 숫자는 숫자가 아니다: 일본어 기술 문서의 PDF-마크다운 변환 시 발생하는 채점상의 함정 (예비 평가)"
-tags: []
+tags: ["document-parsing", "benchmark"]
 authors: ["Mitsumasa Wada"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching"
 hook_ko: "앰비언트 LLM: 온도 매칭을 통한 데이터 효율적인 지도 미세 조정"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Giannis Daras", "Marios Papachristou", "Adam Klivans", "Antonio Torralba", "Constantinos Daskalakis"]
 embedded: false
 health_flourishing: false

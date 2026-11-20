@@ -1,6 +1,6 @@
 ---
-hook_en: "Autonomous Airships Keep Tabs on Energy Infrastructure"
-hook_ko: "자율 비행선이 에너지 인프라를 모니터링하다"
+hook_en: "How Railways Are Developing 5G Networks for Self-Driving Trains"
+hook_ko: "철도가 자율주행 열차를 위해 5G 네트워크를 어떻게 개발하고 있는가"
 tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "Autonomous Airships Keep Tabs on Energy Infrastructure"
+title: "How Railways Are Developing 5G Networks for Self-Driving Trains"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/infrastructure-inspection-airship-hylight"
+source_url: "https://spectrum.ieee.org/wireless-network-5g-for-trains"
 topic: "general-ai"
-date: "2026-10-29"
+date: "2026-11-19"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/infrastructure-inspection-airship-hylight"
+dedup_key: "https://spectrum.ieee.org/wireless-network-5g-for-trains"
 ---

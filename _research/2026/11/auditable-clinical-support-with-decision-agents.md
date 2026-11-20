@@ -1,7 +1,7 @@
 ---
 hook_en: "Auditable Clinical Support with Decision Agents"
 hook_ko: "의사결정 대리인과 함께하는 감사 가능한 임상 지원"
-tags: []
+tags: ["clinical", "reasoning", "human-in-the-loop"]
 authors: ["Tiancheng Bao", "Riga Wu", "Jan Wienhold", "Sebastian Billig", "Patrick Winnersbach", "Hsuan-Chih Chen", "Akis Giannoukos", "Jiayang Li", "Li Shen", "Gary Weissman", "Eduardo J. Mortani Barbosa", "Dyke Ferber", "Jakob Nikolas Kather", "Christos Davatzikos", "Daniel Truhn", "Tianyu Han"]
 embedded: false
 health_flourishing: false

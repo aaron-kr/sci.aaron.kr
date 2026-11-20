@@ -1,7 +1,7 @@
 ---
 hook_en: "Humyn Labs raises $47M to collect real-world data for robotics"
 hook_ko: "휴민 랩스, 로봇 공학을 위한 실제 데이터 수집에 4,700만 달러 투자 유치"
-tags: []
+tags: ["dataset", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

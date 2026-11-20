@@ -1,7 +1,7 @@
 ---
 hook_en: "Retrieval-Augmented Correction for Generalist Medical Image Segmentation"
 hook_ko: "범용 의료 영상 분할을 위한 검색 보강 교정 기법"
-tags: []
+tags: ["biomedical", "evaluation"]
 authors: ["Vincenzo Marcianò", "Xiaoming Zhang", "Michela Antonelli", "Sebastien Ourselin", "Maria A Zuluaga"]
 embedded: false
 health_flourishing: false

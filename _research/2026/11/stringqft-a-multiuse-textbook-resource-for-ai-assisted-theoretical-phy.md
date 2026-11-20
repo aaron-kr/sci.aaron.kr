@@ -1,7 +1,7 @@
 ---
 hook_en: "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics"
 hook_ko: "스트링큐FT: AI 지원 이론물리학을 위한 다목적 교재 자원"
-tags: []
+tags: ["ai-education"]
 authors: ["Xingyang Yu"]
 embedded: false
 health_flourishing: false

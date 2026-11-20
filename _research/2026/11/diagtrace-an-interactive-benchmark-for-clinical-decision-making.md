@@ -1,7 +1,7 @@
 ---
 hook_en: "DiagTrace: An Interactive Benchmark for Clinical Decision Making"
 hook_ko: "DiagTrace: 임상 의사결정을 위한 인터랙티브 벤치마크"
-tags: []
+tags: ["benchmark", "clinical", "human-in-the-loop"]
 authors: ["Yufan Wang", "Rui Yang", "Yi Lin", "Chunhua Weng", "Yifan Peng"]
 embedded: false
 health_flourishing: false

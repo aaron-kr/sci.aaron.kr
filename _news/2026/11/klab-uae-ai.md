@@ -1,7 +1,7 @@
 ---
 hook_en: "Japan's KLab and TraxxTory introduce AI drone and anti-drone technologies to the UAE"
 hook_ko: "일본 KLab·트라젝토리, UAE에 AI 드론·안티드론 기술 소개"
-tags: []
+tags: ["autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false
