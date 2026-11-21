@@ -1,7 +1,7 @@
 ---
 hook_en: "An Optimization Framework for Denoising Generation"
 hook_ko: "노이즈 제거 생성을 위한 최적화 프레임워크"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Xinyu Zhou", "Jiawei Zhang", "Stephen J. Wright"]
 embedded: false
 health_flourishing: false

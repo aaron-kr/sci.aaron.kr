@@ -1,7 +1,7 @@
 ---
 hook_en: "Teleoperated Haircutting with Delay Compensation and Passivity-Based Control for Unilateral Internet Teleoperation under Real Communication Uncertainties"
 hook_ko: "실제 통신 불확실성 하에서의 단측 인터넷 원격 조작을 위한 지연 보상 및 수동성 기반 제어를 적용한 원격 조작 헤어컷"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Viridiana Luna-Zempoalteca", "Zhendai Huang", "Rosalba Galvan-Guerra", "Antonio Rosales", "Xiaoli Liu", "Shuai Li"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems"
 hook_ko: "내가 아는 것을 아는 것: 인간-AI 인지 시스템에서 리뷰어 가치에 관한 특성 이론"
-tags: []
+tags: ["human-in-the-loop", "evaluation"]
 authors: ["Priyanka Sinha", "Sugam Pandey"]
 embedded: false
 health_flourishing: false

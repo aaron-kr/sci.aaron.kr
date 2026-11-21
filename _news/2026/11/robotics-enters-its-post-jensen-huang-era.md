@@ -1,6 +1,6 @@
 ---
-hook_en: "RoboBusiness 2026 recap"
-hook_ko: "로보비즈니스 2026년 요약"
+hook_en: "Robotics enters its post-Jensen Huang era"
+hook_ko: "로봇공학이 젠슨 황 이후의 시대로 접어들다"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "RoboBusiness 2026 recap"
+title: "Robotics enters its post-Jensen Huang era"
 source: "The Robot Report"
 source_lang: "en"
-source_url: "https://www.therobotreport.com/robobusiness-2026-recap/"
+source_url: "https://www.therobotreport.com/robotics-enters-its-post-jensen-huang-era/"
 topic: "physical-ai"
-date: "2026-10-30"
+date: "2026-11-20"
 thumb: null
-dedup_key: "https://www.therobotreport.com/robobusiness-2026-recap/"
+dedup_key: "https://www.therobotreport.com/robotics-enters-its-post-jensen-huang-era/"
 ---

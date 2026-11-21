@@ -1,7 +1,7 @@
 ---
 hook_en: "Genetic Algorithms Outperform Reinforcement Learning in Drone Autonomous Landing Speed"
 hook_ko: "유전 알고리즘, 강화학습보다 드론 자율착륙 속도 앞서"
-tags: []
+tags: ["locomotion", "autonomous-driving"]
 authors: []
 embedded: false
 health_flourishing: false

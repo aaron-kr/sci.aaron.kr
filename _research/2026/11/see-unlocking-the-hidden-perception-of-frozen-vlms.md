@@ -1,7 +1,7 @@
 ---
 hook_en: "SEE: Unlocking the Hidden Perception of Frozen VLMs"
 hook_ko: "참고: 얼어붙은 VLM의 숨겨진 인식 해제하기"
-tags: []
+tags: ["evaluation"]
 authors: ["Alin-Ionut Popa", "Tuo Zhang", "Dimitrios Dimitriadis"]
 embedded: false
 health_flourishing: false

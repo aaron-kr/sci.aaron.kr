@@ -1,7 +1,7 @@
 ---
 hook_en: "Man hired by Russia spied on Silicon Valley tech and defense company, feds say"
 hook_ko: "러시아가 고용한 남성이 실리콘밸리의 기술 및 방위 기업을 감시했다고 연방 당국이 밝혔습니다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false
