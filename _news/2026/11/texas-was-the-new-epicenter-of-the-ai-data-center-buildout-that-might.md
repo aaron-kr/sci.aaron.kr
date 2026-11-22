@@ -1,7 +1,7 @@
 ---
 hook_en: "Texas was the new epicenter of the AI data center buildout. That might be kaput."
 hook_ko: "텍사스가 AI 데이터 센터 구축의 새로운 중심지가 되었습니다. 그건 끝난 걸 수도 있어."
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

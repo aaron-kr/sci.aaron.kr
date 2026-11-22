@@ -1,7 +1,7 @@
 ---
 hook_en: "Six AGIBOT G2 Robots Complete 1,730 Tasks in 24-Hour Shanghai Convenience Store Trial"
 hook_ko: "여섯 개의 AGIBOT G2 로봇, 상하이 편의점 24시간 시범 운영에서 1,730개 작업 완료"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

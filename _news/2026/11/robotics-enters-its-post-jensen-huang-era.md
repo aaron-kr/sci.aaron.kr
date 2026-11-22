@@ -1,7 +1,7 @@
 ---
 hook_en: "Robotics enters its post-Jensen Huang era"
 hook_ko: "로봇공학이 젠슨 황 이후의 시대로 접어들다"
-tags: []
+tags: ["industry", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

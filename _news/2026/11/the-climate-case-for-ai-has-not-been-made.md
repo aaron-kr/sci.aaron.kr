@@ -1,7 +1,7 @@
 ---
 hook_en: "The climate case for AI has not been made"
 hook_ko: "AI의 기후적 타당성은 입증되지 않았다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

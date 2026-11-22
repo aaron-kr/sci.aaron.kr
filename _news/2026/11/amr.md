@@ -1,7 +1,7 @@
 ---
 hook_en: "Rockwell acquires Austrian AMR company Azeelix"
 hook_ko: "美 로크웰, 오스트리아 AMR업체 애질록스 인수"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

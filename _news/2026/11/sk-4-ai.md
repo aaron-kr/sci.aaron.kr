@@ -1,7 +1,7 @@
 ---
 hook_en: "SK Intellix signs a four-party business agreement to expand the senior care market for the AI wellness robot 'NamuX'"
 hook_ko: "SK인텔릭스, 4자 업무협약 체결···AI 웰니스 로봇 ‘나무엑스’ 시니어케어 시장 확대"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

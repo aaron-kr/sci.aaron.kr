@@ -1,7 +1,7 @@
 ---
 hook_en: "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control"
 hook_ko: "에이전트 로보크리틱: 직접 로봇 제어에서 프런티어 에이전트의 능력 이해하기"
-tags: []
+tags: ["humanoids", "manipulation", "evaluation"]
 authors: ["Yiyang Du", "Yuxuan Kuang", "Qitao Zhao", "Yixuan Wang", "Zhanqiu Guo", "Yi Xu", "Xin Li", "Wenbin He", "Liu Ren", "Chenyan Xiong"]
 embedded: false
 health_flourishing: false

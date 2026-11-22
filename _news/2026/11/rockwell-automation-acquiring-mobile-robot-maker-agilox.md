@@ -1,7 +1,7 @@
 ---
 hook_en: "Rockwell Automation acquiring mobile robot maker AGILOX"
 hook_ko: "록웰 오토메이션이 이동형 로봇 제조업체 AGILOX를 인수합니다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Meet Shepherd, the Meta-Agent Keeping Rogue AI In Check"
 hook_ko: "악성 AI를 통제하는 메타 에이전트 셰퍼드를 소개합니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

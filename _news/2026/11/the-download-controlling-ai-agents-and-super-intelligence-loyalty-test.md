@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: controlling AI agents and “Super Intelligence” loyalty tests"
 hook_ko: "다운로드: AI 에이전트와 '초지능' 충성도 테스트 제어하기"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

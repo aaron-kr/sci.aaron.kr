@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI learns to smell and hydropower struggles"
 hook_ko: "다운로드: 인공지능이 냄새를 학습하며 수력 발전이 어려움을 겪다"
-tags: []
+tags: ["reasoning"]
 authors: []
 embedded: false
 health_flourishing: false

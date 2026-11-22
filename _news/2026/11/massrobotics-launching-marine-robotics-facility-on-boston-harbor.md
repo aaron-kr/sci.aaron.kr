@@ -1,7 +1,7 @@
 ---
 hook_en: "MassRobotics launching marine robotics facility on Boston Harbor"
 hook_ko: "MassRobotics, 보스턴 항구에 해양 로봇 시설 출범"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

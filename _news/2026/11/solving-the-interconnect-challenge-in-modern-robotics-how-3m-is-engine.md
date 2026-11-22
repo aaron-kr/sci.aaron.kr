@@ -1,7 +1,7 @@
 ---
 hook_en: "Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime"
 hook_ko: "현대 로봇공학에서 인터커넥트 문제 해결하기: 3M이 움직임, 밀도, 가동 시간을 위해 어떻게 설계하는지"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

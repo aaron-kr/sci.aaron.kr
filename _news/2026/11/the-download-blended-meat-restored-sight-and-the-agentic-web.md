@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: blended meat, restored sight, and the agentic web"
 hook_ko: "다운로드: 혼합된 고기, 회복된 시력, 그리고 에이전트 웹"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

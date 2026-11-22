@@ -1,7 +1,7 @@
 ---
 hook_en: "SK Intellix Opens 'NamuX' AI Wellness Robot Production Site to Soongsil University’s Department of Mechanical Engineering"
 hook_ko: "SK인텔릭스, 숭실대 기계공학부에 AI 웰니스 로봇 ‘나무엑스’ 생산 현장 공개"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

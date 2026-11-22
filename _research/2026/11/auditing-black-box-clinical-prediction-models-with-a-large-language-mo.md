@@ -1,7 +1,7 @@
 ---
 hook_en: "Auditing black-box clinical prediction models with a large language model through queries alone: a blinded test with planted flaws"
 hook_ko: "쿼리만으로 대형 언어 모델을 활용한 블랙박스 임상 예측 모델 감사: 식립 결함이 포함된 블라인드 테스트"
-tags: []
+tags: ["clinical", "evaluation"]
 authors: ["Zhiyu Liu", "Xinyu Yang"]
 embedded: false
 health_flourishing: false

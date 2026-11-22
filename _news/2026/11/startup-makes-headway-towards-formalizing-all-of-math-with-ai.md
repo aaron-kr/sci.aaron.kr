@@ -1,7 +1,7 @@
 ---
 hook_en: "Startup Makes Headway Towards Formalizing All of Math With AI"
 hook_ko: "스타트업, AI로 수학 전 분야의 체계화에 진전"
-tags: []
+tags: ["reasoning", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

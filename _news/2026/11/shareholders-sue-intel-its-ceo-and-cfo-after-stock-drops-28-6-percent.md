@@ -1,7 +1,7 @@
 ---
 hook_en: "Shareholders sue Intel, its CEO, and CFO after stock drops 28.6 percent in one day"
 hook_ko: "주주들이 하루 만에 주가가 28.6% 하락하자 인텔의 CEO와 CFO를 상대로 소송을 제기했습니다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

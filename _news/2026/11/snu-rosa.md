@@ -1,7 +1,7 @@
 ---
 hook_en: "Dr. Sanghoon Lee, Chief Director of SNU Seoul Hospital, to give a lecture at the 'ROSA Robotics Symposium'"
 hook_ko: "SNU서울병원 이상훈 대표원장, ‘ROSA 로봇 심포지엄’서 강연"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

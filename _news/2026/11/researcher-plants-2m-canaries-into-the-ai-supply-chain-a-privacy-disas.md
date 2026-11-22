@@ -1,7 +1,7 @@
 ---
 hook_en: "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
 hook_ko: "연구원이 AI 공급망에 카나리아 200만 마리를 심었습니다. 개인정보 치명적인 사태가 발생했습니다."
-tags: []
+tags: ["dataset"]
 authors: []
 embedded: false
 health_flourishing: false

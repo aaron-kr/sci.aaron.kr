@@ -1,7 +1,7 @@
 ---
 hook_en: "A human liver has been kept alive outside the body for a record seven weeks"
 hook_ko: "인간의 간이 체외에서 기록적인 7주 동안 생존한 적이 있습니다"
-tags: []
+tags: ["biomedical"]
 authors: []
 embedded: false
 health_flourishing: false

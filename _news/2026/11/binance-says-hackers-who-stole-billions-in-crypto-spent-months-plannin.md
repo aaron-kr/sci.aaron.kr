@@ -1,7 +1,7 @@
 ---
 hook_en: "Binance says hackers who stole billions in crypto spent months planning heist"
 hook_ko: "바이낸스는 수십억 달러 규모의 암호화폐를 탈취한 해커들이 수개월에 걸쳐 해킹을 계획했다고 밝혔다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
