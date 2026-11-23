@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: Silicon Valley’s blind spot and Nvidia’s chip-tracking plan"
 hook_ko: "다운로드: 실리콘밸리의 맹점과 엔비디아의 칩 추적 계획"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

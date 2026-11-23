@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: inside the quest to make our minds immortal"
 hook_ko: "다운로드: 우리의 마음을 불멸로 만들기 위한 여정 속으로"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

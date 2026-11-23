@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: Texas’s fragile AI boom and energy policy shifts"
 hook_ko: "다운로드: 텍사스의 불안정한 AI 붐과 에너지 정책 변화"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

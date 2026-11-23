@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: a humanoid cleans house and Samsung builds for the AI boom"
 hook_ko: "다운로드: 휴머노이드가 집안을 청소하고 삼성은 AI 붐을 위해 제품을 개발하다"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

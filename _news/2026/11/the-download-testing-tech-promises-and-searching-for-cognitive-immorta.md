@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: testing tech promises and searching for cognitive immortality"
 hook_ko: "다운로드: 기술 약속을 시험하며 인지적 불멸을 찾아서"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

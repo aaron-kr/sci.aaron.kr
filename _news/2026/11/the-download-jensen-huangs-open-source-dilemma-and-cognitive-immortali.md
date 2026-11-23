@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: Jensen Huang’s open-source dilemma and cognitive immortality"
 hook_ko: "다운로드: 젠슨 황의 오픈소스 딜레마와 인지적 불멸"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

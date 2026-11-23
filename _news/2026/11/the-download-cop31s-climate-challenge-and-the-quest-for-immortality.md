@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: COP31’s climate challenge and the quest for immortality"
 hook_ko: "다운로드: COP31의 기후 도전과 불멸을 향한 여정"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

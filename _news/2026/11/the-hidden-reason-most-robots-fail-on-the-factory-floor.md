@@ -1,7 +1,7 @@
 ---
 hook_en: "The hidden reason most robots fail on the factory floor"
 hook_ko: "대부분의 로봇이 공장 현장에서 실패하는 숨겨진 이유"
-tags: []
+tags: ["industry", "humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

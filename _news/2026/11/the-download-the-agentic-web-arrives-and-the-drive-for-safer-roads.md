@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: the agentic web arrives and the drive for safer roads"
 hook_ko: "다운로드: 에이전트 웹의 등장과 더 안전한 도로를 위한 움직임"
-tags: []
+tags: ["autonomous-driving", "policy"]
 authors: []
 embedded: false
 health_flourishing: false

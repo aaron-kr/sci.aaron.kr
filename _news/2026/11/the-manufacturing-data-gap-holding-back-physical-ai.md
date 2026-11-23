@@ -1,7 +1,7 @@
 ---
 hook_en: "The manufacturing data gap holding back physical AI"
 hook_ko: "제조 데이터 격차가 물리적 AI의 발전을 가로막다"
-tags: []
+tags: ["industry", "dataset"]
 authors: []
 embedded: false
 health_flourishing: false

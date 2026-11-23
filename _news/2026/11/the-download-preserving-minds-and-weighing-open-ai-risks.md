@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: preserving minds and weighing open AI risks"
 hook_ko: "다운로드: 마음을 보존하고 오픈 AI의 위험을 평가하다"
-tags: []
+tags: ["policy", "ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

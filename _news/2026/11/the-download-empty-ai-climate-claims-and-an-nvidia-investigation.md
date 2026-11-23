@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: empty AI climate claims, and an Nvidia investigation"
 hook_ko: "다운로드: 허위 AI 기후 주장과 엔비디아의 조사"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

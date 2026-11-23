@@ -1,7 +1,7 @@
 ---
 hook_en: "PhyDEX: A Benchmark for Physical Reasoning in Vision-Language-Action Models via Dynamic Extrinsic Dexterity"
 hook_ko: "PhyDEX: 동적 외재적 손재주를 통한 시각-언어-행동 모델의 물리적 추론 벤치마크"
-tags: []
+tags: ["benchmark", "manipulation"]
 authors: ["Hao Vo", "Taisei Hanyu", "Yuki Ikebe", "Pham Tri Quang", "Sreevenkata Anjani Tishita Godavarthi", "Nghi D. Q. Bui", "Daniel Sonntag", "Chase Rainwater", "Duy Minh Ho Nguyen", "Anh Nguyen", "Ngan Le"]
 embedded: false
 health_flourishing: false

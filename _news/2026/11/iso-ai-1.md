@@ -1,7 +1,7 @@
 ---
 hook_en: "First-ever launch of the ISO AI Management System International Auditor Maestro Level 1 certification course"
 hook_ko: "ISO AI경영시스템 국제심사원 마에스트로 1급 자격 과정 최초 개설"
-tags: []
+tags: ["ai-education"]
 authors: []
 embedded: false
 health_flourishing: false

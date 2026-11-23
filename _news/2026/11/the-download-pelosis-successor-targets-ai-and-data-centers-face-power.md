@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: Pelosi’s successor targets AI and data centers face power woes"
 hook_ko: "다운로드: 펠로시의 후임자는 인공지능과 데이터 센터를 겨냥하며 전력 문제에 직면해 있다"
-tags: []
+tags: ["policy", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
