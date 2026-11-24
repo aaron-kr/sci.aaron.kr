@@ -1,6 +1,6 @@
 ---
-hook_en: "What Would a U.S. Telecommunications Act 2.0 Look Like?"
-hook_ko: "미국 통신법 2.0은 어떤 모습일까요?"
+hook_en: "Zoox Tests Sounds to Signal Blind and Sighted Pedestrians"
+hook_ko: "주크스, 시각 및 비장애인 보행자 신호용 소리 테스트 진행"
 tags: []
 authors: []
 embedded: false
@@ -17,12 +17,12 @@ pin_priority: null
 pin_own_research: false
 pin_image: null
 raw_wire: false
-title: "What Would a U.S. Telecommunications Act 2.0 Look Like?"
+title: "Zoox Tests Sounds to Signal Blind and Sighted Pedestrians"
 source: "IEEE Spectrum (all topics)"
 source_lang: "en"
-source_url: "https://spectrum.ieee.org/telecommunications-act-reform"
+source_url: "https://spectrum.ieee.org/autonomous-cars-zoox-sound-design"
 topic: "general-ai"
-date: "2026-11-02"
+date: "2026-11-23"
 thumb: null
-dedup_key: "https://spectrum.ieee.org/telecommunications-act-reform"
+dedup_key: "https://spectrum.ieee.org/autonomous-cars-zoox-sound-design"
 ---

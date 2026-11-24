@@ -1,7 +1,7 @@
 ---
 hook_en: "How to tell a cyberattack from a plain old outage"
 hook_ko: "사이버 공격과 일반적인 장애를 구분하는 방법"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

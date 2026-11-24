@@ -1,7 +1,7 @@
 ---
 hook_en: "Can Robots Bring Stroke Surgery to Remote Hospitals?"
 hook_ko: "로봇이 외딴 병원에 뇌졸중 수술을 제공할 수 있을까?"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

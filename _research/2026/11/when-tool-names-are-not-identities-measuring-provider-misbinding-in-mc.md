@@ -1,7 +1,7 @@
 ---
 hook_en: "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents"
 hook_ko: "도구 이름이 동일하지 않을 때: MCP 기반 AI 에이전트에서 제공자 오결합 측정하기"
-tags: []
+tags: ["reasoning", "human-in-the-loop"]
 authors: ["Zeynab Anbiaee", "Sajjad Dadkhah", "Ali A. Ghorbani"]
 embedded: false
 health_flourishing: false

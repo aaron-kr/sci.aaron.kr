@@ -1,7 +1,7 @@
 ---
 hook_en: "US-based Dechico & Sons places Symbi's Talibot in all stores"
 hook_ko: "美 데치코앤선즈, 전매장에 심비의 탤리로봇 배치"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false
