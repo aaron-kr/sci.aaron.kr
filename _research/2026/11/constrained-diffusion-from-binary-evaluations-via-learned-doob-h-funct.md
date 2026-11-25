@@ -1,7 +1,7 @@
 ---
 hook_en: "Constrained Diffusion from Binary Evaluations via Learned Doob h-Functions"
 hook_ko: "학습된 Doob h-함수를 이용한 이진 평가 기반 제약 확산"
-tags: []
+tags: ["reasoning"]
 authors: ["Ssaumya Kammal Jaiswal", "Mahfuza Farooque"]
 embedded: false
 health_flourishing: false

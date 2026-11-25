@@ -1,7 +1,7 @@
 ---
 hook_en: "Sketch2TikZ: Multi-Reward Reinforcement Learning for Converting Hand-Drawn Sketches to Executable TikZ"
 hook_ko: "스케치2TikZ: 손으로 그린 스케치를 실행 가능한 TikZ로 변환하기 위한 다중 보상 강화 학습"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Shubham Paliwal", "Arushi Jain", "Monika Sharma", "Manasi Patwardhan"]
 embedded: false
 health_flourishing: false

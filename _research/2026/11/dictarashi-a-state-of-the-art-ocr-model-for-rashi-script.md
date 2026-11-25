@@ -1,7 +1,7 @@
 ---
 hook_en: "DictaRashi: A State-of-the-Art OCR Model For Rashi Script"
 hook_ko: "DictaRashi: 라시 서체를 위한 최첨단 OCR 모델"
-tags: []
+tags: ["ocr", "historical-documents"]
 authors: ["Ometz Shmidman", "Yonah Taurog", "Aryeh Sanders", "Shlomo Bluth", "Moshe Koppel", "Joshua Geudalia", "Avi Shmidman"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Lonik Obtains Hygiene and Safety Certification for Food Manufacturing Automation Sizing Module 'K-NSF'"
 hook_ko: "로닉, 식품제조 자동화 소분 모듈 ‘K-NSF’ 위생안전 인증 획득"
-tags: []
+tags: ["industry", "manipulation"]
 authors: []
 embedded: false
 health_flourishing: false

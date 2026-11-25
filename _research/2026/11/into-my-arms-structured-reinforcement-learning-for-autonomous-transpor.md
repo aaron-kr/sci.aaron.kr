@@ -1,7 +1,7 @@
 ---
 hook_en: "Into My Arms: Structured reinforcement learning for autonomous transport of objects and humans"
 hook_ko: "Into My Arms: 물체와 인간의 자율 운송을 위한 구조화된 강화학습"
-tags: []
+tags: ["manipulation", "humanoids", "reinforcement-learning"]
 authors: ["Elle Miller", "Reem Almheiri", "Takuma Tsukakoshi", "Ben Sanati", "Tamon Miyake", "Yushi Wang", "Namiko Saito", "Shigeki Sugano", "Tetsuya Ogata", "Rika Antonova", "Oisin Mac Aodha", "Sethu Vijayakumar"]
 embedded: false
 health_flourishing: false
