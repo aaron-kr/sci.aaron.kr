@@ -1,7 +1,7 @@
 ---
 hook_en: "CALVIN-MAX: When Does a Mid-Execution Change Hurt a Robot Policy?"
 hook_ko: "CALVIN-MAX: 실행 중간 변경이 로봇 정책에 언제 해가 될까?"
-tags: []
+tags: ["manipulation", "reasoning"]
 authors: ["Sajjad Pakdamansavoji"]
 embedded: false
 health_flourishing: false

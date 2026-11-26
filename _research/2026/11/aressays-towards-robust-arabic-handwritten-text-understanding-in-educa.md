@@ -1,7 +1,7 @@
 ---
 hook_en: "ArEssays: Towards Robust Arabic Handwritten Text Understanding in Educational Settings"
 hook_ko: "아르에세이: 교육 현장에서 견고한 아랍어 필기 텍스트 이해를 향하여"
-tags: []
+tags: ["handwriting", "dataset", "arabic-nlp"]
 authors: ["Hamdy Mubarak", "Anas Madkoor", "Ehsaneddin Asgari", "Majd Hawasly"]
 embedded: false
 health_flourishing: false

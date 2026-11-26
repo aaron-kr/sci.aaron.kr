@@ -1,7 +1,7 @@
 ---
 hook_en: "When Does Fine-Tuning Beat Prompting for Qiskit-to-CUDA-Q Translation? An Execution-Verified Study"
 hook_ko: "Qiskit-to-CUDA-Q 번역에서 파인튜닝이 프롬프트보다 우위에 있는 시점은 언제일까? 집행 검증 연구"
-tags: []
+tags: ["training-efficiency", "benchmark", "evaluation"]
 authors: ["Ana Paula Appel"]
 embedded: false
 health_flourishing: false

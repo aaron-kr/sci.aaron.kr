@@ -1,7 +1,7 @@
 ---
 hook_en: "Can AI Design a Better nnU-Net? A Hypothesis-Driven Architecture Discovery Loop from Failures to Design Rules"
 hook_ko: "AI가 더 나은 nnU-Net을 설계할 수 있을까? 고장에서 설계 규칙까지, 가설 주도 아키텍처 발견 루프"
-tags: []
+tags: ["benchmark", "training-efficiency"]
 authors: ["Songtao Jiang", "Yuan Wang", "Fucheng Niu", "Hualiang Wang", "Jian Wu", "Zuozhu Liu"]
 embedded: false
 health_flourishing: false

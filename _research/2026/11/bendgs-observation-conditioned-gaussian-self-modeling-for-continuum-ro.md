@@ -1,7 +1,7 @@
 ---
 hook_en: "BendGS: Observation-Conditioned Gaussian Self-Modeling for Continuum Robots"
 hook_ko: "BendGS: 연속체 로봇을 위한 관측 조건화 가우시안 자기 모델링"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Jeong Woon Lee", "Doungjun Kim", "Namho Kim", "Seungheon Chae", "Jongwoo Kim", "Hyoseok Hwang"]
 embedded: false
 health_flourishing: false

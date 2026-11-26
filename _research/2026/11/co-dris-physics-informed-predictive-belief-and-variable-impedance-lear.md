@@ -1,7 +1,7 @@
 ---
 hook_en: "Co-DRIS: Physics-Informed Predictive Belief and Variable-Impedance Learning for Reactive Catching under Coupled Uncertainty"
 hook_ko: "Co-DRIS: 결합된 불확실성 하에서 반응적 캐칭을 위한 물리 기반 예측 신념 및 가변 임피던스 학습"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Yonglong Zhang"]
 embedded: false
 health_flourishing: false

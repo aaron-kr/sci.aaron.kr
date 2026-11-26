@@ -1,7 +1,7 @@
 ---
 hook_en: "JECT: Addressing the Context Shortcut in Joint-Embedding Predictive Learning for Chest CT"
 hook_ko: "JECT: 흉부 CT 예측 학습을 위한 공동 임베딩의 맥락 단축어 해결"
-tags: []
+tags: ["benchmark", "biomedical"]
 authors: ["Hanbin Ko", "Hong-Jun Choi", "Jihun Kim", "Young-Gon Kim", "Dongheon Lee", "Chang Min Park"]
 embedded: false
 health_flourishing: false
