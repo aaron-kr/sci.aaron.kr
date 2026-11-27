@@ -1,7 +1,7 @@
 ---
 hook_en: "PROVE: Predict-to-Specify and Observe-to-Verify for Human-Aligned Evaluation of Mobile Manipulation"
 hook_ko: "모바일 조작의 인간 친화적 평가를 위한 예측-지정(PROVE)과 관찰-검증(Observance-to-Verify)"
-tags: []
+tags: ["humanoids", "manipulation", "evaluation"]
 authors: ["Bowen Lyu", "Yunan Liu", "Liaoyuan Fan", "Qinchuan Cheng", "Jiafei Duan", "Cheston Tan", "Shijie Li"]
 embedded: false
 health_flourishing: false

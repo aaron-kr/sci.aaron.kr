@@ -1,7 +1,7 @@
 ---
 hook_en: "CarlHOI: Counterfactual Predictive Imagination for Generalizable Multi-Humanoid Object Interaction under Constrained Environments"
 hook_ko: "CarlHOI: 제약된 환경에서 일반화 가능한 다중 휴머노이드 객체 상호작용을 위한 반사실적 예측 상상력"
-tags: []
+tags: ["humanoids", "manipulation"]
 authors: ["Wenjie Lin", "Jin Wei-Kocsis"]
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "POISE: Curvature-Aware Critic Regularization for Smooth Actor-Critic Control"
 hook_ko: "POISE: 부드러운 액터-크리틱 제어를 위한 곡률 인지 비평가 정규화"
-tags: []
+tags: ["training-efficiency"]
 authors: ["Jeong Woon Lee", "Namho Kim", "Hyoseok Hwang"]
 embedded: false
 health_flourishing: false

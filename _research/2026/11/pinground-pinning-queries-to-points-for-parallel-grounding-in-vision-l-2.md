@@ -1,7 +1,7 @@
 ---
 hook_en: "PinGround: Pinning Queries to Points for Parallel Grounding in Vision-Language Models"
 hook_ko: "PinGround: 시각-언어 모델에서 병렬 접지를 위해 쿼리를 점에 핀으로 고정하기"
-tags: []
+tags: ["vision-language", "grounding"]
 authors: ["Shuxuan Li", "Jialiang Kang", "Yanghao Zhou", "Ziye Zhu", "Zhilin Zhao", "Xiao Yang"]
 embedded: false
 health_flourishing: false

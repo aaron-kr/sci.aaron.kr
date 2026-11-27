@@ -1,7 +1,7 @@
 ---
 hook_en: "Inha University partners with Synapse Imaging to develop AI technology for semiconductor inspection equipment"
 hook_ko: "인하대, 시냅스이미징과 반도체 검사장비 AI 기술개발 맞손"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

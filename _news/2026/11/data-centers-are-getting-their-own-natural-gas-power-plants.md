@@ -1,12 +1,12 @@
 ---
 hook_en: "Data centers are getting their own natural gas power plants"
 hook_ko: "데이터 센터들이 자체 천연가스 발전소를 갖게 되고 있습니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false
 ai_education: false
-coverage_en: 2
+coverage_en: 3
 coverage_ko: null
 gap: "en_only"
 marked_for_class: false

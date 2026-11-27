@@ -1,7 +1,7 @@
 ---
 hook_en: "A legendary philosopher isn’t buying Anthropic’s consciousness argument"
 hook_ko: "전설적인 철학자가 Anthropic의 의식 논증을 믿지 않는다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "REFORGE: LLM-Assisted RTL Bug Repair with Structured Context and Verification Feedback"
 hook_ko: "REFORGE: 구조화된 컨텍스트와 검증 피드백을 활용한 LLM 지원 RTL 버그 수정"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Tanvir Hossain", "Sudipta Paria", "Aidan Gleason Myers", "Swarup Bhunia", "Tamzidul Hoque"]
 embedded: false
 health_flourishing: false

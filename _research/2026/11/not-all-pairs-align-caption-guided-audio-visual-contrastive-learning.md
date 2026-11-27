@@ -1,7 +1,7 @@
 ---
 hook_en: "Not All Pairs Align: Caption-Guided Audio-Visual Contrastive Learning"
 hook_ko: "모든 쌍이 정렬되는 것은 아니다: 캡션 기반 시청각 대조 학습"
-tags: []
+tags: ["multi-agent"]
 authors: ["Omar Emara", "Nan Lu", "Dima Damen", "Hazel Doughty"]
 embedded: false
 health_flourishing: false

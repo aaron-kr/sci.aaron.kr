@@ -1,7 +1,7 @@
 ---
 hook_en: "[Special Feature ②] China Presents the 'Trinity' with Core Physical AI Technologies…Attention on 'Worken' for evaluating robot productivity"
 hook_ko: "[기획특집 ②] 중국, 피지컬 AI 핵심 기술로 '삼지일체' 제시…로봇 생산성 평가할 'Worken' 주목"
-tags: []
+tags: ["humanoids", "benchmark"]
 authors: []
 embedded: false
 health_flourishing: false
