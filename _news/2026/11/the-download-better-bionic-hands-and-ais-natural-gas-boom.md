@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: Better bionic hands and AI’s natural-gas boom"
 hook_ko: "다운로드: 더 나은 바이오닉 손과 AI의 천연가스 붐"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

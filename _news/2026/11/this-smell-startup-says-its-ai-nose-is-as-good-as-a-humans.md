@@ -1,7 +1,7 @@
 ---
 hook_en: "This smell startup says its AI nose is as good as a human’s"
 hook_ko: "이 냄새 감지 스타트업은 자사의 AI 코가 인간만큼 뛰어나다고 주장합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

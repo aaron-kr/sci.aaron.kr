@@ -1,7 +1,7 @@
 ---
 hook_en: "FlashProve-Next: Verifiable Inference for Production LLM APIs"
 hook_ko: "플래시프로브 다음: 프로덕션 LLM API를 위한 검증 가능한 추론"
-tags: []
+tags: ["reasoning", "evaluation"]
 authors: ["Liang Song"]
 embedded: false
 health_flourishing: false

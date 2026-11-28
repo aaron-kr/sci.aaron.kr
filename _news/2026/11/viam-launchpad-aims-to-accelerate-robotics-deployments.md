@@ -1,7 +1,7 @@
 ---
 hook_en: "Viam Launchpad aims to accelerate robotics deployments"
 hook_ko: "Viam 런치패드는 로봇 기술 도입을 가속화하는 것을 목표로 합니다"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

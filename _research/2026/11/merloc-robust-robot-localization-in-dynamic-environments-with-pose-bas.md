@@ -1,7 +1,7 @@
 ---
 hook_en: "MERLoc: Robust Robot Localization in Dynamic Environments with Pose-Based Retrieval over 3D Gaussian Splatting References"
 hook_ko: "MERLoc: 3D 가우시안 스플래팅 참조 데이터를 활용한 포즈 기반 검색으로 동적 환경에서 강건한 로봇 위치 추정"
-tags: []
+tags: ["navigation", "benchmark"]
 authors: ["Michael Baumgartner", "Dario Mylonopoulos", "Sammy Christen", "Markus Gross", "Moritz Bacher"]
 embedded: false
 health_flourishing: false

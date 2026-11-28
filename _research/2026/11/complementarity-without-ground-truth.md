@@ -1,7 +1,7 @@
 ---
 hook_en: "Complementarity without ground truth?"
 hook_ko: "그라운드 트루스 없이 상보성인가요?"
-tags: []
+tags: ["evaluation"]
 authors: ["Andrea Ferrario", "Alessandro Facchini", "Federico Cabitza"]
 embedded: false
 health_flourishing: false

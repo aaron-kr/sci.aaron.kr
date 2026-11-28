@@ -1,7 +1,7 @@
 ---
 hook_en: "Korea Institute of Robot Convergence Begins Development of Humanoid Robot Platform for Extreme-Range Exploration and Operations"
 hook_ko: "한국로봇융합硏, 극한지 탐사·작업용 휴머노이드 로봇 플랫폼 개발 착수"
-tags: []
+tags: ["humanoids", "locomotion"]
 authors: []
 embedded: false
 health_flourishing: false

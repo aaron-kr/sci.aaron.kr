@@ -1,7 +1,7 @@
 ---
 hook_en: "The Download: AI’s gas power boom and a consciousness reality check"
 hook_ko: "다운로드: 인공지능의 가스 파워 붐과 의식의 현실 점검"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

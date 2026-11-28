@@ -1,7 +1,7 @@
 ---
 hook_en: "The next generation of bionic hands is here—and they can feel"
 hook_ko: "차세대 바이오닉 손이 등장했습니다—이제는 촉감까지 느낄 수 있습니다"
-tags: []
+tags: ["humanoids"]
 authors: []
 embedded: false
 health_flourishing: false

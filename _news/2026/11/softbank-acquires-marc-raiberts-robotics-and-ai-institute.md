@@ -1,7 +1,7 @@
 ---
 hook_en: "SoftBank acquires Marc Raibert’s Robotics and AI Institute"
 hook_ko: "소프트뱅크, 마크 라이버트의 로보틱스 및 AI 연구소 인수"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

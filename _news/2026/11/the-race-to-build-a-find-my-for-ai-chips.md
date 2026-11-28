@@ -1,7 +1,7 @@
 ---
 hook_en: "The Race to Build a “Find My” for AI Chips"
 hook_ko: "AI 칩용 '나를 찾아줘' 기능 개발 경쟁"
-tags: []
+tags: ["industry"]
 authors: []
 embedded: false
 health_flourishing: false

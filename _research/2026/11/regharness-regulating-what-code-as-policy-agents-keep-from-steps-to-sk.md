@@ -1,7 +1,7 @@
 ---
 hook_en: "RegHarness: Regulating What Code-as-Policy Agents Keep from Steps to Skills"
 hook_ko: "RegHarness: 코드-정책 에이전트가 단계에서 기술로 넘어갈 때 무엇을 유지할지 조절하기"
-tags: []
+tags: ["training-efficiency", "reasoning"]
 authors: ["Shengming Liu", "Yunyi Gao", "Xinyi Wang", "Jianyong Sun", "Shuai Wang", "Yi Deng", "Li Chenye", "Mingcai Zhou", "Sim Kuan Goh"]
 embedded: false
 health_flourishing: false

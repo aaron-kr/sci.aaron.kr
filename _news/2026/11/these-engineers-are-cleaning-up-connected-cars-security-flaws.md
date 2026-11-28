@@ -1,7 +1,7 @@
 ---
 hook_en: "These Engineers Are Cleaning Up Connected Cars’ Security Flaws"
 hook_ko: "이 엔지니어들이 커넥티드 카의 보안 취약점을 해결하고 있습니다"
-tags: []
+tags: ["autonomous-driving", "industry"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Artificial Intelligence (AI): Standards Join the Journey from Technological Evolution to Industrial Transformation"
 hook_ko: "인공지능(AI), 기술 진화에서 산업 대전환까지 표준이 함께 한다"
-tags: []
+tags: ["policy"]
 authors: []
 embedded: false
 health_flourishing: false

@@ -1,7 +1,7 @@
 ---
 hook_en: "Endorobotics to Participate in Endoscopy Workshop in Florida for Second Consecutive Year… Introduction to Robot ESD"
 hook_ko: "엔도로보틱스, 2년 연속 미국 플로리다 내시경 워크숍 참가… 로봇 ESD 소개"
-tags: []
+tags: ["humanoids", "industry"]
 authors: []
 embedded: false
 health_flourishing: false
